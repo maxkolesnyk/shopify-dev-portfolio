@@ -48,12 +48,66 @@
       background-size: 256px 256px;
     }
 
-    /* Floating navbar glass */
+    /* Floating navbar — liquid glass */
     .nav-glass {
-      background: rgba(10, 10, 10, 0.7);
-      backdrop-filter: blur(20px) saturate(1.4);
-      -webkit-backdrop-filter: blur(20px) saturate(1.4);
-      border: 1px solid rgba(255, 255, 255, 0.10);
+      background:
+        linear-gradient(180deg,
+          rgba(255, 255, 255, 0.06) 0%,
+          rgba(255, 255, 255, 0.02) 40%,
+          rgba(10, 10, 10, 0.5) 100%
+        );
+      backdrop-filter: blur(40px) saturate(1.6) brightness(1.1);
+      -webkit-backdrop-filter: blur(40px) saturate(1.6) brightness(1.1);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-top: 1px solid rgba(255, 255, 255, 0.22);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.4),
+        0 2px 8px rgba(0, 0, 0, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+      position: relative;
+      overflow: hidden;
+      transition: background 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+    }
+    /* Specular highlight shimmer */
+    .nav-glass::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -20%;
+      width: 60%;
+      height: 100%;
+      background: linear-gradient(
+        105deg,
+        transparent 20%,
+        rgba(255, 255, 255, 0.03) 40%,
+        rgba(255, 255, 255, 0.06) 50%,
+        rgba(255, 255, 255, 0.03) 60%,
+        transparent 80%
+      );
+      pointer-events: none;
+      z-index: 0;
+    }
+    /* Ensure nav content sits above shimmer */
+    .nav-glass > * {
+      position: relative;
+      z-index: 1;
+    }
+    /* Scrolled state — denser, deeper glass */
+    .nav-glass.scrolled {
+      background:
+        linear-gradient(180deg,
+          rgba(255, 255, 255, 0.04) 0%,
+          rgba(255, 255, 255, 0.01) 30%,
+          rgba(10, 10, 10, 0.75) 100%
+        );
+      border-top-color: rgba(255, 255, 255, 0.15);
+      box-shadow:
+        0 12px 48px rgba(0, 0, 0, 0.5),
+        0 4px 12px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.06),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.15);
     }
 
     /* Glass card */
@@ -350,7 +404,7 @@
   <div class="cursor-ring hidden lg:block" id="cursorRing"></div>
 
   <!-- ======================== NAVBAR ======================== -->
-  <nav class="nav-glass fixed top-4 left-4 right-4 z-50 rounded-2xl px-6 py-4 flex items-center justify-between" id="navbar">
+  <nav class="nav-glass fixed top-4 left-1/2 -translate-x-1/2 z-50 rounded-2xl px-6 py-4 flex items-center justify-between w-[calc(100%-2rem)] max-w-3xl" id="navbar">
     <a href="#" class="font-serif text-xl font-bold tracking-tight text-cream cursor-pointer">MK<span class="text-accent">.</span></a>
 
     <!-- Desktop links -->
@@ -1332,12 +1386,14 @@
       if (e.key === 'Escape') mobileMenu.classList.remove('open');
     });
 
-    // Navbar scroll
+    // Navbar scroll — toggle dense glass state
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
-      navbar.style.background = window.scrollY > 60
-        ? 'rgba(10, 10, 10, 0.95)'
-        : 'rgba(10, 10, 10, 0.7)';
+      if (window.scrollY > 60) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
     });
 
     // FAQ accordion
