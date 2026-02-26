@@ -22,7 +22,7 @@
             surfaceLight: '#111111',
             surfaceGlass: 'rgba(255,255,255,0.04)',
             accent: '#C8FF00',
-            muted: '#878787',
+            muted: '#A8A8A8',
             cream: '#F5F0E8',
           },
         },
@@ -241,6 +241,106 @@
       transform: translateX(-8px);
       transition: opacity 0.3s ease, transform 0.3s ease;
     }
+
+    /* ===== ENHANCED HERO ===== */
+
+    /* Blueprint grid background */
+    .blueprint-grid {
+      background-image:
+        linear-gradient(rgba(200, 255, 0, 0.015) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(200, 255, 0, 0.015) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+
+    /* Particle canvas */
+    .hero-canvas {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    /* Word rotation */
+    .word-rotate-wrapper {
+      display: inline-block;
+      height: 1.15em;
+      overflow: hidden;
+      vertical-align: bottom;
+    }
+    .word-rotate-track {
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .word-rotate-track span {
+      display: block;
+      height: 1.15em;
+      line-height: 1.15;
+    }
+
+    /* Blur-in entrance */
+    .blur-in {
+      opacity: 0;
+      filter: blur(8px);
+      transform: translateY(25px);
+      transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+                  filter 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+                  transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .blur-in.visible {
+      opacity: 1;
+      filter: blur(0);
+      transform: translateY(0);
+    }
+
+    /* Animated SVG underline */
+    .hero-underline path {
+      stroke-dasharray: 300;
+      stroke-dashoffset: 300;
+    }
+    .hero-underline.drawn path {
+      stroke-dashoffset: 0;
+      transition: stroke-dashoffset 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* CTA pulse ring */
+    .cta-pulse {
+      position: relative;
+    }
+    .cta-pulse::before {
+      content: '';
+      position: absolute;
+      inset: -3px;
+      border-radius: 9999px;
+      background: #C8FF00;
+      opacity: 0;
+      animation: ctaPulse 2.5s ease-in-out infinite;
+      z-index: -1;
+    }
+    @keyframes ctaPulse {
+      0%, 100% { opacity: 0; transform: scale(1); }
+      50% { opacity: 0.12; transform: scale(1.04); }
+    }
+
+    /* Browser mockup float */
+    .browser-mockup {
+      transform: perspective(1200px) rotateY(-6deg) rotateX(2deg);
+      animation: mockupFloat 8s ease-in-out infinite;
+      box-shadow:
+        0 50px 100px -20px rgba(0, 0, 0, 0.5),
+        0 0 80px rgba(200, 255, 0, 0.02);
+      transition: transform 0.4s ease;
+    }
+    .browser-mockup:hover {
+      transform: perspective(1200px) rotateY(-2deg) rotateX(1deg) scale(1.02);
+    }
+    @keyframes mockupFloat {
+      0%, 100% { transform: perspective(1200px) rotateY(-6deg) rotateX(2deg) translateY(0); }
+      50% { transform: perspective(1200px) rotateY(-6deg) rotateX(2deg) translateY(-12px); }
+    }
+
+    /* Mockup inner glow bar */
+    .mockup-accent-bar {
+      background: linear-gradient(90deg, #C8FF00, rgba(200, 255, 0, 0.3));
+    }
   </style>
 </head>
 <body>
@@ -281,51 +381,166 @@
   </div>
 
   <!-- ======================== HERO ======================== -->
-  <section class="relative min-h-screen flex flex-col justify-center px-4 sm:px-6 lg:px-8 pt-24 pb-20 overflow-hidden">
-    <!-- Orbs -->
-    <div class="hero-orb w-[500px] h-[500px] bg-accent/10 top-[-10%] right-[-10%]"></div>
-    <div class="hero-orb w-[300px] h-[300px] bg-blue-500/5 bottom-[10%] left-[-5%]" style="animation-delay: -4s;"></div>
+  <section class="relative min-h-screen flex flex-col justify-center px-4 sm:px-6 lg:px-8 pt-24 pb-20 overflow-hidden blueprint-grid" id="heroSection">
+    <!-- Particle canvas -->
+    <canvas class="hero-canvas" id="heroCanvas"></canvas>
+
+    <!-- Orbs (enhanced) -->
+    <div class="hero-orb w-[600px] h-[600px] bg-accent/10 top-[-15%] right-[-5%]"></div>
+    <div class="hero-orb w-[400px] h-[400px] bg-blue-500/5 bottom-[5%] left-[-10%]" style="animation-delay: -4s;"></div>
+    <div class="hero-orb w-[200px] h-[200px] bg-accent/5 top-[40%] left-[30%]" style="animation-delay: -8s;"></div>
 
     <div class="max-w-7xl mx-auto w-full relative z-10">
-      <div class="reveal">
-        <p class="font-sans text-sm tracking-[0.3em] uppercase text-accent mb-6">Websites for Construction & Trades</p>
-      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center">
 
-      <h1 class="reveal reveal-delay-1 font-serif text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] xl:text-[6.5rem] font-bold leading-[0.95] tracking-tight text-cream mb-8">
-        Your next job<br>
-        <span class="italic font-normal text-muted">starts with your</span><br>
-        <span class="relative inline-block">
-          website<span class="text-accent">.</span>
-          <svg class="absolute -bottom-2 left-0 w-full" height="8" viewBox="0 0 300 8" fill="none">
-            <path d="M1 5.5C60 1.5 120 1.5 180 5.5C240 9.5 280 3 299 5" stroke="#C8FF00" stroke-width="2" stroke-linecap="round"/>
-          </svg>
-        </span>
-      </h1>
+        <!-- Left: Text content -->
+        <div>
+          <div class="blur-in">
+            <p class="font-sans text-sm tracking-[0.3em] uppercase text-accent mb-6">Websites for Construction & Trades</p>
+          </div>
 
-      <p class="reveal reveal-delay-2 font-sans text-lg sm:text-xl text-muted max-w-xl leading-relaxed mb-10">
-        High-performance websites for builders, tradies, and construction companies across Australia &amp; New Zealand. Built fast with AI-powered development, so you can get back to what you do best.
-      </p>
+          <h1 class="blur-in font-serif text-5xl sm:text-6xl md:text-7xl lg:text-[5rem] xl:text-[5.5rem] font-bold leading-[0.95] tracking-tight text-cream mb-8" style="transition-delay: 0.15s;">
+            Your next<br>
+            <span class="word-rotate-wrapper">
+              <span class="word-rotate-track" id="wordTrack">
+                <span class="text-accent">job</span>
+                <span class="text-accent">client</span>
+                <span class="text-accent">project</span>
+                <span class="text-accent">lead</span>
+                <span class="text-accent">job</span>
+              </span>
+            </span><br>
+            <span class="italic font-normal text-muted">starts with your</span><br>
+            <span class="relative inline-block">
+              website<span class="text-accent">.</span>
+              <svg class="hero-underline absolute -bottom-2 left-0 w-full" height="8" viewBox="0 0 300 8" fill="none">
+                <path d="M1 5.5C60 1.5 120 1.5 180 5.5C240 9.5 280 3 299 5" stroke="#C8FF00" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </span>
+          </h1>
 
-      <div class="reveal reveal-delay-3 flex flex-wrap gap-4 items-center">
-        <a href="#contact" class="btn-primary bg-accent text-surface font-sans font-semibold px-8 py-4 rounded-full text-base cursor-pointer inline-flex items-center gap-3 hover:bg-lime-300 transition-colors duration-200">
-          Get a Free Quote
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </a>
-        <a href="#pricing" class="font-sans text-sm text-muted hover:text-cream transition-colors duration-200 cursor-pointer underline underline-offset-4 decoration-muted/30 hover:decoration-cream/50">See pricing</a>
-      </div>
+          <p class="blur-in font-sans text-lg sm:text-xl text-cream/70 max-w-xl leading-relaxed mb-10" style="transition-delay: 0.3s;">
+            High-performance websites for builders, tradies, and construction companies across Australia &amp; New Zealand. Built fast with AI-powered development.
+          </p>
 
-      <!-- Industry tags -->
-      <div class="reveal reveal-delay-4 flex flex-wrap gap-3 mt-20 pt-10 border-t border-white/5">
-        <span class="font-sans text-xs text-muted bg-white/5 px-4 py-2 rounded-full border border-white/5">Builders</span>
-        <span class="font-sans text-xs text-muted bg-white/5 px-4 py-2 rounded-full border border-white/5">Electricians</span>
-        <span class="font-sans text-xs text-muted bg-white/5 px-4 py-2 rounded-full border border-white/5">Plumbers</span>
-        <span class="font-sans text-xs text-muted bg-white/5 px-4 py-2 rounded-full border border-white/5">Roofers</span>
-        <span class="font-sans text-xs text-muted bg-white/5 px-4 py-2 rounded-full border border-white/5">Landscapers</span>
-        <span class="font-sans text-xs text-muted bg-white/5 px-4 py-2 rounded-full border border-white/5">Concreters</span>
-        <span class="font-sans text-xs text-muted bg-white/5 px-4 py-2 rounded-full border border-white/5">Painters</span>
-        <span class="font-sans text-xs text-muted bg-white/5 px-4 py-2 rounded-full border border-white/5">Fencers</span>
-        <span class="font-sans text-xs text-muted bg-white/5 px-4 py-2 rounded-full border border-white/5">HVAC</span>
-        <span class="font-sans text-xs text-muted bg-white/5 px-4 py-2 rounded-full border border-white/5">Demolition</span>
+          <div class="blur-in flex flex-wrap gap-4 items-center" style="transition-delay: 0.45s;">
+            <a href="#contact" class="cta-pulse btn-primary bg-accent text-surface font-sans font-semibold px-8 py-4 rounded-full text-base cursor-pointer inline-flex items-center gap-3 hover:bg-lime-300 transition-colors duration-200">
+              Get a Free Quote
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+            <a href="#pricing" class="font-sans text-sm text-cream/60 hover:text-cream transition-colors duration-200 cursor-pointer underline underline-offset-4 decoration-cream/20 hover:decoration-cream/50">From $2,500 AUD</a>
+          </div>
+
+          <!-- Proof points -->
+          <div class="blur-in flex flex-wrap gap-6 mt-12 pt-8 border-t border-white/5" style="transition-delay: 0.6s;">
+            <div class="flex items-center gap-2">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C8FF00" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span class="font-sans text-sm text-cream/60">Live in 1&ndash;2 weeks</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C8FF00" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span class="font-sans text-sm text-cream/60">95+ Google PageSpeed</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C8FF00" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span class="font-sans text-sm text-cream/60">AU &amp; NZ focused</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Browser Mockup (desktop only) -->
+        <div class="hidden lg:block">
+          <div class="browser-mockup bg-surfaceLight rounded-xl border border-white/10 overflow-hidden max-w-lg ml-auto">
+            <!-- Browser chrome -->
+            <div class="flex items-center gap-2 px-4 py-3 bg-white/5 border-b border-white/5">
+              <div class="flex gap-1.5">
+                <div class="w-2.5 h-2.5 rounded-full bg-red-500/40"></div>
+                <div class="w-2.5 h-2.5 rounded-full bg-yellow-500/40"></div>
+                <div class="w-2.5 h-2.5 rounded-full bg-green-500/40"></div>
+              </div>
+              <div class="flex-1 mx-3">
+                <div class="bg-white/5 rounded-md px-3 py-1 text-center">
+                  <span class="font-sans text-[10px] text-cream/40">smithbuilders.com.au</span>
+                </div>
+              </div>
+            </div>
+            <!-- Mini website content -->
+            <div class="p-4 space-y-3">
+              <!-- Mini nav -->
+              <div class="flex items-center justify-between">
+                <div class="font-sans text-[11px] font-bold text-cream/70">SB</div>
+                <div class="flex gap-3 items-center">
+                  <div class="w-8 h-1 bg-white/10 rounded"></div>
+                  <div class="w-8 h-1 bg-white/10 rounded"></div>
+                  <div class="w-8 h-1 bg-white/10 rounded"></div>
+                  <div class="w-14 h-4 mockup-accent-bar rounded-full"></div>
+                </div>
+              </div>
+              <!-- Mini hero -->
+              <div class="bg-gradient-to-br from-white/5 to-white/[0.02] rounded-lg p-5 relative overflow-hidden">
+                <div class="absolute inset-0 bg-gradient-to-r from-accent/5 to-transparent"></div>
+                <div class="relative z-10">
+                  <div class="w-24 h-1.5 bg-accent/30 rounded mb-2"></div>
+                  <div class="w-40 h-2 bg-white/20 rounded mb-1"></div>
+                  <div class="w-32 h-2 bg-white/10 rounded mb-3"></div>
+                  <div class="w-20 h-5 bg-accent/30 rounded-full"></div>
+                </div>
+              </div>
+              <!-- Mini service cards -->
+              <div class="grid grid-cols-3 gap-2">
+                <div class="bg-white/[0.03] rounded-lg p-2.5 border border-white/5">
+                  <div class="w-5 h-5 rounded bg-accent/10 mb-2 flex items-center justify-center">
+                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#C8FF00" stroke-width="2" opacity="0.5"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
+                  </div>
+                  <div class="w-12 h-1 bg-white/15 rounded mb-1"></div>
+                  <div class="w-full h-0.5 bg-white/5 rounded"></div>
+                  <div class="w-3/4 h-0.5 bg-white/5 rounded mt-0.5"></div>
+                </div>
+                <div class="bg-white/[0.03] rounded-lg p-2.5 border border-white/5">
+                  <div class="w-5 h-5 rounded bg-accent/10 mb-2 flex items-center justify-center">
+                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#C8FF00" stroke-width="2" opacity="0.5"><circle cx="12" cy="12" r="10"/></svg>
+                  </div>
+                  <div class="w-10 h-1 bg-white/15 rounded mb-1"></div>
+                  <div class="w-full h-0.5 bg-white/5 rounded"></div>
+                  <div class="w-3/4 h-0.5 bg-white/5 rounded mt-0.5"></div>
+                </div>
+                <div class="bg-white/[0.03] rounded-lg p-2.5 border border-white/5">
+                  <div class="w-5 h-5 rounded bg-accent/10 mb-2 flex items-center justify-center">
+                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#C8FF00" stroke-width="2" opacity="0.5"><polygon points="12 2 22 22 2 22"/></svg>
+                  </div>
+                  <div class="w-14 h-1 bg-white/15 rounded mb-1"></div>
+                  <div class="w-full h-0.5 bg-white/5 rounded"></div>
+                  <div class="w-3/4 h-0.5 bg-white/5 rounded mt-0.5"></div>
+                </div>
+              </div>
+              <!-- Mini testimonial -->
+              <div class="bg-white/[0.02] rounded-lg p-3 border border-white/5">
+                <div class="flex gap-0.5 mb-1.5">
+                  <span class="text-[8px] text-accent">&#9733;</span>
+                  <span class="text-[8px] text-accent">&#9733;</span>
+                  <span class="text-[8px] text-accent">&#9733;</span>
+                  <span class="text-[8px] text-accent">&#9733;</span>
+                  <span class="text-[8px] text-accent">&#9733;</span>
+                </div>
+                <div class="w-full h-0.5 bg-white/10 rounded mb-0.5"></div>
+                <div class="w-3/4 h-0.5 bg-white/5 rounded mb-2"></div>
+                <div class="flex items-center gap-2">
+                  <div class="w-4 h-4 rounded-full bg-white/10"></div>
+                  <div>
+                    <div class="w-12 h-0.5 bg-white/15 rounded"></div>
+                    <div class="w-8 h-0.5 bg-white/5 rounded mt-0.5"></div>
+                  </div>
+                </div>
+              </div>
+              <!-- Mini CTA bar -->
+              <div class="flex items-center justify-between bg-accent/5 rounded-lg px-3 py-2 border border-accent/10">
+                <div class="w-24 h-1 bg-white/15 rounded"></div>
+                <div class="w-12 h-4 bg-accent/20 rounded-full"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -938,7 +1153,7 @@
 
   <!-- ======================== JAVASCRIPT ======================== -->
   <script>
-    // Scroll reveal
+    // Scroll reveal (handles both .reveal and .blur-in)
     const revealObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -948,6 +1163,128 @@
       });
     }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
     document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+    document.querySelectorAll('.blur-in').forEach(el => revealObserver.observe(el));
+
+    // ===== HERO PARTICLE CANVAS =====
+    const heroCanvas = document.getElementById('heroCanvas');
+    if (heroCanvas) {
+      const ctx = heroCanvas.getContext('2d');
+      let particles = [];
+      let heroMouse = { x: -1000, y: -1000 };
+      const PARTICLE_COUNT = 70;
+      const CONNECTION_DIST = 130;
+      const MOUSE_RADIUS = 200;
+
+      function resizeHeroCanvas() {
+        const section = document.getElementById('heroSection');
+        heroCanvas.width = section.offsetWidth;
+        heroCanvas.height = section.offsetHeight;
+      }
+
+      function createParticles() {
+        particles = [];
+        for (let i = 0; i < PARTICLE_COUNT; i++) {
+          particles.push({
+            x: Math.random() * heroCanvas.width,
+            y: Math.random() * heroCanvas.height,
+            vx: (Math.random() - 0.5) * 0.3,
+            vy: (Math.random() - 0.5) * 0.3,
+            radius: Math.random() * 1.5 + 0.5,
+            baseAlpha: Math.random() * 0.25 + 0.08,
+          });
+        }
+      }
+
+      function animateParticles() {
+        ctx.clearRect(0, 0, heroCanvas.width, heroCanvas.height);
+        particles.forEach((p, i) => {
+          p.x += p.vx;
+          p.y += p.vy;
+          if (p.x < 0) p.x = heroCanvas.width;
+          if (p.x > heroCanvas.width) p.x = 0;
+          if (p.y < 0) p.y = heroCanvas.height;
+          if (p.y > heroCanvas.height) p.y = 0;
+
+          const dx = heroMouse.x - p.x;
+          const dy = heroMouse.y - p.y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          let alpha = p.baseAlpha;
+
+          if (dist < MOUSE_RADIUS) {
+            const force = (MOUSE_RADIUS - dist) / MOUSE_RADIUS;
+            p.x -= dx * force * 0.015;
+            p.y -= dy * force * 0.015;
+            alpha = p.baseAlpha + force * 0.6;
+          }
+
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+          ctx.fillStyle = 'rgba(200, 255, 0, ' + alpha + ')';
+          ctx.fill();
+
+          for (let j = i + 1; j < particles.length; j++) {
+            const p2 = particles[j];
+            const cdx = p.x - p2.x;
+            const cdy = p.y - p2.y;
+            const cdist = Math.sqrt(cdx * cdx + cdy * cdy);
+            if (cdist < CONNECTION_DIST) {
+              const lineAlpha = (1 - cdist / CONNECTION_DIST) * 0.12;
+              ctx.beginPath();
+              ctx.moveTo(p.x, p.y);
+              ctx.lineTo(p2.x, p2.y);
+              ctx.strokeStyle = 'rgba(200, 255, 0, ' + lineAlpha + ')';
+              ctx.lineWidth = 0.5;
+              ctx.stroke();
+            }
+          }
+        });
+        requestAnimationFrame(animateParticles);
+      }
+
+      const heroSection = document.getElementById('heroSection');
+      heroSection.addEventListener('mousemove', e => {
+        const rect = heroSection.getBoundingClientRect();
+        heroMouse.x = e.clientX - rect.left;
+        heroMouse.y = e.clientY - rect.top;
+      });
+      heroSection.addEventListener('mouseleave', () => {
+        heroMouse.x = -1000;
+        heroMouse.y = -1000;
+      });
+
+      resizeHeroCanvas();
+      createParticles();
+      animateParticles();
+      window.addEventListener('resize', () => { resizeHeroCanvas(); createParticles(); });
+    }
+
+    // ===== WORD ROTATION =====
+    const wordTrack = document.getElementById('wordTrack');
+    if (wordTrack) {
+      const words = wordTrack.children;
+      let currentWord = 0;
+      setInterval(() => {
+        currentWord++;
+        if (currentWord >= words.length - 1) {
+          wordTrack.style.transition = 'transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)';
+          wordTrack.style.transform = 'translateY(-' + (currentWord * 1.15) + 'em)';
+          setTimeout(() => {
+            wordTrack.style.transition = 'none';
+            wordTrack.style.transform = 'translateY(0)';
+            currentWord = 0;
+          }, 650);
+        } else {
+          wordTrack.style.transition = 'transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)';
+          wordTrack.style.transform = 'translateY(-' + (currentWord * 1.15) + 'em)';
+        }
+      }, 2500);
+    }
+
+    // ===== ANIMATED UNDERLINE DRAW-ON =====
+    setTimeout(() => {
+      const underline = document.querySelector('.hero-underline');
+      if (underline) underline.classList.add('drawn');
+    }, 1000);
 
     // Custom cursor
     const dot = document.getElementById('cursorDot');
