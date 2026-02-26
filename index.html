@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Maksym Kolesnyk | Shopify Development</title>
-  <meta name="description" content="I build Shopify stores that convert. Custom themes, headless commerce, and performance-obsessed development for brands that refuse to blend in.">
+  <title>Maksym Kolesnyk | Websites for Construction & Trades</title>
+  <meta name="description" content="High-performance websites for construction and trades businesses across Australia and New Zealand. Built with AI-powered development for faster delivery and better results.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -129,14 +129,6 @@
     .reveal-delay-3 { transition-delay: 0.3s; }
     .reveal-delay-4 { transition-delay: 0.4s; }
 
-    /* Project image zoom */
-    .project-img {
-      transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .project-card:hover .project-img {
-      transform: scale(1.05);
-    }
-
     /* CTA button shimmer */
     .btn-primary {
       position: relative;
@@ -171,19 +163,6 @@
       border-color: #C8FF00;
       color: #C8FF00;
       background: rgba(200, 255, 0, 0.05);
-    }
-
-    /* Testimonial quote mark */
-    .quote-mark {
-      font-family: 'Bodoni Moda', serif;
-      font-size: 8rem;
-      line-height: 1;
-      color: rgba(200, 255, 0, 0.08);
-      position: absolute;
-      top: -1.5rem;
-      left: -0.5rem;
-      pointer-events: none;
-      user-select: none;
     }
 
     /* Custom cursor dot */
@@ -243,72 +222,11 @@
       transform: translateX(0);
     }
 
-    /* Modal overlay */
-    .modal-overlay {
-      position: fixed;
-      inset: 0;
-      z-index: 200;
-      background: rgba(0, 0, 0, 0.85);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.35s ease;
-      overflow-y: auto;
-      display: flex;
-      justify-content: center;
-      padding: 2rem 1rem;
-    }
-    .modal-overlay.active {
-      opacity: 1;
-      pointer-events: auto;
-    }
-    .modal-content {
-      background: #111111;
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 1.5rem;
-      max-width: 820px;
-      width: 100%;
-      margin: auto;
-      transform: translateY(30px) scale(0.97);
-      opacity: 0;
-      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease;
-      position: relative;
-    }
-    .modal-overlay.active .modal-content {
-      transform: translateY(0) scale(1);
-      opacity: 1;
-    }
-    .modal-close {
-      position: absolute;
-      top: 1.25rem;
-      right: 1.25rem;
-      z-index: 10;
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,255,255,0.1);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      transition: background 0.2s ease, border-color 0.2s ease;
-      color: #F5F0E8;
-    }
-    .modal-close:hover {
-      background: rgba(255,255,255,0.12);
-      border-color: rgba(200, 255, 0, 0.3);
-    }
-
-    /* Metric bar fill animation */
-    .metric-bar-fill {
-      height: 100%;
-      border-radius: 999px;
-      background: #C8FF00;
-      width: 0;
-      transition: width 1s cubic-bezier(0.16, 1, 0.3, 1);
-    }
+    /* FAQ */
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
+    .faq-item.active .faq-answer { max-height: 300px; }
+    .faq-icon { transition: transform 0.3s ease; }
+    .faq-item.active .faq-icon { transform: rotate(45deg); }
 
     /* Service card clickable state */
     .service-card-click {
@@ -338,10 +256,10 @@
     <!-- Desktop links -->
     <div class="hidden md:flex items-center gap-8">
       <a href="#about" class="text-sm font-sans text-muted hover:text-cream transition-colors duration-200 cursor-pointer">About</a>
-      <a href="#work" class="text-sm font-sans text-muted hover:text-cream transition-colors duration-200 cursor-pointer">Work</a>
       <a href="#services" class="text-sm font-sans text-muted hover:text-cream transition-colors duration-200 cursor-pointer">Services</a>
       <a href="#pricing" class="text-sm font-sans text-muted hover:text-cream transition-colors duration-200 cursor-pointer">Pricing</a>
-      <a href="#contact" class="btn-primary bg-accent text-surface font-sans text-sm font-semibold px-6 py-2.5 rounded-full cursor-pointer inline-block hover:bg-lime-300 transition-colors duration-200">Let's Talk</a>
+      <a href="#faq" class="text-sm font-sans text-muted hover:text-cream transition-colors duration-200 cursor-pointer">FAQ</a>
+      <a href="#contact" class="btn-primary bg-accent text-surface font-sans text-sm font-semibold px-6 py-2.5 rounded-full cursor-pointer inline-block hover:bg-lime-300 transition-colors duration-200">Get a Quote</a>
     </div>
 
     <!-- Mobile menu button -->
@@ -356,10 +274,10 @@
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
     </button>
     <a href="#about" class="mobile-link font-serif text-3xl text-cream cursor-pointer">About</a>
-    <a href="#work" class="mobile-link font-serif text-3xl text-cream cursor-pointer">Work</a>
     <a href="#services" class="mobile-link font-serif text-3xl text-cream cursor-pointer">Services</a>
     <a href="#pricing" class="mobile-link font-serif text-3xl text-cream cursor-pointer">Pricing</a>
-    <a href="#contact" class="mobile-link btn-primary bg-accent text-surface font-sans text-lg font-semibold px-8 py-3 rounded-full cursor-pointer inline-block mt-4">Let's Talk</a>
+    <a href="#faq" class="mobile-link font-serif text-3xl text-cream cursor-pointer">FAQ</a>
+    <a href="#contact" class="mobile-link btn-primary bg-accent text-surface font-sans text-lg font-semibold px-8 py-3 rounded-full cursor-pointer inline-block mt-4">Get a Quote</a>
   </div>
 
   <!-- ======================== HERO ======================== -->
@@ -370,14 +288,14 @@
 
     <div class="max-w-7xl mx-auto w-full relative z-10">
       <div class="reveal">
-        <p class="font-sans text-sm tracking-[0.3em] uppercase text-accent mb-6">Shopify Developer & Partner</p>
+        <p class="font-sans text-sm tracking-[0.3em] uppercase text-accent mb-6">Websites for Construction & Trades</p>
       </div>
 
       <h1 class="reveal reveal-delay-1 font-serif text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] xl:text-[6.5rem] font-bold leading-[0.95] tracking-tight text-cream mb-8">
-        I build stores<br>
-        <span class="italic font-normal text-muted">that don't just</span><br>
+        Your next job<br>
+        <span class="italic font-normal text-muted">starts with your</span><br>
         <span class="relative inline-block">
-          look good<span class="text-accent">.</span>
+          website<span class="text-accent">.</span>
           <svg class="absolute -bottom-2 left-0 w-full" height="8" viewBox="0 0 300 8" fill="none">
             <path d="M1 5.5C60 1.5 120 1.5 180 5.5C240 9.5 280 3 299 5" stroke="#C8FF00" stroke-width="2" stroke-linecap="round"/>
           </svg>
@@ -385,35 +303,29 @@
       </h1>
 
       <p class="reveal reveal-delay-2 font-sans text-lg sm:text-xl text-muted max-w-xl leading-relaxed mb-10">
-        Custom Shopify themes, headless builds, and conversion-obsessed development for brands ready to dominate their market.
+        High-performance websites for builders, tradies, and construction companies across Australia &amp; New Zealand. Built fast with AI-powered development, so you can get back to what you do best.
       </p>
 
       <div class="reveal reveal-delay-3 flex flex-wrap gap-4 items-center">
         <a href="#contact" class="btn-primary bg-accent text-surface font-sans font-semibold px-8 py-4 rounded-full text-base cursor-pointer inline-flex items-center gap-3 hover:bg-lime-300 transition-colors duration-200">
-          Start a Project
+          Get a Free Quote
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </a>
-        <a href="#work" class="font-sans text-sm text-muted hover:text-cream transition-colors duration-200 cursor-pointer underline underline-offset-4 decoration-muted/30 hover:decoration-cream/50">View my work</a>
+        <a href="#pricing" class="font-sans text-sm text-muted hover:text-cream transition-colors duration-200 cursor-pointer underline underline-offset-4 decoration-muted/30 hover:decoration-cream/50">See pricing</a>
       </div>
 
-      <!-- Stats row -->
-      <div class="reveal reveal-delay-4 grid grid-cols-2 md:grid-cols-4 gap-4 mt-20 pt-10 border-t border-white/5">
-        <div>
-          <p class="font-serif text-3xl md:text-4xl font-bold text-cream">80<span class="text-accent">+</span></p>
-          <p class="font-sans text-xs uppercase tracking-wider text-muted mt-1">Stores Launched</p>
-        </div>
-        <div>
-          <p class="font-serif text-3xl md:text-4xl font-bold text-cream">$12M<span class="text-accent">+</span></p>
-          <p class="font-sans text-xs uppercase tracking-wider text-muted mt-1">Revenue Generated</p>
-        </div>
-        <div>
-          <p class="font-serif text-3xl md:text-4xl font-bold text-cream">99<span class="text-accent">%</span></p>
-          <p class="font-sans text-xs uppercase tracking-wider text-muted mt-1">Performance Score</p>
-        </div>
-        <div>
-          <p class="font-serif text-3xl md:text-4xl font-bold text-cream">4.9<span class="text-accent">/5</span></p>
-          <p class="font-sans text-xs uppercase tracking-wider text-muted mt-1">Client Rating</p>
-        </div>
+      <!-- Industry tags -->
+      <div class="reveal reveal-delay-4 flex flex-wrap gap-3 mt-20 pt-10 border-t border-white/5">
+        <span class="font-sans text-xs text-muted bg-white/5 px-4 py-2 rounded-full border border-white/5">Builders</span>
+        <span class="font-sans text-xs text-muted bg-white/5 px-4 py-2 rounded-full border border-white/5">Electricians</span>
+        <span class="font-sans text-xs text-muted bg-white/5 px-4 py-2 rounded-full border border-white/5">Plumbers</span>
+        <span class="font-sans text-xs text-muted bg-white/5 px-4 py-2 rounded-full border border-white/5">Roofers</span>
+        <span class="font-sans text-xs text-muted bg-white/5 px-4 py-2 rounded-full border border-white/5">Landscapers</span>
+        <span class="font-sans text-xs text-muted bg-white/5 px-4 py-2 rounded-full border border-white/5">Concreters</span>
+        <span class="font-sans text-xs text-muted bg-white/5 px-4 py-2 rounded-full border border-white/5">Painters</span>
+        <span class="font-sans text-xs text-muted bg-white/5 px-4 py-2 rounded-full border border-white/5">Fencers</span>
+        <span class="font-sans text-xs text-muted bg-white/5 px-4 py-2 rounded-full border border-white/5">HVAC</span>
+        <span class="font-sans text-xs text-muted bg-white/5 px-4 py-2 rounded-full border border-white/5">Demolition</span>
       </div>
     </div>
   </section>
@@ -421,58 +333,107 @@
   <!-- ======================== MARQUEE ======================== -->
   <section class="py-6 border-y border-white/5 overflow-hidden">
     <div class="marquee-track">
-      <span class="font-serif text-2xl md:text-3xl italic text-white/10 whitespace-nowrap px-8">Custom Themes</span>
+      <span class="font-serif text-2xl md:text-3xl italic text-white/10 whitespace-nowrap px-8">Builders</span>
       <span class="text-accent text-xl px-2">/</span>
-      <span class="font-serif text-2xl md:text-3xl italic text-white/10 whitespace-nowrap px-8">Headless Commerce</span>
+      <span class="font-serif text-2xl md:text-3xl italic text-white/10 whitespace-nowrap px-8">Electricians</span>
       <span class="text-accent text-xl px-2">/</span>
-      <span class="font-serif text-2xl md:text-3xl italic text-white/10 whitespace-nowrap px-8">Shopify Plus</span>
+      <span class="font-serif text-2xl md:text-3xl italic text-white/10 whitespace-nowrap px-8">Plumbers</span>
       <span class="text-accent text-xl px-2">/</span>
-      <span class="font-serif text-2xl md:text-3xl italic text-white/10 whitespace-nowrap px-8">Conversion Rate Optimization</span>
+      <span class="font-serif text-2xl md:text-3xl italic text-white/10 whitespace-nowrap px-8">Roofers</span>
       <span class="text-accent text-xl px-2">/</span>
-      <span class="font-serif text-2xl md:text-3xl italic text-white/10 whitespace-nowrap px-8">Liquid Development</span>
+      <span class="font-serif text-2xl md:text-3xl italic text-white/10 whitespace-nowrap px-8">Landscapers</span>
       <span class="text-accent text-xl px-2">/</span>
-      <span class="font-serif text-2xl md:text-3xl italic text-white/10 whitespace-nowrap px-8">Store Migration</span>
+      <span class="font-serif text-2xl md:text-3xl italic text-white/10 whitespace-nowrap px-8">Concreters</span>
+      <span class="text-accent text-xl px-2">/</span>
+      <span class="font-serif text-2xl md:text-3xl italic text-white/10 whitespace-nowrap px-8">Painters</span>
+      <span class="text-accent text-xl px-2">/</span>
+      <span class="font-serif text-2xl md:text-3xl italic text-white/10 whitespace-nowrap px-8">Fencers</span>
       <span class="text-accent text-xl px-2">/</span>
       <!-- Duplicate for seamless loop -->
-      <span class="font-serif text-2xl md:text-3xl italic text-white/10 whitespace-nowrap px-8">Custom Themes</span>
+      <span class="font-serif text-2xl md:text-3xl italic text-white/10 whitespace-nowrap px-8">Builders</span>
       <span class="text-accent text-xl px-2">/</span>
-      <span class="font-serif text-2xl md:text-3xl italic text-white/10 whitespace-nowrap px-8">Headless Commerce</span>
+      <span class="font-serif text-2xl md:text-3xl italic text-white/10 whitespace-nowrap px-8">Electricians</span>
       <span class="text-accent text-xl px-2">/</span>
-      <span class="font-serif text-2xl md:text-3xl italic text-white/10 whitespace-nowrap px-8">Shopify Plus</span>
+      <span class="font-serif text-2xl md:text-3xl italic text-white/10 whitespace-nowrap px-8">Plumbers</span>
       <span class="text-accent text-xl px-2">/</span>
-      <span class="font-serif text-2xl md:text-3xl italic text-white/10 whitespace-nowrap px-8">Conversion Rate Optimization</span>
+      <span class="font-serif text-2xl md:text-3xl italic text-white/10 whitespace-nowrap px-8">Roofers</span>
       <span class="text-accent text-xl px-2">/</span>
-      <span class="font-serif text-2xl md:text-3xl italic text-white/10 whitespace-nowrap px-8">Liquid Development</span>
+      <span class="font-serif text-2xl md:text-3xl italic text-white/10 whitespace-nowrap px-8">Landscapers</span>
       <span class="text-accent text-xl px-2">/</span>
-      <span class="font-serif text-2xl md:text-3xl italic text-white/10 whitespace-nowrap px-8">Store Migration</span>
+      <span class="font-serif text-2xl md:text-3xl italic text-white/10 whitespace-nowrap px-8">Concreters</span>
+      <span class="text-accent text-xl px-2">/</span>
+      <span class="font-serif text-2xl md:text-3xl italic text-white/10 whitespace-nowrap px-8">Painters</span>
+      <span class="text-accent text-xl px-2">/</span>
+      <span class="font-serif text-2xl md:text-3xl italic text-white/10 whitespace-nowrap px-8">Fencers</span>
       <span class="text-accent text-xl px-2">/</span>
     </div>
   </section>
 
-  <!-- ======================== ABOUT ME ======================== -->
+  <!-- ======================== ABOUT ======================== -->
   <section id="about" class="px-4 sm:px-6 lg:px-8 py-24 md:py-32">
     <div class="max-w-7xl mx-auto">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
         <div>
-          <p class="reveal font-sans text-sm tracking-[0.3em] uppercase text-accent mb-3">About Me</p>
-          <h2 class="reveal font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-cream leading-tight mb-8">The developer<br><span class="italic font-normal text-muted">behind the code</span></h2>
-          <div class="reveal space-y-5">
-            <p class="font-sans text-base text-muted leading-relaxed">I'm Maksym — a Shopify developer and certified partner based in Melbourne, Australia. For the past 7 years, I've been obsessed with one thing: building online stores that actually convert.</p>
-            <p class="font-sans text-base text-muted leading-relaxed">I've worked with 80+ brands across DTC, luxury, wellness, and lifestyle verticals — from ground-up custom themes to headless Hydrogen builds. Every project starts with understanding your customer's journey and ends with measurable results.</p>
-            <p class="font-sans text-base text-muted leading-relaxed">When I'm not deep in Liquid templates or React components, you'll find me dissecting checkout flows, nerding out on Core Web Vitals, or exploring Melbourne's coffee scene.</p>
+          <p class="reveal font-sans text-sm tracking-[0.3em] uppercase text-accent mb-3">About</p>
+          <h2 class="reveal font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-cream leading-tight">Built for tradies<span class="text-accent">,</span><br><span class="italic font-normal text-muted">by a developer who gets it</span></h2>
+          <div class="reveal space-y-5 mt-8">
+            <p class="font-sans text-base text-muted leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+            <p class="font-sans text-base text-muted leading-relaxed">I use AI-powered development tools like Claude Code to build websites faster and more efficiently than traditional agencies. This means you get a premium website at a fraction of the typical cost and timeline. No bloated teams, no six-month timelines, no $20K invoices.</p>
+            <p class="font-sans text-base text-muted leading-relaxed">Every site I build runs on modern infrastructure &mdash; Next.js, Vercel, and Supabase &mdash; giving your business the same tech stack that powers companies like Nike and Twitch. Fast, reliable, and built to generate leads.</p>
           </div>
           <div class="reveal flex flex-wrap gap-3 mt-8">
-            <span class="font-sans text-xs text-accent bg-accent/10 px-4 py-1.5 rounded-full border border-accent/20">Shopify Partner</span>
-            <span class="font-sans text-xs text-accent bg-accent/10 px-4 py-1.5 rounded-full border border-accent/20">Plus Certified</span>
-            <span class="font-sans text-xs text-accent bg-accent/10 px-4 py-1.5 rounded-full border border-accent/20">Melbourne, AU</span>
+            <span class="font-sans text-xs text-accent bg-accent/10 px-4 py-1.5 rounded-full border border-accent/20">AU & NZ Based</span>
+            <span class="font-sans text-xs text-accent bg-accent/10 px-4 py-1.5 rounded-full border border-accent/20">AI-Powered Development</span>
+            <span class="font-sans text-xs text-accent bg-accent/10 px-4 py-1.5 rounded-full border border-accent/20">Construction Specialist</span>
           </div>
         </div>
-        <div class="reveal relative">
-          <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&h=800&fit=crop" alt="Maksym Kolesnyk" class="w-full aspect-[3/4] object-cover rounded-2xl" loading="lazy">
-          <div class="absolute bottom-6 left-6 glass-card rounded-xl px-5 py-4">
-            <p class="font-serif text-2xl font-bold text-accent">7+</p>
-            <p class="font-sans text-xs text-muted">Years Experience</p>
+        <div class="reveal">
+          <!-- Placeholder for real photo -->
+          <div class="w-full aspect-[3/4] rounded-2xl bg-surfaceLight border border-white/5 flex items-center justify-center">
+            <div class="text-center px-8">
+              <div class="w-24 h-24 rounded-full bg-accent/10 flex items-center justify-center mx-auto mb-6">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#C8FF00" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              </div>
+              <p class="font-sans text-sm text-muted">Your photo here</p>
+            </div>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== WHY AI-POWERED ======================== -->
+  <section class="px-4 sm:px-6 lg:px-8 py-24 md:py-32 border-t border-white/5">
+    <div class="max-w-7xl mx-auto">
+      <div class="reveal mb-16 text-center">
+        <p class="font-sans text-sm tracking-[0.3em] uppercase text-accent mb-3">The Advantage</p>
+        <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-cream leading-tight">Why AI-powered<br><span class="italic font-normal text-muted">development?</span></h2>
+        <p class="font-sans text-base text-muted mt-6 max-w-2xl mx-auto">Traditional agencies charge $10K&ndash;$20K and take months. I use Claude Code and modern AI tools to deliver the same quality &mdash; faster and at a fraction of the cost.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="reveal glass-card stat-card rounded-2xl p-8">
+          <div class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-6">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C8FF00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h3 class="font-serif text-xl font-bold text-cream mb-3">Faster Delivery</h3>
+          <p class="font-sans text-sm text-muted leading-relaxed">Most sites go live within 1&ndash;2 weeks, not months. AI-assisted development means I write better code faster, with fewer revisions needed.</p>
+        </div>
+
+        <div class="reveal reveal-delay-1 glass-card stat-card rounded-2xl p-8">
+          <div class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-6">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C8FF00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <h3 class="font-serif text-xl font-bold text-cream mb-3">Better Value</h3>
+          <p class="font-sans text-sm text-muted leading-relaxed">No bloated agency overhead. You get enterprise-grade technology at tradie-friendly prices. From $2,500 for a complete website.</p>
+        </div>
+
+        <div class="reveal reveal-delay-2 glass-card stat-card rounded-2xl p-8">
+          <div class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-6">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C8FF00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+          <h3 class="font-serif text-xl font-bold text-cream mb-3">Higher Quality</h3>
+          <p class="font-sans text-sm text-muted leading-relaxed">Every site scores 95+ on Google PageSpeed. Fast sites rank higher on Google and convert more visitors into paying customers.</p>
         </div>
       </div>
     </div>
@@ -483,137 +444,16 @@
     <div class="max-w-4xl mx-auto text-center">
       <p class="reveal font-sans text-sm tracking-[0.3em] uppercase text-accent mb-6">Tech Stack</p>
       <div class="reveal flex flex-wrap justify-center gap-3">
-        <span class="service-tag font-sans text-sm text-muted px-5 py-2.5 rounded-full">Shopify Liquid</span>
-        <span class="service-tag font-sans text-sm text-muted px-5 py-2.5 rounded-full">Hydrogen / Remix</span>
+        <span class="service-tag font-sans text-sm text-muted px-5 py-2.5 rounded-full">Next.js</span>
         <span class="service-tag font-sans text-sm text-muted px-5 py-2.5 rounded-full">React</span>
         <span class="service-tag font-sans text-sm text-muted px-5 py-2.5 rounded-full">TypeScript</span>
         <span class="service-tag font-sans text-sm text-muted px-5 py-2.5 rounded-full">Tailwind CSS</span>
-        <span class="service-tag font-sans text-sm text-muted px-5 py-2.5 rounded-full">Alpine.js</span>
+        <span class="service-tag font-sans text-sm text-muted px-5 py-2.5 rounded-full">Vercel</span>
+        <span class="service-tag font-sans text-sm text-muted px-5 py-2.5 rounded-full">Supabase</span>
+        <span class="service-tag font-sans text-sm text-muted px-5 py-2.5 rounded-full">Claude Code</span>
         <span class="service-tag font-sans text-sm text-muted px-5 py-2.5 rounded-full">Node.js</span>
-        <span class="service-tag font-sans text-sm text-muted px-5 py-2.5 rounded-full">GraphQL</span>
-        <span class="service-tag font-sans text-sm text-muted px-5 py-2.5 rounded-full">Storefront API</span>
-        <span class="service-tag font-sans text-sm text-muted px-5 py-2.5 rounded-full">Figma</span>
+        <span class="service-tag font-sans text-sm text-muted px-5 py-2.5 rounded-full">PostgreSQL</span>
         <span class="service-tag font-sans text-sm text-muted px-5 py-2.5 rounded-full">Git / CI/CD</span>
-        <span class="service-tag font-sans text-sm text-muted px-5 py-2.5 rounded-full">Klaviyo</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- ======================== WORK / PROJECTS ======================== -->
-  <section id="work" class="px-4 sm:px-6 lg:px-8 py-24 md:py-32">
-    <div class="max-w-7xl mx-auto">
-      <div class="reveal flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-16">
-        <div>
-          <p class="font-sans text-sm tracking-[0.3em] uppercase text-accent mb-3">Selected Work</p>
-          <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-cream leading-tight">Projects that<br><span class="italic font-normal text-muted">moved the needle</span></h2>
-        </div>
-        <p class="font-sans text-muted text-base max-w-xs">Every project is a case study in converting browsers into buyers.</p>
-      </div>
-
-      <!-- Project Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-
-        <!-- Project 1 -->
-        <div class="reveal project-card glass-card rounded-2xl overflow-hidden cursor-pointer group" onclick="openModal('case1')">
-          <div class="aspect-[16/10] overflow-hidden bg-surfaceLight relative">
-            <img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=800&h=500&fit=crop" alt="MARA Botanicals skincare products on marble surface" class="project-img w-full h-full object-cover" loading="lazy">
-            <div class="absolute inset-0 bg-gradient-to-t from-surface/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
-              <span class="font-sans text-sm text-accent flex items-center gap-2">
-                View Case Study
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-              </span>
-            </div>
-          </div>
-          <div class="p-6">
-            <div class="flex items-center gap-3 mb-3">
-              <span class="font-sans text-xs uppercase tracking-wider text-accent bg-accent/10 px-3 py-1 rounded-full">Shopify Plus</span>
-              <span class="font-sans text-xs text-muted">2025</span>
-            </div>
-            <h3 class="font-serif text-xl md:text-2xl font-bold text-cream mb-2">MARA Botanicals</h3>
-            <p class="font-sans text-sm text-muted leading-relaxed">Full custom theme build for a DTC skincare brand. 42% increase in conversion rate, sub-2s load times.</p>
-          </div>
-        </div>
-
-        <!-- Project 2 -->
-        <div class="reveal reveal-delay-1 project-card glass-card rounded-2xl overflow-hidden cursor-pointer group" onclick="openModal('case2')">
-          <div class="aspect-[16/10] overflow-hidden bg-surfaceLight relative">
-            <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=800&h=500&fit=crop" alt="Volt Athletics performance sportswear in gym setting" class="project-img w-full h-full object-cover" loading="lazy">
-            <div class="absolute inset-0 bg-gradient-to-t from-surface/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
-              <span class="font-sans text-sm text-accent flex items-center gap-2">
-                View Case Study
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-              </span>
-            </div>
-          </div>
-          <div class="p-6">
-            <div class="flex items-center gap-3 mb-3">
-              <span class="font-sans text-xs uppercase tracking-wider text-accent bg-accent/10 px-3 py-1 rounded-full">Headless</span>
-              <span class="font-sans text-xs text-muted">2025</span>
-            </div>
-            <h3 class="font-serif text-xl md:text-2xl font-bold text-cream mb-2">Volt Athletics</h3>
-            <p class="font-sans text-sm text-muted leading-relaxed">Hydrogen-powered headless storefront for a performance sportswear brand. 98 Lighthouse score.</p>
-          </div>
-        </div>
-
-        <!-- Project 3 -->
-        <div class="reveal project-card glass-card rounded-2xl overflow-hidden cursor-pointer group" onclick="openModal('case3')">
-          <div class="aspect-[16/10] overflow-hidden bg-surfaceLight relative">
-            <img src="https://images.unsplash.com/photo-1603006905003-be475563bc59?w=800&h=500&fit=crop" alt="Haus of Ember luxury candles with warm lighting" class="project-img w-full h-full object-cover" loading="lazy">
-            <div class="absolute inset-0 bg-gradient-to-t from-surface/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
-              <span class="font-sans text-sm text-accent flex items-center gap-2">
-                View Case Study
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-              </span>
-            </div>
-          </div>
-          <div class="p-6">
-            <div class="flex items-center gap-3 mb-3">
-              <span class="font-sans text-xs uppercase tracking-wider text-accent bg-accent/10 px-3 py-1 rounded-full">Custom Theme</span>
-              <span class="font-sans text-xs text-muted">2024</span>
-            </div>
-            <h3 class="font-serif text-xl md:text-2xl font-bold text-cream mb-2">Haus of Ember</h3>
-            <p class="font-sans text-sm text-muted leading-relaxed">Luxury candle brand with immersive product pages and custom subscription flow. AOV up 67%.</p>
-          </div>
-        </div>
-
-        <!-- Project 4 -->
-        <div class="reveal reveal-delay-1 project-card glass-card rounded-2xl overflow-hidden cursor-pointer group" onclick="openModal('case4')">
-          <div class="aspect-[16/10] overflow-hidden bg-surfaceLight relative">
-            <img src="https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=800&h=500&fit=crop" alt="Kiln and Co artisan ceramics on display shelf" class="project-img w-full h-full object-cover" loading="lazy">
-            <div class="absolute inset-0 bg-gradient-to-t from-surface/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
-              <span class="font-sans text-sm text-accent flex items-center gap-2">
-                View Case Study
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-              </span>
-            </div>
-          </div>
-          <div class="p-6">
-            <div class="flex items-center gap-3 mb-3">
-              <span class="font-sans text-xs uppercase tracking-wider text-accent bg-accent/10 px-3 py-1 rounded-full">Migration</span>
-              <span class="font-sans text-xs text-muted">2024</span>
-            </div>
-            <h3 class="font-serif text-xl md:text-2xl font-bold text-cream mb-2">Kiln & Co</h3>
-            <p class="font-sans text-sm text-muted leading-relaxed">WooCommerce to Shopify Plus migration for artisan ceramics. Zero downtime, 3x faster checkout.</p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ======================== MID-PAGE CTA ======================== -->
-  <section class="px-4 sm:px-6 lg:px-8 py-16 md:py-20">
-    <div class="max-w-4xl mx-auto">
-      <div class="reveal glass-card rounded-3xl p-8 md:p-12 text-center relative overflow-hidden">
-        <div class="absolute w-[300px] h-[300px] bg-accent/5 rounded-full blur-[100px] -top-20 -left-20 pointer-events-none"></div>
-        <div class="relative z-10">
-          <h2 class="font-serif text-3xl md:text-4xl font-bold text-cream mb-4">Ready to upgrade your store<span class="text-accent">?</span></h2>
-          <p class="font-sans text-base text-muted mb-8 max-w-lg mx-auto">Let's talk about your project and see how we can turn your Shopify store into a conversion machine.</p>
-          <a href="#contact" class="btn-primary bg-accent text-surface font-sans font-semibold px-8 py-4 rounded-full text-base cursor-pointer inline-flex items-center gap-3 hover:bg-lime-300 transition-colors duration-200">
-            Get in Touch
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-          </a>
-        </div>
       </div>
     </div>
   </section>
@@ -622,111 +462,93 @@
   <section id="services" class="px-4 sm:px-6 lg:px-8 py-24 md:py-32 relative">
     <div class="max-w-7xl mx-auto">
       <div class="reveal mb-16">
-        <p class="font-sans text-sm tracking-[0.3em] uppercase text-accent mb-3">What I Do</p>
-        <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-cream leading-tight">Shopify, front to back<span class="text-accent">.</span></h2>
+        <p class="font-sans text-sm tracking-[0.3em] uppercase text-accent mb-3">Services</p>
+        <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-cream leading-tight">Everything your trade<br><span class="italic font-normal text-muted">business needs online</span></h2>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
         <!-- Service 1 -->
-        <div class="reveal glass-card stat-card service-card-click rounded-2xl p-8 relative" onclick="openModal('svc1')">
-          <div class="flex items-center justify-between mb-6">
-            <div class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C8FF00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
-            </div>
-            <span class="service-arrow text-accent"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+        <div class="reveal glass-card stat-card rounded-2xl p-8 relative">
+          <div class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-6">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C8FF00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
           </div>
-          <h3 class="font-serif text-xl font-bold text-cream mb-3">Custom Theme Development</h3>
-          <p class="font-sans text-sm text-muted leading-relaxed mb-6">Pixel-perfect Liquid themes built from scratch. No cookie-cutter templates. Every line of code tailored to your brand.</p>
+          <h3 class="font-serif text-xl font-bold text-cream mb-3">Business Website</h3>
+          <p class="font-sans text-sm text-muted leading-relaxed mb-6">A professional 5&ndash;10 page website that makes your business look as good as your work. Mobile-first, fast-loading, and built to rank on Google.</p>
           <div class="flex flex-wrap gap-2">
-            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">Liquid</span>
-            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">Tailwind</span>
-            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">Alpine.js</span>
+            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">Responsive Design</span>
+            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">SEO</span>
+            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">Contact Forms</span>
           </div>
         </div>
 
         <!-- Service 2 -->
-        <div class="reveal reveal-delay-1 glass-card stat-card service-card-click rounded-2xl p-8 relative" onclick="openModal('svc2')">
-          <div class="flex items-center justify-between mb-6">
-            <div class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C8FF00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-            </div>
-            <span class="service-arrow text-accent"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+        <div class="reveal reveal-delay-1 glass-card stat-card rounded-2xl p-8 relative">
+          <div class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-6">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C8FF00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
           </div>
-          <h3 class="font-serif text-xl font-bold text-cream mb-3">Headless & Hydrogen</h3>
-          <p class="font-sans text-sm text-muted leading-relaxed mb-6">Blazing-fast headless storefronts with Shopify Hydrogen and the Storefront API. Maximum performance, zero compromises.</p>
+          <h3 class="font-serif text-xl font-bold text-cream mb-3">Lead Generation System</h3>
+          <p class="font-sans text-sm text-muted leading-relaxed mb-6">Turn website visitors into booked jobs. Quote request forms, call tracking, Google Business integration, and automated follow-ups.</p>
           <div class="flex flex-wrap gap-2">
-            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">React</span>
-            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">Hydrogen</span>
-            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">Remix</span>
-          </div>
-        </div>
-
-        <!-- Service 3 -->
-        <div class="reveal reveal-delay-2 glass-card stat-card service-card-click rounded-2xl p-8 relative" onclick="openModal('svc3')">
-          <div class="flex items-center justify-between mb-6">
-            <div class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C8FF00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-            </div>
-            <span class="service-arrow text-accent"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
-          </div>
-          <h3 class="font-serif text-xl font-bold text-cream mb-3">CRO & Performance</h3>
-          <p class="font-sans text-sm text-muted leading-relaxed mb-6">Speed audits, Core Web Vitals optimization, and conversion rate improvements backed by data, not guesswork.</p>
-          <div class="flex flex-wrap gap-2">
-            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">Web Vitals</span>
-            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">A/B Testing</span>
+            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">Quote Forms</span>
+            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">Google Business</span>
             <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">Analytics</span>
           </div>
         </div>
 
-        <!-- Service 4 -->
-        <div class="reveal glass-card stat-card service-card-click rounded-2xl p-8 relative" onclick="openModal('svc4')">
-          <div class="flex items-center justify-between mb-6">
-            <div class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C8FF00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
-            </div>
-            <span class="service-arrow text-accent"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+        <!-- Service 3 -->
+        <div class="reveal reveal-delay-2 glass-card stat-card rounded-2xl p-8 relative">
+          <div class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-6">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C8FF00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
           </div>
-          <h3 class="font-serif text-xl font-bold text-cream mb-3">App & Integration</h3>
-          <p class="font-sans text-sm text-muted leading-relaxed mb-6">Custom Shopify apps, third-party integrations, and API work. Klaviyo, Recharge, ShipStation, and beyond.</p>
+          <h3 class="font-serif text-xl font-bold text-cream mb-3">Project Gallery</h3>
+          <p class="font-sans text-sm text-muted leading-relaxed mb-6">Showcase your best work with before &amp; after galleries, project case studies, and client testimonials that build trust and win jobs.</p>
           <div class="flex flex-wrap gap-2">
-            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">Node.js</span>
-            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">REST/GraphQL</span>
-            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">Webhooks</span>
+            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">Before/After</span>
+            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">Case Studies</span>
+            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">Reviews</span>
+          </div>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="reveal glass-card stat-card rounded-2xl p-8 relative">
+          <div class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-6">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C8FF00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <h3 class="font-serif text-xl font-bold text-cream mb-3">Local SEO</h3>
+          <p class="font-sans text-sm text-muted leading-relaxed mb-6">Get found when locals search "builder near me" or "plumber [your city]". On-page SEO, schema markup, and Google Business optimisation.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">Google Maps</span>
+            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">Schema Markup</span>
+            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">Local SEO</span>
           </div>
         </div>
 
         <!-- Service 5 -->
-        <div class="reveal reveal-delay-1 glass-card stat-card service-card-click rounded-2xl p-8 relative" onclick="openModal('svc5')">
-          <div class="flex items-center justify-between mb-6">
-            <div class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C8FF00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14.899A7 7 0 1115.71 8h1.79a4.5 4.5 0 012.5 8.242"/><path d="M12 12v9"/><path d="m8 17 4 4 4-4"/></svg>
-            </div>
-            <span class="service-arrow text-accent"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+        <div class="reveal reveal-delay-1 glass-card stat-card rounded-2xl p-8 relative">
+          <div class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-6">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C8FF00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
           </div>
-          <h3 class="font-serif text-xl font-bold text-cream mb-3">Store Migration</h3>
-          <p class="font-sans text-sm text-muted leading-relaxed mb-6">Seamless migrations from WooCommerce, Magento, or BigCommerce. Your data, your SEO equity, zero downtime.</p>
+          <h3 class="font-serif text-xl font-bold text-cream mb-3">Online Booking</h3>
+          <p class="font-sans text-sm text-muted leading-relaxed mb-6">Let customers book quotes and consultations directly from your website. Calendar integration, automated confirmations, and reminders.</p>
           <div class="flex flex-wrap gap-2">
-            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">Data Transfer</span>
-            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">SEO Preserve</span>
-            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">301 Redirects</span>
+            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">Calendar Sync</span>
+            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">Reminders</span>
+            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">Supabase</span>
           </div>
         </div>
 
         <!-- Service 6 -->
-        <div class="reveal reveal-delay-2 glass-card stat-card service-card-click rounded-2xl p-8 relative" onclick="openModal('svc6')">
-          <div class="flex items-center justify-between mb-6">
-            <div class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C8FF00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-            </div>
-            <span class="service-arrow text-accent"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+        <div class="reveal reveal-delay-2 glass-card stat-card rounded-2xl p-8 relative">
+          <div class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-6">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C8FF00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
           </div>
           <h3 class="font-serif text-xl font-bold text-cream mb-3">Ongoing Support</h3>
-          <p class="font-sans text-sm text-muted leading-relaxed mb-6">Retainer-based maintenance, feature updates, and technical support. Your store never stops improving.</p>
+          <p class="font-sans text-sm text-muted leading-relaxed mb-6">Monthly maintenance, content updates, performance monitoring, and priority support. Your site stays fast, secure, and up-to-date.</p>
           <div class="flex flex-wrap gap-2">
-            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">Retainer</span>
-            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">Bug Fixes</span>
+            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">Hosting</span>
             <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">Updates</span>
+            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">Monitoring</span>
           </div>
         </div>
 
@@ -739,181 +561,134 @@
     <div class="max-w-7xl mx-auto">
       <div class="reveal mb-16">
         <p class="font-sans text-sm tracking-[0.3em] uppercase text-accent mb-3">How It Works</p>
-        <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-cream leading-tight">From brief to<br><span class="italic font-normal text-muted">launch day</span></h2>
+        <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-cream leading-tight">From enquiry to<br><span class="italic font-normal text-muted">live in days</span></h2>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         <div class="reveal glass-card rounded-2xl p-8 relative">
           <span class="step-num">01</span>
           <div class="relative z-10">
-            <h3 class="font-serif text-xl font-bold text-cream mb-3">Discovery</h3>
-            <p class="font-sans text-sm text-muted leading-relaxed">Deep dive into your brand, goals, audience, and competitive landscape. No generic questionnaires.</p>
+            <h3 class="font-serif text-xl font-bold text-cream mb-3">Discovery Call</h3>
+            <p class="font-sans text-sm text-muted leading-relaxed">Quick 15-minute call to understand your business, your customers, and what you need from your website. No jargon, no pressure.</p>
           </div>
         </div>
 
         <div class="reveal reveal-delay-1 glass-card rounded-2xl p-8 relative">
           <span class="step-num">02</span>
           <div class="relative z-10">
-            <h3 class="font-serif text-xl font-bold text-cream mb-3">Design</h3>
-            <p class="font-sans text-sm text-muted leading-relaxed">High-fidelity mockups in Figma. You see exactly what you're getting before a single line of code is written.</p>
+            <h3 class="font-serif text-xl font-bold text-cream mb-3">Design &amp; Content</h3>
+            <p class="font-sans text-sm text-muted leading-relaxed">I'll put together a design mockup and content plan. You'll see exactly what your site will look like before any code is written.</p>
           </div>
         </div>
 
         <div class="reveal reveal-delay-2 glass-card rounded-2xl p-8 relative">
           <span class="step-num">03</span>
           <div class="relative z-10">
-            <h3 class="font-serif text-xl font-bold text-cream mb-3">Develop</h3>
-            <p class="font-sans text-sm text-muted leading-relaxed">Clean, performant code. Weekly demos so you're never in the dark. Built for speed and conversion.</p>
+            <h3 class="font-serif text-xl font-bold text-cream mb-3">Build with AI</h3>
+            <p class="font-sans text-sm text-muted leading-relaxed">Using Claude Code and modern tools, I build your site fast. You get a staging link to review and request changes in real-time.</p>
           </div>
         </div>
 
         <div class="reveal reveal-delay-3 glass-card rounded-2xl p-8 relative">
           <span class="step-num">04</span>
           <div class="relative z-10">
-            <h3 class="font-serif text-xl font-bold text-cream mb-3">Launch</h3>
-            <p class="font-sans text-sm text-muted leading-relaxed">Rigorous QA, performance testing, and a smooth go-live. Plus 30 days of post-launch support included.</p>
+            <h3 class="font-serif text-xl font-bold text-cream mb-3">Launch &amp; Support</h3>
+            <p class="font-sans text-sm text-muted leading-relaxed">Your site goes live on Vercel's global CDN. Lightning fast from Sydney to Auckland. 30 days of free support included.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ======================== TESTIMONIALS ======================== -->
-  <section id="testimonials" class="px-4 sm:px-6 lg:px-8 py-24 md:py-32">
+  <!-- ======================== MID-PAGE CTA ======================== -->
+  <section class="px-4 sm:px-6 lg:px-8 py-16 md:py-20">
+    <div class="max-w-4xl mx-auto">
+      <div class="reveal glass-card rounded-3xl p-8 md:p-12 text-center relative overflow-hidden">
+        <div class="absolute w-[300px] h-[300px] bg-accent/5 rounded-full blur-[100px] -top-20 -left-20 pointer-events-none"></div>
+        <div class="relative z-10">
+          <h2 class="font-serif text-3xl md:text-4xl font-bold text-cream mb-4">Still relying on word of mouth alone<span class="text-accent">?</span></h2>
+          <p class="font-sans text-base text-muted mb-8 max-w-lg mx-auto">Your competitors are getting found on Google. Let's make sure your next customer finds you first.</p>
+          <a href="#contact" class="btn-primary bg-accent text-surface font-sans font-semibold px-8 py-4 rounded-full text-base cursor-pointer inline-flex items-center gap-3 hover:bg-lime-300 transition-colors duration-200">
+            Get a Free Quote
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== WHAT YOU GET ======================== -->
+  <section class="px-4 sm:px-6 lg:px-8 py-24 md:py-32 border-t border-white/5">
     <div class="max-w-7xl mx-auto">
-      <div class="reveal mb-16">
-        <p class="font-sans text-sm tracking-[0.3em] uppercase text-accent mb-3">Client Words</p>
-        <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-cream leading-tight">Don't take my<br><span class="italic font-normal text-muted">word for it</span></h2>
+      <div class="reveal mb-16 text-center">
+        <p class="font-sans text-sm tracking-[0.3em] uppercase text-accent mb-3">Every Site Includes</p>
+        <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-cream leading-tight">No hidden extras<span class="text-accent">.</span><br><span class="italic font-normal text-muted">Everything you need, included.</span></h2>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-
-        <div class="reveal glass-card rounded-2xl p-8 relative">
-          <span class="quote-mark">"</span>
-          <div class="relative z-10">
-            <div class="flex gap-1 mb-4">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="#C8FF00"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="#C8FF00"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="#C8FF00"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="#C8FF00"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="#C8FF00"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            </div>
-            <p class="font-sans text-base text-cream/80 leading-relaxed mb-6">"Maksym didn't just build us a store, he built us a revenue machine. Our conversion rate doubled in the first month. He understood our brand vision on day one and translated it into an experience our customers genuinely love."</p>
-            <div class="flex items-center gap-3">
-              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&h=80&fit=crop&crop=face" alt="Sarah Linden" class="w-10 h-10 rounded-full object-cover">
-              <div>
-                <p class="font-sans text-sm font-semibold text-cream">Sarah Linden</p>
-                <p class="font-sans text-xs text-muted">Founder, MARA Botanicals</p>
-              </div>
-            </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="reveal glass-card rounded-2xl p-6 text-center">
+          <div class="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center mx-auto mb-4">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C8FF00" stroke-width="1.5"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
           </div>
+          <h3 class="font-sans text-sm font-semibold text-cream mb-1">Mobile-First Design</h3>
+          <p class="font-sans text-xs text-muted">Looks perfect on every device</p>
         </div>
 
-        <div class="reveal reveal-delay-1 glass-card rounded-2xl p-8 relative">
-          <span class="quote-mark">"</span>
-          <div class="relative z-10">
-            <div class="flex gap-1 mb-4">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="#C8FF00"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="#C8FF00"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="#C8FF00"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="#C8FF00"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="#C8FF00"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            </div>
-            <p class="font-sans text-base text-cream/80 leading-relaxed mb-6">"The headless build was flawless. Our site loads instantly and the customer experience is unreal. We've had customers literally comment on how fast the site is. Worth every penny."</p>
-            <div class="flex items-center gap-3">
-              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face" alt="Marcus Rivera" class="w-10 h-10 rounded-full object-cover">
-              <div>
-                <p class="font-sans text-sm font-semibold text-cream">Marcus Rivera</p>
-                <p class="font-sans text-xs text-muted">CEO, Volt Athletics</p>
-              </div>
-            </div>
+        <div class="reveal reveal-delay-1 glass-card rounded-2xl p-6 text-center">
+          <div class="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center mx-auto mb-4">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C8FF00" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
           </div>
+          <h3 class="font-sans text-sm font-semibold text-cream mb-1">95+ PageSpeed</h3>
+          <p class="font-sans text-xs text-muted">Blazing fast load times</p>
         </div>
 
-        <div class="reveal reveal-delay-2 glass-card rounded-2xl p-8 relative">
-          <span class="quote-mark">"</span>
-          <div class="relative z-10">
-            <div class="flex gap-1 mb-4">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="#C8FF00"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="#C8FF00"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="#C8FF00"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="#C8FF00"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="#C8FF00"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            </div>
-            <p class="font-sans text-base text-cream/80 leading-relaxed mb-6">"Migrated us from WooCommerce with zero issues. SEO rankings didn't drop a single position. Checkout is 3x faster. The most professional developer I've worked with."</p>
-            <div class="flex items-center gap-3">
-              <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&h=80&fit=crop&crop=face" alt="James Kirkwood" class="w-10 h-10 rounded-full object-cover">
-              <div>
-                <p class="font-sans text-sm font-semibold text-cream">James Kirkwood</p>
-                <p class="font-sans text-xs text-muted">Co-founder, Kiln & Co</p>
-              </div>
-            </div>
+        <div class="reveal reveal-delay-2 glass-card rounded-2xl p-6 text-center">
+          <div class="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center mx-auto mb-4">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C8FF00" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
           </div>
+          <h3 class="font-sans text-sm font-semibold text-cream mb-1">SSL &amp; Security</h3>
+          <p class="font-sans text-xs text-muted">HTTPS included on every site</p>
         </div>
 
-        <div class="reveal glass-card rounded-2xl p-8 relative">
-          <span class="quote-mark">"</span>
-          <div class="relative z-10">
-            <div class="flex gap-1 mb-4">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="#C8FF00"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="#C8FF00"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="#C8FF00"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="#C8FF00"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="#C8FF00"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            </div>
-            <p class="font-sans text-base text-cream/80 leading-relaxed mb-6">"Our subscription candle box went from a clunky third-party checkout to a seamless native flow. Subscriber churn dropped 34% in the first quarter. Maksym thinks about the business, not just the code."</p>
-            <div class="flex items-center gap-3">
-              <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&h=80&fit=crop&crop=face" alt="Nadia Chen" class="w-10 h-10 rounded-full object-cover">
-              <div>
-                <p class="font-sans text-sm font-semibold text-cream">Nadia Chen</p>
-                <p class="font-sans text-xs text-muted">Brand Director, Haus of Ember</p>
-              </div>
-            </div>
+        <div class="reveal reveal-delay-3 glass-card rounded-2xl p-6 text-center">
+          <div class="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center mx-auto mb-4">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C8FF00" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
           </div>
+          <h3 class="font-sans text-sm font-semibold text-cream mb-1">SEO Foundations</h3>
+          <p class="font-sans text-xs text-muted">Built to rank on Google</p>
         </div>
 
-        <div class="reveal reveal-delay-1 glass-card rounded-2xl p-8 relative">
-          <span class="quote-mark">"</span>
-          <div class="relative z-10">
-            <div class="flex gap-1 mb-4">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="#C8FF00"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="#C8FF00"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="#C8FF00"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="#C8FF00"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="#C8FF00"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            </div>
-            <p class="font-sans text-base text-cream/80 leading-relaxed mb-6">"We needed a custom Klaviyo integration that synced real-time inventory with our email flows. Maksym built it in a week and it's been bulletproof since. He's our first call for anything Shopify."</p>
-            <div class="flex items-center gap-3">
-              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=80&h=80&fit=crop&crop=face" alt="Daniel Osei" class="w-10 h-10 rounded-full object-cover">
-              <div>
-                <p class="font-sans text-sm font-semibold text-cream">Daniel Osei</p>
-                <p class="font-sans text-xs text-muted">CTO, Provisions & Co</p>
-              </div>
-            </div>
+        <div class="reveal glass-card rounded-2xl p-6 text-center">
+          <div class="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center mx-auto mb-4">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C8FF00" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
           </div>
+          <h3 class="font-sans text-sm font-semibold text-cream mb-1">Contact Forms</h3>
+          <p class="font-sans text-xs text-muted">Enquiry &amp; quote request forms</p>
         </div>
 
-        <div class="reveal reveal-delay-2 glass-card rounded-2xl p-8 relative">
-          <span class="quote-mark">"</span>
-          <div class="relative z-10">
-            <div class="flex gap-1 mb-4">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="#C8FF00"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="#C8FF00"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="#C8FF00"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="#C8FF00"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="#C8FF00"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            </div>
-            <p class="font-sans text-base text-cream/80 leading-relaxed mb-6">"We were on a tight Black Friday deadline. Maksym delivered a complete redesign plus a custom bundle builder in 3 weeks flat. That BFCM was our biggest ever, $480K in a single weekend."</p>
-            <div class="flex items-center gap-3">
-              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=80&h=80&fit=crop&crop=face" alt="Priya Sharma" class="w-10 h-10 rounded-full object-cover">
-              <div>
-                <p class="font-sans text-sm font-semibold text-cream">Priya Sharma</p>
-                <p class="font-sans text-xs text-muted">CEO, Thread & Bone</p>
-              </div>
-            </div>
+        <div class="reveal reveal-delay-1 glass-card rounded-2xl p-6 text-center">
+          <div class="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center mx-auto mb-4">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C8FF00" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
           </div>
+          <h3 class="font-sans text-sm font-semibold text-cream mb-1">Google Maps</h3>
+          <p class="font-sans text-xs text-muted">Service area maps embedded</p>
         </div>
 
+        <div class="reveal reveal-delay-2 glass-card rounded-2xl p-6 text-center">
+          <div class="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center mx-auto mb-4">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C8FF00" stroke-width="1.5"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+          </div>
+          <h3 class="font-sans text-sm font-semibold text-cream mb-1">Content Writing</h3>
+          <p class="font-sans text-xs text-muted">Professional copy included</p>
+        </div>
+
+        <div class="reveal reveal-delay-3 glass-card rounded-2xl p-6 text-center">
+          <div class="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center mx-auto mb-4">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C8FF00" stroke-width="1.5"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg>
+          </div>
+          <h3 class="font-sans text-sm font-semibold text-cream mb-1">Analytics</h3>
+          <p class="font-sans text-xs text-muted">Track visitors &amp; enquiries</p>
+        </div>
       </div>
     </div>
   </section>
@@ -923,21 +698,24 @@
     <div class="max-w-7xl mx-auto">
       <div class="reveal text-center mb-16">
         <p class="font-sans text-sm tracking-[0.3em] uppercase text-accent mb-3">Pricing</p>
-        <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-cream leading-tight">Transparent<br><span class="italic font-normal text-muted">pricing</span></h2>
-        <p class="font-sans text-base text-muted mt-4 max-w-lg mx-auto">Every project gets a detailed proposal with fixed pricing. No hourly surprises, no hidden fees.</p>
+        <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-cream leading-tight">Straight-up<br><span class="italic font-normal text-muted">pricing</span></h2>
+        <p class="font-sans text-base text-muted mt-4 max-w-lg mx-auto">Fixed prices. No hourly rates, no surprise invoices. You know exactly what you're paying before we start.</p>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <!-- Tier 1 -->
         <div class="reveal glass-card rounded-2xl p-8 flex flex-col">
           <p class="font-serif text-xl font-bold text-cream mb-1">Starter</p>
-          <p class="font-sans text-sm text-muted mb-4">Quick wins &amp; smaller scopes</p>
-          <p class="font-serif text-4xl font-bold text-cream mb-1">$5K<span class="text-lg font-normal text-muted"> – $10K</span></p>
-          <p class="font-sans text-xs text-muted mb-8">Fixed project fee</p>
+          <p class="font-sans text-sm text-muted mb-4">Get online &amp; look professional</p>
+          <p class="font-serif text-4xl font-bold text-cream mb-1">$2,500</p>
+          <p class="font-sans text-xs text-muted mb-8">One-off payment (AUD)</p>
           <ul class="space-y-3 mb-8 flex-1">
-            <li class="font-sans text-sm text-muted flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>Speed &amp; performance optimization</li>
-            <li class="font-sans text-sm text-muted flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>Single-page or landing page builds</li>
-            <li class="font-sans text-sm text-muted flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>Bug fixes &amp; theme tweaks</li>
-            <li class="font-sans text-sm text-muted flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>Basic app integrations</li>
+            <li class="font-sans text-sm text-muted flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>5-page responsive website</li>
+            <li class="font-sans text-sm text-muted flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>Mobile-first design</li>
+            <li class="font-sans text-sm text-muted flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>Contact &amp; quote request form</li>
+            <li class="font-sans text-sm text-muted flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>Google Maps &amp; service areas</li>
+            <li class="font-sans text-sm text-muted flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>Basic SEO setup</li>
+            <li class="font-sans text-sm text-muted flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>SSL &amp; analytics</li>
+            <li class="font-sans text-sm text-muted flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>30 days post-launch support</li>
           </ul>
           <a href="#contact" class="btn-primary bg-white/5 border border-white/10 text-cream font-sans font-semibold px-6 py-3 rounded-full text-sm cursor-pointer inline-flex items-center justify-center gap-2 hover:border-accent/30 transition-colors duration-200">Get Started <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
         </div>
@@ -946,47 +724,55 @@
           <div class="absolute -top-3 left-1/2 -translate-x-1/2">
             <span class="font-sans text-xs font-semibold text-surface bg-accent px-4 py-1 rounded-full">Most Popular</span>
           </div>
-          <p class="font-serif text-xl font-bold text-cream mb-1">Growth</p>
-          <p class="font-sans text-sm text-muted mb-4">Full builds &amp; redesigns</p>
-          <p class="font-serif text-4xl font-bold text-accent mb-1">$10K<span class="text-lg font-normal text-muted"> – $25K</span></p>
-          <p class="font-sans text-xs text-muted mb-8">Fixed project fee</p>
+          <p class="font-serif text-xl font-bold text-cream mb-1">Professional</p>
+          <p class="font-sans text-sm text-muted mb-4">Full site + lead generation</p>
+          <p class="font-serif text-4xl font-bold text-accent mb-1">$5,000</p>
+          <p class="font-sans text-xs text-muted mb-8">One-off payment (AUD)</p>
           <ul class="space-y-3 mb-8 flex-1">
-            <li class="font-sans text-sm text-muted flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>Full custom Shopify theme</li>
-            <li class="font-sans text-sm text-muted flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>CRO audit &amp; implementation</li>
-            <li class="font-sans text-sm text-muted flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>Store migration (any platform)</li>
-            <li class="font-sans text-sm text-muted flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>Figma design + development</li>
-            <li class="font-sans text-sm text-muted flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>30 days post-launch support</li>
+            <li class="font-sans text-sm text-muted flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>Everything in Starter</li>
+            <li class="font-sans text-sm text-muted flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>Up to 10 pages</li>
+            <li class="font-sans text-sm text-muted flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>Project gallery with before/after</li>
+            <li class="font-sans text-sm text-muted flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>Online quote request system</li>
+            <li class="font-sans text-sm text-muted flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>Google Business integration</li>
+            <li class="font-sans text-sm text-muted flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>Professional copywriting</li>
+            <li class="font-sans text-sm text-muted flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>60 days post-launch support</li>
           </ul>
-          <a href="#contact" class="btn-primary bg-accent text-surface font-sans font-semibold px-6 py-3 rounded-full text-sm cursor-pointer inline-flex items-center justify-center gap-2 hover:bg-lime-300 transition-colors duration-200">Start a Project <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+          <a href="#contact" class="btn-primary bg-accent text-surface font-sans font-semibold px-6 py-3 rounded-full text-sm cursor-pointer inline-flex items-center justify-center gap-2 hover:bg-lime-300 transition-colors duration-200">Get Started <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
         </div>
         <!-- Tier 3 -->
         <div class="reveal reveal-delay-2 glass-card rounded-2xl p-8 flex flex-col">
-          <p class="font-serif text-xl font-bold text-cream mb-1">Scale</p>
-          <p class="font-sans text-sm text-muted mb-4">Headless &amp; enterprise</p>
-          <p class="font-serif text-4xl font-bold text-cream mb-1">$25K<span class="text-lg font-normal text-muted">+</span></p>
-          <p class="font-sans text-xs text-muted mb-8">Fixed project fee</p>
+          <p class="font-serif text-xl font-bold text-cream mb-1">Premium</p>
+          <p class="font-sans text-sm text-muted mb-4">Full digital package</p>
+          <p class="font-serif text-4xl font-bold text-cream mb-1">$8,500</p>
+          <p class="font-sans text-xs text-muted mb-8">One-off payment (AUD)</p>
           <ul class="space-y-3 mb-8 flex-1">
-            <li class="font-sans text-sm text-muted flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>Hydrogen / headless storefront</li>
-            <li class="font-sans text-sm text-muted flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>Shopify Plus setup &amp; scripting</li>
-            <li class="font-sans text-sm text-muted flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>Multi-channel / international</li>
-            <li class="font-sans text-sm text-muted flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>Custom app development</li>
-            <li class="font-sans text-sm text-muted flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>Dedicated Slack + priority support</li>
+            <li class="font-sans text-sm text-muted flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>Everything in Professional</li>
+            <li class="font-sans text-sm text-muted flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>Unlimited pages</li>
+            <li class="font-sans text-sm text-muted flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>Client portal &amp; dashboard</li>
+            <li class="font-sans text-sm text-muted flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>Online booking system</li>
+            <li class="font-sans text-sm text-muted flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>CRM integration (Supabase)</li>
+            <li class="font-sans text-sm text-muted flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>Blog / content section</li>
+            <li class="font-sans text-sm text-muted flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>90 days priority support</li>
           </ul>
-          <a href="#contact" class="btn-primary bg-white/5 border border-white/10 text-cream font-sans font-semibold px-6 py-3 rounded-full text-sm cursor-pointer inline-flex items-center justify-center gap-2 hover:border-accent/30 transition-colors duration-200">Let's Talk <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+          <a href="#contact" class="btn-primary bg-white/5 border border-white/10 text-cream font-sans font-semibold px-6 py-3 rounded-full text-sm cursor-pointer inline-flex items-center justify-center gap-2 hover:border-accent/30 transition-colors duration-200">Get Started <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
         </div>
       </div>
-      <p class="reveal font-sans text-xs text-muted text-center mt-8">All prices in USD. Monthly retainers also available from $2K/mo.</p>
+      <div class="reveal glass-card rounded-2xl p-6 md:p-8 mt-6 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div>
+          <p class="font-serif text-xl font-bold text-cream">Ongoing Maintenance</p>
+          <p class="font-sans text-sm text-muted">Hosting, updates, support, performance monitoring &amp; monthly analytics report.</p>
+        </div>
+        <div class="text-right flex-shrink-0">
+          <p class="font-serif text-3xl font-bold text-accent">$199<span class="text-lg font-normal text-muted">/mo</span></p>
+          <p class="font-sans text-xs text-muted">AUD, cancel anytime</p>
+        </div>
+      </div>
+      <p class="reveal font-sans text-xs text-muted text-center mt-8">All prices in AUD and exclude GST. Payment plans available on request.</p>
     </div>
   </section>
 
   <!-- ======================== FAQ ======================== -->
   <section id="faq" class="px-4 sm:px-6 lg:px-8 py-24 md:py-32">
-    <style>
-      .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
-      .faq-item.active .faq-answer { max-height: 300px; }
-      .faq-icon { transition: transform 0.3s ease; }
-      .faq-item.active .faq-icon { transform: rotate(45deg); }
-    </style>
     <div class="max-w-3xl mx-auto">
       <div class="reveal text-center mb-16">
         <p class="font-sans text-sm tracking-[0.3em] uppercase text-accent mb-3">FAQ</p>
@@ -995,100 +781,67 @@
       <div class="space-y-4" id="faqContainer">
         <div class="reveal faq-item glass-card rounded-2xl">
           <button class="faq-btn w-full text-left p-6 flex justify-between items-center gap-4 cursor-pointer bg-transparent border-none" aria-expanded="false">
-            <span class="font-serif text-lg font-bold text-cream">How much does a typical Shopify project cost?</span>
+            <span class="font-serif text-lg font-bold text-cream">How long does it take to build my website?</span>
             <svg class="faq-icon w-5 h-5 text-accent flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
           </button>
           <div class="faq-answer">
-            <p class="px-6 pb-6 font-sans text-sm text-muted leading-relaxed">Every project is scoped individually, but most custom theme builds fall in the $10K–$25K range. Headless/Hydrogen builds typically start at $25K+. I always provide a detailed proposal with fixed pricing before any work begins — no surprise invoices.</p>
+            <p class="px-6 pb-6 font-sans text-sm text-muted leading-relaxed">Most Starter sites go live within 5&ndash;7 business days. Professional sites take 1&ndash;2 weeks, and Premium packages 2&ndash;3 weeks. Because I use AI-powered development with Claude Code, I can build significantly faster than traditional agencies without sacrificing quality. The main variable is how quickly you can provide content like photos and copy.</p>
           </div>
         </div>
         <div class="reveal reveal-delay-1 faq-item glass-card rounded-2xl">
           <button class="faq-btn w-full text-left p-6 flex justify-between items-center gap-4 cursor-pointer bg-transparent border-none" aria-expanded="false">
-            <span class="font-serif text-lg font-bold text-cream">What's your typical project timeline?</span>
+            <span class="font-serif text-lg font-bold text-cream">I'm not tech-savvy. Will I be able to update my site?</span>
             <svg class="faq-icon w-5 h-5 text-accent flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
           </button>
           <div class="faq-answer">
-            <p class="px-6 pb-6 font-sans text-sm text-muted leading-relaxed">Custom themes take 6–10 weeks from kickoff to launch. Headless builds run 10–16 weeks. Migrations are usually 3–8 weeks depending on catalog size. I provide a detailed timeline with weekly milestones so you always know where things stand.</p>
+            <p class="px-6 pb-6 font-sans text-sm text-muted leading-relaxed">You won't need to. That's what the monthly maintenance plan is for &mdash; I handle all updates, content changes, and technical work. If you want to add a new project photo or update your phone number, just send me a text or email and it'll be done within 24 hours. No logging into dashboards or learning CMS tools.</p>
           </div>
         </div>
         <div class="reveal reveal-delay-2 faq-item glass-card rounded-2xl">
           <button class="faq-btn w-full text-left p-6 flex justify-between items-center gap-4 cursor-pointer bg-transparent border-none" aria-expanded="false">
-            <span class="font-serif text-lg font-bold text-cream">Do you work with international clients?</span>
+            <span class="font-serif text-lg font-bold text-cream">What do I need to provide?</span>
             <svg class="faq-icon w-5 h-5 text-accent flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
           </button>
           <div class="faq-answer">
-            <p class="px-6 pb-6 font-sans text-sm text-muted leading-relaxed">Absolutely. While I'm based in Melbourne, Australia, most of my clients are in the US, UK, and Europe. I'm flexible with time zones and use async communication (Loom, Slack, Notion) to keep projects moving without scheduling headaches.</p>
+            <p class="px-6 pb-6 font-sans text-sm text-muted leading-relaxed">At minimum: your logo, photos of your work (phone photos are fine), a list of your services, and your contact details. I'll handle the rest &mdash; professional copywriting, design, development, and launch. If you don't have a logo, I can sort that out too.</p>
           </div>
         </div>
         <div class="reveal faq-item glass-card rounded-2xl">
           <button class="faq-btn w-full text-left p-6 flex justify-between items-center gap-4 cursor-pointer bg-transparent border-none" aria-expanded="false">
-            <span class="font-serif text-lg font-bold text-cream">What kind of post-launch support do you offer?</span>
+            <span class="font-serif text-lg font-bold text-cream">What does the $199/month cover?</span>
             <svg class="faq-icon w-5 h-5 text-accent flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
           </button>
           <div class="faq-answer">
-            <p class="px-6 pb-6 font-sans text-sm text-muted leading-relaxed">Every project includes 30 days of complimentary post-launch support for bug fixes and minor adjustments. For ongoing work, I offer monthly retainer plans starting at 10 hours/month. Most of my clients stay on retainer because their stores never stop evolving.</p>
+            <p class="px-6 pb-6 font-sans text-sm text-muted leading-relaxed">Hosting on Vercel's global CDN, SSL certificate, uptime monitoring, security updates, monthly performance reports, content updates (new photos, text changes, adding projects), and priority email/phone support. It's everything you need to keep your site running fast and looking great. Cancel anytime with 30 days notice.</p>
           </div>
         </div>
         <div class="reveal reveal-delay-1 faq-item glass-card rounded-2xl">
           <button class="faq-btn w-full text-left p-6 flex justify-between items-center gap-4 cursor-pointer bg-transparent border-none" aria-expanded="false">
-            <span class="font-serif text-lg font-bold text-cream">Do you work with designers, or do you handle design too?</span>
+            <span class="font-serif text-lg font-bold text-cream">Do you work with businesses across all of Australia and NZ?</span>
             <svg class="faq-icon w-5 h-5 text-accent flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
           </button>
           <div class="faq-answer">
-            <p class="px-6 pb-6 font-sans text-sm text-muted leading-relaxed">Both. I'm comfortable taking a Figma file from your designer and building it pixel-perfect, or I can handle the full design-to-development process myself. For larger projects, I collaborate with a trusted network of UI/UX designers who specialize in e-commerce.</p>
+            <p class="px-6 pb-6 font-sans text-sm text-muted leading-relaxed">Yes. Everything is done remotely &mdash; we'll have a quick call to kick things off, then I handle the rest. I've worked with tradies from Perth to Christchurch. As long as you can send photos and answer a few questions, we're good to go. Same timezone makes communication easy.</p>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ======================== INSIGHTS ======================== -->
-  <section id="insights" class="px-4 sm:px-6 lg:px-8 py-24 md:py-32">
-    <div class="max-w-7xl mx-auto">
-      <div class="reveal mb-16">
-        <p class="font-sans text-sm tracking-[0.3em] uppercase text-accent mb-3">Insights</p>
-        <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-cream leading-tight">Thoughts on<br><span class="italic font-normal text-muted">commerce &amp; code</span></h2>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <article class="reveal glass-card rounded-2xl overflow-hidden group cursor-pointer">
-          <div class="aspect-[16/10] overflow-hidden bg-surfaceLight">
-            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=500&fit=crop" alt="Performance analytics dashboard on laptop" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+        <div class="reveal faq-item glass-card rounded-2xl">
+          <button class="faq-btn w-full text-left p-6 flex justify-between items-center gap-4 cursor-pointer bg-transparent border-none" aria-expanded="false">
+            <span class="font-serif text-lg font-bold text-cream">What makes your sites different from Wix or Squarespace?</span>
+            <svg class="faq-icon w-5 h-5 text-accent flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p class="px-6 pb-6 font-sans text-sm text-muted leading-relaxed">Speed and SEO. Wix and Squarespace sites are notoriously slow and bloated. My sites are custom-coded with Next.js and hosted on Vercel &mdash; the same infrastructure used by Fortune 500 companies. That means sub-second load times, 95+ Google PageSpeed scores, and better search rankings. You can't get that from a drag-and-drop builder. Plus, you don't have to build it yourself.</p>
           </div>
-          <div class="p-6">
-            <div class="flex items-center gap-3 mb-3">
-              <span class="font-sans text-xs uppercase tracking-wider text-accent bg-accent/10 px-3 py-1 rounded-full">Performance</span>
-              <span class="font-sans text-xs text-muted">5 min read</span>
-            </div>
-            <h3 class="font-serif text-lg font-bold text-cream mb-2">7 Shopify Performance Fixes That Actually Move the Needle</h3>
-            <p class="font-sans text-sm text-muted leading-relaxed">Most Shopify speed guides rehash the same advice. Here are the fixes that actually impact your Core Web Vitals and conversion rate.</p>
+        </div>
+        <div class="reveal reveal-delay-1 faq-item glass-card rounded-2xl">
+          <button class="faq-btn w-full text-left p-6 flex justify-between items-center gap-4 cursor-pointer bg-transparent border-none" aria-expanded="false">
+            <span class="font-serif text-lg font-bold text-cream">Can I pay in instalments?</span>
+            <svg class="faq-icon w-5 h-5 text-accent flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p class="px-6 pb-6 font-sans text-sm text-muted leading-relaxed">Absolutely. Standard terms are 50% upfront and 50% on launch. For Premium packages, I can split it into three payments. Happy to discuss what works for your cash flow.</p>
           </div>
-        </article>
-        <article class="reveal reveal-delay-1 glass-card rounded-2xl overflow-hidden group cursor-pointer">
-          <div class="aspect-[16/10] overflow-hidden bg-surfaceLight">
-            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&h=500&fit=crop" alt="Code editor showing React and Liquid code" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
-          </div>
-          <div class="p-6">
-            <div class="flex items-center gap-3 mb-3">
-              <span class="font-sans text-xs uppercase tracking-wider text-accent bg-accent/10 px-3 py-1 rounded-full">Development</span>
-              <span class="font-sans text-xs text-muted">8 min read</span>
-            </div>
-            <h3 class="font-serif text-lg font-bold text-cream mb-2">Hydrogen vs Liquid: A Decision Framework for 2026</h3>
-            <p class="font-sans text-sm text-muted leading-relaxed">When does headless make sense? A practical guide to choosing between Shopify's Liquid themes and Hydrogen storefronts.</p>
-          </div>
-        </article>
-        <article class="reveal reveal-delay-2 glass-card rounded-2xl overflow-hidden group cursor-pointer">
-          <div class="aspect-[16/10] overflow-hidden bg-surfaceLight">
-            <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&h=500&fit=crop" alt="Checkout conversion optimization data" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
-          </div>
-          <div class="p-6">
-            <div class="flex items-center gap-3 mb-3">
-              <span class="font-sans text-xs uppercase tracking-wider text-accent bg-accent/10 px-3 py-1 rounded-full">Case Study</span>
-              <span class="font-sans text-xs text-muted">6 min read</span>
-            </div>
-            <h3 class="font-serif text-lg font-bold text-cream mb-2">How We Lifted Checkout Conversions 42% for a DTC Brand</h3>
-            <p class="font-sans text-sm text-muted leading-relaxed">A deep dive into the CRO tactics, UX changes, and technical optimizations that doubled a skincare brand's conversion rate.</p>
-          </div>
-        </article>
+        </div>
       </div>
     </div>
   </section>
@@ -1101,9 +854,9 @@
         <div class="absolute w-[400px] h-[400px] bg-accent/5 rounded-full blur-[120px] -top-40 -right-40 pointer-events-none"></div>
 
         <div class="relative z-10 max-w-2xl">
-          <p class="font-sans text-sm tracking-[0.3em] uppercase text-accent mb-4">Start a Project</p>
-          <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-cream leading-tight mb-6">Let's build something<br><span class="italic font-normal text-muted">your competitors envy</span></h2>
-          <p class="font-sans text-base text-muted leading-relaxed mb-10 max-w-lg">Ready to transform your Shopify store? Tell me about your project and I'll get back to you within 24 hours.</p>
+          <p class="font-sans text-sm tracking-[0.3em] uppercase text-accent mb-4">Get a Quote</p>
+          <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-cream leading-tight mb-6">Let's get your<br><span class="italic font-normal text-muted">business online</span></h2>
+          <p class="font-sans text-base text-muted leading-relaxed mb-10 max-w-lg">Tell me about your business and I'll get back to you within 24 hours with a no-obligation quote.</p>
 
           <form class="space-y-6" id="contactForm" action="#" method="POST">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -1113,19 +866,42 @@
               </div>
               <div>
                 <label for="email" class="font-sans text-xs uppercase tracking-wider text-muted mb-2 block">Email</label>
-                <input type="email" id="email" name="email" required class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 font-sans text-sm text-cream placeholder:text-muted/50 focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/20 transition-colors duration-200" placeholder="you@company.com">
+                <input type="email" id="email" name="email" required class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 font-sans text-sm text-cream placeholder:text-muted/50 focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/20 transition-colors duration-200" placeholder="you@yourbusiness.com.au">
+              </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label for="phone" class="font-sans text-xs uppercase tracking-wider text-muted mb-2 block">Phone</label>
+                <input type="tel" id="phone" name="phone" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 font-sans text-sm text-cream placeholder:text-muted/50 focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/20 transition-colors duration-200" placeholder="04XX XXX XXX">
+              </div>
+              <div>
+                <label for="trade" class="font-sans text-xs uppercase tracking-wider text-muted mb-2 block">Your Trade</label>
+                <select id="trade" name="trade" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 font-sans text-sm text-cream focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/20 transition-colors duration-200 appearance-none cursor-pointer">
+                  <option value="" class="bg-surface">Select your trade</option>
+                  <option value="builder" class="bg-surface">Builder / Construction</option>
+                  <option value="electrician" class="bg-surface">Electrician</option>
+                  <option value="plumber" class="bg-surface">Plumber</option>
+                  <option value="roofer" class="bg-surface">Roofer</option>
+                  <option value="landscaper" class="bg-surface">Landscaper</option>
+                  <option value="concreter" class="bg-surface">Concreter</option>
+                  <option value="painter" class="bg-surface">Painter</option>
+                  <option value="fencer" class="bg-surface">Fencer</option>
+                  <option value="hvac" class="bg-surface">HVAC / Air Conditioning</option>
+                  <option value="demolition" class="bg-surface">Demolition</option>
+                  <option value="other" class="bg-surface">Other Trade</option>
+                </select>
               </div>
             </div>
             <div>
-              <label for="project" class="font-sans text-xs uppercase tracking-wider text-muted mb-2 block">Tell me about your project</label>
-              <textarea id="project" name="project" rows="4" required class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 font-sans text-sm text-cream placeholder:text-muted/50 focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/20 transition-colors duration-200 resize-none" placeholder="What are you building? Budget range? Timeline?"></textarea>
+              <label for="project" class="font-sans text-xs uppercase tracking-wider text-muted mb-2 block">Tell me about your business</label>
+              <textarea id="project" name="project" rows="4" required class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 font-sans text-sm text-cream placeholder:text-muted/50 focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/20 transition-colors duration-200 resize-none" placeholder="What does your business do? Do you have an existing website? What package interests you?"></textarea>
             </div>
             <div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
               <button type="submit" class="btn-primary bg-accent text-surface font-sans font-semibold px-8 py-4 rounded-full text-base cursor-pointer inline-flex items-center gap-3 hover:bg-lime-300 transition-colors duration-200">
-                Send Message
+                Send Enquiry
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
               </button>
-              <span class="font-sans text-xs text-muted">Typically respond within 24 hours</span>
+              <span class="font-sans text-xs text-muted">Free quote &mdash; no obligation</span>
             </div>
           </form>
         </div>
@@ -1139,21 +915,20 @@
       <div class="flex items-center gap-3">
         <span class="font-serif text-xl font-bold text-cream">MK<span class="text-accent">.</span></span>
         <span class="text-white/10">|</span>
-        <span class="font-sans text-sm text-muted">Shopify Partner</span>
+        <span class="font-sans text-sm text-muted">Websites for Construction &amp; Trades</span>
       </div>
 
       <div class="flex items-center gap-6">
-        <a href="#" aria-label="GitHub" class="text-muted hover:text-cream transition-colors duration-200 cursor-pointer">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-        </a>
-        <a href="#" aria-label="X / Twitter" class="text-muted hover:text-cream transition-colors duration-200 cursor-pointer">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-        </a>
+        <!-- Placeholder: Replace # with real social links -->
         <a href="#" aria-label="LinkedIn" class="text-muted hover:text-cream transition-colors duration-200 cursor-pointer">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
         </a>
-        <a href="mailto:hello@maksymkolesnyk.dev" aria-label="Email" class="text-muted hover:text-cream transition-colors duration-200 cursor-pointer">
+        <a href="mailto:lorem@ipsum.com" aria-label="Email" class="text-muted hover:text-cream transition-colors duration-200 cursor-pointer">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        </a>
+        <!-- Placeholder: Replace with real phone -->
+        <a href="tel:+61400000000" aria-label="Phone" class="text-muted hover:text-cream transition-colors duration-200 cursor-pointer">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
         </a>
       </div>
 
@@ -1161,585 +936,97 @@
     </div>
   </footer>
 
-  <!-- ======================== CASE STUDY MODALS ======================== -->
-
-  <!-- Case Study 1: MARA Botanicals -->
-  <div class="modal-overlay" id="case1" onclick="if(event.target===this)closeModal('case1')">
-    <div class="modal-content">
-      <button class="modal-close" onclick="closeModal('case1')" aria-label="Close modal">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-      </button>
-      <img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=820&h=420&fit=crop" alt="MARA Botanicals storefront" class="w-full h-52 md:h-72 object-cover rounded-t-[1.5rem]">
-      <div class="p-6 md:p-10">
-        <div class="flex flex-wrap items-center gap-3 mb-4">
-          <span class="font-sans text-xs uppercase tracking-wider text-accent bg-accent/10 px-3 py-1 rounded-full">Shopify Plus</span>
-          <span class="font-sans text-xs uppercase tracking-wider text-muted bg-white/5 px-3 py-1 rounded-full">Custom Theme</span>
-          <span class="font-sans text-xs text-muted">Jan 2025 &mdash; 8 weeks</span>
-        </div>
-        <h3 class="font-serif text-3xl md:text-4xl font-bold text-cream mb-2">MARA Botanicals</h3>
-        <p class="font-sans text-muted text-base mb-8">DTC skincare brand selling organic serums, moisturizers, and botanical extracts to a millennial female audience across the US and Canada.</p>
-
-        <h4 class="font-sans text-xs uppercase tracking-[0.2em] text-accent mb-4">The Challenge</h4>
-        <p class="font-sans text-sm text-cream/70 leading-relaxed mb-8">MARA's previous store was a Dawn theme with heavy app bloat. Page load times exceeded 6 seconds on mobile, cart abandonment sat at 78%, and the brand's premium positioning was completely lost in a generic template. They needed a ground-up rebuild that matched their in-store boutique experience.</p>
-
-        <h4 class="font-sans text-xs uppercase tracking-[0.2em] text-accent mb-4">Results</h4>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-          <div class="bg-white/5 rounded-xl p-4 text-center">
-            <p class="font-serif text-2xl font-bold text-accent">+42%</p>
-            <p class="font-sans text-xs text-muted mt-1">Conversion Rate</p>
-          </div>
-          <div class="bg-white/5 rounded-xl p-4 text-center">
-            <p class="font-serif text-2xl font-bold text-accent">1.8s</p>
-            <p class="font-sans text-xs text-muted mt-1">Load Time</p>
-          </div>
-          <div class="bg-white/5 rounded-xl p-4 text-center">
-            <p class="font-serif text-2xl font-bold text-accent">-51%</p>
-            <p class="font-sans text-xs text-muted mt-1">Bounce Rate</p>
-          </div>
-          <div class="bg-white/5 rounded-xl p-4 text-center">
-            <p class="font-serif text-2xl font-bold text-accent">+28%</p>
-            <p class="font-sans text-xs text-muted mt-1">AOV Increase</p>
-          </div>
-        </div>
-
-        <h4 class="font-sans text-xs uppercase tracking-[0.2em] text-accent mb-4">What I Built</h4>
-        <ul class="space-y-3 mb-8">
-          <li class="font-sans text-sm text-cream/70 flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>Custom Liquid theme with ingredient-driven product pages featuring interactive before/after sliders</li>
-          <li class="font-sans text-sm text-cream/70 flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>Skin quiz funnel integrated with Klaviyo for personalized product recommendations</li>
-          <li class="font-sans text-sm text-cream/70 flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>Ajax cart drawer with upsell engine (contributed to +28% AOV)</li>
-          <li class="font-sans text-sm text-cream/70 flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>Stripped 14 apps down to 3, replacing the rest with native Liquid code</li>
-        </ul>
-
-        <div class="flex flex-wrap gap-2">
-          <span class="font-sans text-xs text-muted bg-white/5 px-3 py-1.5 rounded-full">Liquid</span>
-          <span class="font-sans text-xs text-muted bg-white/5 px-3 py-1.5 rounded-full">Tailwind CSS</span>
-          <span class="font-sans text-xs text-muted bg-white/5 px-3 py-1.5 rounded-full">Alpine.js</span>
-          <span class="font-sans text-xs text-muted bg-white/5 px-3 py-1.5 rounded-full">Klaviyo</span>
-          <span class="font-sans text-xs text-muted bg-white/5 px-3 py-1.5 rounded-full">Shopify Plus</span>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Case Study 2: Volt Athletics -->
-  <div class="modal-overlay" id="case2" onclick="if(event.target===this)closeModal('case2')">
-    <div class="modal-content">
-      <button class="modal-close" onclick="closeModal('case2')" aria-label="Close modal">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-      </button>
-      <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=820&h=420&fit=crop" alt="Volt Athletics gym scene" class="w-full h-52 md:h-72 object-cover rounded-t-[1.5rem]">
-      <div class="p-6 md:p-10">
-        <div class="flex flex-wrap items-center gap-3 mb-4">
-          <span class="font-sans text-xs uppercase tracking-wider text-accent bg-accent/10 px-3 py-1 rounded-full">Headless</span>
-          <span class="font-sans text-xs uppercase tracking-wider text-muted bg-white/5 px-3 py-1 rounded-full">Hydrogen</span>
-          <span class="font-sans text-xs text-muted">Mar 2025 &mdash; 12 weeks</span>
-        </div>
-        <h3 class="font-serif text-3xl md:text-4xl font-bold text-cream mb-2">Volt Athletics</h3>
-        <p class="font-sans text-muted text-base mb-8">Performance sportswear brand targeting competitive athletes and CrossFit enthusiasts. High-SKU catalog with complex variant logic for sizes, colors, and bundle kits.</p>
-
-        <h4 class="font-sans text-xs uppercase tracking-[0.2em] text-accent mb-4">The Challenge</h4>
-        <p class="font-sans text-sm text-cream/70 leading-relaxed mb-8">Volt was outgrowing their Shopify theme. Product filtering across 2,000+ SKUs was sluggish, the mobile experience was painful, and they needed real-time inventory sync across their retail and wholesale channels. They wanted a next-gen storefront that felt like an app.</p>
-
-        <h4 class="font-sans text-xs uppercase tracking-[0.2em] text-accent mb-4">Results</h4>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-          <div class="bg-white/5 rounded-xl p-4 text-center">
-            <p class="font-serif text-2xl font-bold text-accent">98</p>
-            <p class="font-sans text-xs text-muted mt-1">Lighthouse Score</p>
-          </div>
-          <div class="bg-white/5 rounded-xl p-4 text-center">
-            <p class="font-serif text-2xl font-bold text-accent">0.9s</p>
-            <p class="font-sans text-xs text-muted mt-1">TTI (mobile)</p>
-          </div>
-          <div class="bg-white/5 rounded-xl p-4 text-center">
-            <p class="font-serif text-2xl font-bold text-accent">+61%</p>
-            <p class="font-sans text-xs text-muted mt-1">Mobile Revenue</p>
-          </div>
-          <div class="bg-white/5 rounded-xl p-4 text-center">
-            <p class="font-serif text-2xl font-bold text-accent">3.2x</p>
-            <p class="font-sans text-xs text-muted mt-1">Page Views/Session</p>
-          </div>
-        </div>
-
-        <h4 class="font-sans text-xs uppercase tracking-[0.2em] text-accent mb-4">What I Built</h4>
-        <ul class="space-y-3 mb-8">
-          <li class="font-sans text-sm text-cream/70 flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>Full Hydrogen/Remix storefront with server-side rendering and streaming</li>
-          <li class="font-sans text-sm text-cream/70 flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>Instant collection filtering with Storefront API and edge caching</li>
-          <li class="font-sans text-sm text-cream/70 flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>Custom bundle builder with real-time pricing and inventory checks</li>
-          <li class="font-sans text-sm text-cream/70 flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>Multi-channel inventory sync (retail POS + wholesale + DTC) via custom middleware</li>
-        </ul>
-
-        <div class="flex flex-wrap gap-2">
-          <span class="font-sans text-xs text-muted bg-white/5 px-3 py-1.5 rounded-full">Hydrogen</span>
-          <span class="font-sans text-xs text-muted bg-white/5 px-3 py-1.5 rounded-full">Remix</span>
-          <span class="font-sans text-xs text-muted bg-white/5 px-3 py-1.5 rounded-full">React</span>
-          <span class="font-sans text-xs text-muted bg-white/5 px-3 py-1.5 rounded-full">Storefront API</span>
-          <span class="font-sans text-xs text-muted bg-white/5 px-3 py-1.5 rounded-full">Oxygen</span>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Case Study 3: Haus of Ember -->
-  <div class="modal-overlay" id="case3" onclick="if(event.target===this)closeModal('case3')">
-    <div class="modal-content">
-      <button class="modal-close" onclick="closeModal('case3')" aria-label="Close modal">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-      </button>
-      <img src="https://images.unsplash.com/photo-1603006905003-be475563bc59?w=820&h=420&fit=crop" alt="Haus of Ember candles" class="w-full h-52 md:h-72 object-cover rounded-t-[1.5rem]">
-      <div class="p-6 md:p-10">
-        <div class="flex flex-wrap items-center gap-3 mb-4">
-          <span class="font-sans text-xs uppercase tracking-wider text-accent bg-accent/10 px-3 py-1 rounded-full">Custom Theme</span>
-          <span class="font-sans text-xs uppercase tracking-wider text-muted bg-white/5 px-3 py-1 rounded-full">Subscriptions</span>
-          <span class="font-sans text-xs text-muted">Sep 2024 &mdash; 6 weeks</span>
-        </div>
-        <h3 class="font-serif text-3xl md:text-4xl font-bold text-cream mb-2">Haus of Ember</h3>
-        <p class="font-sans text-muted text-base mb-8">Luxury hand-poured candle brand with a seasonal subscription box and a devoted Instagram following of 120K. Based in Brooklyn, shipping nationwide.</p>
-
-        <h4 class="font-sans text-xs uppercase tracking-[0.2em] text-accent mb-4">The Challenge</h4>
-        <p class="font-sans text-sm text-cream/70 leading-relaxed mb-8">Their existing store couldn't convey the sensory, premium nature of the product. Subscription management was handled through a clunky third-party portal that caused 40% of subscribers to churn within 3 months. They wanted product pages that felt like mini-experiences and a native subscription flow.</p>
-
-        <h4 class="font-sans text-xs uppercase tracking-[0.2em] text-accent mb-4">Results</h4>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-          <div class="bg-white/5 rounded-xl p-4 text-center">
-            <p class="font-serif text-2xl font-bold text-accent">+67%</p>
-            <p class="font-sans text-xs text-muted mt-1">AOV Increase</p>
-          </div>
-          <div class="bg-white/5 rounded-xl p-4 text-center">
-            <p class="font-serif text-2xl font-bold text-accent">-34%</p>
-            <p class="font-sans text-xs text-muted mt-1">Subscriber Churn</p>
-          </div>
-          <div class="bg-white/5 rounded-xl p-4 text-center">
-            <p class="font-serif text-2xl font-bold text-accent">4.2min</p>
-            <p class="font-sans text-xs text-muted mt-1">Avg. Session</p>
-          </div>
-          <div class="bg-white/5 rounded-xl p-4 text-center">
-            <p class="font-serif text-2xl font-bold text-accent">+89%</p>
-            <p class="font-sans text-xs text-muted mt-1">Subscription Sign-ups</p>
-          </div>
-        </div>
-
-        <h4 class="font-sans text-xs uppercase tracking-[0.2em] text-accent mb-4">What I Built</h4>
-        <ul class="space-y-3 mb-8">
-          <li class="font-sans text-sm text-cream/70 flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>Immersive product pages with ambient background color shifts matching each candle's scent profile</li>
-          <li class="font-sans text-sm text-cream/70 flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>Custom Recharge integration with native in-theme subscription management portal</li>
-          <li class="font-sans text-sm text-cream/70 flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>Scent finder quiz that maps user preferences to product recommendations</li>
-          <li class="font-sans text-sm text-cream/70 flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>Gift-wrapping upsell flow with custom message cards at checkout</li>
-        </ul>
-
-        <div class="flex flex-wrap gap-2">
-          <span class="font-sans text-xs text-muted bg-white/5 px-3 py-1.5 rounded-full">Liquid</span>
-          <span class="font-sans text-xs text-muted bg-white/5 px-3 py-1.5 rounded-full">Recharge</span>
-          <span class="font-sans text-xs text-muted bg-white/5 px-3 py-1.5 rounded-full">GSAP</span>
-          <span class="font-sans text-xs text-muted bg-white/5 px-3 py-1.5 rounded-full">Klaviyo</span>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Case Study 4: Kiln & Co -->
-  <div class="modal-overlay" id="case4" onclick="if(event.target===this)closeModal('case4')">
-    <div class="modal-content">
-      <button class="modal-close" onclick="closeModal('case4')" aria-label="Close modal">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-      </button>
-      <img src="https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=820&h=420&fit=crop" alt="Kiln and Co ceramics" class="w-full h-52 md:h-72 object-cover rounded-t-[1.5rem]">
-      <div class="p-6 md:p-10">
-        <div class="flex flex-wrap items-center gap-3 mb-4">
-          <span class="font-sans text-xs uppercase tracking-wider text-accent bg-accent/10 px-3 py-1 rounded-full">Migration</span>
-          <span class="font-sans text-xs uppercase tracking-wider text-muted bg-white/5 px-3 py-1 rounded-full">Shopify Plus</span>
-          <span class="font-sans text-xs text-muted">Jun 2024 &mdash; 5 weeks</span>
-        </div>
-        <h3 class="font-serif text-3xl md:text-4xl font-bold text-cream mb-2">Kiln & Co</h3>
-        <p class="font-sans text-muted text-base mb-8">Artisan ceramics studio selling handmade pottery, tableware, and home goods. Previously on WooCommerce with 1,200 products and 8 years of order history.</p>
-
-        <h4 class="font-sans text-xs uppercase tracking-[0.2em] text-accent mb-4">The Challenge</h4>
-        <p class="font-sans text-sm text-cream/70 leading-relaxed mb-8">WooCommerce was grinding to a halt under their product load. Checkout took 12 seconds, hosting costs were escalating, and their developer had left. They needed a clean migration to Shopify Plus without losing 8 years of SEO equity, customer accounts, or order history, and it had to happen before their peak holiday season.</p>
-
-        <h4 class="font-sans text-xs uppercase tracking-[0.2em] text-accent mb-4">Results</h4>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-          <div class="bg-white/5 rounded-xl p-4 text-center">
-            <p class="font-serif text-2xl font-bold text-accent">0</p>
-            <p class="font-sans text-xs text-muted mt-1">Minutes Downtime</p>
-          </div>
-          <div class="bg-white/5 rounded-xl p-4 text-center">
-            <p class="font-serif text-2xl font-bold text-accent">3x</p>
-            <p class="font-sans text-xs text-muted mt-1">Faster Checkout</p>
-          </div>
-          <div class="bg-white/5 rounded-xl p-4 text-center">
-            <p class="font-serif text-2xl font-bold text-accent">100%</p>
-            <p class="font-sans text-xs text-muted mt-1">SEO Preserved</p>
-          </div>
-          <div class="bg-white/5 rounded-xl p-4 text-center">
-            <p class="font-serif text-2xl font-bold text-accent">-70%</p>
-            <p class="font-sans text-xs text-muted mt-1">Hosting Costs</p>
-          </div>
-        </div>
-
-        <h4 class="font-sans text-xs uppercase tracking-[0.2em] text-accent mb-4">What I Built</h4>
-        <ul class="space-y-3 mb-8">
-          <li class="font-sans text-sm text-cream/70 flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>Full data migration: 1,200 products, 34K customers, 52K orders with complete history</li>
-          <li class="font-sans text-sm text-cream/70 flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>800+ 301 redirects mapped and tested to preserve every indexed URL</li>
-          <li class="font-sans text-sm text-cream/70 flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>Custom theme with collection filtering for material, glaze, and kiln technique</li>
-          <li class="font-sans text-sm text-cream/70 flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>Blue/green deployment: ran both stores in parallel for 48h before cutover</li>
-        </ul>
-
-        <div class="flex flex-wrap gap-2">
-          <span class="font-sans text-xs text-muted bg-white/5 px-3 py-1.5 rounded-full">Shopify Plus</span>
-          <span class="font-sans text-xs text-muted bg-white/5 px-3 py-1.5 rounded-full">Data Migration</span>
-          <span class="font-sans text-xs text-muted bg-white/5 px-3 py-1.5 rounded-full">301 Redirects</span>
-          <span class="font-sans text-xs text-muted bg-white/5 px-3 py-1.5 rounded-full">ShipStation</span>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ======================== SERVICE MODALS ======================== -->
-
-  <!-- Service Modal 1: Custom Theme Development -->
-  <div class="modal-overlay" id="svc1" onclick="if(event.target===this)closeModal('svc1')">
-    <div class="modal-content">
-      <button class="modal-close" onclick="closeModal('svc1')" aria-label="Close modal">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-      </button>
-      <div class="p-6 md:p-10">
-        <div class="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center mb-6">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C8FF00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
-        </div>
-        <h3 class="font-serif text-3xl md:text-4xl font-bold text-cream mb-3">Custom Theme Development</h3>
-        <p class="font-sans text-muted text-base leading-relaxed mb-8">Every store I build starts with a blank canvas. No pre-built themes, no page builders, no compromise. I write every line of Liquid, CSS, and JavaScript by hand to create a storefront that's uniquely yours, optimized to convert, and a joy to manage.</p>
-
-        <h4 class="font-sans text-xs uppercase tracking-[0.2em] text-accent mb-4">What's Included</h4>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-          <div class="bg-white/5 rounded-xl p-4"><p class="font-sans text-sm text-cream/80">Complete Figma design system before development begins</p></div>
-          <div class="bg-white/5 rounded-xl p-4"><p class="font-sans text-sm text-cream/80">Fully customizable sections and blocks in the Shopify editor</p></div>
-          <div class="bg-white/5 rounded-xl p-4"><p class="font-sans text-sm text-cream/80">Mobile-first responsive design tested on 20+ devices</p></div>
-          <div class="bg-white/5 rounded-xl p-4"><p class="font-sans text-sm text-cream/80">Performance budget: sub-2s load, 90+ Lighthouse</p></div>
-          <div class="bg-white/5 rounded-xl p-4"><p class="font-sans text-sm text-cream/80">Mega menus, quick-view drawers, ajax cart with upsells</p></div>
-          <div class="bg-white/5 rounded-xl p-4"><p class="font-sans text-sm text-cream/80">WCAG 2.1 AA accessibility compliance</p></div>
-        </div>
-
-        <h4 class="font-sans text-xs uppercase tracking-[0.2em] text-accent mb-4">Tech Stack</h4>
-        <div class="flex flex-wrap gap-2 mb-8">
-          <span class="font-sans text-xs text-cream/60 bg-white/5 px-3 py-1.5 rounded-full">Shopify Liquid</span>
-          <span class="font-sans text-xs text-cream/60 bg-white/5 px-3 py-1.5 rounded-full">Tailwind CSS</span>
-          <span class="font-sans text-xs text-cream/60 bg-white/5 px-3 py-1.5 rounded-full">Alpine.js</span>
-          <span class="font-sans text-xs text-cream/60 bg-white/5 px-3 py-1.5 rounded-full">Shopify CLI</span>
-          <span class="font-sans text-xs text-cream/60 bg-white/5 px-3 py-1.5 rounded-full">Theme Check</span>
-        </div>
-
-        <h4 class="font-sans text-xs uppercase tracking-[0.2em] text-accent mb-3">Typical Timeline</h4>
-        <p class="font-sans text-sm text-muted mb-6">6 &ndash; 10 weeks from kickoff to launch, depending on scope.</p>
-        <a href="#contact" onclick="closeModal('svc1')" class="btn-primary bg-accent text-surface font-sans font-semibold px-6 py-3 rounded-full text-sm cursor-pointer inline-flex items-center gap-2 hover:bg-lime-300 transition-colors duration-200">Discuss Your Theme <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
-      </div>
-    </div>
-  </div>
-
-  <!-- Service Modal 2: Headless & Hydrogen -->
-  <div class="modal-overlay" id="svc2" onclick="if(event.target===this)closeModal('svc2')">
-    <div class="modal-content">
-      <button class="modal-close" onclick="closeModal('svc2')" aria-label="Close modal">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-      </button>
-      <div class="p-6 md:p-10">
-        <div class="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center mb-6">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C8FF00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-        </div>
-        <h3 class="font-serif text-3xl md:text-4xl font-bold text-cream mb-3">Headless & Hydrogen</h3>
-        <p class="font-sans text-muted text-base leading-relaxed mb-8">For brands that need the absolute fastest storefront possible. I build with Shopify's Hydrogen framework on Remix, powered by the Storefront API and deployed on Oxygen. The result is a React-based storefront with sub-second load times and app-like interactivity.</p>
-
-        <h4 class="font-sans text-xs uppercase tracking-[0.2em] text-accent mb-4">What's Included</h4>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-          <div class="bg-white/5 rounded-xl p-4"><p class="font-sans text-sm text-cream/80">Hydrogen/Remix storefront with server-side rendering</p></div>
-          <div class="bg-white/5 rounded-xl p-4"><p class="font-sans text-sm text-cream/80">Edge caching and streaming for instant page transitions</p></div>
-          <div class="bg-white/5 rounded-xl p-4"><p class="font-sans text-sm text-cream/80">Full Storefront API integration with optimistic UI</p></div>
-          <div class="bg-white/5 rounded-xl p-4"><p class="font-sans text-sm text-cream/80">Custom CMS integration (Sanity, Contentful, or Shopify metaobjects)</p></div>
-          <div class="bg-white/5 rounded-xl p-4"><p class="font-sans text-sm text-cream/80">Deployed to Oxygen or Vercel with CI/CD pipeline</p></div>
-          <div class="bg-white/5 rounded-xl p-4"><p class="font-sans text-sm text-cream/80">Internationalization and multi-currency support</p></div>
-        </div>
-
-        <h4 class="font-sans text-xs uppercase tracking-[0.2em] text-accent mb-3">Typical Timeline</h4>
-        <p class="font-sans text-sm text-muted mb-6">10 &ndash; 16 weeks. Headless builds are more complex but the performance gains are substantial.</p>
-        <a href="#contact" onclick="closeModal('svc2')" class="btn-primary bg-accent text-surface font-sans font-semibold px-6 py-3 rounded-full text-sm cursor-pointer inline-flex items-center gap-2 hover:bg-lime-300 transition-colors duration-200">Go Headless <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
-      </div>
-    </div>
-  </div>
-
-  <!-- Service Modal 3: CRO & Performance -->
-  <div class="modal-overlay" id="svc3" onclick="if(event.target===this)closeModal('svc3')">
-    <div class="modal-content">
-      <button class="modal-close" onclick="closeModal('svc3')" aria-label="Close modal">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-      </button>
-      <div class="p-6 md:p-10">
-        <div class="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center mb-6">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C8FF00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-        </div>
-        <h3 class="font-serif text-3xl md:text-4xl font-bold text-cream mb-3">CRO & Performance</h3>
-        <p class="font-sans text-muted text-base leading-relaxed mb-8">Already have a store but it's not converting? I run a forensic audit of your speed, UX, and conversion funnel, then implement data-backed improvements. No guesswork, no fluff. Every change is measured against your baseline.</p>
-
-        <h4 class="font-sans text-xs uppercase tracking-[0.2em] text-accent mb-4">Audit Covers</h4>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-          <div class="bg-white/5 rounded-xl p-4"><p class="font-sans text-sm text-cream/80">Core Web Vitals (LCP, FID, CLS) deep dive with prioritized fixes</p></div>
-          <div class="bg-white/5 rounded-xl p-4"><p class="font-sans text-sm text-cream/80">App audit: identify bloat, replace with native code where possible</p></div>
-          <div class="bg-white/5 rounded-xl p-4"><p class="font-sans text-sm text-cream/80">Funnel analysis from landing to purchase with drop-off mapping</p></div>
-          <div class="bg-white/5 rounded-xl p-4"><p class="font-sans text-sm text-cream/80">Heatmap and session recording review (Hotjar/Lucky Orange)</p></div>
-          <div class="bg-white/5 rounded-xl p-4"><p class="font-sans text-sm text-cream/80">A/B test design and implementation for high-impact changes</p></div>
-          <div class="bg-white/5 rounded-xl p-4"><p class="font-sans text-sm text-cream/80">Image optimization, lazy loading, and critical CSS extraction</p></div>
-        </div>
-
-        <h4 class="font-sans text-xs uppercase tracking-[0.2em] text-accent mb-3">Typical Timeline</h4>
-        <p class="font-sans text-sm text-muted mb-6">2 &ndash; 4 weeks for audit + implementation. Ongoing A/B testing available on retainer.</p>
-        <a href="#contact" onclick="closeModal('svc3')" class="btn-primary bg-accent text-surface font-sans font-semibold px-6 py-3 rounded-full text-sm cursor-pointer inline-flex items-center gap-2 hover:bg-lime-300 transition-colors duration-200">Boost Conversions <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
-      </div>
-    </div>
-  </div>
-
-  <!-- Service Modal 4: App & Integration -->
-  <div class="modal-overlay" id="svc4" onclick="if(event.target===this)closeModal('svc4')">
-    <div class="modal-content">
-      <button class="modal-close" onclick="closeModal('svc4')" aria-label="Close modal">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-      </button>
-      <div class="p-6 md:p-10">
-        <div class="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center mb-6">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C8FF00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
-        </div>
-        <h3 class="font-serif text-3xl md:text-4xl font-bold text-cream mb-3">App & Integration</h3>
-        <p class="font-sans text-muted text-base leading-relaxed mb-8">Need something Shopify doesn't do out of the box? I build custom Shopify apps and integrate third-party services so your store works with your entire business stack. From email flows to ERPs to custom loyalty programs.</p>
-
-        <h4 class="font-sans text-xs uppercase tracking-[0.2em] text-accent mb-4">Common Integrations</h4>
-        <div class="grid grid-cols-2 md:grid-cols-3 gap-3 mb-8">
-          <div class="bg-white/5 rounded-xl p-3 text-center"><p class="font-sans text-sm text-cream/80">Klaviyo</p></div>
-          <div class="bg-white/5 rounded-xl p-3 text-center"><p class="font-sans text-sm text-cream/80">Recharge</p></div>
-          <div class="bg-white/5 rounded-xl p-3 text-center"><p class="font-sans text-sm text-cream/80">ShipStation</p></div>
-          <div class="bg-white/5 rounded-xl p-3 text-center"><p class="font-sans text-sm text-cream/80">Yotpo</p></div>
-          <div class="bg-white/5 rounded-xl p-3 text-center"><p class="font-sans text-sm text-cream/80">Gorgias</p></div>
-          <div class="bg-white/5 rounded-xl p-3 text-center"><p class="font-sans text-sm text-cream/80">NetSuite</p></div>
-          <div class="bg-white/5 rounded-xl p-3 text-center"><p class="font-sans text-sm text-cream/80">Stripe</p></div>
-          <div class="bg-white/5 rounded-xl p-3 text-center"><p class="font-sans text-sm text-cream/80">Zapier</p></div>
-          <div class="bg-white/5 rounded-xl p-3 text-center"><p class="font-sans text-sm text-cream/80">Custom APIs</p></div>
-        </div>
-
-        <h4 class="font-sans text-xs uppercase tracking-[0.2em] text-accent mb-3">Typical Timeline</h4>
-        <p class="font-sans text-sm text-muted mb-6">1 &ndash; 6 weeks depending on complexity. Simple integrations can ship in days.</p>
-        <a href="#contact" onclick="closeModal('svc4')" class="btn-primary bg-accent text-surface font-sans font-semibold px-6 py-3 rounded-full text-sm cursor-pointer inline-flex items-center gap-2 hover:bg-lime-300 transition-colors duration-200">Build an Integration <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
-      </div>
-    </div>
-  </div>
-
-  <!-- Service Modal 5: Store Migration -->
-  <div class="modal-overlay" id="svc5" onclick="if(event.target===this)closeModal('svc5')">
-    <div class="modal-content">
-      <button class="modal-close" onclick="closeModal('svc5')" aria-label="Close modal">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-      </button>
-      <div class="p-6 md:p-10">
-        <div class="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center mb-6">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C8FF00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14.899A7 7 0 1115.71 8h1.79a4.5 4.5 0 012.5 8.242"/><path d="M12 12v9"/><path d="m8 17 4 4 4-4"/></svg>
-        </div>
-        <h3 class="font-serif text-3xl md:text-4xl font-bold text-cream mb-3">Store Migration</h3>
-        <p class="font-sans text-muted text-base leading-relaxed mb-8">Moving to Shopify from WooCommerce, Magento, BigCommerce, or Squarespace? I handle the entire migration: products, customers, orders, SEO redirects, and theme. Zero data loss, zero downtime, zero headaches.</p>
-
-        <h4 class="font-sans text-xs uppercase tracking-[0.2em] text-accent mb-4">Migration Checklist</h4>
-        <ul class="space-y-3 mb-8">
-          <li class="font-sans text-sm text-cream/70 flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>Full product catalog with variants, images, metafields, and SEO data</li>
-          <li class="font-sans text-sm text-cream/70 flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>Customer accounts with order history and tags preserved</li>
-          <li class="font-sans text-sm text-cream/70 flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>Comprehensive 301 redirect map for every indexed URL</li>
-          <li class="font-sans text-sm text-cream/70 flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>DNS cutover strategy with parallel running period</li>
-          <li class="font-sans text-sm text-cream/70 flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>Post-migration monitoring for 30 days (broken links, 404s, ranking changes)</li>
-        </ul>
-
-        <h4 class="font-sans text-xs uppercase tracking-[0.2em] text-accent mb-3">Typical Timeline</h4>
-        <p class="font-sans text-sm text-muted mb-6">3 &ndash; 8 weeks depending on catalog size and data complexity.</p>
-        <a href="#contact" onclick="closeModal('svc5')" class="btn-primary bg-accent text-surface font-sans font-semibold px-6 py-3 rounded-full text-sm cursor-pointer inline-flex items-center gap-2 hover:bg-lime-300 transition-colors duration-200">Plan Your Migration <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
-      </div>
-    </div>
-  </div>
-
-  <!-- Service Modal 6: Ongoing Support -->
-  <div class="modal-overlay" id="svc6" onclick="if(event.target===this)closeModal('svc6')">
-    <div class="modal-content">
-      <button class="modal-close" onclick="closeModal('svc6')" aria-label="Close modal">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-      </button>
-      <div class="p-6 md:p-10">
-        <div class="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center mb-6">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C8FF00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-        </div>
-        <h3 class="font-serif text-3xl md:text-4xl font-bold text-cream mb-3">Ongoing Support</h3>
-        <p class="font-sans text-muted text-base leading-relaxed mb-8">Your store is never "done." I offer monthly retainer plans for brands that want a dedicated Shopify expert on speed-dial. Bug fixes, feature additions, seasonal updates, and proactive performance monitoring, all handled.</p>
-
-        <h4 class="font-sans text-xs uppercase tracking-[0.2em] text-accent mb-4">Retainer Plans</h4>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-          <div class="bg-white/5 rounded-xl p-5 border border-white/5">
-            <p class="font-serif text-lg font-bold text-cream mb-1">Essentials</p>
-            <p class="font-sans text-xs text-muted mb-3">10 hrs/month</p>
-            <ul class="space-y-2">
-              <li class="font-sans text-xs text-cream/60 flex items-start gap-2"><span class="text-accent"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Bug fixes & updates</li>
-              <li class="font-sans text-xs text-cream/60 flex items-start gap-2"><span class="text-accent"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Monthly performance report</li>
-              <li class="font-sans text-xs text-cream/60 flex items-start gap-2"><span class="text-accent"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>48hr response time</li>
-            </ul>
-          </div>
-          <div class="bg-white/5 rounded-xl p-5 border border-accent/20">
-            <p class="font-serif text-lg font-bold text-accent mb-1">Growth</p>
-            <p class="font-sans text-xs text-muted mb-3">20 hrs/month</p>
-            <ul class="space-y-2">
-              <li class="font-sans text-xs text-cream/60 flex items-start gap-2"><span class="text-accent"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Everything in Essentials</li>
-              <li class="font-sans text-xs text-cream/60 flex items-start gap-2"><span class="text-accent"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>New feature development</li>
-              <li class="font-sans text-xs text-cream/60 flex items-start gap-2"><span class="text-accent"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>24hr response time</li>
-            </ul>
-          </div>
-          <div class="bg-white/5 rounded-xl p-5 border border-white/5">
-            <p class="font-serif text-lg font-bold text-cream mb-1">Scale</p>
-            <p class="font-sans text-xs text-muted mb-3">40 hrs/month</p>
-            <ul class="space-y-2">
-              <li class="font-sans text-xs text-cream/60 flex items-start gap-2"><span class="text-accent"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Everything in Growth</li>
-              <li class="font-sans text-xs text-cream/60 flex items-start gap-2"><span class="text-accent"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Priority Slack channel</li>
-              <li class="font-sans text-xs text-cream/60 flex items-start gap-2"><span class="text-accent"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Same-day response</li>
-            </ul>
-          </div>
-        </div>
-
-        <a href="#contact" onclick="closeModal('svc6')" class="btn-primary bg-accent text-surface font-sans font-semibold px-6 py-3 rounded-full text-sm cursor-pointer inline-flex items-center gap-2 hover:bg-lime-300 transition-colors duration-200">Choose a Plan <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
-      </div>
-    </div>
-  </div>
-
-  <!-- ======================== SCRIPTS ======================== -->
+  <!-- ======================== JAVASCRIPT ======================== -->
   <script>
-    // === Scroll Reveal ===
-    const reveals = document.querySelectorAll('.reveal');
-    const observer = new IntersectionObserver((entries) => {
+    // Scroll reveal
+    const revealObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
         }
       });
     }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-    reveals.forEach(el => observer.observe(el));
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
-    // === Custom Cursor ===
+    // Custom cursor
     const dot = document.getElementById('cursorDot');
     const ring = document.getElementById('cursorRing');
     let mouseX = 0, mouseY = 0, ringX = 0, ringY = 0;
-
-    document.addEventListener('mousemove', (e) => {
+    document.addEventListener('mousemove', e => {
       mouseX = e.clientX;
       mouseY = e.clientY;
-      if (dot) {
-        dot.style.left = mouseX - 4 + 'px';
-        dot.style.top = mouseY - 4 + 'px';
-      }
+      dot.style.left = mouseX - 4 + 'px';
+      dot.style.top = mouseY - 4 + 'px';
     });
-
     function animateRing() {
       ringX += (mouseX - ringX) * 0.15;
       ringY += (mouseY - ringY) * 0.15;
-      if (ring) {
-        ring.style.left = ringX - 20 + 'px';
-        ring.style.top = ringY - 20 + 'px';
-      }
+      ring.style.left = ringX - 20 + 'px';
+      ring.style.top = ringY - 20 + 'px';
       requestAnimationFrame(animateRing);
     }
     animateRing();
-
-    // Expand cursor on interactive elements
-    document.querySelectorAll('a, button, .project-card, .service-tag, input, textarea').forEach(el => {
+    document.querySelectorAll('a, button, input, textarea, select, .glass-card').forEach(el => {
       el.addEventListener('mouseenter', () => {
-        if (ring) {
-          ring.style.width = '60px';
-          ring.style.height = '60px';
-          ring.style.borderColor = 'rgba(200, 255, 0, 0.6)';
-          ring.style.left = ringX - 30 + 'px';
-          ring.style.top = ringY - 30 + 'px';
-        }
-        if (dot) dot.style.transform = 'scale(1.5)';
+        ring.style.width = '60px';
+        ring.style.height = '60px';
+        ring.style.borderColor = 'rgba(200,255,0,0.6)';
+        ring.style.left = ringX - 30 + 'px';
+        ring.style.top = ringY - 30 + 'px';
       });
       el.addEventListener('mouseleave', () => {
-        if (ring) {
-          ring.style.width = '40px';
-          ring.style.height = '40px';
-          ring.style.borderColor = 'rgba(200, 255, 0, 0.4)';
-        }
-        if (dot) dot.style.transform = 'scale(1)';
+        ring.style.width = '40px';
+        ring.style.height = '40px';
+        ring.style.borderColor = 'rgba(200,255,0,0.4)';
       });
     });
 
-    // === Mobile Menu ===
+    // Mobile menu
     const menuBtn = document.getElementById('menuBtn');
     const closeMenuBtn = document.getElementById('closeMenuBtn');
     const mobileMenu = document.getElementById('mobileMenu');
-    const mobileLinks = document.querySelectorAll('.mobile-link');
-
     menuBtn.addEventListener('click', () => mobileMenu.classList.add('open'));
     closeMenuBtn.addEventListener('click', () => mobileMenu.classList.remove('open'));
-    mobileLinks.forEach(link => {
+    document.querySelectorAll('.mobile-link').forEach(link => {
       link.addEventListener('click', () => mobileMenu.classList.remove('open'));
     });
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') mobileMenu.classList.remove('open');
+    });
 
-    // === Navbar background on scroll ===
+    // Navbar scroll
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
-      if (window.scrollY > 60) {
-        navbar.style.background = 'rgba(10, 10, 10, 0.9)';
-      } else {
-        navbar.style.background = 'rgba(10, 10, 10, 0.7)';
-      }
+      navbar.style.background = window.scrollY > 60
+        ? 'rgba(10, 10, 10, 0.95)'
+        : 'rgba(10, 10, 10, 0.7)';
     });
 
-    // === Modal Logic ===
-    function openModal(id) {
-      const modal = document.getElementById(id);
-      if (!modal) return;
-      modal.classList.add('active');
-      document.body.style.overflow = 'hidden';
-    }
-    function closeModal(id) {
-      const modal = document.getElementById(id);
-      if (!modal) return;
-      modal.classList.remove('active');
-      document.body.style.overflow = '';
-    }
-    // Close on Escape key
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') {
-        document.querySelectorAll('.modal-overlay.active').forEach(m => {
-          m.classList.remove('active');
-        });
-        document.body.style.overflow = '';
-      }
-    });
-
-    // === FAQ Accordion ===
+    // FAQ accordion
     document.querySelectorAll('.faq-btn').forEach(btn => {
       btn.addEventListener('click', () => {
-        const item = btn.closest('.faq-item');
-        const isOpen = item.classList.contains('active');
-        document.querySelectorAll('.faq-item.active').forEach(openItem => {
-          openItem.classList.remove('active');
-          openItem.querySelector('.faq-btn').setAttribute('aria-expanded', 'false');
-          openItem.querySelector('.faq-answer').style.maxHeight = '0';
-        });
-        if (!isOpen) {
-          item.classList.add('active');
-          btn.setAttribute('aria-expanded', 'true');
-          const answer = item.querySelector('.faq-answer');
-          answer.style.maxHeight = answer.scrollHeight + 'px';
-        }
+        const item = btn.parentElement;
+        const isActive = item.classList.contains('active');
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+        if (!isActive) item.classList.add('active');
       });
     });
 
-    // === Simple form handler (prevent default) ===
-    document.getElementById('contactForm').addEventListener('submit', (e) => {
+    // Contact form
+    const form = document.getElementById('contactForm');
+    form.addEventListener('submit', e => {
       e.preventDefault();
-      const btn = e.target.querySelector('button[type="submit"]');
-      const original = btn.innerHTML;
-      btn.innerHTML = '<span>Message Sent</span>';
-      btn.style.background = '#22c55e';
+      const btn = form.querySelector('button[type="submit"]');
+      const originalText = btn.innerHTML;
+      btn.innerHTML = '<span class="inline-flex items-center gap-2">Sent! <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>';
+      btn.classList.remove('bg-accent');
+      btn.classList.add('bg-green-500');
       setTimeout(() => {
-        btn.innerHTML = original;
-        btn.style.background = '';
-        e.target.reset();
+        btn.innerHTML = originalText;
+        btn.classList.remove('bg-green-500');
+        btn.classList.add('bg-accent');
+        form.reset();
       }, 2500);
     });
   </script>
