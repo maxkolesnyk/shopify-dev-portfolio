@@ -22,7 +22,7 @@
             surfaceLight: '#111111',
             surfaceGlass: 'rgba(255,255,255,0.04)',
             accent: '#C8FF00',
-            muted: '#B8B8B8',
+            muted: '#D0D0D0',
             cream: '#F5F0E8',
           },
         },
@@ -112,16 +112,16 @@
 
     /* Glass card */
     .glass-card {
-      background: rgba(255, 255, 255, 0.03);
+      background: rgba(255, 255, 255, 0.07);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
-      border: 1px solid rgba(255, 255, 255, 0.10);
+      border: 1px solid rgba(255, 255, 255, 0.16);
       transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     }
     .glass-card:hover {
-      background: rgba(255, 255, 255, 0.08);
-      border-color: rgba(200, 255, 0, 0.25);
-      box-shadow: 0 0 60px rgba(200, 255, 0, 0.06);
+      background: rgba(255, 255, 255, 0.12);
+      border-color: rgba(200, 255, 0, 0.35);
+      box-shadow: 0 0 60px rgba(200, 255, 0, 0.08);
     }
 
     /* Stat card glow on hover */
@@ -205,12 +205,12 @@
     /* Horizontal rule */
     .divider {
       height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.12), transparent);
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
     }
 
     /* Service tag pill */
     .service-tag {
-      border: 1px solid rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.22);
       transition: all 0.3s ease;
     }
     .service-tag:hover {
@@ -248,7 +248,7 @@
       font-size: 5rem;
       font-weight: 700;
       line-height: 1;
-      color: rgba(255,255,255,0.03);
+      color: rgba(255,255,255,0.06);
       position: absolute;
       top: -0.5rem;
       left: -0.25rem;
@@ -313,7 +313,7 @@
 
     /* Comparison table */
     .compare-check { color: #C8FF00; }
-    .compare-x { color: #555; }
+    .compare-x { color: #777; }
     .compare-row {
       transition: background 0.2s ease;
     }
@@ -449,7 +449,7 @@
   <div class="cursor-ring hidden lg:block" id="cursorRing"></div>
 
   <!-- ======================== NAVBAR ======================== -->
-  <nav class="nav-glass fixed top-4 left-1/2 -translate-x-1/2 z-50 rounded-2xl px-6 py-4 flex items-center justify-between w-[calc(100%-2rem)] max-w-7xl" id="navbar">
+  <nav class="nav-glass fixed top-4 left-1/2 -translate-x-1/2 z-50 rounded-2xl px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between w-[calc(100%-2rem)] max-w-7xl" id="navbar">
     <a href="#" class="font-serif text-xl font-bold tracking-tight text-cream cursor-pointer">MK<span class="text-accent">.</span></a>
 
     <!-- Desktop links -->
@@ -517,7 +517,7 @@
             </span>
           </h1>
 
-          <p class="blur-in font-sans text-lg sm:text-xl text-cream/85 max-w-xl leading-relaxed mb-10" style="transition-delay: 0.3s;">
+          <p class="blur-in font-sans text-lg sm:text-xl text-cream max-w-xl leading-relaxed mb-10" style="transition-delay: 0.3s;">
             High-performance websites for builders, tradies, and construction companies across Australia &amp; New Zealand. Built fast with AI-powered development.
           </p>
 
@@ -526,31 +526,31 @@
               Get a Free Quote
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
             </a>
-            <a href="#pricing" class="font-sans text-sm text-cream/75 hover:text-cream transition-colors duration-200 cursor-pointer underline underline-offset-4 decoration-cream/20 hover:decoration-cream/50">From $2,500 AUD</a>
+            <a href="#pricing" class="font-sans text-sm text-cream/90 hover:text-cream transition-colors duration-200 cursor-pointer underline underline-offset-4 decoration-cream/20 hover:decoration-cream/50">From $2,500 AUD</a>
           </div>
 
           <!-- Proof points -->
-          <div class="blur-in flex flex-wrap gap-6 mt-12 pt-8 border-t border-white/8" style="transition-delay: 0.6s;">
+          <div class="blur-in flex flex-wrap gap-6 mt-12 pt-8 border-t border-white/15" style="transition-delay: 0.6s;">
             <div class="flex items-center gap-2">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C8FF00" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              <span class="font-sans text-sm text-cream/75">Live in 1&ndash;2 weeks</span>
+              <span class="font-sans text-sm text-cream/90">Live in 1&ndash;2 weeks</span>
             </div>
             <div class="flex items-center gap-2">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C8FF00" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              <span class="font-sans text-sm text-cream/75">95+ Google PageSpeed</span>
+              <span class="font-sans text-sm text-cream/90">95+ Google PageSpeed</span>
             </div>
             <div class="flex items-center gap-2">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C8FF00" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              <span class="font-sans text-sm text-cream/75">AU &amp; NZ focused</span>
+              <span class="font-sans text-sm text-cream/90">AU &amp; NZ focused</span>
             </div>
           </div>
         </div>
 
         <!-- Right: Browser Mockup (desktop only) -->
         <div class="hidden lg:block">
-          <div class="browser-mockup bg-surfaceLight rounded-xl border border-white/10 overflow-hidden max-w-lg ml-auto">
+          <div class="browser-mockup bg-surfaceLight rounded-xl border border-white/15 overflow-hidden max-w-lg ml-auto">
             <!-- Browser chrome -->
-            <div class="flex items-center gap-2 px-4 py-3 bg-white/5 border-b border-white/8">
+            <div class="flex items-center gap-2 px-4 py-3 bg-white/5 border-b border-white/15">
               <div class="flex gap-1.5">
                 <div class="w-2.5 h-2.5 rounded-full bg-red-500/40"></div>
                 <div class="w-2.5 h-2.5 rounded-full bg-yellow-500/40"></div>
@@ -566,7 +566,7 @@
             <div class="p-4 space-y-3">
               <!-- Mini nav -->
               <div class="flex items-center justify-between">
-                <div class="font-sans text-[11px] font-bold text-cream/85">SB</div>
+                <div class="font-sans text-[11px] font-bold text-cream">SB</div>
                 <div class="flex gap-3 items-center">
                   <div class="w-8 h-1 bg-white/10 rounded"></div>
                   <div class="w-8 h-1 bg-white/10 rounded"></div>
@@ -586,7 +586,7 @@
               </div>
               <!-- Mini service cards -->
               <div class="grid grid-cols-3 gap-2">
-                <div class="bg-white/[0.03] rounded-lg p-2.5 border border-white/8">
+                <div class="bg-white/[0.03] rounded-lg p-2.5 border border-white/15">
                   <div class="w-5 h-5 rounded bg-accent/10 mb-2 flex items-center justify-center">
                     <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#C8FF00" stroke-width="2" opacity="0.5"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
                   </div>
@@ -594,7 +594,7 @@
                   <div class="w-full h-0.5 bg-white/5 rounded"></div>
                   <div class="w-3/4 h-0.5 bg-white/5 rounded mt-0.5"></div>
                 </div>
-                <div class="bg-white/[0.03] rounded-lg p-2.5 border border-white/8">
+                <div class="bg-white/[0.03] rounded-lg p-2.5 border border-white/15">
                   <div class="w-5 h-5 rounded bg-accent/10 mb-2 flex items-center justify-center">
                     <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#C8FF00" stroke-width="2" opacity="0.5"><circle cx="12" cy="12" r="10"/></svg>
                   </div>
@@ -602,7 +602,7 @@
                   <div class="w-full h-0.5 bg-white/5 rounded"></div>
                   <div class="w-3/4 h-0.5 bg-white/5 rounded mt-0.5"></div>
                 </div>
-                <div class="bg-white/[0.03] rounded-lg p-2.5 border border-white/8">
+                <div class="bg-white/[0.03] rounded-lg p-2.5 border border-white/15">
                   <div class="w-5 h-5 rounded bg-accent/10 mb-2 flex items-center justify-center">
                     <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#C8FF00" stroke-width="2" opacity="0.5"><polygon points="12 2 22 22 2 22"/></svg>
                   </div>
@@ -612,7 +612,7 @@
                 </div>
               </div>
               <!-- Mini testimonial -->
-              <div class="bg-white/[0.02] rounded-lg p-3 border border-white/8">
+              <div class="bg-white/[0.02] rounded-lg p-3 border border-white/15">
                 <div class="flex gap-0.5 mb-1.5">
                   <span class="text-[8px] text-accent">&#9733;</span>
                   <span class="text-[8px] text-accent">&#9733;</span>
@@ -644,56 +644,56 @@
   </section>
 
   <!-- ======================== MARQUEE ======================== -->
-  <section class="py-6 border-y border-white/8 overflow-hidden">
+  <section class="py-6 border-y border-white/15 overflow-hidden">
     <div class="marquee-track">
-      <span class="font-serif text-2xl md:text-3xl italic text-white/35 whitespace-nowrap px-8">Builders</span>
+      <span class="font-serif text-2xl md:text-3xl italic text-white/55 whitespace-nowrap px-8">Builders</span>
       <span class="text-accent text-xl px-2">/</span>
-      <span class="font-serif text-2xl md:text-3xl italic text-white/35 whitespace-nowrap px-8">Electricians</span>
+      <span class="font-serif text-2xl md:text-3xl italic text-white/55 whitespace-nowrap px-8">Electricians</span>
       <span class="text-accent text-xl px-2">/</span>
-      <span class="font-serif text-2xl md:text-3xl italic text-white/35 whitespace-nowrap px-8">Plumbers</span>
+      <span class="font-serif text-2xl md:text-3xl italic text-white/55 whitespace-nowrap px-8">Plumbers</span>
       <span class="text-accent text-xl px-2">/</span>
-      <span class="font-serif text-2xl md:text-3xl italic text-white/35 whitespace-nowrap px-8">Roofers</span>
+      <span class="font-serif text-2xl md:text-3xl italic text-white/55 whitespace-nowrap px-8">Roofers</span>
       <span class="text-accent text-xl px-2">/</span>
-      <span class="font-serif text-2xl md:text-3xl italic text-white/35 whitespace-nowrap px-8">Landscapers</span>
+      <span class="font-serif text-2xl md:text-3xl italic text-white/55 whitespace-nowrap px-8">Landscapers</span>
       <span class="text-accent text-xl px-2">/</span>
-      <span class="font-serif text-2xl md:text-3xl italic text-white/35 whitespace-nowrap px-8">Concreters</span>
+      <span class="font-serif text-2xl md:text-3xl italic text-white/55 whitespace-nowrap px-8">Concreters</span>
       <span class="text-accent text-xl px-2">/</span>
-      <span class="font-serif text-2xl md:text-3xl italic text-white/35 whitespace-nowrap px-8">Painters</span>
+      <span class="font-serif text-2xl md:text-3xl italic text-white/55 whitespace-nowrap px-8">Painters</span>
       <span class="text-accent text-xl px-2">/</span>
-      <span class="font-serif text-2xl md:text-3xl italic text-white/35 whitespace-nowrap px-8">Fencers</span>
+      <span class="font-serif text-2xl md:text-3xl italic text-white/55 whitespace-nowrap px-8">Fencers</span>
       <span class="text-accent text-xl px-2">/</span>
       <!-- Duplicate 2x for seamless loop on wide screens -->
-      <span class="font-serif text-2xl md:text-3xl italic text-white/35 whitespace-nowrap px-8">Builders</span>
+      <span class="font-serif text-2xl md:text-3xl italic text-white/55 whitespace-nowrap px-8">Builders</span>
       <span class="text-accent text-xl px-2">/</span>
-      <span class="font-serif text-2xl md:text-3xl italic text-white/35 whitespace-nowrap px-8">Electricians</span>
+      <span class="font-serif text-2xl md:text-3xl italic text-white/55 whitespace-nowrap px-8">Electricians</span>
       <span class="text-accent text-xl px-2">/</span>
-      <span class="font-serif text-2xl md:text-3xl italic text-white/35 whitespace-nowrap px-8">Plumbers</span>
+      <span class="font-serif text-2xl md:text-3xl italic text-white/55 whitespace-nowrap px-8">Plumbers</span>
       <span class="text-accent text-xl px-2">/</span>
-      <span class="font-serif text-2xl md:text-3xl italic text-white/35 whitespace-nowrap px-8">Roofers</span>
+      <span class="font-serif text-2xl md:text-3xl italic text-white/55 whitespace-nowrap px-8">Roofers</span>
       <span class="text-accent text-xl px-2">/</span>
-      <span class="font-serif text-2xl md:text-3xl italic text-white/35 whitespace-nowrap px-8">Landscapers</span>
+      <span class="font-serif text-2xl md:text-3xl italic text-white/55 whitespace-nowrap px-8">Landscapers</span>
       <span class="text-accent text-xl px-2">/</span>
-      <span class="font-serif text-2xl md:text-3xl italic text-white/35 whitespace-nowrap px-8">Concreters</span>
+      <span class="font-serif text-2xl md:text-3xl italic text-white/55 whitespace-nowrap px-8">Concreters</span>
       <span class="text-accent text-xl px-2">/</span>
-      <span class="font-serif text-2xl md:text-3xl italic text-white/35 whitespace-nowrap px-8">Painters</span>
+      <span class="font-serif text-2xl md:text-3xl italic text-white/55 whitespace-nowrap px-8">Painters</span>
       <span class="text-accent text-xl px-2">/</span>
-      <span class="font-serif text-2xl md:text-3xl italic text-white/35 whitespace-nowrap px-8">Fencers</span>
+      <span class="font-serif text-2xl md:text-3xl italic text-white/55 whitespace-nowrap px-8">Fencers</span>
       <span class="text-accent text-xl px-2">/</span>
-      <span class="font-serif text-2xl md:text-3xl italic text-white/35 whitespace-nowrap px-8">Builders</span>
+      <span class="font-serif text-2xl md:text-3xl italic text-white/55 whitespace-nowrap px-8">Builders</span>
       <span class="text-accent text-xl px-2">/</span>
-      <span class="font-serif text-2xl md:text-3xl italic text-white/35 whitespace-nowrap px-8">Electricians</span>
+      <span class="font-serif text-2xl md:text-3xl italic text-white/55 whitespace-nowrap px-8">Electricians</span>
       <span class="text-accent text-xl px-2">/</span>
-      <span class="font-serif text-2xl md:text-3xl italic text-white/35 whitespace-nowrap px-8">Plumbers</span>
+      <span class="font-serif text-2xl md:text-3xl italic text-white/55 whitespace-nowrap px-8">Plumbers</span>
       <span class="text-accent text-xl px-2">/</span>
-      <span class="font-serif text-2xl md:text-3xl italic text-white/35 whitespace-nowrap px-8">Roofers</span>
+      <span class="font-serif text-2xl md:text-3xl italic text-white/55 whitespace-nowrap px-8">Roofers</span>
       <span class="text-accent text-xl px-2">/</span>
-      <span class="font-serif text-2xl md:text-3xl italic text-white/35 whitespace-nowrap px-8">Landscapers</span>
+      <span class="font-serif text-2xl md:text-3xl italic text-white/55 whitespace-nowrap px-8">Landscapers</span>
       <span class="text-accent text-xl px-2">/</span>
-      <span class="font-serif text-2xl md:text-3xl italic text-white/35 whitespace-nowrap px-8">Concreters</span>
+      <span class="font-serif text-2xl md:text-3xl italic text-white/55 whitespace-nowrap px-8">Concreters</span>
       <span class="text-accent text-xl px-2">/</span>
-      <span class="font-serif text-2xl md:text-3xl italic text-white/35 whitespace-nowrap px-8">Painters</span>
+      <span class="font-serif text-2xl md:text-3xl italic text-white/55 whitespace-nowrap px-8">Painters</span>
       <span class="text-accent text-xl px-2">/</span>
-      <span class="font-serif text-2xl md:text-3xl italic text-white/35 whitespace-nowrap px-8">Fencers</span>
+      <span class="font-serif text-2xl md:text-3xl italic text-white/55 whitespace-nowrap px-8">Fencers</span>
       <span class="text-accent text-xl px-2">/</span>
     </div>
   </section>
@@ -718,7 +718,7 @@
         </div>
         <div class="reveal">
           <!-- Placeholder for real photo -->
-          <div class="w-full aspect-[3/4] rounded-2xl bg-surfaceLight border border-white/8 flex items-center justify-center">
+          <div class="w-full aspect-[3/4] rounded-2xl bg-surfaceLight border border-white/15 flex items-center justify-center">
             <div class="text-center px-8">
               <div class="w-24 h-24 rounded-full bg-accent/10 flex items-center justify-center mx-auto mb-6">
                 <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#C8FF00" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
@@ -732,7 +732,7 @@
   </section>
 
   <!-- ======================== WHY AI-POWERED ======================== -->
-  <section class="px-4 sm:px-6 lg:px-8 py-24 md:py-32 border-t border-white/8">
+  <section class="px-4 sm:px-6 lg:px-8 py-24 md:py-32 border-t border-white/15">
     <div class="max-w-7xl mx-auto">
       <div class="reveal mb-16 text-center">
         <p class="font-sans text-sm tracking-[0.3em] uppercase text-accent mb-3">The Advantage</p>
@@ -947,7 +947,7 @@
   </section>
 
   <!-- ======================== WHAT YOU GET ======================== -->
-  <section class="px-4 sm:px-6 lg:px-8 py-24 md:py-32 border-t border-white/8">
+  <section class="px-4 sm:px-6 lg:px-8 py-24 md:py-32 border-t border-white/15">
     <div class="max-w-7xl mx-auto">
       <div class="reveal mb-16 text-center">
         <p class="font-sans text-sm tracking-[0.3em] uppercase text-accent mb-3">Every Site Includes</p>
@@ -1046,7 +1046,7 @@
             <li class="font-sans text-sm text-muted flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>SSL &amp; analytics</li>
             <li class="font-sans text-sm text-muted flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>30 days post-launch support</li>
           </ul>
-          <a href="#contact" class="btn-primary bg-white/5 border border-white/10 text-cream font-sans font-semibold px-6 py-3 rounded-full text-sm cursor-pointer inline-flex items-center justify-center gap-2 hover:border-accent/30 transition-colors duration-200">Get Started <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+          <a href="#contact" class="btn-primary bg-white/5 border border-white/15 text-cream font-sans font-semibold px-6 py-3 rounded-full text-sm cursor-pointer inline-flex items-center justify-center gap-2 hover:border-accent/30 transition-colors duration-200">Get Started <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
         </div>
         <!-- Tier 2 (Featured) -->
         <div class="reveal reveal-delay-1 glass-card pricing-card pricing-featured rounded-2xl p-8 flex flex-col relative">
@@ -1083,7 +1083,7 @@
             <li class="font-sans text-sm text-muted flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>Blog / content section</li>
             <li class="font-sans text-sm text-muted flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>90 days priority support</li>
           </ul>
-          <a href="#contact" class="btn-primary bg-white/5 border border-white/10 text-cream font-sans font-semibold px-6 py-3 rounded-full text-sm cursor-pointer inline-flex items-center justify-center gap-2 hover:border-accent/30 transition-colors duration-200">Get Started <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+          <a href="#contact" class="btn-primary bg-white/5 border border-white/15 text-cream font-sans font-semibold px-6 py-3 rounded-full text-sm cursor-pointer inline-flex items-center justify-center gap-2 hover:border-accent/30 transition-colors duration-200">Get Started <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
         </div>
       </div>
       <div class="reveal glass-card rounded-2xl p-6 md:p-8 mt-6 flex flex-col md:flex-row items-center justify-between gap-4">
@@ -1101,10 +1101,10 @@
       <!-- Comparison table -->
       <div class="reveal mt-20">
         <h3 class="font-serif text-2xl md:text-3xl font-bold text-cream text-center mb-10">How it stacks up</h3>
-        <div class="overflow-x-auto rounded-2xl border border-white/10">
+        <div class="overflow-x-auto rounded-2xl border border-white/15">
           <table class="w-full text-left font-sans text-sm">
             <thead>
-              <tr class="border-b border-white/10">
+              <tr class="border-b border-white/15">
                 <th class="p-4 md:p-5 text-muted font-normal w-[40%]"></th>
                 <th class="p-4 md:p-5 text-muted font-semibold text-center">DIY Builder<br><span class="text-xs font-normal">Wix / Squarespace</span></th>
                 <th class="p-4 md:p-5 text-muted font-semibold text-center">Traditional Agency</th>
@@ -1258,21 +1258,21 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
                 <label for="name" class="font-sans text-xs uppercase tracking-wider text-muted mb-2 block">Name</label>
-                <input type="text" id="name" name="name" required class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 font-sans text-sm text-cream placeholder:text-muted/50 focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/20 transition-colors duration-200" placeholder="Your name">
+                <input type="text" id="name" name="name" required class="w-full bg-white/5 border border-white/15 rounded-xl px-4 py-3 font-sans text-sm text-cream placeholder:text-muted/50 focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/20 transition-colors duration-200" placeholder="Your name">
               </div>
               <div>
                 <label for="email" class="font-sans text-xs uppercase tracking-wider text-muted mb-2 block">Email</label>
-                <input type="email" id="email" name="email" required class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 font-sans text-sm text-cream placeholder:text-muted/50 focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/20 transition-colors duration-200" placeholder="you@yourbusiness.com.au">
+                <input type="email" id="email" name="email" required class="w-full bg-white/5 border border-white/15 rounded-xl px-4 py-3 font-sans text-sm text-cream placeholder:text-muted/50 focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/20 transition-colors duration-200" placeholder="you@yourbusiness.com.au">
               </div>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
                 <label for="phone" class="font-sans text-xs uppercase tracking-wider text-muted mb-2 block">Phone</label>
-                <input type="tel" id="phone" name="phone" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 font-sans text-sm text-cream placeholder:text-muted/50 focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/20 transition-colors duration-200" placeholder="04XX XXX XXX">
+                <input type="tel" id="phone" name="phone" class="w-full bg-white/5 border border-white/15 rounded-xl px-4 py-3 font-sans text-sm text-cream placeholder:text-muted/50 focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/20 transition-colors duration-200" placeholder="04XX XXX XXX">
               </div>
               <div>
                 <label for="trade" class="font-sans text-xs uppercase tracking-wider text-muted mb-2 block">Your Trade</label>
-                <select id="trade" name="trade" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 font-sans text-sm text-cream focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/20 transition-colors duration-200 appearance-none cursor-pointer">
+                <select id="trade" name="trade" class="w-full bg-white/5 border border-white/15 rounded-xl px-4 py-3 font-sans text-sm text-cream focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/20 transition-colors duration-200 appearance-none cursor-pointer">
                   <option value="" class="bg-surface">Select your trade</option>
                   <option value="builder" class="bg-surface">Builder / Construction</option>
                   <option value="electrician" class="bg-surface">Electrician</option>
@@ -1290,7 +1290,7 @@
             </div>
             <div>
               <label for="project" class="font-sans text-xs uppercase tracking-wider text-muted mb-2 block">Tell me about your business</label>
-              <textarea id="project" name="project" rows="4" required class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 font-sans text-sm text-cream placeholder:text-muted/50 focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/20 transition-colors duration-200 resize-none" placeholder="What does your business do? Do you have an existing website? What package interests you?"></textarea>
+              <textarea id="project" name="project" rows="4" required class="w-full bg-white/5 border border-white/15 rounded-xl px-4 py-3 font-sans text-sm text-cream placeholder:text-muted/50 focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/20 transition-colors duration-200 resize-none" placeholder="What does your business do? Do you have an existing website? What package interests you?"></textarea>
             </div>
             <div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
               <button type="submit" class="btn-primary bg-accent text-surface font-sans font-semibold px-8 py-4 rounded-full text-base cursor-pointer inline-flex items-center gap-3 hover:bg-lime-300 transition-colors duration-200">
@@ -1306,11 +1306,11 @@
   </section>
 
   <!-- ======================== FOOTER ======================== -->
-  <footer class="px-4 sm:px-6 lg:px-8 py-12 border-t border-white/8">
+  <footer class="px-4 sm:px-6 lg:px-8 py-12 border-t border-white/15">
     <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
       <div class="flex items-center gap-3">
         <span class="font-serif text-xl font-bold text-cream">MK<span class="text-accent">.</span></span>
-        <span class="text-white/20">|</span>
+        <span class="text-white/35">|</span>
         <span class="font-sans text-sm text-muted">Websites for Construction &amp; Trades</span>
       </div>
 
