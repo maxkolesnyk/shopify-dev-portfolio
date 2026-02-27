@@ -419,39 +419,6 @@
       background: linear-gradient(90deg, #C8FF00, rgba(200, 255, 0, 0.3));
     }
 
-    /* ── Section Glow Dividers ── */
-    .section-glow {
-      position: relative;
-    }
-    .section-glow::before {
-      content: '';
-      position: absolute;
-      top: -120px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 800px;
-      height: 240px;
-      border-radius: 50%;
-      pointer-events: none;
-      z-index: 0;
-    }
-    .section-glow-accent::before {
-      background: radial-gradient(ellipse, rgba(200, 255, 0, 0.035), transparent 70%);
-    }
-    .section-glow-blue::before {
-      background: radial-gradient(ellipse, rgba(100, 160, 255, 0.025), transparent 70%);
-    }
-    .section-glow-warm::before {
-      background: radial-gradient(ellipse, rgba(245, 240, 232, 0.02), transparent 70%);
-    }
-    @media (max-width: 768px) {
-      .section-glow::before {
-        width: 400px;
-        height: 160px;
-        top: -80px;
-      }
-    }
-
     /* ── Elevated Section Tints ── */
     .section-elevated {
       background: linear-gradient(180deg, rgba(200, 255, 0, 0.008) 0%, rgba(200, 255, 0, 0.012) 50%, transparent 100%);
@@ -783,7 +750,7 @@
   </section>
 
   <!-- ======================== ABOUT ======================== -->
-  <section id="about" class="px-4 sm:px-6 lg:px-8 py-24 md:py-32 section-glow section-glow-accent overflow-hidden">
+  <section id="about" class="px-4 sm:px-6 lg:px-8 py-24 md:py-32 border-t border-white/15 overflow-hidden">
     <div class="max-w-7xl mx-auto">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
         <div>
@@ -816,7 +783,7 @@
   </section>
 
   <!-- ======================== WHY AI-POWERED ======================== -->
-  <section class="px-4 sm:px-6 lg:px-8 py-24 md:py-32 border-t border-white/15 section-glow section-glow-blue overflow-hidden">
+  <section class="px-4 sm:px-6 lg:px-8 py-24 md:py-32 border-t border-white/15 overflow-hidden">
     <div class="max-w-7xl mx-auto">
       <div class="reveal mb-16 text-center">
         <p class="font-sans text-sm tracking-[0.3em] uppercase text-accent mb-3">The Advantage</p>
@@ -872,7 +839,7 @@
   </section>
 
   <!-- ======================== SERVICES ======================== -->
-  <section id="services" class="px-4 sm:px-6 lg:px-8 py-24 md:py-32 relative section-glow section-glow-accent overflow-hidden">
+  <section id="services" class="px-4 sm:px-6 lg:px-8 py-24 md:py-32 relative border-t border-white/15 overflow-hidden">
     <div class="max-w-7xl mx-auto">
       <div class="reveal mb-16">
         <p class="font-sans text-sm tracking-[0.3em] uppercase text-accent mb-3">Services</p>
@@ -1015,7 +982,7 @@
   </section>
 
   <!-- ======================== PROCESS ======================== -->
-  <section id="process" class="px-4 sm:px-6 lg:px-8 py-24 md:py-32 section-glow section-glow-blue overflow-hidden">
+  <section id="process" class="px-4 sm:px-6 lg:px-8 py-24 md:py-32 border-t border-white/15 overflow-hidden">
     <div class="max-w-7xl mx-auto">
       <div class="reveal mb-16">
         <p class="font-sans text-sm tracking-[0.3em] uppercase text-accent mb-3">How It Works</p>
@@ -1076,7 +1043,7 @@
   </section>
 
   <!-- ======================== WHAT YOU GET ======================== -->
-  <section class="px-4 sm:px-6 lg:px-8 py-24 md:py-32 border-t border-white/15 section-glow section-glow-warm overflow-hidden">
+  <section class="px-4 sm:px-6 lg:px-8 py-24 md:py-32 border-t border-white/15 overflow-hidden">
     <div class="max-w-7xl mx-auto">
       <div class="reveal mb-16 text-center">
         <p class="font-sans text-sm tracking-[0.3em] uppercase text-accent mb-3">Every Site Includes</p>
@@ -1152,7 +1119,7 @@
   </section>
 
   <!-- ======================== PRICING ======================== -->
-  <section id="pricing" class="px-4 sm:px-6 lg:px-8 py-24 md:py-32 section-glow section-glow-accent section-elevated overflow-hidden">
+  <section id="pricing" class="px-4 sm:px-6 lg:px-8 py-24 md:py-32 border-t border-white/15 section-elevated overflow-hidden">
     <div class="max-w-7xl mx-auto">
       <div class="reveal text-center mb-16">
         <p class="font-sans text-sm tracking-[0.3em] uppercase text-accent mb-3">Pricing</p>
@@ -1467,7 +1434,7 @@
   </section>
 
   <!-- ======================== FAQ ======================== -->
-  <section id="faq" class="px-4 sm:px-6 lg:px-8 py-24 md:py-32 section-glow section-glow-blue overflow-hidden">
+  <section id="faq" class="px-4 sm:px-6 lg:px-8 py-24 md:py-32 border-t border-white/15 overflow-hidden">
     <div class="max-w-3xl mx-auto">
       <div class="reveal text-center mb-16">
         <p class="font-sans text-sm tracking-[0.3em] uppercase text-accent mb-3">FAQ</p>
@@ -1542,7 +1509,7 @@
   </section>
 
   <!-- ======================== CTA / CONTACT ======================== -->
-  <section id="contact" class="px-4 sm:px-6 lg:px-8 py-24 md:py-32 section-glow section-glow-accent section-elevated overflow-hidden">
+  <section id="contact" class="px-4 sm:px-6 lg:px-8 py-24 md:py-32 border-t border-white/15 section-elevated overflow-hidden">
     <div class="max-w-7xl mx-auto">
       <div class="reveal glass-card rounded-3xl p-8 md:p-16 relative overflow-hidden">
         <!-- Background orb -->
