@@ -256,6 +256,7 @@
       }
       .reveal { opacity: 1; transform: none; }
       .marquee-track { animation: none; }
+      .ambient-orb { animation: none; }
     }
 
     /* Mobile nav — liquid glass */
@@ -417,6 +418,61 @@
     .mockup-accent-bar {
       background: linear-gradient(90deg, #C8FF00, rgba(200, 255, 0, 0.3));
     }
+
+    /* ── Section Glow Dividers ── */
+    .section-glow {
+      position: relative;
+    }
+    .section-glow::before {
+      content: '';
+      position: absolute;
+      top: -120px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 800px;
+      height: 240px;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .section-glow-accent::before {
+      background: radial-gradient(ellipse, rgba(200, 255, 0, 0.035), transparent 70%);
+    }
+    .section-glow-blue::before {
+      background: radial-gradient(ellipse, rgba(100, 160, 255, 0.025), transparent 70%);
+    }
+    .section-glow-warm::before {
+      background: radial-gradient(ellipse, rgba(245, 240, 232, 0.02), transparent 70%);
+    }
+    @media (max-width: 768px) {
+      .section-glow::before {
+        width: 400px;
+        height: 160px;
+        top: -80px;
+      }
+    }
+
+    /* ── Elevated Section Tints ── */
+    .section-elevated {
+      background: linear-gradient(180deg, rgba(200, 255, 0, 0.008) 0%, rgba(200, 255, 0, 0.012) 50%, transparent 100%);
+    }
+
+    /* ── Ambient Floating Orbs ── */
+    .ambient-orb {
+      position: fixed;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 0;
+      filter: blur(150px);
+      will-change: transform;
+      animation: ambientDrift 25s ease-in-out infinite;
+    }
+    @keyframes ambientDrift {
+      0%, 100% { transform: translate(0, 0) scale(1); }
+      25% { transform: translate(30px, -20px) scale(1.05); }
+      50% { transform: translate(-20px, 15px) scale(0.95); }
+      75% { transform: translate(15px, 25px) scale(1.03); }
+    }
   </style>
   <!-- Structured Data -->
   <script type="application/ld+json">
@@ -500,6 +556,12 @@
   </div>
 
   <main id="main">
+
+  <!-- Ambient background orbs -->
+  <div class="ambient-orb" aria-hidden="true" style="width:450px;height:450px;top:30vh;left:-10%;background:rgba(200,255,0,0.012);animation-delay:0s;"></div>
+  <div class="ambient-orb" aria-hidden="true" style="width:350px;height:350px;top:55vh;right:-8%;background:rgba(100,160,255,0.01);animation-delay:-6s;"></div>
+  <div class="ambient-orb" aria-hidden="true" style="width:500px;height:500px;top:75vh;left:20%;background:rgba(245,240,232,0.01);animation-delay:-12s;"></div>
+  <div class="ambient-orb" aria-hidden="true" style="width:400px;height:400px;top:15vh;right:15%;background:rgba(200,255,0,0.015);animation-delay:-18s;"></div>
 
   <!-- ======================== HERO ======================== -->
   <section class="relative min-h-screen flex flex-col justify-start sm:justify-center px-4 sm:px-6 lg:px-8 pt-24 pb-16 sm:pb-20 overflow-hidden blueprint-grid" id="heroSection">
@@ -721,7 +783,7 @@
   </section>
 
   <!-- ======================== ABOUT ======================== -->
-  <section id="about" class="px-4 sm:px-6 lg:px-8 py-24 md:py-32">
+  <section id="about" class="px-4 sm:px-6 lg:px-8 py-24 md:py-32 section-glow section-glow-accent overflow-hidden">
     <div class="max-w-7xl mx-auto">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
         <div>
@@ -754,7 +816,7 @@
   </section>
 
   <!-- ======================== WHY AI-POWERED ======================== -->
-  <section class="px-4 sm:px-6 lg:px-8 py-24 md:py-32 border-t border-white/15">
+  <section class="px-4 sm:px-6 lg:px-8 py-24 md:py-32 border-t border-white/15 section-glow section-glow-blue overflow-hidden">
     <div class="max-w-7xl mx-auto">
       <div class="reveal mb-16 text-center">
         <p class="font-sans text-sm tracking-[0.3em] uppercase text-accent mb-3">The Advantage</p>
@@ -810,7 +872,7 @@
   </section>
 
   <!-- ======================== SERVICES ======================== -->
-  <section id="services" class="px-4 sm:px-6 lg:px-8 py-24 md:py-32 relative">
+  <section id="services" class="px-4 sm:px-6 lg:px-8 py-24 md:py-32 relative section-glow section-glow-accent overflow-hidden">
     <div class="max-w-7xl mx-auto">
       <div class="reveal mb-16">
         <p class="font-sans text-sm tracking-[0.3em] uppercase text-accent mb-3">Services</p>
@@ -953,7 +1015,7 @@
   </section>
 
   <!-- ======================== PROCESS ======================== -->
-  <section id="process" class="px-4 sm:px-6 lg:px-8 py-24 md:py-32">
+  <section id="process" class="px-4 sm:px-6 lg:px-8 py-24 md:py-32 section-glow section-glow-blue overflow-hidden">
     <div class="max-w-7xl mx-auto">
       <div class="reveal mb-16">
         <p class="font-sans text-sm tracking-[0.3em] uppercase text-accent mb-3">How It Works</p>
@@ -1014,7 +1076,7 @@
   </section>
 
   <!-- ======================== WHAT YOU GET ======================== -->
-  <section class="px-4 sm:px-6 lg:px-8 py-24 md:py-32 border-t border-white/15">
+  <section class="px-4 sm:px-6 lg:px-8 py-24 md:py-32 border-t border-white/15 section-glow section-glow-warm overflow-hidden">
     <div class="max-w-7xl mx-auto">
       <div class="reveal mb-16 text-center">
         <p class="font-sans text-sm tracking-[0.3em] uppercase text-accent mb-3">Every Site Includes</p>
@@ -1090,7 +1152,7 @@
   </section>
 
   <!-- ======================== PRICING ======================== -->
-  <section id="pricing" class="px-4 sm:px-6 lg:px-8 py-24 md:py-32">
+  <section id="pricing" class="px-4 sm:px-6 lg:px-8 py-24 md:py-32 section-glow section-glow-accent section-elevated overflow-hidden">
     <div class="max-w-7xl mx-auto">
       <div class="reveal text-center mb-16">
         <p class="font-sans text-sm tracking-[0.3em] uppercase text-accent mb-3">Pricing</p>
@@ -1405,7 +1467,7 @@
   </section>
 
   <!-- ======================== FAQ ======================== -->
-  <section id="faq" class="px-4 sm:px-6 lg:px-8 py-24 md:py-32">
+  <section id="faq" class="px-4 sm:px-6 lg:px-8 py-24 md:py-32 section-glow section-glow-blue overflow-hidden">
     <div class="max-w-3xl mx-auto">
       <div class="reveal text-center mb-16">
         <p class="font-sans text-sm tracking-[0.3em] uppercase text-accent mb-3">FAQ</p>
@@ -1480,7 +1542,7 @@
   </section>
 
   <!-- ======================== CTA / CONTACT ======================== -->
-  <section id="contact" class="px-4 sm:px-6 lg:px-8 py-24 md:py-32">
+  <section id="contact" class="px-4 sm:px-6 lg:px-8 py-24 md:py-32 section-glow section-glow-accent section-elevated overflow-hidden">
     <div class="max-w-7xl mx-auto">
       <div class="reveal glass-card rounded-3xl p-8 md:p-16 relative overflow-hidden">
         <!-- Background orb -->
