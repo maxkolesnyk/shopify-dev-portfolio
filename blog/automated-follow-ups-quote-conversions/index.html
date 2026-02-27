@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How Automated Follow-ups Can Double Your Quote Conversions | Maksym Kolesnyk</title>
+  <meta name="description" content="Most quotes go cold because tradies are too busy to follow up. Learn how simple automation can recover lost revenue and double your conversion rate.">
+  <meta name="theme-color" content="#0A0A0A">
+  <link rel="canonical" href="https://maksym.au/blog/automated-follow-ups-quote-conversions">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://maksym.au/blog/automated-follow-ups-quote-conversions">
+  <meta property="og:title" content="How Automated Follow-ups Can Double Your Quote Conversions">
+  <meta property="og:description" content="Most quotes go cold because tradies are too busy to follow up. Learn how simple automation can recover lost revenue.">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="How Automated Follow-ups Can Double Your Quote Conversions">
+  <meta name="twitter:description" content="Most quotes go cold because tradies are too busy to follow up. Learn how simple automation can recover lost revenue.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,700;1,400&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../dist/output.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { background: #0A0A0A; color: #F5F0E8; font-family: 'Jost', sans-serif; overflow-x: hidden; }
+    ::selection { background: #C8FF00; color: #0A0A0A; }
+
+    /* Noise grain overlay */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      pointer-events: none;
+      opacity: 0.035;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+      background-repeat: repeat;
+      background-size: 256px 256px;
+    }
+
+    /* Floating navbar — liquid glass */
+    .nav-glass {
+      background:
+        linear-gradient(180deg,
+          rgba(255, 255, 255, 0.06) 0%,
+          rgba(255, 255, 255, 0.02) 40%,
+          rgba(10, 10, 10, 0.5) 100%
+        );
+      backdrop-filter: blur(40px) saturate(1.6) brightness(1.1);
+      -webkit-backdrop-filter: blur(40px) saturate(1.6) brightness(1.1);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-top: 1px solid rgba(255, 255, 255, 0.22);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.4),
+        0 2px 8px rgba(0, 0, 0, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: background 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+    }
+    .nav-glass::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -20%;
+      width: 60%;
+      height: 100%;
+      background: linear-gradient(
+        105deg,
+        transparent 20%,
+        rgba(255, 255, 255, 0.03) 40%,
+        rgba(255, 255, 255, 0.06) 50%,
+        rgba(255, 255, 255, 0.03) 60%,
+        transparent 80%
+      );
+      pointer-events: none;
+      z-index: 0;
+    }
+    .nav-glass > * {
+      position: relative;
+      z-index: 1;
+    }
+    .nav-glass.scrolled {
+      background:
+        linear-gradient(180deg,
+          rgba(255, 255, 255, 0.04) 0%,
+          rgba(255, 255, 255, 0.01) 30%,
+          rgba(10, 10, 10, 0.75) 100%
+        );
+      border-top-color: rgba(255, 255, 255, 0.15);
+      box-shadow:
+        0 12px 48px rgba(0, 0, 0, 0.5),
+        0 4px 12px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.06),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+    }
+
+    /* CTA button shimmer */
+    .btn-primary {
+      position: relative;
+      overflow: hidden;
+    }
+    .btn-primary::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
+      transition: left 0.5s ease;
+    }
+    .btn-primary:hover::after {
+      left: 100%;
+    }
+
+    /* Mobile menu */
+    .mobile-menu {
+      background:
+        linear-gradient(180deg,
+          rgba(255, 255, 255, 0.04) 0%,
+          rgba(255, 255, 255, 0.01) 30%,
+          rgba(10, 10, 10, 0.85) 100%
+        );
+      backdrop-filter: blur(60px) saturate(1.8);
+      -webkit-backdrop-filter: blur(60px) saturate(1.8);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+    .mobile-menu.open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    /* Scroll reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Article prose */
+    .prose h2 {
+      font-family: 'Bodoni Moda', serif;
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: #F5F0E8;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      line-height: 1.3;
+    }
+    .prose p {
+      font-family: 'Jost', sans-serif;
+      font-size: 1.0625rem;
+      line-height: 1.8;
+      color: #D0D0D0;
+      margin-bottom: 1.25rem;
+    }
+    .prose ul, .prose ol {
+      font-family: 'Jost', sans-serif;
+      font-size: 1.0625rem;
+      line-height: 1.8;
+      color: #D0D0D0;
+      margin-bottom: 1.25rem;
+      padding-left: 1.5rem;
+    }
+    .prose li {
+      margin-bottom: 0.5rem;
+    }
+    .prose strong {
+      color: #F5F0E8;
+      font-weight: 600;
+    }
+    .prose a {
+      color: #C8FF00;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+    .prose a:hover {
+      color: #d4ff4d;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="nav-glass fixed top-2 sm:top-4 left-1/2 -translate-x-1/2 z-50 rounded-xl sm:rounded-2xl px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between w-[calc(100%-1rem)] sm:w-[calc(100%-2rem)] max-w-7xl" id="navbar">
+    <a href="/" class="font-serif text-xl font-bold tracking-tight text-cream cursor-pointer">MK<span class="text-accent">.</span></a>
+
+    <!-- Desktop links -->
+    <div class="hidden md:flex items-center gap-8">
+      <a href="/#about" class="text-sm font-sans text-muted hover:text-cream transition-colors duration-200 cursor-pointer">About</a>
+      <a href="/#services" class="text-sm font-sans text-muted hover:text-cream transition-colors duration-200 cursor-pointer">Services</a>
+      <a href="/#process" class="text-sm font-sans text-muted hover:text-cream transition-colors duration-200 cursor-pointer">How It Works</a>
+      <a href="/#pricing" class="text-sm font-sans text-muted hover:text-cream transition-colors duration-200 cursor-pointer">Pricing</a>
+      <a href="/blog" class="text-sm font-sans text-cream hover:text-accent transition-colors duration-200 cursor-pointer">Blog</a>
+      <a href="/#contact" class="btn-primary bg-accent text-surface font-sans text-sm font-semibold px-6 py-2.5 rounded-full cursor-pointer inline-block hover:bg-lime-300 transition-colors duration-200">Get a Quote</a>
+    </div>
+
+    <!-- Mobile menu button -->
+    <button class="md:hidden text-cream cursor-pointer" id="menuBtn" aria-label="Open menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu fixed inset-0 z-[60] flex flex-col items-center justify-center gap-8 md:hidden overflow-y-auto py-20" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Navigation menu" aria-hidden="true">
+    <button class="fixed top-6 right-6 text-cream cursor-pointer z-[61]" id="closeMenuBtn" aria-label="Close menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <a href="/#about" class="mobile-link font-serif text-3xl text-cream cursor-pointer">About</a>
+    <a href="/#services" class="mobile-link font-serif text-3xl text-cream cursor-pointer">Services</a>
+    <a href="/#process" class="mobile-link font-serif text-3xl text-cream cursor-pointer">How It Works</a>
+    <a href="/#pricing" class="mobile-link font-serif text-3xl text-cream cursor-pointer">Pricing</a>
+    <a href="/blog" class="mobile-link font-serif text-3xl text-cream cursor-pointer">Blog</a>
+    <a href="/#contact" class="mobile-link btn-primary bg-accent text-surface font-sans text-lg font-semibold px-8 py-3 rounded-full cursor-pointer inline-block mt-4">Get a Quote</a>
+  </div>
+
+  <main>
+
+  <!-- Article Header -->
+  <section class="px-4 sm:px-6 lg:px-8 pt-32 pb-8 md:pt-40 md:pb-12">
+    <div class="max-w-3xl mx-auto">
+      <a href="/blog" class="inline-flex items-center gap-2 font-sans text-sm text-accent hover:text-lime-300 transition-colors duration-200 mb-8">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        Back to Blog
+      </a>
+      <span class="inline-block font-sans text-xs tracking-[0.2em] uppercase text-surface bg-accent px-3 py-1 rounded-full font-semibold mb-4">Lead Gen</span>
+      <h1 class="font-serif text-4xl md:text-5xl font-bold text-cream leading-tight mb-4">How Automated Follow-ups Can Double Your Quote Conversions</h1>
+      <div class="flex items-center gap-3 font-sans text-sm text-muted">
+        <span>Maksym Kolesnyk</span>
+        <span class="text-white/30">|</span>
+        <time datetime="2026-02-27">27 Feb 2026</time>
+      </div>
+    </div>
+  </section>
+
+  <!-- Article Body -->
+  <section class="px-4 sm:px-6 lg:px-8 pb-16 md:pb-24">
+    <div class="max-w-3xl mx-auto prose">
+
+      <p>You spend 45 minutes driving to a job, measuring up, working out materials, and writing a detailed quote. You send it off. Then... nothing. The customer goes quiet. You're too busy on the next job to chase them up. Two weeks later, they've hired someone else.</p>
+
+      <p>Sound familiar? If you're a tradie, this is probably happening more often than you think. Industry data suggests that <strong>the average quote conversion rate for trade businesses is around 20-30%</strong>. That means for every 10 quotes you write, 7 or 8 go nowhere.</p>
+
+      <p>But here's the thing — most of those lost quotes aren't lost because of your pricing. They're lost because of <strong>timing and follow-up</strong>. And that's a problem that automation can solve.</p>
+
+      <h2>Why Quotes Go Cold</h2>
+
+      <p>Let's be honest about why customers don't respond to quotes. It's rarely because they found someone cheaper (though sometimes it is). More often, it's one of these:</p>
+
+      <ul>
+        <li><strong>They got busy</strong> — life happened, the renovation got pushed back, they forgot to reply</li>
+        <li><strong>They're comparing quotes</strong> — they requested three quotes and the first tradie to follow up gets the job</li>
+        <li><strong>They had a question</strong> — something in the quote wasn't clear, but they didn't want to bother you</li>
+        <li><strong>They need a nudge</strong> — they liked your quote but just... didn't get around to saying yes</li>
+      </ul>
+
+      <p>In every single one of these scenarios, a simple follow-up message could have won the job. The problem isn't willingness — it's capacity. You're on the tools all day. You don't have time to track who you quoted last Tuesday and send them a polite check-in.</p>
+
+      <h2>The Follow-up Gap</h2>
+
+      <p>Research from the Harvard Business Review found that <strong>companies that contact leads within the first hour are 7x more likely to qualify them</strong> compared to those who wait even one hour longer. And yet most tradies take 24-72 hours to even send the initial quote, let alone follow up afterwards.</p>
+
+      <p>Here's what a typical tradie's follow-up process looks like:</p>
+
+      <ol>
+        <li>Send quote via email or text</li>
+        <li>Wait and hope</li>
+        <li>Maybe remember to follow up a week later (if at all)</li>
+        <li>By then, the customer has already hired someone else</li>
+      </ol>
+
+      <p>Compare that to what an automated follow-up sequence looks like:</p>
+
+      <ol>
+        <li>Quote sent automatically (or manually) — confirmation message sent immediately</li>
+        <li>Day 2: "Hi [Name], just checking you received the quote. Happy to answer any questions."</li>
+        <li>Day 5: "Still interested in getting this done? I've got availability next week if you'd like to lock it in."</li>
+        <li>Day 10: "Last check-in — the quote's valid for another 20 days. Let me know if anything's changed."</li>
+      </ol>
+
+      <p>That's it. Four touchpoints. Completely automated. And it's the difference between a 25% conversion rate and a 45-50% conversion rate for many trade businesses.</p>
+
+      <h2>What "Automated Follow-ups" Actually Means</h2>
+
+      <p>When I say automation, I'm not talking about building a robot or hiring a call centre. I'm talking about simple, practical tools that send messages on your behalf based on triggers you set up once.</p>
+
+      <p>The most common options for tradies:</p>
+
+      <ul>
+        <li><strong>Email sequences</strong> — tools like Mailchimp, ConvertKit, or even simple Gmail scheduling can send pre-written follow-up emails at set intervals after you send a quote</li>
+        <li><strong>SMS follow-ups</strong> — services like GoHighLevel, Twilio, or even business texting apps can send automated text messages (which have a 98% open rate compared to email's 20%)</li>
+        <li><strong>CRM with automation</strong> — platforms like Tradify, ServiceM8, or Jobber have built-in follow-up features designed specifically for tradies</li>
+        <li><strong>Custom website forms</strong> — when someone requests a quote through your website, an automated sequence starts immediately</li>
+      </ul>
+
+      <p>The key principle is: <strong>set it up once, and it runs forever</strong>. You write the follow-up messages once, set the timing, and every quote you send from that point gets the same professional follow-up treatment — even when you're knee-deep in a bathroom reno.</p>
+
+      <h2>What to Say in Your Follow-ups</h2>
+
+      <p>The biggest mistake people make with automated follow-ups is making them sound automated. Your messages should feel like you personally typed them on your phone between jobs. Keep them short, casual, and helpful.</p>
+
+      <p><strong>Follow-up 1 (Day 1-2):</strong></p>
+      <p><em>"Hey [Name], just making sure you got the quote I sent through for the [job type]. Give me a shout if you've got any questions — happy to chat."</em></p>
+
+      <p><strong>Follow-up 2 (Day 4-5):</strong></p>
+      <p><em>"Hi [Name], following up on the quote for [job type]. I've got some availability coming up in [timeframe] if you'd like to get it booked in. No pressure either way."</em></p>
+
+      <p><strong>Follow-up 3 (Day 9-10):</strong></p>
+      <p><em>"Hey [Name], just a last check-in on the [job type] quote. Totally understand if the timing's not right — just let me know either way so I can plan my schedule. Cheers."</em></p>
+
+      <p>Notice the tone: friendly, not pushy. You're being helpful and professional, not desperate. And that last "let me know either way" gives them an easy out, which paradoxically makes people more likely to respond.</p>
+
+      <h2>The Numbers Behind It</h2>
+
+      <p>Let's make this tangible. Say you're a sparky who sends out 20 quotes a month with an average job value of $2,000.</p>
+
+      <ul>
+        <li><strong>Without follow-ups:</strong> 25% conversion = 5 jobs = $10,000/month</li>
+        <li><strong>With automated follow-ups:</strong> 45% conversion = 9 jobs = $18,000/month</li>
+      </ul>
+
+      <p>That's an extra <strong>$8,000 per month</strong> — or $96,000 per year — from jobs you were already quoting on. You didn't need more leads. You didn't need to advertise more. You just needed to follow up on the work you were already doing.</p>
+
+      <p>Even if your numbers are half of that, it's still a massive return for something that costs almost nothing to set up.</p>
+
+      <h2>Getting Started (Keep It Simple)</h2>
+
+      <p>You don't need to set up a complex CRM system to start seeing results. Here's the simplest way to begin:</p>
+
+      <ol>
+        <li><strong>Pick SMS or email</strong> — SMS has higher open rates, but email works too. Use whatever your customers prefer</li>
+        <li><strong>Write 3 follow-up messages</strong> — use the templates above as a starting point, customise them to sound like you</li>
+        <li><strong>Set the timing</strong> — Day 1-2, Day 4-5, Day 9-10 is a good starting cadence</li>
+        <li><strong>Use a tool with templates</strong> — even scheduling texts on your phone works as a start. When you're ready to scale, look at tools like ServiceM8, Tradify, or GoHighLevel</li>
+        <li><strong>Track your results</strong> — note how many quotes convert before and after. You'll see the difference within the first month</li>
+      </ol>
+
+      <p>The whole setup takes less than an hour. After that, every quote you send gets professional, consistent follow-up — without you lifting a finger.</p>
+
+      <h2>The Bottom Line</h2>
+
+      <p>You're already doing the hard work — turning up, measuring, writing quotes. The follow-up is the easy part, and it's where most tradies leave money on the table. A simple automated sequence of 3 friendly messages can realistically double your quote conversion rate.</p>
+
+      <p>You don't need more leads. You need to close more of the ones you already have.</p>
+
+      <!-- CTA -->
+      <div class="mt-12 mb-8 p-8 rounded-2xl border border-accent/20 bg-accent/5 text-center">
+        <p class="font-serif text-2xl font-bold text-cream mb-3">Want a website that captures and converts leads?</p>
+        <p class="font-sans text-base text-muted mb-6">I build websites with built-in lead capture and automation for tradies and construction businesses across AU & NZ.</p>
+        <a href="/#contact" class="btn-primary inline-block bg-accent text-surface font-sans text-sm font-semibold px-8 py-3 rounded-full hover:bg-lime-300 transition-colors duration-200">Get a Free Quote</a>
+      </div>
+
+      <a href="/blog" class="inline-flex items-center gap-2 font-sans text-sm text-accent hover:text-lime-300 transition-colors duration-200">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        Back to Blog
+      </a>
+
+    </div>
+  </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="px-4 sm:px-6 lg:px-8 py-12 border-t border-white/15">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-3">
+        <span class="font-serif text-xl font-bold text-cream">MK<span class="text-accent">.</span></span>
+        <span class="text-white/35">|</span>
+        <span class="font-sans text-sm text-muted">Websites for Construction &amp; Trades</span>
+      </div>
+
+      <div class="flex items-center gap-6">
+        <a href="#" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer" class="text-muted hover:text-cream transition-colors duration-200 cursor-pointer">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+        <a href="mailto:lorem@ipsum.com" aria-label="Email" class="text-muted hover:text-cream transition-colors duration-200 cursor-pointer">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        </a>
+        <a href="tel:+61400000000" aria-label="Phone" class="text-muted hover:text-cream transition-colors duration-200 cursor-pointer">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        </a>
+      </div>
+
+      <p class="font-sans text-xs text-muted">&copy; 2026 Maksym Kolesnyk. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Navbar scroll state
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 20);
+    });
+
+    // Mobile menu
+    const menuBtn = document.getElementById('menuBtn');
+    const closeMenuBtn = document.getElementById('closeMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    function openMobileMenu() {
+      mobileMenu.classList.add('open');
+      mobileMenu.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+      closeMenuBtn.focus();
+    }
+    function closeMobileMenu() {
+      mobileMenu.classList.remove('open');
+      mobileMenu.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+      menuBtn.focus();
+    }
+    menuBtn.addEventListener('click', openMobileMenu);
+    closeMenuBtn.addEventListener('click', closeMobileMenu);
+    document.querySelectorAll('.mobile-link').forEach(link => {
+      link.addEventListener('click', closeMobileMenu);
+    });
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && mobileMenu.classList.contains('open')) closeMobileMenu();
+    });
+  </script>
+
+</body>
+</html>
