@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog | Maksym Kolesnyk — Websites for Construction & Trades</title>
+  <meta name="description" content="Tips, guides, and insights on websites, SEO, and lead generation for construction and trades businesses across Australia and New Zealand.">
+  <meta name="theme-color" content="#0A0A0A">
+  <link rel="canonical" href="https://maksym.au/blog">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://maksym.au/blog">
+  <meta property="og:title" content="Blog | Maksym Kolesnyk — Websites for Construction & Trades">
+  <meta property="og:description" content="Tips, guides, and insights on websites, SEO, and lead generation for construction and trades businesses across AU & NZ.">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Blog | Maksym Kolesnyk — Websites for Construction & Trades">
+  <meta name="twitter:description" content="Tips, guides, and insights on websites, SEO, and lead generation for construction and trades businesses across AU & NZ.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,700;1,400&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../dist/output.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { background: #0A0A0A; color: #F5F0E8; font-family: 'Jost', sans-serif; overflow-x: hidden; }
+    ::selection { background: #C8FF00; color: #0A0A0A; }
+
+    /* Noise grain overlay */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      pointer-events: none;
+      opacity: 0.035;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+      background-repeat: repeat;
+      background-size: 256px 256px;
+    }
+
+    /* Floating navbar — liquid glass */
+    .nav-glass {
+      background:
+        linear-gradient(180deg,
+          rgba(255, 255, 255, 0.06) 0%,
+          rgba(255, 255, 255, 0.02) 40%,
+          rgba(10, 10, 10, 0.5) 100%
+        );
+      backdrop-filter: blur(40px) saturate(1.6) brightness(1.1);
+      -webkit-backdrop-filter: blur(40px) saturate(1.6) brightness(1.1);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-top: 1px solid rgba(255, 255, 255, 0.22);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.4),
+        0 2px 8px rgba(0, 0, 0, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: background 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+    }
+    .nav-glass::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -20%;
+      width: 60%;
+      height: 100%;
+      background: linear-gradient(
+        105deg,
+        transparent 20%,
+        rgba(255, 255, 255, 0.03) 40%,
+        rgba(255, 255, 255, 0.06) 50%,
+        rgba(255, 255, 255, 0.03) 60%,
+        transparent 80%
+      );
+      pointer-events: none;
+      z-index: 0;
+    }
+    .nav-glass > * {
+      position: relative;
+      z-index: 1;
+    }
+    .nav-glass.scrolled {
+      background:
+        linear-gradient(180deg,
+          rgba(255, 255, 255, 0.04) 0%,
+          rgba(255, 255, 255, 0.01) 30%,
+          rgba(10, 10, 10, 0.75) 100%
+        );
+      border-top-color: rgba(255, 255, 255, 0.15);
+      box-shadow:
+        0 12px 48px rgba(0, 0, 0, 0.5),
+        0 4px 12px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.06),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+    }
+
+    /* Glass card */
+    .glass-card {
+      background: rgba(255, 255, 255, 0.07);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .glass-card:hover {
+      background: rgba(255, 255, 255, 0.12);
+      border-color: rgba(200, 255, 0, 0.35);
+      box-shadow: 0 0 60px rgba(200, 255, 0, 0.08);
+    }
+
+    /* CTA button shimmer */
+    .btn-primary {
+      position: relative;
+      overflow: hidden;
+    }
+    .btn-primary::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
+      transition: left 0.5s ease;
+    }
+    .btn-primary:hover::after {
+      left: 100%;
+    }
+
+    /* Mobile menu */
+    .mobile-menu {
+      background:
+        linear-gradient(180deg,
+          rgba(255, 255, 255, 0.04) 0%,
+          rgba(255, 255, 255, 0.01) 30%,
+          rgba(10, 10, 10, 0.85) 100%
+        );
+      backdrop-filter: blur(60px) saturate(1.8);
+      -webkit-backdrop-filter: blur(60px) saturate(1.8);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+    .mobile-menu.open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    /* Scroll reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="nav-glass fixed top-2 sm:top-4 left-1/2 -translate-x-1/2 z-50 rounded-xl sm:rounded-2xl px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between w-[calc(100%-1rem)] sm:w-[calc(100%-2rem)] max-w-7xl" id="navbar">
+    <a href="/" class="font-serif text-xl font-bold tracking-tight text-cream cursor-pointer">MK<span class="text-accent">.</span></a>
+
+    <!-- Desktop links -->
+    <div class="hidden md:flex items-center gap-8">
+      <a href="/#about" class="text-sm font-sans text-muted hover:text-cream transition-colors duration-200 cursor-pointer">About</a>
+      <a href="/#services" class="text-sm font-sans text-muted hover:text-cream transition-colors duration-200 cursor-pointer">Services</a>
+      <a href="/#process" class="text-sm font-sans text-muted hover:text-cream transition-colors duration-200 cursor-pointer">How It Works</a>
+      <a href="/#pricing" class="text-sm font-sans text-muted hover:text-cream transition-colors duration-200 cursor-pointer">Pricing</a>
+      <a href="/blog" class="text-sm font-sans text-cream hover:text-accent transition-colors duration-200 cursor-pointer">Blog</a>
+      <a href="/#contact" class="btn-primary bg-accent text-surface font-sans text-sm font-semibold px-6 py-2.5 rounded-full cursor-pointer inline-block hover:bg-lime-300 transition-colors duration-200">Get a Quote</a>
+    </div>
+
+    <!-- Mobile menu button -->
+    <button class="md:hidden text-cream cursor-pointer" id="menuBtn" aria-label="Open menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu fixed inset-0 z-[60] flex flex-col items-center justify-center gap-8 md:hidden overflow-y-auto py-20" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Navigation menu" aria-hidden="true">
+    <button class="fixed top-6 right-6 text-cream cursor-pointer z-[61]" id="closeMenuBtn" aria-label="Close menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <a href="/#about" class="mobile-link font-serif text-3xl text-cream cursor-pointer">About</a>
+    <a href="/#services" class="mobile-link font-serif text-3xl text-cream cursor-pointer">Services</a>
+    <a href="/#process" class="mobile-link font-serif text-3xl text-cream cursor-pointer">How It Works</a>
+    <a href="/#pricing" class="mobile-link font-serif text-3xl text-cream cursor-pointer">Pricing</a>
+    <a href="/blog" class="mobile-link font-serif text-3xl text-cream cursor-pointer">Blog</a>
+    <a href="/#contact" class="mobile-link btn-primary bg-accent text-surface font-sans text-lg font-semibold px-8 py-3 rounded-full cursor-pointer inline-block mt-4">Get a Quote</a>
+  </div>
+
+  <main>
+
+  <!-- Hero / Page Header -->
+  <section class="px-4 sm:px-6 lg:px-8 pt-32 pb-16 md:pt-40 md:pb-20">
+    <div class="max-w-7xl mx-auto text-center">
+      <p class="font-sans text-sm tracking-[0.3em] uppercase text-accent mb-3">Blog</p>
+      <h1 class="font-serif text-5xl md:text-6xl lg:text-7xl font-bold text-cream leading-tight mb-6">Insights for<br><span class="italic font-normal text-muted">tradies & builders</span></h1>
+      <p class="font-sans text-base text-muted leading-relaxed max-w-2xl mx-auto">Tips on websites, local SEO, and lead generation to help your construction or trades business grow online.</p>
+    </div>
+  </section>
+
+  <!-- Blog Post Grid -->
+  <section class="px-4 sm:px-6 lg:px-8 pb-24 md:pb-32">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- Post 1 -->
+        <article class="reveal glass-card rounded-2xl overflow-hidden group">
+          <div class="h-48 bg-gradient-to-br from-accent/20 via-accent/5 to-transparent flex items-center justify-center">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" class="text-accent/40" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+          </div>
+          <div class="p-6">
+            <span class="font-sans text-xs tracking-[0.2em] uppercase text-accent">Web Tips</span>
+            <h2 class="font-serif text-xl font-bold text-cream mt-2 mb-3 group-hover:text-accent transition-colors duration-200">5 Things Every Tradie Website Needs in 2026</h2>
+            <p class="font-sans text-sm text-muted leading-relaxed mb-4">Your website is your 24/7 salesperson. Here are the must-haves that turn visitors into paying customers for trade businesses.</p>
+            <span class="font-sans text-sm text-accent/50">Coming Soon</span>
+          </div>
+        </article>
+
+        <!-- Post 2 -->
+        <article class="reveal reveal-delay-1 glass-card rounded-2xl overflow-hidden group">
+          <div class="h-48 bg-gradient-to-br from-accent/15 via-accent/5 to-transparent flex items-center justify-center">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" class="text-accent/40" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </div>
+          <div class="p-6">
+            <span class="font-sans text-xs tracking-[0.2em] uppercase text-accent">Local SEO</span>
+            <h2 class="font-serif text-xl font-bold text-cream mt-2 mb-3 group-hover:text-accent transition-colors duration-200">Why Your Google Business Profile Matters More Than Social Media</h2>
+            <p class="font-sans text-sm text-muted leading-relaxed mb-4">Most tradies waste hours on Instagram when their Google Business Profile drives 10x more leads. Here's how to optimise it.</p>
+            <span class="font-sans text-sm text-accent/50">Coming Soon</span>
+          </div>
+        </article>
+
+        <!-- Post 3 -->
+        <article class="reveal reveal-delay-2 glass-card rounded-2xl overflow-hidden group">
+          <div class="h-48 bg-gradient-to-br from-accent/10 via-accent/5 to-transparent flex items-center justify-center">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" class="text-accent/40" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
+          <div class="p-6">
+            <span class="font-sans text-xs tracking-[0.2em] uppercase text-accent">Lead Gen</span>
+            <h2 class="font-serif text-xl font-bold text-cream mt-2 mb-3 group-hover:text-accent transition-colors duration-200">How Automated Follow-ups Can Double Your Quote Conversions</h2>
+            <p class="font-sans text-sm text-muted leading-relaxed mb-4">Most quotes go cold because tradies are too busy to follow up. Learn how simple automation can recover lost revenue.</p>
+            <span class="font-sans text-sm text-accent/50">Coming Soon</span>
+          </div>
+        </article>
+
+        <!-- Post 4 — placeholder -->
+        <article class="reveal glass-card rounded-2xl overflow-hidden group opacity-50">
+          <div class="h-48 bg-gradient-to-br from-white/5 to-transparent flex items-center justify-center">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" class="text-muted/30" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+          </div>
+          <div class="p-6">
+            <span class="font-sans text-xs tracking-[0.2em] uppercase text-muted/50">More Coming</span>
+            <h2 class="font-serif text-xl font-bold text-muted/50 mt-2 mb-3">More Posts on the Way</h2>
+            <p class="font-sans text-sm text-muted/40 leading-relaxed">New articles on websites, SEO, and growth for tradies — published regularly.</p>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Back to home -->
+      <div class="text-center mt-16">
+        <a href="/" class="inline-flex items-center gap-3 font-sans text-sm font-semibold text-accent border border-accent/30 px-8 py-3 rounded-full hover:bg-accent/10 transition-all duration-200 cursor-pointer">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+          Back to Home
+        </a>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="px-4 sm:px-6 lg:px-8 py-12 border-t border-white/15">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-3">
+        <span class="font-serif text-xl font-bold text-cream">MK<span class="text-accent">.</span></span>
+        <span class="text-white/35">|</span>
+        <span class="font-sans text-sm text-muted">Websites for Construction &amp; Trades</span>
+      </div>
+
+      <div class="flex items-center gap-6">
+        <a href="#" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer" class="text-muted hover:text-cream transition-colors duration-200 cursor-pointer">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+        <a href="mailto:lorem@ipsum.com" aria-label="Email" class="text-muted hover:text-cream transition-colors duration-200 cursor-pointer">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        </a>
+        <a href="tel:+61400000000" aria-label="Phone" class="text-muted hover:text-cream transition-colors duration-200 cursor-pointer">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        </a>
+      </div>
+
+      <p class="font-sans text-xs text-muted">&copy; 2026 Maksym Kolesnyk. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Scroll reveal
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+    // Navbar scroll state
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 20);
+    });
+
+    // Mobile menu
+    const menuBtn = document.getElementById('menuBtn');
+    const closeMenuBtn = document.getElementById('closeMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    function openMobileMenu() {
+      mobileMenu.classList.add('open');
+      mobileMenu.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+      closeMenuBtn.focus();
+    }
+    function closeMobileMenu() {
+      mobileMenu.classList.remove('open');
+      mobileMenu.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+      menuBtn.focus();
+    }
+    menuBtn.addEventListener('click', openMobileMenu);
+    closeMenuBtn.addEventListener('click', closeMobileMenu);
+    document.querySelectorAll('.mobile-link').forEach(link => {
+      link.addEventListener('click', closeMobileMenu);
+    });
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && mobileMenu.classList.contains('open')) closeMobileMenu();
+    });
+  </script>
+
+</body>
+</html>
