@@ -468,7 +468,7 @@
   <div class="cursor-ring hidden lg:block" id="cursorRing" aria-hidden="true"></div>
 
   <!-- ======================== NAVBAR ======================== -->
-  <nav class="nav-glass fixed top-4 left-1/2 -translate-x-1/2 z-50 rounded-2xl px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between w-[calc(100%-2rem)] max-w-7xl" id="navbar">
+  <nav class="nav-glass fixed top-2 sm:top-4 left-1/2 -translate-x-1/2 z-50 rounded-2xl px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between w-[calc(100%-1rem)] sm:w-[calc(100%-2rem)] max-w-7xl" id="navbar">
     <a href="/" class="font-serif text-xl font-bold tracking-tight text-cream cursor-pointer">MK<span class="text-accent">.</span></a>
 
     <!-- Desktop links -->
@@ -487,8 +487,8 @@
   </nav>
 
   <!-- Mobile Menu -->
-  <div class="mobile-menu fixed inset-0 z-[60] flex flex-col items-center justify-center gap-8 md:hidden" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Navigation menu" aria-hidden="true">
-    <button class="absolute top-6 right-6 text-cream cursor-pointer" id="closeMenuBtn" aria-label="Close menu">
+  <div class="mobile-menu fixed inset-0 z-[60] flex flex-col items-center justify-center gap-8 md:hidden overflow-y-auto py-20" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Navigation menu" aria-hidden="true">
+    <button class="fixed top-6 right-6 text-cream cursor-pointer z-[61]" id="closeMenuBtn" aria-label="Close menu">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
     </button>
     <a href="#about" class="mobile-link font-serif text-3xl text-cream cursor-pointer">About</a>
