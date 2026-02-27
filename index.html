@@ -13,36 +13,14 @@
   <meta property="og:url" content="https://maksym.au/">
   <meta property="og:title" content="Maksym Kolesnyk | Websites for Construction & Trades">
   <meta property="og:description" content="High-performance websites for builders, tradies, and construction companies across AU & NZ. AI-powered development — fast, affordable, enterprise-grade.">
-  <meta property="og:image" content="https://maksym.au/og-image.png">
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Maksym Kolesnyk | Websites for Construction & Trades">
   <meta name="twitter:description" content="High-performance websites for builders, tradies, and construction companies across AU & NZ. AI-powered development — fast, affordable, enterprise-grade.">
-  <meta name="twitter:image" content="https://maksym.au/og-image.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,700;1,400&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            serif: ['"Bodoni Moda"', 'serif'],
-            sans: ['Jost', 'sans-serif'],
-          },
-          colors: {
-            surface: '#0A0A0A',
-            surfaceLight: '#111111',
-
-            accent: '#C8FF00',
-            muted: '#D0D0D0',
-            cream: '#F5F0E8',
-          },
-        },
-      },
-    }
-  </script>
+  <link rel="stylesheet" href="dist/output.css">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; }
@@ -456,9 +434,9 @@
       "@type": "OfferCatalog",
       "name": "Website Packages",
       "itemListElement": [
-        {"@type": "Offer", "name": "Starter", "price": "2500", "priceCurrency": "AUD", "description": "5-page responsive website with SEO and contact forms"},
-        {"@type": "Offer", "name": "Professional", "price": "5000", "priceCurrency": "AUD", "description": "Full site with lead generation, gallery, and Google Business integration"},
-        {"@type": "Offer", "name": "Premium", "price": "8500", "priceCurrency": "AUD", "description": "Full digital package with booking system, CRM, and client portal"}
+        {"@type": "Offer", "name": "Foundation", "price": "1990", "priceCurrency": "AUD", "description": "5-page responsive website with SEO, contact forms, SSL, and analytics"},
+        {"@type": "Offer", "name": "Professional", "price": "3990", "priceCurrency": "AUD", "description": "10+ page site with project gallery, professional copywriting, advanced SEO, and Google Business setup"},
+        {"@type": "Offer", "name": "Advanced", "price": "4990", "priceCurrency": "AUD", "description": "Professional site plus Lead Engine, Blog Writer Bot, and Auto-Reply Bot built in"}
       ]
     }
   }
@@ -468,16 +446,17 @@
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
-      {"@type": "Question", "name": "How long does it take to build my website?", "acceptedAnswer": {"@type": "Answer", "text": "Most Starter sites go live within 5–7 business days. Professional sites take 1–2 weeks, and Premium packages 2–3 weeks."}},
-      {"@type": "Question", "name": "I'm not tech-savvy. Will I be able to update my site?", "acceptedAnswer": {"@type": "Answer", "text": "You won't need to. The monthly maintenance plan covers all updates, content changes, and technical work."}},
+      {"@type": "Question", "name": "How long does it take to build my website?", "acceptedAnswer": {"@type": "Answer", "text": "Foundation sites go live within 5–7 business days. Professional sites take 1–2 weeks. AI-powered development means faster delivery without sacrificing quality."}},
+      {"@type": "Question", "name": "I'm not tech-savvy. Will I be able to update my site?", "acceptedAnswer": {"@type": "Answer", "text": "You won't need to. The Hosting & Care plan covers all updates, content changes, and technical work."}},
       {"@type": "Question", "name": "What do I need to provide?", "acceptedAnswer": {"@type": "Answer", "text": "Your logo, photos of your work, a list of your services, and your contact details. Professional copywriting, design, and development are all handled for you."}},
-      {"@type": "Question", "name": "What does the $199/month cover?", "acceptedAnswer": {"@type": "Answer", "text": "Hosting, SSL, uptime monitoring, security updates, monthly performance reports, content updates, and priority support. Cancel anytime with 30 days notice."}},
+      {"@type": "Question", "name": "What does the $49/month Hosting & Care cover?", "acceptedAnswer": {"@type": "Answer", "text": "Vercel hosting, SSL, uptime monitoring, security updates, and basic support. Add-on systems like Lead Engine, Blog Writer Bot, and Online Booking are one-time builds with no extra monthly fees."}},
       {"@type": "Question", "name": "Do you work with businesses across all of Australia and NZ?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Everything is done remotely. Same timezone makes communication easy."}},
       {"@type": "Question", "name": "What makes your sites different from Wix or Squarespace?", "acceptedAnswer": {"@type": "Answer", "text": "Speed and SEO. Custom-coded with Next.js on Vercel infrastructure — sub-second load times, 95+ PageSpeed scores, and better search rankings."}},
-      {"@type": "Question", "name": "Can I pay in instalments?", "acceptedAnswer": {"@type": "Answer", "text": "Standard terms are 50% upfront and 50% on launch. Premium packages can be split into three payments."}}
+      {"@type": "Question", "name": "Can I pay in instalments?", "acceptedAnswer": {"@type": "Answer", "text": "Standard terms are 50% upfront and 50% on launch for both Foundation and Professional builds. Monthly modules are billed monthly with no lock-in contracts."}}
     ]
   }
   </script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
 </head>
 <body>
 
@@ -568,7 +547,7 @@
               Get a Free Quote
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
             </a>
-            <a href="#pricing" class="font-sans text-sm text-cream/90 hover:text-cream transition-colors duration-200 cursor-pointer underline underline-offset-4 decoration-cream/20 hover:decoration-cream/50">From $2,500 AUD</a>
+            <a href="#pricing" class="font-sans text-sm text-cream/90 hover:text-cream transition-colors duration-200 cursor-pointer underline underline-offset-4 decoration-cream/20 hover:decoration-cream/50">From $1,990 AUD</a>
           </div>
 
           <!-- Proof points -->
@@ -796,7 +775,7 @@
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C8FF00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
           </div>
           <h3 class="font-serif text-xl font-bold text-cream mb-3">Better Value</h3>
-          <p class="font-sans text-sm text-muted leading-relaxed">No bloated agency overhead. You get enterprise-grade technology at tradie-friendly prices. From $2,500 for a complete website.</p>
+          <p class="font-sans text-sm text-muted leading-relaxed">No bloated agency overhead. You get enterprise-grade technology at tradie-friendly prices. From $1,990 for a complete website.</p>
         </div>
 
         <div class="reveal reveal-delay-2 glass-card stat-card rounded-2xl p-8">
@@ -834,92 +813,137 @@
     <div class="max-w-7xl mx-auto">
       <div class="reveal mb-16">
         <p class="font-sans text-sm tracking-[0.3em] uppercase text-accent mb-3">Services</p>
-        <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-cream leading-tight">Everything your trade<br><span class="italic font-normal text-muted">business needs online</span></h2>
+        <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-cream leading-tight">The website gets you online.<br><span class="italic font-normal text-muted">The systems make you money.</span></h2>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- The Website -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
-        <!-- Service 1 -->
         <div class="reveal glass-card stat-card rounded-2xl p-8 relative">
           <div class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-6">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C8FF00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
           </div>
-          <h3 class="font-serif text-xl font-bold text-cream mb-3">Business Website</h3>
-          <p class="font-sans text-sm text-muted leading-relaxed mb-6">A professional 5&ndash;10 page website that makes your business look as good as your work. Mobile-first, fast-loading, and built to rank on Google.</p>
+          <h3 class="font-serif text-xl font-bold text-cream mb-3">Your Online Presence</h3>
+          <p class="font-sans text-sm text-muted leading-relaxed mb-6">A fast, professional website that makes your business look as good as your work. Mobile-first, built to rank on Google, and live in days &mdash; not months.</p>
           <div class="flex flex-wrap gap-2">
-            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">Responsive Design</span>
-            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">SEO</span>
+            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">Mobile-First</span>
+            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">95+ PageSpeed</span>
+            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">SEO-Ready</span>
             <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">Contact Forms</span>
           </div>
         </div>
 
-        <!-- Service 2 -->
         <div class="reveal reveal-delay-1 glass-card stat-card rounded-2xl p-8 relative">
-          <div class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-6">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C8FF00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-          </div>
-          <h3 class="font-serif text-xl font-bold text-cream mb-3">Lead Generation System</h3>
-          <p class="font-sans text-sm text-muted leading-relaxed mb-6">Turn website visitors into booked jobs. Quote request forms, call tracking, Google Business integration, and automated follow-ups.</p>
-          <div class="flex flex-wrap gap-2">
-            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">Quote Forms</span>
-            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">Google Business</span>
-            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">Analytics</span>
-          </div>
-        </div>
-
-        <!-- Service 3 -->
-        <div class="reveal reveal-delay-2 glass-card stat-card rounded-2xl p-8 relative">
           <div class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-6">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C8FF00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
           </div>
-          <h3 class="font-serif text-xl font-bold text-cream mb-3">Project Gallery</h3>
-          <p class="font-sans text-sm text-muted leading-relaxed mb-6">Showcase your best work with before &amp; after galleries, project case studies, and client testimonials that build trust and win jobs.</p>
+          <h3 class="font-serif text-xl font-bold text-cream mb-3">Your Best Work, Front &amp; Centre</h3>
+          <p class="font-sans text-sm text-muted leading-relaxed mb-6">Showcase completed projects with before-and-after galleries, service pages that target your local area, and professional copy that turns browsers into callers.</p>
           <div class="flex flex-wrap gap-2">
-            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">Before/After</span>
-            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">Case Studies</span>
-            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">Reviews</span>
-          </div>
-        </div>
-
-        <!-- Service 4 -->
-        <div class="reveal glass-card stat-card rounded-2xl p-8 relative">
-          <div class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-6">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C8FF00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          </div>
-          <h3 class="font-serif text-xl font-bold text-cream mb-3">Local SEO</h3>
-          <p class="font-sans text-sm text-muted leading-relaxed mb-6">Get found when locals search "builder near me" or "plumber [your city]". On-page SEO, schema markup, and Google Business optimisation.</p>
-          <div class="flex flex-wrap gap-2">
+            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">Project Gallery</span>
+            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">Service Pages</span>
+            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">Professional Copy</span>
             <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">Google Maps</span>
-            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">Schema Markup</span>
-            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">Local SEO</span>
           </div>
         </div>
 
-        <!-- Service 5 -->
-        <div class="reveal reveal-delay-1 glass-card stat-card rounded-2xl p-8 relative">
-          <div class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-6">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C8FF00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      </div>
+
+      <!-- Narrative bridge -->
+      <div class="reveal text-center my-16">
+        <p class="font-sans text-sm tracking-[0.3em] uppercase text-accent mb-3">Then Plug In</p>
+        <h3 class="font-serif text-3xl md:text-4xl font-bold text-cream leading-tight">Growth systems that<br><span class="italic font-normal text-muted">pay for themselves</span></h3>
+        <p class="font-sans text-base text-muted mt-4 max-w-lg mx-auto">Your website brings people in. These modules turn them into booked jobs, repeat customers, and steady revenue.</p>
+      </div>
+
+      <!-- Growth Systems -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <div class="reveal glass-card stat-card rounded-2xl p-6 relative">
+          <span class="font-sans text-xs font-semibold text-accent bg-accent/10 px-3 py-1 rounded-full">$1,490</span>
+          <h3 class="font-serif text-xl font-bold text-cream mb-3 mt-4">Lead Engine</h3>
+          <p class="font-sans text-sm text-muted leading-relaxed mb-6">Turn visitors into booked jobs. Quote request system, call tracking, Google Business integration, automated follow-ups, and a lead analytics dashboard.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">Quote Forms</span>
+            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">Call Tracking</span>
+            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">Follow-ups</span>
           </div>
-          <h3 class="font-serif text-xl font-bold text-cream mb-3">Online Booking</h3>
-          <p class="font-sans text-sm text-muted leading-relaxed mb-6">Let customers book quotes and consultations directly from your website. Calendar integration, automated confirmations, and reminders.</p>
+        </div>
+
+        <div class="reveal reveal-delay-1 glass-card stat-card rounded-2xl p-6 relative">
+          <span class="font-sans text-xs font-semibold text-accent bg-accent/10 px-3 py-1 rounded-full">$1,490</span>
+          <h3 class="font-serif text-xl font-bold text-cream mb-3 mt-4">Blog Writer Bot</h3>
+          <p class="font-sans text-sm text-muted leading-relaxed mb-6">AI-powered content pipeline that writes SEO-optimised blog posts for your trade. Scheduling, auto-publish, and an admin panel to review before going live.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">AI Content</span>
+            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">Auto-Publish</span>
+            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">SEO</span>
+          </div>
+        </div>
+
+        <div class="reveal reveal-delay-2 glass-card stat-card rounded-2xl p-6 relative">
+          <span class="font-sans text-xs font-semibold text-accent bg-accent/10 px-3 py-1 rounded-full">$890</span>
+          <h3 class="font-serif text-xl font-bold text-cream mb-3 mt-4">Auto-Reply Bot</h3>
+          <p class="font-sans text-sm text-muted leading-relaxed mb-6">Instant AI-personalised responses to every enquiry within minutes. SMS and email. Never lose a lead because you were on the tools.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">Instant Reply</span>
+            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">SMS + Email</span>
+            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">AI-Powered</span>
+          </div>
+        </div>
+
+        <div class="reveal glass-card stat-card rounded-2xl p-6 relative">
+          <span class="font-sans text-xs font-semibold text-accent bg-accent/10 px-3 py-1 rounded-full">$1,190</span>
+          <h3 class="font-serif text-xl font-bold text-cream mb-3 mt-4">Online Booking</h3>
+          <p class="font-sans text-sm text-muted leading-relaxed mb-6">Let customers book quotes and consultations directly from your site. Calendar integration, automated confirmations, and SMS reminders.</p>
           <div class="flex flex-wrap gap-2">
             <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">Calendar Sync</span>
-            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">Reminders</span>
-            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">Supabase</span>
+            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">Confirmations</span>
+            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">SMS Reminders</span>
           </div>
         </div>
 
-        <!-- Service 6 -->
-        <div class="reveal reveal-delay-2 glass-card stat-card rounded-2xl p-8 relative">
-          <div class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-6">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C8FF00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-          </div>
-          <h3 class="font-serif text-xl font-bold text-cream mb-3">Ongoing Support</h3>
-          <p class="font-sans text-sm text-muted leading-relaxed mb-6">Monthly maintenance, content updates, performance monitoring, and priority support. Your site stays fast, secure, and up-to-date.</p>
+        <div class="reveal reveal-delay-1 glass-card stat-card rounded-2xl p-6 relative">
+          <span class="font-sans text-xs font-semibold text-accent bg-accent/10 px-3 py-1 rounded-full">$1,790</span>
+          <h3 class="font-serif text-xl font-bold text-cream mb-3 mt-4">Quoting System</h3>
+          <p class="font-sans text-sm text-muted leading-relaxed mb-6">Customers input project details and get an instant ballpark estimate. You get a qualified lead with scope already defined. Cuts back-and-forth in half.</p>
           <div class="flex flex-wrap gap-2">
-            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">Hosting</span>
-            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">Updates</span>
-            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">Monitoring</span>
+            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">Instant Quotes</span>
+            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">Lead Capture</span>
+            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">Custom Rules</span>
+          </div>
+        </div>
+
+        <div class="reveal reveal-delay-2 glass-card stat-card rounded-2xl p-6 relative">
+          <span class="font-sans text-xs font-semibold text-accent bg-accent/10 px-3 py-1 rounded-full">$790</span>
+          <h3 class="font-serif text-xl font-bold text-cream mb-3 mt-4">Review Collector</h3>
+          <p class="font-sans text-sm text-muted leading-relaxed mb-6">Automated post-job SMS with a direct Google review link. Follow-up reminders if they haven't reviewed. Build your reputation on autopilot.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">Auto SMS</span>
+            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">Google Reviews</span>
+            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">Reminders</span>
+          </div>
+        </div>
+
+        <div class="reveal glass-card stat-card rounded-2xl p-6 relative">
+          <span class="font-sans text-xs font-semibold text-accent bg-accent/10 px-3 py-1 rounded-full">$1,990</span>
+          <h3 class="font-serif text-xl font-bold text-cream mb-3 mt-4">Client Portal</h3>
+          <p class="font-sans text-sm text-muted leading-relaxed mb-6">Give your clients a login to track project progress, view invoices, and communicate directly. CRM integration keeps everything organised.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">Client Dashboard</span>
+            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">Project Tracking</span>
+            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">CRM</span>
+          </div>
+        </div>
+
+        <div class="reveal reveal-delay-1 glass-card stat-card rounded-2xl p-6 relative border border-accent/20">
+          <span class="font-sans text-xs font-semibold text-surface bg-accent px-3 py-1 rounded-full">$249/mo</span>
+          <h3 class="font-serif text-xl font-bold text-cream mb-3 mt-4">SEO &amp; Content</h3>
+          <p class="font-sans text-sm text-muted leading-relaxed mb-6">Ongoing hands-on SEO, monthly content writing, keyword ranking tracking, and quarterly performance reports. The only module that requires continuous effort.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">Monthly Content</span>
+            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">Rank Tracking</span>
+            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">Quarterly Reports</span>
           </div>
         </div>
 
@@ -963,8 +987,8 @@
         <div class="reveal reveal-delay-3 glass-card rounded-2xl p-8 relative">
           <span class="step-num" aria-hidden="true">04</span>
           <div class="relative z-10">
-            <h3 class="font-serif text-xl font-bold text-cream mb-3">Launch &amp; Support</h3>
-            <p class="font-sans text-sm text-muted leading-relaxed">Your site goes live on Vercel's global CDN. Lightning fast from Sydney to Auckland. 30 days of free support included.</p>
+            <h3 class="font-serif text-xl font-bold text-cream mb-3">Launch &amp; Grow</h3>
+            <p class="font-sans text-sm text-muted leading-relaxed">Your site goes live on Vercel's global CDN. Lightning fast from Sydney to Auckland. Then we plug in growth systems &mdash; lead capture, booking, SEO &mdash; that turn your website into a revenue engine.</p>
           </div>
         </div>
       </div>
@@ -977,8 +1001,8 @@
       <div class="reveal glass-card rounded-3xl p-8 md:p-12 text-center relative overflow-hidden">
         <div class="absolute w-[300px] h-[300px] bg-accent/5 rounded-full blur-[100px] -top-20 -left-20 pointer-events-none" aria-hidden="true"></div>
         <div class="relative z-10">
-          <h2 class="font-serif text-3xl md:text-4xl font-bold text-cream mb-4">Still relying on word of mouth alone<span class="text-accent">?</span></h2>
-          <p class="font-sans text-base text-muted mb-8 max-w-lg mx-auto">Your competitors are getting found on Google. Let's make sure your next customer finds you first.</p>
+          <h2 class="font-serif text-3xl md:text-4xl font-bold text-cream mb-4">Your website should be your best salesperson<span class="text-accent">.</span></h2>
+          <p class="font-sans text-base text-muted mb-8 max-w-lg mx-auto">Get a site that looks the part from $1,990 &mdash; then plug in systems that book jobs while you sleep.</p>
           <a href="#contact" class="btn-primary bg-accent text-surface font-sans font-semibold px-8 py-4 rounded-full text-base cursor-pointer inline-flex items-center gap-3 hover:bg-lime-300 transition-colors duration-200">
             Get a Free Quote
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
@@ -993,7 +1017,7 @@
     <div class="max-w-7xl mx-auto">
       <div class="reveal mb-16 text-center">
         <p class="font-sans text-sm tracking-[0.3em] uppercase text-accent mb-3">Every Site Includes</p>
-        <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-cream leading-tight">No hidden extras<span class="text-accent">.</span><br><span class="italic font-normal text-muted">Everything you need, included.</span></h2>
+        <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-cream leading-tight">No hidden extras<span class="text-accent">.</span><br><span class="italic font-normal text-muted">All of this from $1,990.</span></h2>
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -1072,12 +1096,13 @@
         <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-cream leading-tight">Straight-up<br><span class="italic font-normal text-muted">pricing</span></h2>
         <p class="font-sans text-base text-muted mt-4 max-w-lg mx-auto">Fixed prices. No hourly rates, no surprise invoices. You know exactly what you're paying before we start.</p>
       </div>
+      <!-- Website Build Tiers -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <!-- Tier 1 -->
+        <!-- Foundation -->
         <div class="reveal glass-card pricing-card rounded-2xl p-8 flex flex-col">
-          <p class="font-serif text-xl font-bold text-cream mb-1">Starter</p>
-          <p class="font-sans text-sm text-muted mb-4">Get online &amp; look professional</p>
-          <p class="font-serif text-4xl font-bold text-cream mb-1">$2,500</p>
+          <p class="font-serif text-xl font-bold text-cream mb-1">Foundation</p>
+          <p class="font-sans text-sm text-muted mb-4">Get online &amp; start getting leads</p>
+          <p class="font-serif text-4xl font-bold text-cream mb-1">$1,990</p>
           <p class="font-sans text-xs text-muted mb-8">One-off payment (AUD)</p>
           <ul class="space-y-3 mb-8 flex-1">
             <li class="font-sans text-sm text-muted flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span>5-page responsive website</li>
@@ -1090,55 +1115,151 @@
           </ul>
           <a href="#contact" class="btn-primary bg-white/5 border border-white/15 text-cream font-sans font-semibold px-6 py-3 rounded-full text-sm cursor-pointer inline-flex items-center justify-center gap-2 hover:border-accent/30 transition-colors duration-200">Get Started <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
         </div>
-        <!-- Tier 2 (Featured) -->
-        <div class="reveal reveal-delay-1 glass-card pricing-card pricing-featured rounded-2xl p-8 flex flex-col relative">
-          <div class="absolute -top-3 left-1/2 -translate-x-1/2">
-            <span class="font-sans text-xs font-semibold text-surface bg-accent px-4 py-1 rounded-full">Most Popular</span>
-          </div>
+        <!-- Professional -->
+        <div class="reveal reveal-delay-1 glass-card pricing-card rounded-2xl p-8 flex flex-col">
           <p class="font-serif text-xl font-bold text-cream mb-1">Professional</p>
-          <p class="font-sans text-sm text-muted mb-4">Full site + lead generation</p>
-          <p class="font-serif text-4xl font-bold text-accent mb-1">$5,000</p>
+          <p class="font-sans text-sm text-muted mb-4">Full site + copywriting + advanced SEO</p>
+          <p class="font-serif text-4xl font-bold text-cream mb-1">$3,990</p>
           <p class="font-sans text-xs text-muted mb-8">One-off payment (AUD)</p>
           <ul class="space-y-3 mb-8 flex-1">
-            <li class="font-sans text-sm text-muted flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span>Everything in Starter</li>
-            <li class="font-sans text-sm text-muted flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span>Up to 10 pages</li>
+            <li class="font-sans text-sm text-muted flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span>Everything in Foundation</li>
+            <li class="font-sans text-sm text-muted flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span>10+ pages</li>
             <li class="font-sans text-sm text-muted flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span>Project gallery with before/after</li>
-            <li class="font-sans text-sm text-muted flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span>Online quote request system</li>
-            <li class="font-sans text-sm text-muted flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span>Google Business integration</li>
             <li class="font-sans text-sm text-muted flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span>Professional copywriting</li>
+            <li class="font-sans text-sm text-muted flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span>Advanced SEO &amp; schema markup</li>
+            <li class="font-sans text-sm text-muted flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span>Google Business setup</li>
             <li class="font-sans text-sm text-muted flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span>60 days post-launch support</li>
-          </ul>
-          <a href="#contact" class="btn-primary bg-accent text-surface font-sans font-semibold px-6 py-3 rounded-full text-sm cursor-pointer inline-flex items-center justify-center gap-2 hover:bg-lime-300 transition-colors duration-200">Get Started <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
-        </div>
-        <!-- Tier 3 -->
-        <div class="reveal reveal-delay-2 glass-card pricing-card rounded-2xl p-8 flex flex-col">
-          <p class="font-serif text-xl font-bold text-cream mb-1">Premium</p>
-          <p class="font-sans text-sm text-muted mb-4">Full digital package</p>
-          <p class="font-serif text-4xl font-bold text-cream mb-1">$8,500</p>
-          <p class="font-sans text-xs text-muted mb-8">One-off payment (AUD)</p>
-          <ul class="space-y-3 mb-8 flex-1">
-            <li class="font-sans text-sm text-muted flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span>Everything in Professional</li>
-            <li class="font-sans text-sm text-muted flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span>Unlimited pages</li>
-            <li class="font-sans text-sm text-muted flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span>Client portal &amp; dashboard</li>
-            <li class="font-sans text-sm text-muted flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span>Online booking system</li>
-            <li class="font-sans text-sm text-muted flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span>CRM integration (Supabase)</li>
-            <li class="font-sans text-sm text-muted flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span>Blog / content section</li>
-            <li class="font-sans text-sm text-muted flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span>90 days priority support</li>
           </ul>
           <a href="#contact" class="btn-primary bg-white/5 border border-white/15 text-cream font-sans font-semibold px-6 py-3 rounded-full text-sm cursor-pointer inline-flex items-center justify-center gap-2 hover:border-accent/30 transition-colors duration-200">Get Started <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
         </div>
+        <!-- Advanced (Featured) -->
+        <div class="reveal reveal-delay-2 glass-card pricing-card pricing-featured rounded-2xl p-8 flex flex-col relative">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2">
+            <span class="font-sans text-xs font-semibold text-surface bg-accent px-4 py-1 rounded-full">Best Value</span>
+          </div>
+          <p class="font-serif text-xl font-bold text-cream mb-1">Advanced</p>
+          <p class="font-sans text-sm text-muted mb-4">Website + growth systems built in</p>
+          <p class="font-serif text-4xl font-bold text-accent mb-1">$4,990</p>
+          <p class="font-sans text-xs text-muted mb-8">One-off &mdash; save $2,880 on systems</p>
+          <ul class="space-y-3 mb-8 flex-1">
+            <li class="font-sans text-sm text-muted flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span>Everything in Professional</li>
+            <li class="font-sans text-sm text-muted flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span>Lead Engine ($1,490 value)</li>
+            <li class="font-sans text-sm text-muted flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span>Blog Writer Bot ($1,490 value)</li>
+            <li class="font-sans text-sm text-muted flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span>Auto-Reply Bot ($890 value)</li>
+            <li class="font-sans text-sm text-muted flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span>Priority build (fastest turnaround)</li>
+            <li class="font-sans text-sm text-muted flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span>90 days priority support</li>
+          </ul>
+          <a href="#contact" class="btn-primary bg-accent text-surface font-sans font-semibold px-6 py-3 rounded-full text-sm cursor-pointer inline-flex items-center justify-center gap-2 hover:bg-lime-300 transition-colors duration-200">Get Started <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        </div>
       </div>
+
+      <!-- Hosting & Care -->
       <div class="reveal glass-card rounded-2xl p-6 md:p-8 mt-6 flex flex-col md:flex-row items-center justify-between gap-4">
         <div>
-          <p class="font-serif text-xl font-bold text-cream">Ongoing Maintenance</p>
-          <p class="font-sans text-sm text-muted">Hosting, updates, support, performance monitoring &amp; monthly analytics report.</p>
+          <p class="font-serif text-xl font-bold text-cream">Hosting &amp; Care</p>
+          <p class="font-sans text-sm text-muted">Vercel hosting, SSL, uptime monitoring, security updates, and basic support. Required for all sites.</p>
         </div>
         <div class="text-right flex-shrink-0">
-          <p class="font-serif text-3xl font-bold text-accent">$199<span class="text-lg font-normal text-muted">/mo</span></p>
+          <p class="font-serif text-3xl font-bold text-accent">$49<span class="text-lg font-normal text-muted">/mo</span></p>
           <p class="font-sans text-xs text-muted">AUD, cancel anytime</p>
         </div>
       </div>
-      <p class="reveal font-sans text-xs text-muted text-center mt-8">All prices in AUD and exclude GST. Payment plans available on request.</p>
+
+      <!-- Add-on Systems -->
+      <div class="reveal mt-16 mb-10">
+        <h3 class="font-serif text-2xl md:text-3xl font-bold text-cream text-center">Add-on systems</h3>
+        <p class="font-sans text-sm text-muted text-center mt-2">One-time builds that bolt onto any site. No extra monthly fees &mdash; just $49/mo hosting.</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="reveal glass-card pricing-card rounded-2xl p-6 flex flex-col">
+          <p class="font-serif text-lg font-bold text-cream mb-1">Lead Engine</p>
+          <p class="font-serif text-2xl font-bold text-accent mb-3">$1,490</p>
+          <ul class="space-y-2 flex-1">
+            <li class="font-sans text-xs text-muted flex items-start gap-2"><span class="text-accent mt-0.5"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span>Quote request system</li>
+            <li class="font-sans text-xs text-muted flex items-start gap-2"><span class="text-accent mt-0.5"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span>Call tracking</li>
+            <li class="font-sans text-xs text-muted flex items-start gap-2"><span class="text-accent mt-0.5"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span>Google Business integration</li>
+            <li class="font-sans text-xs text-muted flex items-start gap-2"><span class="text-accent mt-0.5"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span>Automated follow-ups</li>
+            <li class="font-sans text-xs text-muted flex items-start gap-2"><span class="text-accent mt-0.5"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span>Lead analytics dashboard</li>
+          </ul>
+        </div>
+        <div class="reveal reveal-delay-1 glass-card pricing-card rounded-2xl p-6 flex flex-col">
+          <p class="font-serif text-lg font-bold text-cream mb-1">Blog Writer Bot</p>
+          <p class="font-serif text-2xl font-bold text-accent mb-3">$1,490</p>
+          <ul class="space-y-2 flex-1">
+            <li class="font-sans text-xs text-muted flex items-start gap-2"><span class="text-accent mt-0.5"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span>AI-powered content pipeline</li>
+            <li class="font-sans text-xs text-muted flex items-start gap-2"><span class="text-accent mt-0.5"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span>SEO-optimised posts</li>
+            <li class="font-sans text-xs text-muted flex items-start gap-2"><span class="text-accent mt-0.5"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span>Auto-publish scheduling</li>
+            <li class="font-sans text-xs text-muted flex items-start gap-2"><span class="text-accent mt-0.5"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span>Admin review panel</li>
+          </ul>
+        </div>
+        <div class="reveal reveal-delay-2 glass-card pricing-card rounded-2xl p-6 flex flex-col">
+          <p class="font-serif text-lg font-bold text-cream mb-1">Online Booking</p>
+          <p class="font-serif text-2xl font-bold text-accent mb-3">$1,190</p>
+          <ul class="space-y-2 flex-1">
+            <li class="font-sans text-xs text-muted flex items-start gap-2"><span class="text-accent mt-0.5"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span>Calendar integration</li>
+            <li class="font-sans text-xs text-muted flex items-start gap-2"><span class="text-accent mt-0.5"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span>Automated confirmations</li>
+            <li class="font-sans text-xs text-muted flex items-start gap-2"><span class="text-accent mt-0.5"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span>SMS reminders</li>
+            <li class="font-sans text-xs text-muted flex items-start gap-2"><span class="text-accent mt-0.5"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span>Online scheduling page</li>
+          </ul>
+        </div>
+        <div class="reveal reveal-delay-3 glass-card pricing-card rounded-2xl p-6 flex flex-col">
+          <p class="font-serif text-lg font-bold text-cream mb-1">Auto-Reply Bot</p>
+          <p class="font-serif text-2xl font-bold text-accent mb-3">$890</p>
+          <ul class="space-y-2 flex-1">
+            <li class="font-sans text-xs text-muted flex items-start gap-2"><span class="text-accent mt-0.5"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span>Instant AI responses</li>
+            <li class="font-sans text-xs text-muted flex items-start gap-2"><span class="text-accent mt-0.5"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span>SMS + email</li>
+            <li class="font-sans text-xs text-muted flex items-start gap-2"><span class="text-accent mt-0.5"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span>Personalised per enquiry</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+        <div class="reveal glass-card pricing-card rounded-2xl p-6 flex flex-col">
+          <p class="font-serif text-lg font-bold text-cream mb-1">Quoting System</p>
+          <p class="font-serif text-2xl font-bold text-accent mb-3">$1,790</p>
+          <ul class="space-y-2 flex-1">
+            <li class="font-sans text-xs text-muted flex items-start gap-2"><span class="text-accent mt-0.5"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span>Instant ballpark estimates</li>
+            <li class="font-sans text-xs text-muted flex items-start gap-2"><span class="text-accent mt-0.5"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span>Qualified lead capture</li>
+            <li class="font-sans text-xs text-muted flex items-start gap-2"><span class="text-accent mt-0.5"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span>Custom pricing rules</li>
+          </ul>
+        </div>
+        <div class="reveal reveal-delay-1 glass-card pricing-card rounded-2xl p-6 flex flex-col">
+          <p class="font-serif text-lg font-bold text-cream mb-1">Review Collector</p>
+          <p class="font-serif text-2xl font-bold text-accent mb-3">$790</p>
+          <ul class="space-y-2 flex-1">
+            <li class="font-sans text-xs text-muted flex items-start gap-2"><span class="text-accent mt-0.5"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span>Automated review requests</li>
+            <li class="font-sans text-xs text-muted flex items-start gap-2"><span class="text-accent mt-0.5"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span>Direct Google review link</li>
+            <li class="font-sans text-xs text-muted flex items-start gap-2"><span class="text-accent mt-0.5"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span>Follow-up reminders</li>
+          </ul>
+        </div>
+        <div class="reveal reveal-delay-2 glass-card pricing-card rounded-2xl p-6 flex flex-col">
+          <p class="font-serif text-lg font-bold text-cream mb-1">Client Portal</p>
+          <p class="font-serif text-2xl font-bold text-accent mb-3">$1,990</p>
+          <ul class="space-y-2 flex-1">
+            <li class="font-sans text-xs text-muted flex items-start gap-2"><span class="text-accent mt-0.5"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span>Client login dashboard</li>
+            <li class="font-sans text-xs text-muted flex items-start gap-2"><span class="text-accent mt-0.5"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span>Project tracking + invoices</li>
+            <li class="font-sans text-xs text-muted flex items-start gap-2"><span class="text-accent mt-0.5"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span>CRM integration</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- SEO & Content (monthly) -->
+      <div class="reveal glass-card rounded-2xl p-6 md:p-8 mt-6 flex flex-col md:flex-row items-center justify-between gap-4 border border-accent/20">
+        <div>
+          <div class="flex items-center gap-3 mb-1 flex-wrap">
+            <p class="font-serif text-xl font-bold text-cream">SEO &amp; Content</p>
+            <span class="font-sans text-xs font-semibold text-accent bg-accent/10 px-3 py-1 rounded-full">Ongoing</span>
+          </div>
+          <p class="font-sans text-sm text-muted">Hands-on SEO, monthly content writing, keyword rank tracking, and quarterly reports. The only service that requires continuous effort.</p>
+        </div>
+        <div class="text-right flex-shrink-0">
+          <p class="font-serif text-3xl font-bold text-accent">$249<span class="text-lg font-normal text-muted">/mo</span></p>
+          <p class="font-sans text-xs text-muted">AUD, cancel anytime</p>
+        </div>
+      </div>
+
+      <p class="reveal font-sans text-xs text-muted text-center mt-8">All prices in AUD and exclude GST. 50% deposit on website builds, balance on launch. Add-on systems are one-time builds with no extra monthly fees.</p>
 
       <!-- Comparison table -->
       <div class="reveal mt-20">
@@ -1164,7 +1285,7 @@
                 <td class="p-4 md:p-5 text-cream">Cost</td>
                 <td class="p-4 md:p-5 text-center text-muted">$300&ndash;$600/yr</td>
                 <td class="p-4 md:p-5 text-center text-muted">$10K&ndash;$25K</td>
-                <td class="p-4 md:p-5 text-center text-cream font-medium">From $2,500</td>
+                <td class="p-4 md:p-5 text-center text-cream font-medium">From $1,990</td>
               </tr>
               <tr class="compare-row border-b border-white/5">
                 <td class="p-4 md:p-5 text-cream">Google PageSpeed</td>
@@ -1200,7 +1321,13 @@
                 <td class="p-4 md:p-5 text-cream">Ongoing support</td>
                 <td class="p-4 md:p-5 text-center"><span class="compare-x">&times;</span></td>
                 <td class="p-4 md:p-5 text-center text-muted">$$$ retainer</td>
-                <td class="p-4 md:p-5 text-center"><span class="compare-check">$199/mo</span></td>
+                <td class="p-4 md:p-5 text-center"><span class="compare-check">From $49/mo</span></td>
+              </tr>
+              <tr class="compare-row">
+                <td class="p-4 md:p-5 text-cream">Growth systems (leads, booking, SEO)</td>
+                <td class="p-4 md:p-5 text-center"><span class="compare-x">&times;</span></td>
+                <td class="p-4 md:p-5 text-center text-muted">$$$ extra</td>
+                <td class="p-4 md:p-5 text-center"><span class="compare-check">Plug &amp; play add-ons</span></td>
               </tr>
             </tbody>
           </table>
@@ -1223,7 +1350,7 @@
             <svg class="faq-icon w-5 h-5 text-accent flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
           </button>
           <div class="faq-answer" id="faq-a1" role="region">
-            <p class="px-6 pb-6 font-sans text-sm text-muted leading-relaxed">Most Starter sites go live within 5&ndash;7 business days. Professional sites take 1&ndash;2 weeks, and Premium packages 2&ndash;3 weeks. Because I use AI-powered development with Claude Code, I can build significantly faster than traditional agencies without sacrificing quality. The main variable is how quickly you can provide content like photos and copy.</p>
+            <p class="px-6 pb-6 font-sans text-sm text-muted leading-relaxed">Foundation sites go live within 5&ndash;7 business days. Professional and Advanced sites take 1&ndash;2 weeks. Because I use AI-powered development with Claude Code, I can build significantly faster than traditional agencies without sacrificing quality. The main variable is how quickly you can provide content like photos and copy.</p>
           </div>
         </div>
         <div class="reveal reveal-delay-1 faq-item glass-card rounded-2xl">
@@ -1232,7 +1359,7 @@
             <svg class="faq-icon w-5 h-5 text-accent flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
           </button>
           <div class="faq-answer" id="faq-a2" role="region">
-            <p class="px-6 pb-6 font-sans text-sm text-muted leading-relaxed">You won't need to. That's what the monthly maintenance plan is for &mdash; I handle all updates, content changes, and technical work. If you want to add a new project photo or update your phone number, just send me a text or email and it'll be done within 24 hours. No logging into dashboards or learning CMS tools.</p>
+            <p class="px-6 pb-6 font-sans text-sm text-muted leading-relaxed">You won't need to. That's what the Hosting &amp; Care plan is for &mdash; I handle all updates, content changes, and technical work. If you want to add a new project photo or update your phone number, just send me a text or email and it'll be done within 24 hours. No logging into dashboards or learning CMS tools.</p>
           </div>
         </div>
         <div class="reveal reveal-delay-2 faq-item glass-card rounded-2xl">
@@ -1246,11 +1373,11 @@
         </div>
         <div class="reveal faq-item glass-card rounded-2xl">
           <button class="faq-btn w-full text-left p-6 flex justify-between items-center gap-4 cursor-pointer bg-transparent border-none" aria-expanded="false" aria-controls="faq-a4">
-            <span class="font-serif text-lg font-bold text-cream">What does the $199/month cover?</span>
+            <span class="font-serif text-lg font-bold text-cream">What does the $49/month Hosting &amp; Care cover?</span>
             <svg class="faq-icon w-5 h-5 text-accent flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
           </button>
           <div class="faq-answer" id="faq-a4" role="region">
-            <p class="px-6 pb-6 font-sans text-sm text-muted leading-relaxed">Hosting on Vercel's global CDN, SSL certificate, uptime monitoring, security updates, monthly performance reports, content updates (new photos, text changes, adding projects), and priority email/phone support. It's everything you need to keep your site running fast and looking great. Cancel anytime with 30 days notice.</p>
+            <p class="px-6 pb-6 font-sans text-sm text-muted leading-relaxed">Vercel hosting on a global CDN, SSL certificate, uptime monitoring, security updates, and basic support. That's your only monthly cost &mdash; all add-on systems (Lead Engine, Blog Writer Bot, Booking, etc.) are one-time builds with no extra monthly fees. The only optional monthly service is SEO &amp; Content ($249/mo) which involves ongoing hands-on work. Cancel anytime with 30 days notice.</p>
           </div>
         </div>
         <div class="reveal reveal-delay-1 faq-item glass-card rounded-2xl">
@@ -1277,7 +1404,7 @@
             <svg class="faq-icon w-5 h-5 text-accent flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
           </button>
           <div class="faq-answer" id="faq-a7" role="region">
-            <p class="px-6 pb-6 font-sans text-sm text-muted leading-relaxed">Absolutely. Standard terms are 50% upfront and 50% on launch. For Premium packages, I can split it into three payments. Happy to discuss what works for your cash flow.</p>
+            <p class="px-6 pb-6 font-sans text-sm text-muted leading-relaxed">Absolutely. Standard terms are 50% upfront and 50% on launch for all website builds. For the Advanced package or multiple add-ons, I can split it into three payments. Add-on systems follow the same 50/50 split. Happy to discuss what works for your cash flow.</p>
           </div>
         </div>
       </div>
@@ -1296,8 +1423,7 @@
           <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-cream leading-tight mb-6">Let's get your<br><span class="italic font-normal text-muted">business online</span></h2>
           <p class="font-sans text-base text-muted leading-relaxed mb-10 max-w-lg">Tell me about your business and I'll get back to you within 24 hours with a no-obligation quote.</p>
 
-          <!-- TODO: Replace YOUR_FORM_ID with your Formspree form ID from https://formspree.io -->
-          <form class="space-y-6" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <form class="space-y-6" id="contactForm">
             <!-- Honeypot anti-spam (hidden from real users) -->
             <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -1633,49 +1759,61 @@
       });
     });
 
-    // Contact form — submit via fetch to Formspree
+    // Supabase client
+    const _supabase = window.supabase.createClient(
+      'https://cetwhivwrjargrorjkdz.supabase.co',
+      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNldHdoaXZ3cmphcmdyb3Jqa2R6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzIxNDM0MDIsImV4cCI6MjA4NzcxOTQwMn0.TQpiu3dfWvM1PIxVy5yUBGu1NRZVkeXDjTNmthWNTOw'
+    );
+
+    // Contact form — submit to Supabase
     const form = document.getElementById('contactForm');
-    form.addEventListener('submit', e => {
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
+
+      // Honeypot — silently ignore bots
+      const honeypot = form.querySelector('input[name="_gotcha"]');
+      if (honeypot && honeypot.value) return;
+
       const btn = form.querySelector('button[type="submit"]');
       const originalText = btn.innerHTML;
       btn.disabled = true;
       btn.innerHTML = '<span class="inline-flex items-center gap-2">Sending...</span>';
 
-      fetch(form.action, {
-        method: 'POST',
-        body: new FormData(form),
-        headers: { 'Accept': 'application/json' }
-      }).then(response => {
-        if (response.ok) {
-          btn.innerHTML = '<span class="inline-flex items-center gap-2">Sent! <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>';
-          btn.classList.remove('bg-accent');
-          btn.classList.add('bg-green-500');
-          form.reset();
-        } else {
-          btn.innerHTML = '<span class="inline-flex items-center gap-2">Error — try again</span>';
-          btn.classList.remove('bg-accent');
-          btn.classList.add('bg-red-500');
-        }
-        setTimeout(() => {
-          btn.innerHTML = originalText;
-          btn.classList.remove('bg-green-500', 'bg-red-500');
-          btn.classList.add('bg-accent');
-          btn.disabled = false;
-        }, 2500);
-      }).catch(() => {
+      try {
+        const { error } = await _supabase
+          .from('contact_submissions')
+          .insert({
+            name: form.querySelector('#name').value.trim(),
+            email: form.querySelector('#email').value.trim(),
+            phone: form.querySelector('#phone').value.trim() || null,
+            trade: form.querySelector('#trade').value || null,
+            project: form.querySelector('#project').value.trim(),
+          });
+
+        if (error) throw error;
+
+        btn.innerHTML = '<span class="inline-flex items-center gap-2">Sent! <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>';
+        btn.classList.remove('bg-accent');
+        btn.classList.add('bg-green-500');
+        form.reset();
+      } catch (err) {
+        console.error('Form submission error:', err);
         btn.innerHTML = '<span class="inline-flex items-center gap-2">Error — try again</span>';
         btn.classList.remove('bg-accent');
         btn.classList.add('bg-red-500');
-        setTimeout(() => {
-          btn.innerHTML = originalText;
-          btn.classList.remove('bg-red-500');
-          btn.classList.add('bg-accent');
-          btn.disabled = false;
-        }, 2500);
-      });
+      }
+
+      setTimeout(() => {
+        btn.innerHTML = originalText;
+        btn.classList.remove('bg-green-500', 'bg-red-500');
+        btn.classList.add('bg-accent');
+        btn.disabled = false;
+      }, 2500);
     });
   </script>
+
+  <!-- Cloudflare Web Analytics -->
+  <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "42e8088b03054cbf86c5445e07ea49a0"}'></script>
 
 </body>
 </html>
