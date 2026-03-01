@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Booking for Tradies | Stop Playing Phone Tag | Maksym Kolesnyk</title>
+  <meta name="description" content="Stop playing phone tag with every customer. Online booking lets customers book quotes and consultations directly from your website. Calendar sync, SMS reminders, zero no-shows. One-off $1,190.">
+  <meta name="theme-color" content="#0A0A0A">
+  <link rel="canonical" href="https://maksym.au/services/online-booking">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://maksym.au/services/online-booking">
+  <meta property="og:title" content="Online Booking for Tradies | Stop Playing Phone Tag">
+  <meta property="og:description" content="Stop playing phone tag with every customer. Online booking lets customers book quotes and consultations directly from your website. Calendar sync, SMS reminders, zero no-shows.">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Online Booking for Tradies | Stop Playing Phone Tag">
+  <meta name="twitter:description" content="Stop playing phone tag with every customer. Online booking lets customers book quotes and consultations directly from your website. Calendar sync, SMS reminders, zero no-shows.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,700;1,400&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../dist/output.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { background: #0A0A0A; color: #F5F0E8; font-family: 'Jost', sans-serif; overflow-x: hidden; }
+    ::selection { background: #C8FF00; color: #0A0A0A; }
+
+    /* Noise grain overlay */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      pointer-events: none;
+      opacity: 0.035;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+      background-repeat: repeat;
+      background-size: 256px 256px;
+    }
+
+    /* Floating navbar — liquid glass */
+    .nav-glass {
+      background:
+        linear-gradient(180deg,
+          rgba(255, 255, 255, 0.06) 0%,
+          rgba(255, 255, 255, 0.02) 40%,
+          rgba(10, 10, 10, 0.5) 100%
+        );
+      backdrop-filter: blur(40px) saturate(1.6) brightness(1.1);
+      -webkit-backdrop-filter: blur(40px) saturate(1.6) brightness(1.1);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-top: 1px solid rgba(255, 255, 255, 0.22);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.4),
+        0 2px 8px rgba(0, 0, 0, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: background 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+    }
+    .nav-glass::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -20%;
+      width: 60%;
+      height: 100%;
+      background: linear-gradient(
+        105deg,
+        transparent 20%,
+        rgba(255, 255, 255, 0.03) 40%,
+        rgba(255, 255, 255, 0.06) 50%,
+        rgba(255, 255, 255, 0.03) 60%,
+        transparent 80%
+      );
+      pointer-events: none;
+      z-index: 0;
+    }
+    .nav-glass > * {
+      position: relative;
+      z-index: 1;
+    }
+    .nav-glass.scrolled {
+      background:
+        linear-gradient(180deg,
+          rgba(255, 255, 255, 0.04) 0%,
+          rgba(255, 255, 255, 0.01) 30%,
+          rgba(10, 10, 10, 0.75) 100%
+        );
+      border-top-color: rgba(255, 255, 255, 0.15);
+      box-shadow:
+        0 12px 48px rgba(0, 0, 0, 0.5),
+        0 4px 12px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.06),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+    }
+
+    /* Glass card */
+    .glass-card {
+      background: rgba(255, 255, 255, 0.07);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .glass-card:hover {
+      background: rgba(255, 255, 255, 0.12);
+      border-color: rgba(200, 255, 0, 0.35);
+      box-shadow: 0 0 60px rgba(200, 255, 0, 0.08);
+    }
+
+    /* Stat card glow on hover */
+    .stat-card {
+      position: relative;
+      overflow: hidden;
+    }
+    .stat-card::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(200, 255, 0, 0.06) 0%, transparent 60%);
+      opacity: 0;
+      transition: opacity 0.5s ease;
+      pointer-events: none;
+    }
+    .stat-card:hover::before { opacity: 1; }
+
+    /* CTA button shimmer */
+    .btn-primary {
+      position: relative;
+      overflow: hidden;
+    }
+    .btn-primary::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
+      transition: left 0.5s ease;
+    }
+    .btn-primary:hover::after {
+      left: 100%;
+    }
+
+    /* Service tag pill */
+    .service-tag {
+      border: 1px solid rgba(255,255,255,0.22);
+      transition: all 0.3s ease;
+    }
+    .service-tag:hover {
+      border-color: #C8FF00;
+      color: #C8FF00;
+      background: rgba(200, 255, 0, 0.05);
+    }
+
+    /* Process step number */
+    .step-num {
+      font-family: 'Bodoni Moda', serif;
+      font-size: 5rem;
+      font-weight: 700;
+      line-height: 1;
+      color: rgba(255,255,255,0.06);
+      position: absolute;
+      top: -0.5rem;
+      left: -0.25rem;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    /* Scroll reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+
+    /* Mobile nav — liquid glass */
+    .mobile-menu {
+      transform: translateX(100%);
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      background:
+        linear-gradient(180deg,
+          rgba(255, 255, 255, 0.04) 0%,
+          rgba(10, 10, 10, 0.85) 30%,
+          rgba(10, 10, 10, 0.95) 100%
+        );
+      backdrop-filter: blur(60px) saturate(1.8) brightness(1.05);
+      -webkit-backdrop-filter: blur(60px) saturate(1.8) brightness(1.05);
+    }
+    .mobile-menu.open {
+      transform: translateX(0);
+    }
+
+    /* Reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+      .reveal { opacity: 1; transform: none; }
+    }
+  </style>
+
+  <!-- Schema.org Product -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Online Booking",
+    "description": "Self-service booking system for trade businesses. Calendar sync, automated SMS confirmations, reminders that cut no-shows by 50-70%, online rescheduling, and a mobile-friendly admin panel.",
+    "brand": {
+      "@type": "Brand",
+      "name": "Maksym Kolesnyk"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "1190",
+      "priceCurrency": "AUD",
+      "availability": "https://schema.org/InStock"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="nav-glass fixed top-2 sm:top-4 left-1/2 -translate-x-1/2 z-50 rounded-xl sm:rounded-2xl px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between w-[calc(100%-1rem)] sm:w-[calc(100%-2rem)] max-w-7xl" id="navbar">
+    <a href="/" class="font-serif text-xl font-bold tracking-tight text-cream cursor-pointer">MK<span class="text-accent">.</span></a>
+
+    <!-- Desktop links -->
+    <div class="hidden md:flex items-center gap-8">
+      <a href="/#services" class="text-sm font-sans text-muted hover:text-cream transition-colors duration-200 cursor-pointer">Services</a>
+      <a href="/#pricing" class="text-sm font-sans text-muted hover:text-cream transition-colors duration-200 cursor-pointer">Pricing</a>
+      <a href="/#process" class="text-sm font-sans text-muted hover:text-cream transition-colors duration-200 cursor-pointer">How It Works</a>
+      <a href="/#contact" class="btn-primary bg-accent text-surface font-sans text-sm font-semibold px-6 py-2.5 rounded-full cursor-pointer inline-block hover:bg-lime-300 transition-colors duration-200">Get a Quote</a>
+    </div>
+
+    <!-- Mobile menu button -->
+    <button class="md:hidden text-cream cursor-pointer" id="menuBtn" aria-label="Open menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu fixed inset-0 z-[60] flex flex-col items-center justify-center gap-8 md:hidden overflow-y-auto py-20" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Navigation menu" aria-hidden="true">
+    <button class="fixed top-6 right-6 text-cream cursor-pointer z-[61]" id="closeMenuBtn" aria-label="Close menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <a href="/#services" class="mobile-link font-serif text-3xl text-cream cursor-pointer">Services</a>
+    <a href="/#pricing" class="mobile-link font-serif text-3xl text-cream cursor-pointer">Pricing</a>
+    <a href="/#process" class="mobile-link font-serif text-3xl text-cream cursor-pointer">How It Works</a>
+    <a href="/#contact" class="mobile-link btn-primary bg-accent text-surface font-sans text-lg font-semibold px-8 py-3 rounded-full cursor-pointer inline-block mt-4">Get a Quote</a>
+  </div>
+
+  <main>
+
+  <!-- ======================== HERO ======================== -->
+  <section class="px-4 sm:px-6 lg:px-8 pt-32 pb-16 md:pt-40 md:pb-20">
+    <div class="max-w-4xl mx-auto">
+      <a href="/#services" class="inline-flex items-center gap-2 font-sans text-sm text-accent hover:text-lime-300 transition-colors duration-200 mb-8">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        All Services
+      </a>
+      <div class="flex flex-wrap items-center gap-3 mb-6">
+        <span class="font-sans text-xs font-semibold text-surface bg-accent px-4 py-1.5 rounded-full">$1,190 one-off</span>
+        <span class="font-sans text-xs text-muted">Add-on to any website package</span>
+      </div>
+      <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-cream leading-tight mb-6">Stop playing phone tag<br><span class="italic font-normal text-muted">with every customer</span></h1>
+      <p class="font-sans text-lg text-muted max-w-2xl mb-8">Let customers book quotes and consultations directly from your website. Calendar sync, automated confirmations, and SMS reminders that cut no-shows in half.</p>
+      <a href="/#contact" class="btn-primary bg-accent text-surface font-sans font-semibold px-8 py-4 rounded-full text-base cursor-pointer inline-flex items-center gap-3 hover:bg-lime-300 transition-colors duration-200">
+        Add to My Site
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- ======================== THE PROBLEM ======================== -->
+  <section class="px-4 sm:px-6 lg:px-8 py-20 md:py-28 border-t border-white/10">
+    <div class="max-w-6xl mx-auto">
+      <div class="reveal text-center mb-16">
+        <p class="font-sans text-sm tracking-[0.3em] uppercase text-accent mb-3">The Problem</p>
+        <h2 class="font-serif text-3xl md:text-4xl font-bold text-cream leading-tight">Phone tag, no-shows, lost time<br><span class="italic font-normal text-muted">coordinating schedules</span></h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="reveal glass-card rounded-2xl p-8 text-center">
+          <div class="w-12 h-12 rounded-xl bg-red-500/10 flex items-center justify-center mx-auto mb-5">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15.05 5A5 5 0 0 1 19 8.95M15.05 1A9 9 0 0 1 23 8.94m-1 7.98v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <h3 class="font-serif text-lg font-bold text-cream mb-3">Phone Tag Kills Productivity</h3>
+          <p class="font-sans text-sm text-muted leading-relaxed">Customer calls while you're on a job. You call back, they're busy. They call again, you're driving. Three days later, they've booked someone else.</p>
+        </div>
+
+        <div class="reveal reveal-delay-1 glass-card rounded-2xl p-8 text-center">
+          <div class="w-12 h-12 rounded-xl bg-red-500/10 flex items-center justify-center mx-auto mb-5">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h3 class="font-serif text-lg font-bold text-cream mb-3">No-Shows Waste Your Day</h3>
+          <p class="font-sans text-sm text-muted leading-relaxed">You block out 2 hours for a quote inspection. They don't show. No text, no call. That's half your morning gone.</p>
+        </div>
+
+        <div class="reveal reveal-delay-2 glass-card rounded-2xl p-8 text-center">
+          <div class="w-12 h-12 rounded-xl bg-red-500/10 flex items-center justify-center mx-auto mb-5">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          </div>
+          <h3 class="font-serif text-lg font-bold text-cream mb-3">Admin Overload</h3>
+          <p class="font-sans text-sm text-muted leading-relaxed">Manually managing your calendar, sending confirmations, rescheduling &mdash; it's a part-time job you didn't sign up for.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== THE SOLUTION ======================== -->
+  <section class="px-4 sm:px-6 lg:px-8 py-20 md:py-28 border-t border-white/10">
+    <div class="max-w-4xl mx-auto">
+      <div class="reveal text-center mb-12">
+        <p class="font-sans text-sm tracking-[0.3em] uppercase text-accent mb-3">The Solution</p>
+        <h2 class="font-serif text-3xl md:text-4xl font-bold text-cream leading-tight">A self-service booking system<br><span class="italic font-normal text-muted">built into your website</span></h2>
+        <p class="font-sans text-base text-muted mt-4 max-w-2xl mx-auto">Customers book directly from your site, your calendar stays in sync, and automated SMS reminders make sure they actually show up &mdash; no phone calls, no chasing, no admin.</p>
+      </div>
+
+      <div class="reveal flex flex-wrap justify-center gap-3">
+        <span class="service-tag font-sans text-sm text-muted px-4 py-2 rounded-full">Calendar Sync</span>
+        <span class="service-tag font-sans text-sm text-muted px-4 py-2 rounded-full">Auto Confirmations</span>
+        <span class="service-tag font-sans text-sm text-muted px-4 py-2 rounded-full">SMS Reminders</span>
+        <span class="service-tag font-sans text-sm text-muted px-4 py-2 rounded-full">Self-Service Booking</span>
+        <span class="service-tag font-sans text-sm text-muted px-4 py-2 rounded-full">Time Slot Management</span>
+        <span class="service-tag font-sans text-sm text-muted px-4 py-2 rounded-full">Rescheduling</span>
+        <span class="service-tag font-sans text-sm text-muted px-4 py-2 rounded-full">Buffer Times</span>
+        <span class="service-tag font-sans text-sm text-muted px-4 py-2 rounded-full">Mobile Friendly</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== HOW IT WORKS ======================== -->
+  <section class="px-4 sm:px-6 lg:px-8 py-20 md:py-28 border-t border-white/10">
+    <div class="max-w-6xl mx-auto">
+      <div class="reveal text-center mb-16">
+        <p class="font-sans text-sm tracking-[0.3em] uppercase text-accent mb-3">How It Works</p>
+        <h2 class="font-serif text-3xl md:text-4xl font-bold text-cream leading-tight">Three steps to<br><span class="italic font-normal text-muted">zero no-shows</span></h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="reveal glass-card rounded-2xl p-8 relative">
+          <span class="step-num" aria-hidden="true">01</span>
+          <div class="relative z-10">
+            <h3 class="font-serif text-xl font-bold text-cream mb-3">Customer Books Online</h3>
+            <p class="font-sans text-sm text-muted leading-relaxed">They pick a date and time that suits them from your available slots &mdash; no phone call needed.</p>
+          </div>
+        </div>
+
+        <div class="reveal reveal-delay-1 glass-card rounded-2xl p-8 relative">
+          <span class="step-num" aria-hidden="true">02</span>
+          <div class="relative z-10">
+            <h3 class="font-serif text-xl font-bold text-cream mb-3">Auto Confirmations Sent</h3>
+            <p class="font-sans text-sm text-muted leading-relaxed">Instant confirmation via SMS and email with date, time, and your contact details. They know it's locked in.</p>
+          </div>
+        </div>
+
+        <div class="reveal reveal-delay-2 glass-card rounded-2xl p-8 relative">
+          <span class="step-num" aria-hidden="true">03</span>
+          <div class="relative z-10">
+            <h3 class="font-serif text-xl font-bold text-cream mb-3">Reminders Prevent No-Shows</h3>
+            <p class="font-sans text-sm text-muted leading-relaxed">24-hour and 1-hour SMS reminders ensure they actually show up. If they can't make it, they reschedule online.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== WHAT'S INCLUDED ======================== -->
+  <section class="px-4 sm:px-6 lg:px-8 py-20 md:py-28 border-t border-white/10">
+    <div class="max-w-4xl mx-auto">
+      <div class="reveal text-center mb-12">
+        <p class="font-sans text-sm tracking-[0.3em] uppercase text-accent mb-3">What's Included</p>
+        <h2 class="font-serif text-3xl md:text-4xl font-bold text-cream leading-tight">Everything you need to<br><span class="italic font-normal text-muted">fill your calendar</span></h2>
+      </div>
+
+      <div class="reveal glass-card rounded-2xl p-8 md:p-10">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4">
+          <div class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-accent mt-0.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="font-sans text-sm text-cream">Custom booking widget for your site</span>
+          </div>
+          <div class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-accent mt-0.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="font-sans text-sm text-cream">Google Calendar / Outlook sync</span>
+          </div>
+          <div class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-accent mt-0.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="font-sans text-sm text-cream">Automated SMS confirmations</span>
+          </div>
+          <div class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-accent mt-0.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="font-sans text-sm text-cream">Automated email confirmations</span>
+          </div>
+          <div class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-accent mt-0.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="font-sans text-sm text-cream">24hr + 1hr SMS reminders</span>
+          </div>
+          <div class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-accent mt-0.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="font-sans text-sm text-cream">Online rescheduling</span>
+          </div>
+          <div class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-accent mt-0.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="font-sans text-sm text-cream">Buffer time between appointments</span>
+          </div>
+          <div class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-accent mt-0.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="font-sans text-sm text-cream">Service type selection</span>
+          </div>
+          <div class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-accent mt-0.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="font-sans text-sm text-cream">Booking notification to your phone</span>
+          </div>
+          <div class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-accent mt-0.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="font-sans text-sm text-cream">Mobile-friendly admin panel</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== ROI / THE NUMBERS ======================== -->
+  <section class="px-4 sm:px-6 lg:px-8 py-20 md:py-28 border-t border-white/10">
+    <div class="max-w-6xl mx-auto">
+      <div class="reveal text-center mb-16">
+        <p class="font-sans text-sm tracking-[0.3em] uppercase text-accent mb-3">The Numbers</p>
+        <h2 class="font-serif text-3xl md:text-4xl font-bold text-cream leading-tight">It pays for itself within<br><span class="italic font-normal text-muted">1&ndash;2 months</span></h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+        <div class="reveal glass-card stat-card rounded-2xl p-8 text-center">
+          <p class="font-serif text-4xl md:text-5xl font-bold text-accent mb-2">50&ndash;70%</p>
+          <p class="font-sans text-sm text-muted">reduction in no-shows with SMS reminders</p>
+        </div>
+        <div class="reveal reveal-delay-1 glass-card stat-card rounded-2xl p-8 text-center">
+          <p class="font-serif text-4xl md:text-5xl font-bold text-accent mb-2">0</p>
+          <p class="font-sans text-sm text-muted">phone calls needed to book an appointment</p>
+        </div>
+        <div class="reveal reveal-delay-2 glass-card stat-card rounded-2xl p-8 text-center">
+          <p class="font-serif text-4xl md:text-5xl font-bold text-accent mb-2">$0</p>
+          <p class="font-sans text-sm text-muted">ongoing cost &mdash; one-off setup, yours forever</p>
+        </div>
+      </div>
+
+      <div class="reveal glass-card rounded-2xl p-8 md:p-10 max-w-2xl mx-auto">
+        <h3 class="font-serif text-xl font-bold text-cream mb-4">Quick maths</h3>
+        <div class="space-y-3 font-sans text-sm text-muted">
+          <p>Time spent on phone tag per week: <span class="text-cream font-semibold">2 &ndash; 3 hours</span></p>
+          <p>No-shows per month: <span class="text-cream font-semibold">3 &ndash; 5</span></p>
+          <p>Cost of each no-show (travel + lost time): <span class="text-cream font-semibold">$100 &ndash; $300</span></p>
+          <p>Monthly cost of no-shows: <span class="text-cream font-semibold">$300 &ndash; $1,500</span></p>
+          <div class="border-t border-white/10 pt-3 mt-3">
+            <p>Online Booking cost: <span class="text-accent font-semibold">$1,190 once</span></p>
+            <p class="text-cream font-semibold mt-2">Pays for itself within 1&ndash;2 months. Every month after that, you're saving time and money.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== FINAL CTA ======================== -->
+  <section class="px-4 sm:px-6 lg:px-8 py-20 md:py-28">
+    <div class="max-w-3xl mx-auto">
+      <div class="reveal glass-card rounded-3xl p-8 md:p-12 text-center relative overflow-hidden">
+        <div class="absolute w-[300px] h-[300px] bg-accent/5 rounded-full blur-[100px] -top-20 -left-20 pointer-events-none" aria-hidden="true"></div>
+        <div class="relative z-10">
+          <span class="inline-block font-sans text-xs font-semibold text-surface bg-accent px-4 py-1.5 rounded-full mb-6">$1,190 one-off</span>
+          <h2 class="font-serif text-3xl md:text-4xl font-bold text-cream mb-4">Let them book you while you're on the tools<span class="text-accent">.</span></h2>
+          <p class="font-sans text-base text-muted mb-8 max-w-lg mx-auto">Add Online Booking to your website and stop losing time to phone tag, no-shows, and calendar admin.</p>
+          <a href="/#contact" class="btn-primary bg-accent text-surface font-sans font-semibold px-8 py-4 rounded-full text-base cursor-pointer inline-flex items-center gap-3 hover:bg-lime-300 transition-colors duration-200">
+            Add Online Booking to My Site
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="px-4 sm:px-6 lg:px-8 py-12 border-t border-white/15">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-3">
+        <span class="font-serif text-xl font-bold text-cream">MK<span class="text-accent">.</span></span>
+        <span class="text-white/35">|</span>
+        <span class="font-sans text-sm text-muted">Websites for Construction &amp; Trades</span>
+      </div>
+
+      <div class="flex items-center gap-6">
+        <a href="#" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer" class="text-muted hover:text-cream transition-colors duration-200 cursor-pointer">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+        <a href="mailto:lorem@ipsum.com" aria-label="Email" class="text-muted hover:text-cream transition-colors duration-200 cursor-pointer">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        </a>
+        <a href="tel:+61400000000" aria-label="Phone" class="text-muted hover:text-cream transition-colors duration-200 cursor-pointer">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        </a>
+      </div>
+
+      <p class="font-sans text-xs text-muted">&copy; 2026 Maksym Kolesnyk. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Navbar scroll state
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 20);
+    });
+
+    // Mobile menu
+    const menuBtn = document.getElementById('menuBtn');
+    const closeMenuBtn = document.getElementById('closeMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    function openMobileMenu() {
+      mobileMenu.classList.add('open');
+      mobileMenu.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+      closeMenuBtn.focus();
+    }
+    function closeMobileMenu() {
+      mobileMenu.classList.remove('open');
+      mobileMenu.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+      menuBtn.focus();
+    }
+    menuBtn.addEventListener('click', openMobileMenu);
+    closeMenuBtn.addEventListener('click', closeMobileMenu);
+    document.querySelectorAll('.mobile-link').forEach(link => {
+      link.addEventListener('click', closeMobileMenu);
+    });
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && mobileMenu.classList.contains('open')) closeMobileMenu();
+    });
+
+    // Scroll reveal
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+  </script>
+
+  <!-- Cloudflare Web Analytics -->
+  <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "a20a26e005a34dc5a2baad1d499e7ceb"}'></script>
+
+</body>
+</html>
