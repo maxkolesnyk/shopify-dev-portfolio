@@ -468,7 +468,6 @@
     ]
   }
   </script>
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
 </head>
 <body>
 
@@ -1588,18 +1587,18 @@
             <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <label for="name" class="font-sans text-xs uppercase tracking-wider text-muted mb-2 block">Name</label>
+                <label for="name" class="font-sans text-xs uppercase tracking-wider text-muted mb-2 block">Name <span class="text-accent">*</span></label>
                 <input type="text" id="name" name="name" required autocomplete="name" class="w-full bg-white/5 border border-white/15 rounded-xl px-4 py-3 font-sans text-sm text-cream placeholder:text-muted/50 focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/20 transition-colors duration-200" placeholder="Your name">
               </div>
               <div>
-                <label for="email" class="font-sans text-xs uppercase tracking-wider text-muted mb-2 block">Email</label>
-                <input type="email" id="email" name="email" required autocomplete="email" class="w-full bg-white/5 border border-white/15 rounded-xl px-4 py-3 font-sans text-sm text-cream placeholder:text-muted/50 focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/20 transition-colors duration-200" placeholder="you@yourbusiness.com.au">
+                <label for="phone" class="font-sans text-xs uppercase tracking-wider text-muted mb-2 block">Phone <span class="text-accent">*</span></label>
+                <input type="tel" id="phone" name="phone" required autocomplete="tel" class="w-full bg-white/5 border border-white/15 rounded-xl px-4 py-3 font-sans text-sm text-cream placeholder:text-muted/50 focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/20 transition-colors duration-200" placeholder="04XX XXX XXX">
               </div>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <label for="phone" class="font-sans text-xs uppercase tracking-wider text-muted mb-2 block">Phone</label>
-                <input type="tel" id="phone" name="phone" autocomplete="tel" class="w-full bg-white/5 border border-white/15 rounded-xl px-4 py-3 font-sans text-sm text-cream placeholder:text-muted/50 focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/20 transition-colors duration-200" placeholder="04XX XXX XXX">
+                <label for="email" class="font-sans text-xs uppercase tracking-wider text-muted mb-2 block">Email</label>
+                <input type="email" id="email" name="email" autocomplete="email" class="w-full bg-white/5 border border-white/15 rounded-xl px-4 py-3 font-sans text-sm text-cream placeholder:text-muted/50 focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/20 transition-colors duration-200" placeholder="you@yourbusiness.com.au">
               </div>
               <div>
                 <label for="trade" class="font-sans text-xs uppercase tracking-wider text-muted mb-2 block">Your Trade</label>
@@ -1620,8 +1619,64 @@
               </div>
             </div>
             <div>
-              <label for="project" class="font-sans text-xs uppercase tracking-wider text-muted mb-2 block">Tell me about your business</label>
-              <textarea id="project" name="project" rows="4" required class="w-full bg-white/5 border border-white/15 rounded-xl px-4 py-3 font-sans text-sm text-cream placeholder:text-muted/50 focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/20 transition-colors duration-200 resize-none" placeholder="What does your business do? Do you have an existing website? What package interests you?"></textarea>
+              <label for="package" class="font-sans text-xs uppercase tracking-wider text-muted mb-2 block">Package</label>
+              <select id="package" name="package" class="w-full bg-white/5 border border-white/15 rounded-xl px-4 py-3 font-sans text-sm text-cream focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/20 transition-colors duration-200 appearance-none cursor-pointer">
+                <option value="" class="bg-surface">Not sure yet</option>
+                <option value="foundation" class="bg-surface">Foundation ($2,990)</option>
+                <option value="professional" class="bg-surface">Professional ($4,990)</option>
+                <option value="advanced" class="bg-surface">Advanced ($6,490)</option>
+              </select>
+            </div>
+            <div>
+              <p class="font-sans text-xs uppercase tracking-wider text-muted mb-3">Add-ons</p>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <label class="flex items-center gap-3 cursor-pointer group">
+                  <input type="checkbox" name="addons" value="Lead Engine $1,490" class="accent-accent w-4 h-4 rounded">
+                  <span class="font-sans text-sm text-muted group-hover:text-cream transition-colors">Lead Engine &mdash; $1,490</span>
+                </label>
+                <label class="flex items-center gap-3 cursor-pointer group">
+                  <input type="checkbox" name="addons" value="Blog Writer Bot $1,490" class="accent-accent w-4 h-4 rounded">
+                  <span class="font-sans text-sm text-muted group-hover:text-cream transition-colors">Blog Writer Bot &mdash; $1,490</span>
+                </label>
+                <label class="flex items-center gap-3 cursor-pointer group">
+                  <input type="checkbox" name="addons" value="Auto-Reply Bot $890" class="accent-accent w-4 h-4 rounded">
+                  <span class="font-sans text-sm text-muted group-hover:text-cream transition-colors">Auto-Reply Bot &mdash; $890</span>
+                </label>
+                <label class="flex items-center gap-3 cursor-pointer group">
+                  <input type="checkbox" name="addons" value="Online Booking $1,190" class="accent-accent w-4 h-4 rounded">
+                  <span class="font-sans text-sm text-muted group-hover:text-cream transition-colors">Online Booking &mdash; $1,190</span>
+                </label>
+                <label class="flex items-center gap-3 cursor-pointer group">
+                  <input type="checkbox" name="addons" value="Quoting System $1,790" class="accent-accent w-4 h-4 rounded">
+                  <span class="font-sans text-sm text-muted group-hover:text-cream transition-colors">Quoting System &mdash; $1,790</span>
+                </label>
+                <label class="flex items-center gap-3 cursor-pointer group">
+                  <input type="checkbox" name="addons" value="Review Collector $790" class="accent-accent w-4 h-4 rounded">
+                  <span class="font-sans text-sm text-muted group-hover:text-cream transition-colors">Review Collector &mdash; $790</span>
+                </label>
+                <label class="flex items-center gap-3 cursor-pointer group">
+                  <input type="checkbox" name="addons" value="Client Portal $1,990" class="accent-accent w-4 h-4 rounded">
+                  <span class="font-sans text-sm text-muted group-hover:text-cream transition-colors">Client Portal &mdash; $1,990</span>
+                </label>
+                <label class="flex items-center gap-3 cursor-pointer group">
+                  <input type="checkbox" name="addons" value="SEO & Content $249/mo" class="accent-accent w-4 h-4 rounded">
+                  <span class="font-sans text-sm text-muted group-hover:text-cream transition-colors">SEO &amp; Content &mdash; $249/mo</span>
+                </label>
+                <label class="flex items-center gap-3 cursor-pointer group">
+                  <input type="checkbox" name="addons" value="Content Collection $490" class="accent-accent w-4 h-4 rounded">
+                  <span class="font-sans text-sm text-muted group-hover:text-cream transition-colors">Content Collection &mdash; $490</span>
+                </label>
+                <label class="flex items-center gap-3 cursor-pointer group">
+                  <input type="checkbox" name="addons" value="Google Ads $349/mo" class="accent-accent w-4 h-4 rounded">
+                  <span class="font-sans text-sm text-muted group-hover:text-cream transition-colors">Google Ads &mdash; $349/mo</span>
+                </label>
+              </div>
+            </div>
+            <div>
+              <label class="flex items-center gap-3 cursor-pointer group">
+                <input type="checkbox" id="hasExistingSite" name="has_existing_site" class="accent-accent w-4 h-4 rounded">
+                <span class="font-sans text-sm text-muted group-hover:text-cream transition-colors">I have an existing website</span>
+              </label>
             </div>
             <div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
               <button type="submit" class="btn-primary bg-accent text-surface font-sans font-semibold px-8 py-4 rounded-full text-base cursor-pointer inline-flex items-center gap-3 hover:bg-lime-300 transition-colors duration-200">
@@ -1898,13 +1953,7 @@
       });
     });
 
-    // Supabase client
-    const _supabase = window.supabase.createClient(
-      'https://cetwhivwrjargrorjkdz.supabase.co',
-      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNldHdoaXZ3cmphcmdyb3Jqa2R6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzIxNDM0MDIsImV4cCI6MjA4NzcxOTQwMn0.TQpiu3dfWvM1PIxVy5yUBGu1NRZVkeXDjTNmthWNTOw'
-    );
-
-    // Contact form — submit to Supabase
+    // Contact form — submit to leads API
     const form = document.getElementById('contactForm');
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
@@ -1919,17 +1968,28 @@
       btn.innerHTML = '<span class="inline-flex items-center gap-2">Sending...</span>';
 
       try {
-        const { error } = await _supabase
-          .from('contact_submissions')
-          .insert({
-            name: form.querySelector('#name').value.trim(),
-            email: form.querySelector('#email').value.trim(),
-            phone: form.querySelector('#phone').value.trim() || null,
-            trade: form.querySelector('#trade').value || null,
-            project: form.querySelector('#project').value.trim(),
-          });
+        const addons = Array.from(form.querySelectorAll('input[name="addons"]:checked')).map(cb => cb.value);
+        const pkg = form.querySelector('#package').value || undefined;
 
-        if (error) throw error;
+        const payload = {
+          name: form.querySelector('#name').value.trim(),
+          phone: form.querySelector('#phone').value.trim(),
+          email: form.querySelector('#email').value.trim() || undefined,
+          trade: form.querySelector('#trade').value || undefined,
+          package: pkg,
+          addons: addons.length ? addons : undefined,
+          has_existing_site: form.querySelector('#hasExistingSite').checked || undefined,
+          website: honeypot.value || undefined,
+          page_url: window.location.href,
+        };
+
+        const res = await fetch('https://app.maksym.au/api/leads', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+        });
+
+        if (!res.ok) throw new Error('Request failed');
 
         btn.innerHTML = '<span class="inline-flex items-center gap-2">Sent! <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>';
         btn.classList.remove('bg-accent');
