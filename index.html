@@ -1482,6 +1482,141 @@
     </div>
   </section>
 
+  <!-- ======================== CTA / CONTACT ======================== -->
+  <section id="contact" class="px-4 sm:px-6 lg:px-8 py-24 md:py-32 border-t border-white/15 section-elevated overflow-hidden">
+    <div class="max-w-7xl mx-auto">
+      <div class="reveal glass-card rounded-3xl p-8 md:p-16 relative overflow-hidden">
+        <!-- Background orb -->
+        <div class="absolute w-[400px] h-[400px] bg-accent/5 rounded-full blur-[120px] -top-40 -right-40 pointer-events-none" aria-hidden="true"></div>
+
+        <div class="relative z-10 max-w-2xl">
+          <p class="font-sans text-sm tracking-[0.3em] uppercase text-accent mb-4">Get a Quote</p>
+          <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-cream leading-tight mb-6">Let's get your<br><span class="italic font-normal text-muted">business online</span></h2>
+          <p class="font-sans text-base text-muted leading-relaxed mb-10 max-w-lg">Tell me about your business and I'll get back to you within 24 hours with a no-obligation quote.</p>
+
+          <form class="space-y-6" id="contactForm">
+            <!-- Honeypot anti-spam (hidden from real users) -->
+            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label for="name" class="font-sans text-xs uppercase tracking-wider text-muted mb-2 block">Name <span class="text-accent">*</span></label>
+                <input type="text" id="name" name="name" required autocomplete="name" class="w-full bg-white/5 border border-white/15 rounded-xl px-4 py-3 font-sans text-sm text-cream placeholder:text-muted/50 focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/20 transition-colors duration-200" placeholder="Your name">
+              </div>
+              <div>
+                <label for="phone" class="font-sans text-xs uppercase tracking-wider text-muted mb-2 block">Phone <span class="text-accent">*</span></label>
+                <input type="tel" id="phone" name="phone" required autocomplete="tel" class="w-full bg-white/5 border border-white/15 rounded-xl px-4 py-3 font-sans text-sm text-cream placeholder:text-muted/50 focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/20 transition-colors duration-200" placeholder="04XX XXX XXX">
+              </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label for="email" class="font-sans text-xs uppercase tracking-wider text-muted mb-2 block">Email</label>
+                <input type="email" id="email" name="email" autocomplete="email" class="w-full bg-white/5 border border-white/15 rounded-xl px-4 py-3 font-sans text-sm text-cream placeholder:text-muted/50 focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/20 transition-colors duration-200" placeholder="you@yourbusiness.com.au">
+              </div>
+              <div>
+                <label for="trade" class="font-sans text-xs uppercase tracking-wider text-muted mb-2 block">Your Trade</label>
+                <select id="trade" name="trade" class="w-full bg-white/5 border border-white/15 rounded-xl px-4 py-3 font-sans text-sm text-cream focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/20 transition-colors duration-200 appearance-none cursor-pointer">
+                  <option value="" class="bg-surface">Select your trade</option>
+                  <option value="builder" class="bg-surface">Builder / Construction</option>
+                  <option value="electrician" class="bg-surface">Electrician</option>
+                  <option value="plumber" class="bg-surface">Plumber</option>
+                  <option value="roofer" class="bg-surface">Roofer</option>
+                  <option value="landscaper" class="bg-surface">Landscaper</option>
+                  <option value="concreter" class="bg-surface">Concreter</option>
+                  <option value="painter" class="bg-surface">Painter</option>
+                  <option value="fencer" class="bg-surface">Fencer</option>
+                  <option value="hvac" class="bg-surface">HVAC / Air Conditioning</option>
+                  <option value="demolition" class="bg-surface">Demolition</option>
+                  <option value="other" class="bg-surface">Other Trade</option>
+                </select>
+              </div>
+            </div>
+            <div>
+              <p class="font-sans text-xs uppercase tracking-wider text-muted mb-3">Package</p>
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-3" id="packageCards">
+                <label class="package-card bg-white/5 border border-white/15 rounded-xl p-4 text-center cursor-pointer">
+                  <input type="radio" name="package" value="foundation" class="sr-only">
+                  <span class="block text-sm font-semibold text-cream">Foundation</span>
+                  <span class="block text-xs text-muted mt-1">$2,990</span>
+                </label>
+                <label class="package-card bg-white/5 border border-white/15 rounded-xl p-4 text-center cursor-pointer relative">
+                  <input type="radio" name="package" value="professional" class="sr-only">
+                  <span class="absolute -top-2 left-1/2 -translate-x-1/2 bg-accent text-surface text-[10px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded-full">Popular</span>
+                  <span class="block text-sm font-semibold text-cream">Professional</span>
+                  <span class="block text-xs text-muted mt-1">$4,990</span>
+                </label>
+                <label class="package-card bg-white/5 border border-white/15 rounded-xl p-4 text-center cursor-pointer">
+                  <input type="radio" name="package" value="advanced" class="sr-only">
+                  <span class="block text-sm font-semibold text-cream">Advanced</span>
+                  <span class="block text-xs text-muted mt-1">$6,490</span>
+                </label>
+              </div>
+              <button type="button" id="packageClear" class="font-sans text-xs text-muted hover:text-accent transition-colors mt-2 cursor-pointer">Not sure yet</button>
+            </div>
+            <div>
+              <p class="font-sans text-xs uppercase tracking-wider text-muted mb-3">Add-ons</p>
+              <div class="flex flex-wrap gap-2">
+                <label class="addon-pill border border-white/15 rounded-full px-4 py-2 cursor-pointer text-sm font-sans text-muted bg-white/5 hover:border-white/30">
+                  <input type="checkbox" name="addons" value="Lead Engine $1,490" class="sr-only">
+                  Lead Engine — $1,490
+                </label>
+                <label class="addon-pill border border-white/15 rounded-full px-4 py-2 cursor-pointer text-sm font-sans text-muted bg-white/5 hover:border-white/30">
+                  <input type="checkbox" name="addons" value="Blog Writer Bot $1,490" class="sr-only">
+                  Blog Writer Bot — $1,490
+                </label>
+                <label class="addon-pill border border-white/15 rounded-full px-4 py-2 cursor-pointer text-sm font-sans text-muted bg-white/5 hover:border-white/30">
+                  <input type="checkbox" name="addons" value="Auto-Reply Bot $890" class="sr-only">
+                  Auto-Reply Bot — $890
+                </label>
+                <label class="addon-pill border border-white/15 rounded-full px-4 py-2 cursor-pointer text-sm font-sans text-muted bg-white/5 hover:border-white/30">
+                  <input type="checkbox" name="addons" value="Online Booking $1,190" class="sr-only">
+                  Online Booking — $1,190
+                </label>
+                <label class="addon-pill border border-white/15 rounded-full px-4 py-2 cursor-pointer text-sm font-sans text-muted bg-white/5 hover:border-white/30">
+                  <input type="checkbox" name="addons" value="Quoting System $1,790" class="sr-only">
+                  Quoting System — $1,790
+                </label>
+                <label class="addon-pill border border-white/15 rounded-full px-4 py-2 cursor-pointer text-sm font-sans text-muted bg-white/5 hover:border-white/30">
+                  <input type="checkbox" name="addons" value="Review Collector $790" class="sr-only">
+                  Review Collector — $790
+                </label>
+                <label class="addon-pill border border-white/15 rounded-full px-4 py-2 cursor-pointer text-sm font-sans text-muted bg-white/5 hover:border-white/30">
+                  <input type="checkbox" name="addons" value="Client Portal $1,990" class="sr-only">
+                  Client Portal — $1,990
+                </label>
+                <label class="addon-pill border border-white/15 rounded-full px-4 py-2 cursor-pointer text-sm font-sans text-muted bg-white/5 hover:border-white/30">
+                  <input type="checkbox" name="addons" value="SEO & Content $249/mo" class="sr-only">
+                  SEO &amp; Content — $249/mo
+                </label>
+                <label class="addon-pill border border-white/15 rounded-full px-4 py-2 cursor-pointer text-sm font-sans text-muted bg-white/5 hover:border-white/30">
+                  <input type="checkbox" name="addons" value="Content Collection $490" class="sr-only">
+                  Content Collection — $490
+                </label>
+                <label class="addon-pill border border-white/15 rounded-full px-4 py-2 cursor-pointer text-sm font-sans text-muted bg-white/5 hover:border-white/30">
+                  <input type="checkbox" name="addons" value="Google Ads $349/mo" class="sr-only">
+                  Google Ads — $349/mo
+                </label>
+              </div>
+            </div>
+            <div>
+              <label class="flex items-center gap-3 cursor-pointer group">
+                <input type="checkbox" id="hasExistingSite" name="has_existing_site" class="sr-only">
+                <span class="toggle-track"></span>
+                <span class="font-sans text-sm text-muted group-hover:text-cream transition-colors">I have an existing website</span>
+              </label>
+            </div>
+            <div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
+              <button type="submit" class="btn-primary bg-accent text-surface font-sans font-semibold px-8 py-4 rounded-full text-base cursor-pointer inline-flex items-center gap-3 hover:bg-lime-300 transition-colors duration-200">
+                Send Enquiry
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              </button>
+              <span class="font-sans text-xs text-muted">Free quote &mdash; no obligation</span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ======================== BLOG PREVIEW ======================== -->
   <section id="blog" class="px-4 sm:px-6 lg:px-8 py-24 md:py-32">
     <div class="max-w-7xl mx-auto">
@@ -1613,141 +1748,6 @@
           <div class="faq-answer" id="faq-a10" role="region">
             <p class="px-6 pb-6 font-sans text-sm text-muted leading-relaxed">Email forwarding is included in the Hosting &amp; Care plan &mdash; emails sent to info@yourdomain.com.au get forwarded to your personal inbox. If you want a full professional inbox (send and receive from your domain), I can set up Google Workspace on request.</p>
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ======================== CTA / CONTACT ======================== -->
-  <section id="contact" class="px-4 sm:px-6 lg:px-8 py-24 md:py-32 border-t border-white/15 section-elevated overflow-hidden">
-    <div class="max-w-7xl mx-auto">
-      <div class="reveal glass-card rounded-3xl p-8 md:p-16 relative overflow-hidden">
-        <!-- Background orb -->
-        <div class="absolute w-[400px] h-[400px] bg-accent/5 rounded-full blur-[120px] -top-40 -right-40 pointer-events-none" aria-hidden="true"></div>
-
-        <div class="relative z-10 max-w-2xl">
-          <p class="font-sans text-sm tracking-[0.3em] uppercase text-accent mb-4">Get a Quote</p>
-          <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-cream leading-tight mb-6">Let's get your<br><span class="italic font-normal text-muted">business online</span></h2>
-          <p class="font-sans text-base text-muted leading-relaxed mb-10 max-w-lg">Tell me about your business and I'll get back to you within 24 hours with a no-obligation quote.</p>
-
-          <form class="space-y-6" id="contactForm">
-            <!-- Honeypot anti-spam (hidden from real users) -->
-            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <label for="name" class="font-sans text-xs uppercase tracking-wider text-muted mb-2 block">Name <span class="text-accent">*</span></label>
-                <input type="text" id="name" name="name" required autocomplete="name" class="w-full bg-white/5 border border-white/15 rounded-xl px-4 py-3 font-sans text-sm text-cream placeholder:text-muted/50 focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/20 transition-colors duration-200" placeholder="Your name">
-              </div>
-              <div>
-                <label for="phone" class="font-sans text-xs uppercase tracking-wider text-muted mb-2 block">Phone <span class="text-accent">*</span></label>
-                <input type="tel" id="phone" name="phone" required autocomplete="tel" class="w-full bg-white/5 border border-white/15 rounded-xl px-4 py-3 font-sans text-sm text-cream placeholder:text-muted/50 focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/20 transition-colors duration-200" placeholder="04XX XXX XXX">
-              </div>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <label for="email" class="font-sans text-xs uppercase tracking-wider text-muted mb-2 block">Email</label>
-                <input type="email" id="email" name="email" autocomplete="email" class="w-full bg-white/5 border border-white/15 rounded-xl px-4 py-3 font-sans text-sm text-cream placeholder:text-muted/50 focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/20 transition-colors duration-200" placeholder="you@yourbusiness.com.au">
-              </div>
-              <div>
-                <label for="trade" class="font-sans text-xs uppercase tracking-wider text-muted mb-2 block">Your Trade</label>
-                <select id="trade" name="trade" class="w-full bg-white/5 border border-white/15 rounded-xl px-4 py-3 font-sans text-sm text-cream focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/20 transition-colors duration-200 appearance-none cursor-pointer">
-                  <option value="" class="bg-surface">Select your trade</option>
-                  <option value="builder" class="bg-surface">Builder / Construction</option>
-                  <option value="electrician" class="bg-surface">Electrician</option>
-                  <option value="plumber" class="bg-surface">Plumber</option>
-                  <option value="roofer" class="bg-surface">Roofer</option>
-                  <option value="landscaper" class="bg-surface">Landscaper</option>
-                  <option value="concreter" class="bg-surface">Concreter</option>
-                  <option value="painter" class="bg-surface">Painter</option>
-                  <option value="fencer" class="bg-surface">Fencer</option>
-                  <option value="hvac" class="bg-surface">HVAC / Air Conditioning</option>
-                  <option value="demolition" class="bg-surface">Demolition</option>
-                  <option value="other" class="bg-surface">Other Trade</option>
-                </select>
-              </div>
-            </div>
-            <div>
-              <p class="font-sans text-xs uppercase tracking-wider text-muted mb-3">Package</p>
-              <div class="grid grid-cols-1 sm:grid-cols-3 gap-3" id="packageCards">
-                <label class="package-card bg-white/5 border border-white/15 rounded-xl p-4 text-center cursor-pointer">
-                  <input type="radio" name="package" value="foundation" class="sr-only">
-                  <span class="block text-sm font-semibold text-cream">Foundation</span>
-                  <span class="block text-xs text-muted mt-1">$2,990</span>
-                </label>
-                <label class="package-card bg-white/5 border border-white/15 rounded-xl p-4 text-center cursor-pointer relative">
-                  <input type="radio" name="package" value="professional" class="sr-only">
-                  <span class="absolute -top-2 left-1/2 -translate-x-1/2 bg-accent text-surface text-[10px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded-full">Popular</span>
-                  <span class="block text-sm font-semibold text-cream">Professional</span>
-                  <span class="block text-xs text-muted mt-1">$4,990</span>
-                </label>
-                <label class="package-card bg-white/5 border border-white/15 rounded-xl p-4 text-center cursor-pointer">
-                  <input type="radio" name="package" value="advanced" class="sr-only">
-                  <span class="block text-sm font-semibold text-cream">Advanced</span>
-                  <span class="block text-xs text-muted mt-1">$6,490</span>
-                </label>
-              </div>
-              <button type="button" id="packageClear" class="font-sans text-xs text-muted hover:text-accent transition-colors mt-2 cursor-pointer">Not sure yet</button>
-            </div>
-            <div>
-              <p class="font-sans text-xs uppercase tracking-wider text-muted mb-3">Add-ons</p>
-              <div class="flex flex-wrap gap-2">
-                <label class="addon-pill border border-white/15 rounded-full px-4 py-2 cursor-pointer text-sm font-sans text-muted bg-white/5 hover:border-white/30">
-                  <input type="checkbox" name="addons" value="Lead Engine $1,490" class="sr-only">
-                  Lead Engine — $1,490
-                </label>
-                <label class="addon-pill border border-white/15 rounded-full px-4 py-2 cursor-pointer text-sm font-sans text-muted bg-white/5 hover:border-white/30">
-                  <input type="checkbox" name="addons" value="Blog Writer Bot $1,490" class="sr-only">
-                  Blog Writer Bot — $1,490
-                </label>
-                <label class="addon-pill border border-white/15 rounded-full px-4 py-2 cursor-pointer text-sm font-sans text-muted bg-white/5 hover:border-white/30">
-                  <input type="checkbox" name="addons" value="Auto-Reply Bot $890" class="sr-only">
-                  Auto-Reply Bot — $890
-                </label>
-                <label class="addon-pill border border-white/15 rounded-full px-4 py-2 cursor-pointer text-sm font-sans text-muted bg-white/5 hover:border-white/30">
-                  <input type="checkbox" name="addons" value="Online Booking $1,190" class="sr-only">
-                  Online Booking — $1,190
-                </label>
-                <label class="addon-pill border border-white/15 rounded-full px-4 py-2 cursor-pointer text-sm font-sans text-muted bg-white/5 hover:border-white/30">
-                  <input type="checkbox" name="addons" value="Quoting System $1,790" class="sr-only">
-                  Quoting System — $1,790
-                </label>
-                <label class="addon-pill border border-white/15 rounded-full px-4 py-2 cursor-pointer text-sm font-sans text-muted bg-white/5 hover:border-white/30">
-                  <input type="checkbox" name="addons" value="Review Collector $790" class="sr-only">
-                  Review Collector — $790
-                </label>
-                <label class="addon-pill border border-white/15 rounded-full px-4 py-2 cursor-pointer text-sm font-sans text-muted bg-white/5 hover:border-white/30">
-                  <input type="checkbox" name="addons" value="Client Portal $1,990" class="sr-only">
-                  Client Portal — $1,990
-                </label>
-                <label class="addon-pill border border-white/15 rounded-full px-4 py-2 cursor-pointer text-sm font-sans text-muted bg-white/5 hover:border-white/30">
-                  <input type="checkbox" name="addons" value="SEO & Content $249/mo" class="sr-only">
-                  SEO &amp; Content — $249/mo
-                </label>
-                <label class="addon-pill border border-white/15 rounded-full px-4 py-2 cursor-pointer text-sm font-sans text-muted bg-white/5 hover:border-white/30">
-                  <input type="checkbox" name="addons" value="Content Collection $490" class="sr-only">
-                  Content Collection — $490
-                </label>
-                <label class="addon-pill border border-white/15 rounded-full px-4 py-2 cursor-pointer text-sm font-sans text-muted bg-white/5 hover:border-white/30">
-                  <input type="checkbox" name="addons" value="Google Ads $349/mo" class="sr-only">
-                  Google Ads — $349/mo
-                </label>
-              </div>
-            </div>
-            <div>
-              <label class="flex items-center gap-3 cursor-pointer group">
-                <input type="checkbox" id="hasExistingSite" name="has_existing_site" class="sr-only">
-                <span class="toggle-track"></span>
-                <span class="font-sans text-sm text-muted group-hover:text-cream transition-colors">I have an existing website</span>
-              </label>
-            </div>
-            <div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
-              <button type="submit" class="btn-primary bg-accent text-surface font-sans font-semibold px-8 py-4 rounded-full text-base cursor-pointer inline-flex items-center gap-3 hover:bg-lime-300 transition-colors duration-200">
-                Send Enquiry
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-              </button>
-              <span class="font-sans text-xs text-muted">Free quote &mdash; no obligation</span>
-            </div>
-          </form>
         </div>
       </div>
     </div>
