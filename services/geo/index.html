@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GEO Services — Generative Engine Optimization | Maksym Kolesnyk</title>
+  <meta name="description" content="Get your Shopify store cited by ChatGPT, Perplexity, and Claude. AI search audit, structured data optimization, content strategy for AI citation. From $3,500.">
+  <meta name="theme-color" content="#FAFAFA">
+  <link rel="canonical" href="https://maksym.au/services/geo/">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://maksym.au/services/geo/">
+  <meta property="og:title" content="GEO Services — Generative Engine Optimization | Maksym Kolesnyk">
+  <meta property="og:description" content="Get your Shopify store cited by ChatGPT, Perplexity, and Claude. AI search audit, structured data optimization, content strategy for AI citation. From $3,500.">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="GEO Services — Generative Engine Optimization | Maksym Kolesnyk">
+  <meta name="twitter:description" content="Get your Shopify store cited by ChatGPT, Perplexity, and Claude. AI search audit, structured data optimization, content strategy for AI citation. From $3,500.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,700;1,400&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../dist/output.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { background: #FAFAFA; color: #1A1A1A; font-family: 'Jost', sans-serif; overflow-x: hidden; }
+    ::selection { background: #C8FF00; color: #0A0A0A; }
+
+    /* ── Liquid Glass Navbar ── */
+    .nav-glass {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(40px) saturate(1.6);
+      -webkit-backdrop-filter: blur(40px) saturate(1.6);
+      border: 1px solid rgba(0, 0, 0, 0.06);
+      border-top: 1px solid rgba(255, 255, 255, 0.9);
+      box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.06),
+        0 2px 8px rgba(0, 0, 0, 0.04),
+        inset 0 1px 0 rgba(255, 255, 255, 1),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.02);
+      overflow: hidden;
+      transition: background 0.4s ease, box-shadow 0.4s ease;
+    }
+    .nav-glass::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -20%;
+      width: 60%;
+      height: 100%;
+      background: linear-gradient(105deg, transparent 20%, rgba(255, 255, 255, 0.4) 40%, rgba(255, 255, 255, 0.6) 50%, rgba(255, 255, 255, 0.4) 60%, transparent 80%);
+      pointer-events: none;
+      z-index: 0;
+    }
+    .nav-glass > * { position: relative; z-index: 1; }
+    .nav-glass.scrolled {
+      background: rgba(255, 255, 255, 0.85);
+      box-shadow:
+        0 12px 48px rgba(0, 0, 0, 0.08),
+        0 4px 12px rgba(0, 0, 0, 0.05),
+        inset 0 1px 0 rgba(255, 255, 255, 1);
+    }
+
+    /* ── Glass Card (Light) ── */
+    .glass-card {
+      background: rgba(255, 255, 255, 0.65);
+      backdrop-filter: blur(24px) saturate(1.4);
+      -webkit-backdrop-filter: blur(24px) saturate(1.4);
+      border: 1px solid rgba(0, 0, 0, 0.06);
+      border-top: 1px solid rgba(255, 255, 255, 0.8);
+      box-shadow:
+        0 4px 24px rgba(0, 0, 0, 0.04),
+        0 1px 4px rgba(0, 0, 0, 0.02),
+        inset 0 1px 0 rgba(255, 255, 255, 0.9);
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .glass-card:hover {
+      background: rgba(255, 255, 255, 0.8);
+      box-shadow:
+        0 8px 40px rgba(0, 0, 0, 0.08),
+        0 2px 8px rgba(0, 0, 0, 0.04),
+        inset 0 1px 0 rgba(255, 255, 255, 1);
+      transform: translateY(-2px);
+    }
+
+    /* ── Service Card (clickable) ── */
+    .service-card {
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .service-card:hover {
+      border-color: rgba(200, 255, 0, 0.4);
+      box-shadow:
+        0 8px 40px rgba(200, 255, 0, 0.06),
+        0 2px 8px rgba(0, 0, 0, 0.04),
+        inset 0 1px 0 rgba(255, 255, 255, 1);
+      transform: translateY(-4px);
+    }
+
+    /* ── Stat Card ── */
+    .stat-card { position: relative; overflow: hidden; }
+    .stat-card::before {
+      content: '';
+      position: absolute;
+      top: -50%; left: -50%;
+      width: 200%; height: 200%;
+      background: radial-gradient(circle, rgba(200, 255, 0, 0.04) 0%, transparent 60%);
+      opacity: 0;
+      transition: opacity 0.5s ease;
+      pointer-events: none;
+    }
+    .stat-card:hover::before { opacity: 1; }
+
+    /* ── Mobile Nav ── */
+    .mobile-menu {
+      transform: translateX(100%);
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(60px) saturate(1.8);
+      -webkit-backdrop-filter: blur(60px) saturate(1.8);
+    }
+    .mobile-menu.open { transform: translateX(0); }
+
+    /* ── Scroll Reveal ── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
+
+    /* ── Blur-in Entrance ── */
+    .blur-in {
+      opacity: 0;
+      filter: blur(8px);
+      transform: translateY(25px);
+      transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+                  filter 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+                  transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .blur-in.visible { opacity: 1; filter: blur(0); transform: translateY(0); }
+
+    /* ── CTA Button Shimmer ── */
+    .btn-primary { position: relative; overflow: hidden; }
+    .btn-primary::after {
+      content: '';
+      position: absolute;
+      top: 0; left: -100%;
+      width: 100%; height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: left 0.5s ease;
+    }
+    .btn-primary:hover::after { left: 100%; }
+
+    /* ── Service Tag Pill ── */
+    .service-tag {
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+    .service-tag:hover {
+      border-color: #A3D900;
+      color: #1A1A1A;
+      background: rgba(200, 255, 0, 0.1);
+    }
+
+    /* ── Process Step Number ── */
+    .step-num {
+      font-family: 'Bodoni Moda', serif;
+      font-size: 5rem;
+      font-weight: 700;
+      line-height: 1;
+      color: rgba(0, 0, 0, 0.04);
+      position: absolute;
+      top: -0.5rem;
+      left: -0.25rem;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    /* ── FAQ ── */
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
+    .faq-item.active .faq-answer { max-height: 500px; }
+    .faq-icon { transition: transform 0.3s ease; }
+    .faq-item.active .faq-icon { transform: rotate(45deg); }
+
+    /* ── Custom Cursor ── */
+    .cursor-dot {
+      width: 8px; height: 8px;
+      background: #1A1A1A;
+      border-radius: 50%;
+      position: fixed;
+      pointer-events: none;
+      z-index: 99999;
+      transition: transform 0.15s ease, opacity 0.15s ease;
+      mix-blend-mode: difference;
+    }
+    .cursor-ring {
+      width: 40px; height: 40px;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      border-radius: 50%;
+      position: fixed;
+      pointer-events: none;
+      z-index: 99998;
+      transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease, border-color 0.3s ease;
+    }
+
+    /* ── Gradient Mesh Background ── */
+    .mesh-bg {
+      background:
+        radial-gradient(ellipse 80% 50% at 20% 40%, rgba(200, 255, 0, 0.04), transparent),
+        radial-gradient(ellipse 60% 40% at 80% 20%, rgba(59, 130, 246, 0.03), transparent),
+        radial-gradient(ellipse 70% 60% at 50% 80%, rgba(168, 85, 247, 0.02), transparent);
+    }
+
+    /* ── Pricing Featured ── */
+    .pricing-featured {
+      border: 2px solid rgba(200, 255, 0, 0.3);
+      box-shadow:
+        0 8px 40px rgba(200, 255, 0, 0.08),
+        0 2px 8px rgba(0, 0, 0, 0.04),
+        inset 0 1px 0 rgba(255, 255, 255, 1);
+    }
+
+    /* ── Reduced Motion ── */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+      .reveal { opacity: 1; transform: none; }
+      .blur-in { opacity: 1; filter: none; transform: none; }
+    }
+  </style>
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "GEO — Generative Engine Optimization",
+    "provider": {
+      "@type": "ProfessionalService",
+      "name": "Maksym Kolesnyk",
+      "url": "https://maksym.au"
+    },
+    "url": "https://maksym.au/services/geo/",
+    "description": "Get your Shopify store cited by ChatGPT, Perplexity, and Claude. AI search audit, structured data optimization, content strategy for AI citation.",
+    "offers": [
+      {"@type": "Offer", "name": "GEO Audit & Setup", "price": "3500", "priceCurrency": "AUD", "description": "AI search audit, structured data optimization, content strategy, competitor analysis, implementation. 2-3 weeks."},
+      {"@type": "Offer", "name": "GEO Ongoing Optimization", "price": "990", "priceCurrency": "AUD", "description": "Monthly citation monitoring, content optimization, competitor tracking, quarterly strategy reviews."}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type": "Question", "name": "How is GEO different from SEO?", "acceptedAnswer": {"@type": "Answer", "text": "SEO optimizes for Google's ranking algorithm. GEO optimizes for AI citation — making sure AI assistants recommend and cite your products when users ask questions. You need both, but GEO is the emerging channel most stores are ignoring."}},
+      {"@type": "Question", "name": "How do you track AI citations?", "acceptedAnswer": {"@type": "Answer", "text": "I use a combination of direct querying, brand mention monitoring, and structured data validation tools to track when and how AI systems reference your brand and products."}},
+      {"@type": "Question", "name": "How long before I see results?", "acceptedAnswer": {"@type": "Answer", "text": "Initial improvements in structured data and content are visible within 2-3 weeks. AI citation improvements typically take 4-8 weeks as models update their knowledge. The ongoing retainer ensures continuous optimization."}},
+      {"@type": "Question", "name": "Do I need to be on Shopify?", "acceptedAnswer": {"@type": "Answer", "text": "GEO optimization works on any ecommerce platform. The principles of structured data, authoritative content, and AI-readable product information are universal."}}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://maksym.au/"},
+      {"@type": "ListItem", "position": 2, "name": "Services", "item": "https://maksym.au/#services"},
+      {"@type": "ListItem", "position": 3, "name": "GEO Optimization", "item": "https://maksym.au/services/geo/"}
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Skip to content -->
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[9999] focus:bg-accent focus:text-surface focus:px-4 focus:py-2 focus:rounded-full focus:font-sans focus:text-sm focus:font-semibold">Skip to main content</a>
+
+  <!-- Custom Cursor (desktop only) -->
+  <div class="cursor-dot hidden lg:block" id="cursorDot" aria-hidden="true"></div>
+  <div class="cursor-ring hidden lg:block" id="cursorRing" aria-hidden="true"></div>
+
+  <!-- ======================== NAVBAR ======================== -->
+  <nav class="nav-glass fixed top-2 sm:top-4 left-1/2 -translate-x-1/2 z-50 rounded-xl sm:rounded-2xl px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between w-[calc(100%-1rem)] sm:w-[calc(100%-2rem)] max-w-7xl" id="navbar">
+    <a href="/" class="font-serif text-xl font-bold tracking-tight text-cream cursor-pointer">MK<span class="text-accent">.</span></a>
+
+    <!-- Desktop links -->
+    <div class="hidden md:flex items-center gap-8">
+      <a href="/#services" class="text-sm font-sans text-muted hover:text-cream transition-colors duration-200 cursor-pointer">Services</a>
+      <a href="/#about" class="text-sm font-sans text-muted hover:text-cream transition-colors duration-200 cursor-pointer">About</a>
+      <a href="/#process" class="text-sm font-sans text-muted hover:text-cream transition-colors duration-200 cursor-pointer">How It Works</a>
+      <a href="/#faq" class="text-sm font-sans text-muted hover:text-cream transition-colors duration-200 cursor-pointer">FAQ</a>
+      <a href="/#contact" class="btn-primary bg-cream text-white font-sans text-sm font-semibold px-6 py-2.5 rounded-full cursor-pointer inline-block hover:bg-black transition-colors duration-200">Book a Call</a>
+    </div>
+
+    <!-- Mobile menu button -->
+    <button class="md:hidden text-cream cursor-pointer" id="menuBtn" aria-label="Open menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu fixed inset-0 z-[60] flex flex-col items-center justify-center gap-8 md:hidden overflow-y-auto py-20" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Navigation menu" aria-hidden="true">
+    <button class="fixed top-6 right-6 text-cream cursor-pointer z-[61]" id="closeMenuBtn" aria-label="Close menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <a href="/#services" class="mobile-link font-serif text-3xl text-cream cursor-pointer">Services</a>
+    <a href="/#about" class="mobile-link font-serif text-3xl text-cream cursor-pointer">About</a>
+    <a href="/#process" class="mobile-link font-serif text-3xl text-cream cursor-pointer">How It Works</a>
+    <a href="/#faq" class="mobile-link font-serif text-3xl text-cream cursor-pointer">FAQ</a>
+    <a href="/#contact" class="mobile-link btn-primary bg-cream text-white font-sans text-lg font-semibold px-8 py-3 rounded-full cursor-pointer inline-block mt-4">Book a Call</a>
+  </div>
+
+  <main id="main">
+
+  <!-- ======================== HERO ======================== -->
+  <section class="relative min-h-[70vh] flex flex-col justify-center px-4 sm:px-6 lg:px-8 pt-28 pb-16 sm:pb-20 overflow-hidden mesh-bg">
+    <div class="max-w-7xl mx-auto w-full relative z-10">
+      <div class="max-w-4xl">
+        <!-- Breadcrumb -->
+        <div class="blur-in">
+          <nav class="font-sans text-sm text-muted mb-8" aria-label="Breadcrumb">
+            <a href="/#services" class="hover:text-cream transition-colors duration-200">Services</a>
+            <span class="mx-2 text-black/20">/</span>
+            <span class="text-cream">GEO Optimization</span>
+          </nav>
+        </div>
+
+        <h1 class="blur-in font-serif text-5xl sm:text-6xl md:text-7xl lg:text-[5rem] font-bold leading-[0.95] tracking-tight text-cream mb-4" style="transition-delay: 0.15s;">
+          Get cited by AI<span class="text-accent">.</span>
+        </h1>
+        <p class="blur-in font-serif text-2xl sm:text-3xl italic font-normal text-muted mb-8" style="transition-delay: 0.25s;">Not just indexed by Google.</p>
+
+        <p class="blur-in font-sans text-lg sm:text-xl text-secondary max-w-2xl leading-relaxed mb-10" style="transition-delay: 0.35s;">
+          AI assistants are answering product questions and making purchase recommendations. If they don't mention your store, you're losing sales. GEO optimization ensures your brand appears in AI-generated answers.
+        </p>
+
+        <div class="blur-in flex flex-wrap gap-4 items-center" style="transition-delay: 0.45s;">
+          <a href="#contact" class="btn-primary bg-cream text-white font-sans font-semibold px-8 py-4 rounded-full text-base cursor-pointer inline-flex items-center gap-3 hover:bg-black transition-colors duration-200">
+            Book a Discovery Call
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+          <span class="font-sans text-sm font-semibold text-cream bg-cream/10 px-4 py-2 rounded-full">From $3,500</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== THE PROBLEM ======================== -->
+  <section class="px-4 sm:px-6 lg:px-8 py-24 md:py-32 border-t border-black/5 overflow-hidden">
+    <div class="max-w-7xl mx-auto">
+      <div class="reveal text-center max-w-3xl mx-auto mb-16">
+        <p class="font-sans text-sm tracking-[0.3em] uppercase text-muted mb-3">The Problem</p>
+        <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-cream leading-tight">AI search is here<span class="text-accent">.</span><br><span class="italic font-normal text-muted">Your SEO won't help.</span></h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="reveal glass-card stat-card rounded-2xl p-8">
+          <p class="font-serif text-4xl font-bold text-cream mb-3">40%</p>
+          <p class="font-sans text-sm font-semibold text-cream mb-2">of product searches start with AI</p>
+          <p class="font-sans text-sm text-muted leading-relaxed">ChatGPT, Perplexity, and Claude are the new front door. Your SEO doesn't help here.</p>
+        </div>
+        <div class="reveal reveal-delay-1 glass-card stat-card rounded-2xl p-8">
+          <p class="font-serif text-4xl font-bold text-cream mb-3">Cite</p>
+          <p class="font-sans text-sm font-semibold text-cream mb-2">AI doesn't scrape &mdash; it cites</p>
+          <p class="font-sans text-sm text-muted leading-relaxed">AI models cite structured, authoritative sources. If your product data is messy, you're invisible.</p>
+        </div>
+        <div class="reveal reveal-delay-2 glass-card stat-card rounded-2xl p-8">
+          <p class="font-serif text-4xl font-bold text-cream mb-3">&lt;1%</p>
+          <p class="font-sans text-sm font-semibold text-cream mb-2">Your competitors aren't optimized either</p>
+          <p class="font-sans text-sm text-muted leading-relaxed">Less than 1% of Shopify stores are GEO-optimized. First-mover advantage is massive.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== WHAT YOU GET ======================== -->
+  <section class="px-4 sm:px-6 lg:px-8 py-24 md:py-32 border-t border-black/5 overflow-hidden">
+    <div class="max-w-7xl mx-auto">
+      <div class="reveal text-center max-w-3xl mx-auto mb-16">
+        <p class="font-sans text-sm tracking-[0.3em] uppercase text-muted mb-3">What You Get</p>
+        <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-cream leading-tight">Full-stack GEO<br><span class="italic font-normal text-muted">optimization.</span></h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="reveal glass-card rounded-2xl p-8">
+          <div class="w-12 h-12 rounded-xl bg-accent/20 flex items-center justify-center mb-6">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1A1A1A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><path d="M11 8v6"/><path d="M8 11h6"/></svg>
+          </div>
+          <h3 class="font-serif text-xl font-bold text-cream mb-3">AI Search Audit</h3>
+          <p class="font-sans text-sm text-muted leading-relaxed">Complete analysis of how AI systems currently perceive your brand and products. You'll see exactly where you stand.</p>
+        </div>
+
+        <div class="reveal reveal-delay-1 glass-card rounded-2xl p-8">
+          <div class="w-12 h-12 rounded-xl bg-accent/20 flex items-center justify-center mb-6">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1A1A1A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          </div>
+          <h3 class="font-serif text-xl font-bold text-cream mb-3">Structured Data Optimization</h3>
+          <p class="font-sans text-sm text-muted leading-relaxed">Schema markup, product feeds, and metadata optimized for AI consumption. The foundation of AI visibility.</p>
+        </div>
+
+        <div class="reveal reveal-delay-2 glass-card rounded-2xl p-8">
+          <div class="w-12 h-12 rounded-xl bg-accent/20 flex items-center justify-center mb-6">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1A1A1A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+          </div>
+          <h3 class="font-serif text-xl font-bold text-cream mb-3">Content Strategy</h3>
+          <p class="font-sans text-sm text-muted leading-relaxed">Content crafted to be cited by AI: authoritative, well-structured, fact-rich. Not SEO fluff &mdash; substance that AI trusts.</p>
+        </div>
+
+        <div class="reveal glass-card rounded-2xl p-8">
+          <div class="w-12 h-12 rounded-xl bg-accent/20 flex items-center justify-center mb-6">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1A1A1A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+          </div>
+          <h3 class="font-serif text-xl font-bold text-cream mb-3">Brand Mention Monitoring</h3>
+          <p class="font-sans text-sm text-muted leading-relaxed">Track when and how AI systems mention your brand and products. Know your AI visibility in real time.</p>
+        </div>
+
+        <div class="reveal reveal-delay-1 glass-card rounded-2xl p-8">
+          <div class="w-12 h-12 rounded-xl bg-accent/20 flex items-center justify-center mb-6">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1A1A1A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+          </div>
+          <h3 class="font-serif text-xl font-bold text-cream mb-3">Competitor AI Visibility Analysis</h3>
+          <p class="font-sans text-sm text-muted leading-relaxed">See how your competitors appear in AI search results. Identify gaps and opportunities to outposition them.</p>
+        </div>
+
+        <div class="reveal reveal-delay-2 glass-card rounded-2xl p-8">
+          <div class="w-12 h-12 rounded-xl bg-accent/20 flex items-center justify-center mb-6">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1A1A1A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+          </div>
+          <h3 class="font-serif text-xl font-bold text-cream mb-3">Ongoing Optimization</h3>
+          <p class="font-sans text-sm text-muted leading-relaxed">Monthly refinement based on AI citation performance data. AI search evolves fast &mdash; your strategy needs to keep up.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== HOW IT WORKS ======================== -->
+  <section class="px-4 sm:px-6 lg:px-8 py-24 md:py-32 border-t border-black/5 overflow-hidden">
+    <div class="max-w-7xl mx-auto">
+      <div class="reveal mb-16 text-center">
+        <p class="font-sans text-sm tracking-[0.3em] uppercase text-muted mb-3">How It Works</p>
+        <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-cream leading-tight">Three steps to<br><span class="italic font-normal text-muted">AI visibility.</span></h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="reveal glass-card rounded-2xl p-8 relative">
+          <span class="step-num" aria-hidden="true">01</span>
+          <div class="relative z-10">
+            <h3 class="font-serif text-xl font-bold text-cream mb-3">AI Search Audit</h3>
+            <p class="font-sans text-sm text-muted leading-relaxed">I analyze how ChatGPT, Perplexity, Claude, and other AI systems currently see your store. You'll get a detailed report showing gaps and opportunities.</p>
+          </div>
+        </div>
+
+        <div class="reveal reveal-delay-1 glass-card rounded-2xl p-8 relative">
+          <span class="step-num" aria-hidden="true">02</span>
+          <div class="relative z-10">
+            <h3 class="font-serif text-xl font-bold text-cream mb-3">Optimization & Implementation</h3>
+            <p class="font-sans text-sm text-muted leading-relaxed">Structured data overhaul, content optimization, product feed cleanup, and authority signals. Typically 2&ndash;3 weeks.</p>
+          </div>
+        </div>
+
+        <div class="reveal reveal-delay-2 glass-card rounded-2xl p-8 relative">
+          <span class="step-num" aria-hidden="true">03</span>
+          <div class="relative z-10">
+            <h3 class="font-serif text-xl font-bold text-cream mb-3">Monitor & Optimize</h3>
+            <p class="font-sans text-sm text-muted leading-relaxed">Track AI citations, refine strategy monthly, adapt to new AI search patterns. Optional ongoing retainer.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== PRICING ======================== -->
+  <section class="px-4 sm:px-6 lg:px-8 py-24 md:py-32 border-t border-black/5 overflow-hidden">
+    <div class="max-w-5xl mx-auto">
+      <div class="reveal text-center max-w-3xl mx-auto mb-16">
+        <p class="font-sans text-sm tracking-[0.3em] uppercase text-muted mb-3">Pricing</p>
+        <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-cream leading-tight">Simple, transparent<br><span class="italic font-normal text-muted">pricing.</span></h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- GEO Audit & Setup -->
+        <div class="reveal glass-card rounded-2xl p-8 md:p-10">
+          <p class="font-sans text-sm tracking-[0.2em] uppercase text-muted mb-2">One-Time</p>
+          <h3 class="font-serif text-2xl font-bold text-cream mb-2">GEO Audit & Setup</h3>
+          <p class="font-serif text-4xl font-bold text-cream mb-6">$3,500</p>
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-start gap-3">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.5" class="flex-shrink-0 mt-0.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              <span class="font-sans text-sm text-muted">AI search audit across ChatGPT, Perplexity, Claude</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.5" class="flex-shrink-0 mt-0.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              <span class="font-sans text-sm text-muted">Structured data optimization</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.5" class="flex-shrink-0 mt-0.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              <span class="font-sans text-sm text-muted">Content strategy for AI citation</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.5" class="flex-shrink-0 mt-0.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              <span class="font-sans text-sm text-muted">Competitor AI visibility analysis</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.5" class="flex-shrink-0 mt-0.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              <span class="font-sans text-sm text-muted">Full implementation</span>
+            </li>
+          </ul>
+          <p class="font-sans text-xs text-muted mb-6">Timeline: 2&ndash;3 weeks</p>
+          <a href="#contact" class="btn-primary bg-cream text-white font-sans font-semibold px-8 py-4 rounded-full text-base cursor-pointer inline-flex items-center gap-3 hover:bg-black transition-colors duration-200 w-full justify-center">
+            Get Started
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+
+        <!-- GEO Ongoing -->
+        <div class="reveal reveal-delay-1 glass-card pricing-featured rounded-2xl p-8 md:p-10 relative">
+          <div class="absolute top-4 right-4">
+            <span class="font-sans text-[10px] font-semibold text-white bg-cream px-2.5 py-1 rounded-full uppercase tracking-wider">Recommended</span>
+          </div>
+          <p class="font-sans text-sm tracking-[0.2em] uppercase text-muted mb-2">Monthly</p>
+          <h3 class="font-serif text-2xl font-bold text-cream mb-2">GEO Ongoing</h3>
+          <p class="font-serif text-4xl font-bold text-cream mb-1">$990<span class="font-sans text-base font-normal text-muted">/mo</span></p>
+          <p class="font-sans text-xs text-muted mb-6">Cancel anytime</p>
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-start gap-3">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.5" class="flex-shrink-0 mt-0.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              <span class="font-sans text-sm text-muted">Monthly citation monitoring</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.5" class="flex-shrink-0 mt-0.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              <span class="font-sans text-sm text-muted">Content optimization</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.5" class="flex-shrink-0 mt-0.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              <span class="font-sans text-sm text-muted">Competitor tracking</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.5" class="flex-shrink-0 mt-0.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              <span class="font-sans text-sm text-muted">Quarterly strategy reviews</span>
+            </li>
+          </ul>
+          <a href="#contact" class="btn-primary bg-cream text-white font-sans font-semibold px-8 py-4 rounded-full text-base cursor-pointer inline-flex items-center gap-3 hover:bg-black transition-colors duration-200 w-full justify-center">
+            Get Started
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <p class="reveal text-center font-sans text-xs text-muted mt-8">All prices in AUD, exclude GST. 50% upfront, 50% on completion for one-time projects.</p>
+    </div>
+  </section>
+
+  <!-- ======================== FAQ ======================== -->
+  <section id="faq" class="px-4 sm:px-6 lg:px-8 py-24 md:py-32 border-t border-black/5 overflow-hidden">
+    <div class="max-w-3xl mx-auto">
+      <div class="reveal text-center mb-16">
+        <p class="font-sans text-sm tracking-[0.3em] uppercase text-muted mb-3">FAQ</p>
+        <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-cream leading-tight">Common<br><span class="italic font-normal text-muted">questions</span></h2>
+      </div>
+      <div class="space-y-4" id="faqContainer">
+
+        <div class="reveal faq-item glass-card rounded-2xl">
+          <button class="faq-btn w-full text-left p-6 flex justify-between items-center gap-4 cursor-pointer bg-transparent border-none" aria-expanded="false" aria-controls="faq-a1">
+            <span class="font-serif text-lg font-bold text-cream">How is GEO different from SEO?</span>
+            <svg class="faq-icon w-5 h-5 text-muted flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+          <div class="faq-answer" id="faq-a1" role="region">
+            <p class="px-6 pb-6 font-sans text-sm text-muted leading-relaxed">SEO optimizes for Google's ranking algorithm. GEO optimizes for AI citation &mdash; making sure AI assistants recommend and cite your products when users ask questions. You need both, but GEO is the emerging channel most stores are ignoring.</p>
+          </div>
+        </div>
+
+        <div class="reveal reveal-delay-1 faq-item glass-card rounded-2xl">
+          <button class="faq-btn w-full text-left p-6 flex justify-between items-center gap-4 cursor-pointer bg-transparent border-none" aria-expanded="false" aria-controls="faq-a2">
+            <span class="font-serif text-lg font-bold text-cream">How do you track AI citations?</span>
+            <svg class="faq-icon w-5 h-5 text-muted flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+          <div class="faq-answer" id="faq-a2" role="region">
+            <p class="px-6 pb-6 font-sans text-sm text-muted leading-relaxed">I use a combination of direct querying, brand mention monitoring, and structured data validation tools to track when and how AI systems reference your brand and products.</p>
+          </div>
+        </div>
+
+        <div class="reveal reveal-delay-2 faq-item glass-card rounded-2xl">
+          <button class="faq-btn w-full text-left p-6 flex justify-between items-center gap-4 cursor-pointer bg-transparent border-none" aria-expanded="false" aria-controls="faq-a3">
+            <span class="font-serif text-lg font-bold text-cream">How long before I see results?</span>
+            <svg class="faq-icon w-5 h-5 text-muted flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+          <div class="faq-answer" id="faq-a3" role="region">
+            <p class="px-6 pb-6 font-sans text-sm text-muted leading-relaxed">Initial improvements in structured data and content are visible within 2&ndash;3 weeks. AI citation improvements typically take 4&ndash;8 weeks as models update their knowledge. The ongoing retainer ensures continuous optimization.</p>
+          </div>
+        </div>
+
+        <div class="reveal faq-item glass-card rounded-2xl">
+          <button class="faq-btn w-full text-left p-6 flex justify-between items-center gap-4 cursor-pointer bg-transparent border-none" aria-expanded="false" aria-controls="faq-a4">
+            <span class="font-serif text-lg font-bold text-cream">Do I need to be on Shopify?</span>
+            <svg class="faq-icon w-5 h-5 text-muted flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+          <div class="faq-answer" id="faq-a4" role="region">
+            <p class="px-6 pb-6 font-sans text-sm text-muted leading-relaxed">GEO optimization works on any ecommerce platform. The principles of structured data, authoritative content, and AI-readable product information are universal.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== MID-PAGE CTA ======================== -->
+  <section class="px-4 sm:px-6 lg:px-8 py-16 md:py-20">
+    <div class="max-w-4xl mx-auto">
+      <div class="reveal glass-card rounded-3xl p-8 md:p-12 text-center relative overflow-hidden">
+        <div class="absolute w-[300px] h-[300px] bg-accent/10 rounded-full blur-[100px] -top-20 -left-20 pointer-events-none" aria-hidden="true"></div>
+        <div class="relative z-10">
+          <h2 class="font-serif text-3xl md:text-4xl font-bold text-cream mb-4">Your customers are asking AI for product recommendations<span class="text-accent">.</span></h2>
+          <p class="font-sans text-base text-muted mb-8 max-w-lg mx-auto">Make sure the answer is you.</p>
+          <a href="#contact" class="btn-primary bg-cream text-white font-sans font-semibold px-8 py-4 rounded-full text-base cursor-pointer inline-flex items-center gap-3 hover:bg-black transition-colors duration-200">
+            Book a Discovery Call
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== RELATED SERVICES ======================== -->
+  <section class="px-4 sm:px-6 lg:px-8 py-24 md:py-32 border-t border-black/5 overflow-hidden">
+    <div class="max-w-5xl mx-auto">
+      <div class="reveal text-center mb-16">
+        <p class="font-sans text-sm tracking-[0.3em] uppercase text-muted mb-3">Related Services</p>
+        <h2 class="font-serif text-4xl md:text-5xl font-bold text-cream leading-tight">Go further<span class="text-accent">.</span></h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <a href="/services/agentic-commerce/" class="reveal glass-card service-card rounded-2xl p-8 block group">
+          <div class="w-12 h-12 rounded-xl bg-accent/20 flex items-center justify-center mb-6">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1A1A1A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a4 4 0 0 1 4 4c0 1.95-1.4 3.58-3.25 3.93"/><path d="M8.56 9.8A4 4 0 1 1 15 13"/><circle cx="12" cy="12" r="10"/><path d="M12 16v.01"/></svg>
+          </div>
+          <h3 class="font-serif text-xl font-bold text-cream mb-3 group-hover:text-secondary transition-colors">Agentic Commerce Prep</h3>
+          <p class="font-sans text-sm text-muted leading-relaxed mb-4">Take AI readiness further with API endpoints and MCP servers. Prepare your store for autonomous shopping agents.</p>
+          <span class="font-sans text-sm text-cream group-hover:text-secondary transition-colors duration-200 inline-flex items-center gap-1">Learn more <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </a>
+
+        <a href="/services/shopify-claude-code/" class="reveal reveal-delay-1 glass-card service-card rounded-2xl p-8 block group">
+          <div class="w-12 h-12 rounded-xl bg-accent/20 flex items-center justify-center mb-6">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1A1A1A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/><line x1="14" y1="4" x2="10" y2="20"/></svg>
+          </div>
+          <h3 class="font-serif text-xl font-bold text-cream mb-3 group-hover:text-secondary transition-colors">Shopify + Claude Code</h3>
+          <p class="font-sans text-sm text-muted leading-relaxed mb-4">Need your store rebuilt for the AI era? AI-powered development at 3&ndash;5x speed.</p>
+          <span class="font-sans text-sm text-cream group-hover:text-secondary transition-colors duration-200 inline-flex items-center gap-1">Learn more <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== CONTACT ======================== -->
+  <section id="contact" class="px-4 sm:px-6 lg:px-8 py-24 md:py-32 border-t border-black/5 overflow-hidden">
+    <div class="max-w-7xl mx-auto">
+      <div class="reveal glass-card rounded-3xl p-8 md:p-16 relative overflow-hidden">
+        <!-- Background accent -->
+        <div class="absolute w-[400px] h-[400px] bg-accent/10 rounded-full blur-[120px] -top-40 -right-40 pointer-events-none" aria-hidden="true"></div>
+
+        <div class="relative z-10 max-w-2xl">
+          <p class="font-sans text-sm tracking-[0.3em] uppercase text-muted mb-4">Get Started</p>
+          <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-cream leading-tight mb-6">Let's talk about<br><span class="italic font-normal text-muted">your store.</span></h2>
+          <p class="font-sans text-base text-muted leading-relaxed mb-10 max-w-lg">Tell me what you're working on. I'll get back to you within 24 hours with next steps.</p>
+
+          <form class="space-y-6" id="contactForm">
+            <!-- Honeypot -->
+            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label for="name" class="font-sans text-xs uppercase tracking-wider text-muted mb-2 block">Name <span class="text-red-400">*</span></label>
+                <input type="text" id="name" name="name" required autocomplete="name" class="w-full bg-black/[0.03] border border-black/10 rounded-xl px-4 py-3 font-sans text-sm text-cream placeholder:text-muted/50 focus:outline-none focus:border-cream/40 focus:ring-1 focus:ring-cream/20 transition-colors duration-200" placeholder="Your name">
+              </div>
+              <div>
+                <label for="email" class="font-sans text-xs uppercase tracking-wider text-muted mb-2 block">Email <span class="text-red-400">*</span></label>
+                <input type="email" id="email" name="email" required autocomplete="email" class="w-full bg-black/[0.03] border border-black/10 rounded-xl px-4 py-3 font-sans text-sm text-cream placeholder:text-muted/50 focus:outline-none focus:border-cream/40 focus:ring-1 focus:ring-cream/20 transition-colors duration-200" placeholder="you@store.com">
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label for="storeUrl" class="font-sans text-xs uppercase tracking-wider text-muted mb-2 block">Store URL</label>
+                <input type="url" id="storeUrl" name="store_url" class="w-full bg-black/[0.03] border border-black/10 rounded-xl px-4 py-3 font-sans text-sm text-cream placeholder:text-muted/50 focus:outline-none focus:border-cream/40 focus:ring-1 focus:ring-cream/20 transition-colors duration-200" placeholder="yourstore.com">
+              </div>
+              <div>
+                <label for="service" class="font-sans text-xs uppercase tracking-wider text-muted mb-2 block">Interested In</label>
+                <select id="service" name="service" class="w-full bg-black/[0.03] border border-black/10 rounded-xl px-4 py-3 font-sans text-sm text-cream focus:outline-none focus:border-cream/40 focus:ring-1 focus:ring-cream/20 transition-colors duration-200 appearance-none cursor-pointer">
+                  <option value="">Select a service</option>
+                  <option value="geo" selected>GEO Optimization</option>
+                  <option value="shopify-claude-code">Shopify + Claude Code</option>
+                  <option value="ecommerce-automation">Ecommerce Automation</option>
+                  <option value="agentic-commerce">Agentic Commerce Prep</option>
+                  <option value="consulting">1-on-1 Consulting</option>
+                  <option value="not-sure">Not sure yet</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label for="message" class="font-sans text-xs uppercase tracking-wider text-muted mb-2 block">Message</label>
+              <textarea id="message" name="message" rows="4" class="w-full bg-black/[0.03] border border-black/10 rounded-xl px-4 py-3 font-sans text-sm text-cream placeholder:text-muted/50 focus:outline-none focus:border-cream/40 focus:ring-1 focus:ring-cream/20 transition-colors duration-200 resize-none" placeholder="Tell me about your store and what you're looking to achieve..."></textarea>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
+              <button type="submit" class="btn-primary bg-cream text-white font-sans font-semibold px-8 py-4 rounded-full text-base cursor-pointer inline-flex items-center gap-3 hover:bg-black transition-colors duration-200">
+                Send Message
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              </button>
+              <span class="font-sans text-xs text-muted">Free discovery call &mdash; no obligation</span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- ======================== FOOTER ======================== -->
+  <footer class="px-4 sm:px-6 lg:px-8 py-12 border-t border-black/5">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+        <div>
+          <a href="/" class="font-serif text-xl font-bold text-cream">MK<span class="text-accent">.</span></a>
+          <p class="font-sans text-sm text-muted mt-2">AI-First Shopify & Ecommerce Consultancy</p>
+        </div>
+        <div>
+          <p class="font-sans text-xs uppercase tracking-wider text-muted mb-3">Services</p>
+          <div class="space-y-2">
+            <a href="/services/geo/" class="font-sans text-sm text-secondary hover:text-cream transition-colors block">GEO Optimization</a>
+            <a href="/services/shopify-claude-code/" class="font-sans text-sm text-secondary hover:text-cream transition-colors block">Shopify + Claude Code</a>
+            <a href="/services/ecommerce-automation/" class="font-sans text-sm text-secondary hover:text-cream transition-colors block">Ecommerce Automation</a>
+            <a href="/services/agentic-commerce/" class="font-sans text-sm text-secondary hover:text-cream transition-colors block">Agentic Commerce</a>
+            <a href="/services/consulting/" class="font-sans text-sm text-secondary hover:text-cream transition-colors block">1-on-1 Consulting</a>
+          </div>
+        </div>
+        <div>
+          <p class="font-sans text-xs uppercase tracking-wider text-muted mb-3">Contact</p>
+          <div class="space-y-2">
+            <a href="mailto:max.kolesnyk1@gmail.com" class="font-sans text-sm text-secondary hover:text-cream transition-colors block">max.kolesnyk1@gmail.com</a>
+            <a href="tel:+61414841874" class="font-sans text-sm text-secondary hover:text-cream transition-colors block">+61 414 841 874</a>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-black/5 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p class="font-sans text-xs text-muted">&copy; 2026 Maksym Kolesnyk. All rights reserved.</p>
+        <p class="font-sans text-xs text-muted">All prices in AUD, exclude GST.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ======================== JAVASCRIPT ======================== -->
+  <script>
+    // Scroll reveal
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+    document.querySelectorAll('.blur-in').forEach(el => revealObserver.observe(el));
+
+    // Custom cursor (desktop only)
+    const dot = document.getElementById('cursorDot');
+    const ring = document.getElementById('cursorRing');
+    if (dot && ring && window.matchMedia('(pointer: fine)').matches) {
+      let mouseX = 0, mouseY = 0, ringX = 0, ringY = 0;
+      document.addEventListener('mousemove', e => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+        dot.style.left = mouseX - 4 + 'px';
+        dot.style.top = mouseY - 4 + 'px';
+      });
+      function animateRing() {
+        ringX += (mouseX - ringX) * 0.15;
+        ringY += (mouseY - ringY) * 0.15;
+        ring.style.left = ringX - 20 + 'px';
+        ring.style.top = ringY - 20 + 'px';
+        requestAnimationFrame(animateRing);
+      }
+      animateRing();
+      document.querySelectorAll('a, button, input, textarea, select, .glass-card').forEach(el => {
+        el.addEventListener('mouseenter', () => {
+          ring.style.width = '60px';
+          ring.style.height = '60px';
+          ring.style.borderColor = 'rgba(0,0,0,0.4)';
+          ring.style.left = ringX - 30 + 'px';
+          ring.style.top = ringY - 30 + 'px';
+        });
+        el.addEventListener('mouseleave', () => {
+          ring.style.width = '40px';
+          ring.style.height = '40px';
+          ring.style.borderColor = 'rgba(0,0,0,0.2)';
+        });
+      });
+    }
+
+    // Mobile menu
+    const menuBtn = document.getElementById('menuBtn');
+    const closeMenuBtn = document.getElementById('closeMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    function openMobileMenu() {
+      mobileMenu.classList.add('open');
+      mobileMenu.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+      closeMenuBtn.focus();
+    }
+    function closeMobileMenu() {
+      mobileMenu.classList.remove('open');
+      mobileMenu.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+      menuBtn.focus();
+    }
+    menuBtn.addEventListener('click', openMobileMenu);
+    closeMenuBtn.addEventListener('click', closeMobileMenu);
+    document.querySelectorAll('.mobile-link').forEach(link => {
+      link.addEventListener('click', closeMobileMenu);
+    });
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && mobileMenu.classList.contains('open')) closeMobileMenu();
+      if (e.key === 'Tab' && mobileMenu.classList.contains('open')) {
+        const focusable = mobileMenu.querySelectorAll('a, button');
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+        if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+        else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+      }
+    });
+
+    // Navbar scroll
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 60);
+    });
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.parentElement;
+        const isActive = item.classList.contains('active');
+        document.querySelectorAll('.faq-item').forEach(i => {
+          i.classList.remove('active');
+          i.querySelector('.faq-btn').setAttribute('aria-expanded', 'false');
+        });
+        if (!isActive) {
+          item.classList.add('active');
+          btn.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+
+    // Contact form
+    const form = document.getElementById('contactForm');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const honeypot = form.querySelector('input[name="_gotcha"]');
+      if (honeypot && honeypot.value) return;
+
+      const btn = form.querySelector('button[type="submit"]');
+      const originalText = btn.innerHTML;
+      btn.disabled = true;
+      btn.innerHTML = '<span class="inline-flex items-center gap-2">Sending...</span>';
+
+      try {
+        const payload = {
+          name: form.querySelector('#name').value.trim(),
+          email: form.querySelector('#email').value.trim(),
+          store_url: form.querySelector('#storeUrl').value.trim() || undefined,
+          service: form.querySelector('#service').value || undefined,
+          message: form.querySelector('#message').value.trim() || undefined,
+          page_url: window.location.href,
+        };
+
+        const res = await fetch('https://app.maksym.au/api/leads', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+        });
+
+        if (!res.ok) throw new Error('Request failed');
+
+        btn.innerHTML = '<span class="inline-flex items-center gap-2">Sent! <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>';
+        btn.classList.remove('bg-cream');
+        btn.classList.add('bg-green-600');
+        form.reset();
+      } catch (err) {
+        console.error('Form submission error:', err);
+        btn.innerHTML = '<span class="inline-flex items-center gap-2">Error — try again</span>';
+        btn.classList.remove('bg-cream');
+        btn.classList.add('bg-red-500');
+      }
+
+      setTimeout(() => {
+        btn.innerHTML = originalText;
+        btn.classList.remove('bg-green-600', 'bg-red-500');
+        btn.classList.add('bg-cream');
+        btn.disabled = false;
+      }, 2500);
+    });
+  </script>
+
+  <!-- Cloudflare Web Analytics -->
+  <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "42e8088b03054cbf86c5445e07ea49a0"}'></script>
+
+</body>
+</html>

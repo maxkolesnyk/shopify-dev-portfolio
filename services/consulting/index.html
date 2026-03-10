@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1-on-1 Ecommerce & AI Consulting | Maksym Kolesnyk</title>
+  <meta name="description" content="Expert consulting for Shopify merchants and ecommerce teams. Strategy calls, code reviews, team training, and architecture audits. $350/hr.">
+  <meta name="theme-color" content="#FAFAFA">
+  <link rel="canonical" href="https://maksym.au/services/consulting/">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://maksym.au/services/consulting/">
+  <meta property="og:title" content="1-on-1 Ecommerce & AI Consulting | Maksym Kolesnyk">
+  <meta property="og:description" content="Expert consulting for Shopify merchants and ecommerce teams. Strategy calls, code reviews, team training, and architecture audits. $350/hr.">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="1-on-1 Ecommerce & AI Consulting | Maksym Kolesnyk">
+  <meta name="twitter:description" content="Expert consulting for Shopify merchants and ecommerce teams. Strategy calls, code reviews, team training, and architecture audits. $350/hr.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,700;1,400&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../dist/output.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { background: #FAFAFA; color: #1A1A1A; font-family: 'Jost', sans-serif; overflow-x: hidden; }
+    ::selection { background: #C8FF00; color: #0A0A0A; }
+
+    /* ── Liquid Glass Navbar ── */
+    .nav-glass {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(40px) saturate(1.6);
+      -webkit-backdrop-filter: blur(40px) saturate(1.6);
+      border: 1px solid rgba(0, 0, 0, 0.06);
+      border-top: 1px solid rgba(255, 255, 255, 0.9);
+      box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.06),
+        0 2px 8px rgba(0, 0, 0, 0.04),
+        inset 0 1px 0 rgba(255, 255, 255, 1),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.02);
+      overflow: hidden;
+      transition: background 0.4s ease, box-shadow 0.4s ease;
+    }
+    .nav-glass::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -20%;
+      width: 60%;
+      height: 100%;
+      background: linear-gradient(105deg, transparent 20%, rgba(255, 255, 255, 0.4) 40%, rgba(255, 255, 255, 0.6) 50%, rgba(255, 255, 255, 0.4) 60%, transparent 80%);
+      pointer-events: none;
+      z-index: 0;
+    }
+    .nav-glass > * { position: relative; z-index: 1; }
+    .nav-glass.scrolled {
+      background: rgba(255, 255, 255, 0.85);
+      box-shadow:
+        0 12px 48px rgba(0, 0, 0, 0.08),
+        0 4px 12px rgba(0, 0, 0, 0.05),
+        inset 0 1px 0 rgba(255, 255, 255, 1);
+    }
+
+    /* ── Glass Card (Light) ── */
+    .glass-card {
+      background: rgba(255, 255, 255, 0.65);
+      backdrop-filter: blur(24px) saturate(1.4);
+      -webkit-backdrop-filter: blur(24px) saturate(1.4);
+      border: 1px solid rgba(0, 0, 0, 0.06);
+      border-top: 1px solid rgba(255, 255, 255, 0.8);
+      box-shadow:
+        0 4px 24px rgba(0, 0, 0, 0.04),
+        0 1px 4px rgba(0, 0, 0, 0.02),
+        inset 0 1px 0 rgba(255, 255, 255, 0.9);
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .glass-card:hover {
+      background: rgba(255, 255, 255, 0.8);
+      box-shadow:
+        0 8px 40px rgba(0, 0, 0, 0.08),
+        0 2px 8px rgba(0, 0, 0, 0.04),
+        inset 0 1px 0 rgba(255, 255, 255, 1);
+      transform: translateY(-2px);
+    }
+
+    /* ── Service Card (clickable) ── */
+    .service-card {
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .service-card:hover {
+      border-color: rgba(200, 255, 0, 0.4);
+      box-shadow:
+        0 8px 40px rgba(200, 255, 0, 0.06),
+        0 2px 8px rgba(0, 0, 0, 0.04),
+        inset 0 1px 0 rgba(255, 255, 255, 1);
+      transform: translateY(-4px);
+    }
+
+    /* ── Stat Card ── */
+    .stat-card { position: relative; overflow: hidden; }
+    .stat-card::before {
+      content: '';
+      position: absolute;
+      top: -50%; left: -50%;
+      width: 200%; height: 200%;
+      background: radial-gradient(circle, rgba(200, 255, 0, 0.04) 0%, transparent 60%);
+      opacity: 0;
+      transition: opacity 0.5s ease;
+      pointer-events: none;
+    }
+    .stat-card:hover::before { opacity: 1; }
+
+    /* ── Mobile Nav ── */
+    .mobile-menu {
+      transform: translateX(100%);
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(60px) saturate(1.8);
+      -webkit-backdrop-filter: blur(60px) saturate(1.8);
+    }
+    .mobile-menu.open { transform: translateX(0); }
+
+    /* ── Scroll Reveal ── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
+
+    /* ── Blur-in Entrance ── */
+    .blur-in {
+      opacity: 0;
+      filter: blur(8px);
+      transform: translateY(25px);
+      transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+                  filter 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+                  transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .blur-in.visible { opacity: 1; filter: blur(0); transform: translateY(0); }
+
+    /* ── CTA Button Shimmer ── */
+    .btn-primary { position: relative; overflow: hidden; }
+    .btn-primary::after {
+      content: '';
+      position: absolute;
+      top: 0; left: -100%;
+      width: 100%; height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: left 0.5s ease;
+    }
+    .btn-primary:hover::after { left: 100%; }
+
+    /* ── Service Tag Pill ── */
+    .service-tag {
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+    .service-tag:hover {
+      border-color: #A3D900;
+      color: #1A1A1A;
+      background: rgba(200, 255, 0, 0.1);
+    }
+
+    /* ── Process Step Number ── */
+    .step-num {
+      font-family: 'Bodoni Moda', serif;
+      font-size: 5rem;
+      font-weight: 700;
+      line-height: 1;
+      color: rgba(0, 0, 0, 0.04);
+      position: absolute;
+      top: -0.5rem;
+      left: -0.25rem;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    /* ── FAQ ── */
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
+    .faq-item.active .faq-answer { max-height: 500px; }
+    .faq-icon { transition: transform 0.3s ease; }
+    .faq-item.active .faq-icon { transform: rotate(45deg); }
+
+    /* ── Custom Cursor ── */
+    .cursor-dot {
+      width: 8px; height: 8px;
+      background: #1A1A1A;
+      border-radius: 50%;
+      position: fixed;
+      pointer-events: none;
+      z-index: 99999;
+      transition: transform 0.15s ease, opacity 0.15s ease;
+      mix-blend-mode: difference;
+    }
+    .cursor-ring {
+      width: 40px; height: 40px;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      border-radius: 50%;
+      position: fixed;
+      pointer-events: none;
+      z-index: 99998;
+      transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease, border-color 0.3s ease;
+    }
+
+    /* ── Gradient Mesh Background ── */
+    .mesh-bg {
+      background:
+        radial-gradient(ellipse 80% 50% at 20% 40%, rgba(200, 255, 0, 0.04), transparent),
+        radial-gradient(ellipse 60% 40% at 80% 20%, rgba(59, 130, 246, 0.03), transparent),
+        radial-gradient(ellipse 70% 60% at 50% 80%, rgba(168, 85, 247, 0.02), transparent);
+    }
+
+    /* ── Pricing Featured ── */
+    .pricing-featured {
+      border: 2px solid rgba(200, 255, 0, 0.4);
+      box-shadow:
+        0 8px 40px rgba(200, 255, 0, 0.08),
+        0 2px 8px rgba(0, 0, 0, 0.04),
+        inset 0 1px 0 rgba(255, 255, 255, 1);
+    }
+
+    /* ── Reduced Motion ── */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+      .reveal { opacity: 1; transform: none; }
+      .blur-in { opacity: 1; filter: none; transform: none; }
+    }
+  </style>
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "1-on-1 Ecommerce & AI Consulting",
+    "provider": {
+      "@type": "ProfessionalService",
+      "name": "Maksym Kolesnyk",
+      "url": "https://maksym.au"
+    },
+    "url": "https://maksym.au/services/consulting/",
+    "description": "Expert consulting for Shopify merchants and ecommerce teams. Strategy calls, code reviews, team training, and architecture audits.",
+    "offers": [
+      {"@type": "Offer", "name": "Single Session", "price": "350", "priceCurrency": "AUD", "description": "1-hour video call. Strategy, code review, or problem-solving. Follow-up notes within 24 hours."},
+      {"@type": "Offer", "name": "5-Hour Block", "price": "1500", "priceCurrency": "AUD", "description": "Prepaid hours used at your pace. Ideal for ongoing advisory. Valid for 3 months."},
+      {"@type": "Offer", "name": "Half-Day Deep Dive", "price": "1200", "priceCurrency": "AUD", "description": "4 hours of focused work on a single topic. Prep + follow-up included."}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type": "Question", "name": "What topics can I ask about?", "acceptedAnswer": {"@type": "Answer", "text": "Anything in the AI + ecommerce space: GEO optimization, agentic commerce, Shopify development, Claude Code workflows, ecommerce automation, structured data, tech stack decisions, team processes, and vendor evaluation. If it's related to AI and ecommerce, I can help."}},
+      {"@type": "Question", "name": "Can consulting turn into a project?", "acceptedAnswer": {"@type": "Answer", "text": "Absolutely. Many clients start with a consulting session to get clarity, then move into a focused project. Consulting hours already paid are credited toward the project."}},
+      {"@type": "Question", "name": "How do I prepare for a session?", "acceptedAnswer": {"@type": "Answer", "text": "Send me your questions, relevant URLs, code snippets, or challenge descriptions at least 24 hours before the session. The more context I have, the more value you'll get from the hour."}},
+      {"@type": "Question", "name": "Do you offer team training?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Training sessions are typically 2-4 hours and can cover Claude Code for Shopify development, GEO optimization workflows, structured data best practices, or agentic commerce preparation. I provide hands-on exercises and documentation your team can reference afterward."}}
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Skip to content -->
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[9999] focus:bg-accent focus:text-surface focus:px-4 focus:py-2 focus:rounded-full focus:font-sans focus:text-sm focus:font-semibold">Skip to main content</a>
+
+  <!-- Custom Cursor (desktop only) -->
+  <div class="cursor-dot hidden lg:block" id="cursorDot" aria-hidden="true"></div>
+  <div class="cursor-ring hidden lg:block" id="cursorRing" aria-hidden="true"></div>
+
+  <!-- ======================== NAVBAR ======================== -->
+  <nav class="nav-glass fixed top-2 sm:top-4 left-1/2 -translate-x-1/2 z-50 rounded-xl sm:rounded-2xl px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between w-[calc(100%-1rem)] sm:w-[calc(100%-2rem)] max-w-7xl" id="navbar">
+    <a href="/" class="font-serif text-xl font-bold tracking-tight text-cream cursor-pointer">MK<span class="text-accent">.</span></a>
+
+    <!-- Desktop links -->
+    <div class="hidden md:flex items-center gap-8">
+      <a href="/#services" class="text-sm font-sans text-muted hover:text-cream transition-colors duration-200 cursor-pointer">Services</a>
+      <a href="/#about" class="text-sm font-sans text-muted hover:text-cream transition-colors duration-200 cursor-pointer">About</a>
+      <a href="/#process" class="text-sm font-sans text-muted hover:text-cream transition-colors duration-200 cursor-pointer">How It Works</a>
+      <a href="/#faq" class="text-sm font-sans text-muted hover:text-cream transition-colors duration-200 cursor-pointer">FAQ</a>
+      <a href="/#contact" class="btn-primary bg-cream text-white font-sans text-sm font-semibold px-6 py-2.5 rounded-full cursor-pointer inline-block hover:bg-black transition-colors duration-200">Book a Call</a>
+    </div>
+
+    <!-- Mobile menu button -->
+    <button class="md:hidden text-cream cursor-pointer" id="menuBtn" aria-label="Open menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu fixed inset-0 z-[60] flex flex-col items-center justify-center gap-8 md:hidden overflow-y-auto py-20" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Navigation menu" aria-hidden="true">
+    <button class="fixed top-6 right-6 text-cream cursor-pointer z-[61]" id="closeMenuBtn" aria-label="Close menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <a href="/#services" class="mobile-link font-serif text-3xl text-cream cursor-pointer">Services</a>
+    <a href="/#about" class="mobile-link font-serif text-3xl text-cream cursor-pointer">About</a>
+    <a href="/#process" class="mobile-link font-serif text-3xl text-cream cursor-pointer">How It Works</a>
+    <a href="/#faq" class="mobile-link font-serif text-3xl text-cream cursor-pointer">FAQ</a>
+    <a href="/#contact" class="mobile-link btn-primary bg-cream text-white font-sans text-lg font-semibold px-8 py-3 rounded-full cursor-pointer inline-block mt-4">Book a Call</a>
+  </div>
+
+  <main id="main">
+
+  <!-- ======================== HERO ======================== -->
+  <section class="relative min-h-[70vh] flex flex-col justify-center px-4 sm:px-6 lg:px-8 pt-28 pb-16 sm:pb-20 overflow-hidden mesh-bg">
+    <div class="max-w-7xl mx-auto w-full relative z-10">
+      <div class="max-w-4xl">
+        <!-- Breadcrumb -->
+        <div class="blur-in">
+          <nav class="font-sans text-sm text-muted mb-6" aria-label="Breadcrumb">
+            <a href="/#services" class="hover:text-cream transition-colors duration-200">Services</a>
+            <span class="mx-2 text-black/20">/</span>
+            <span class="text-cream">Consulting</span>
+          </nav>
+        </div>
+
+        <h1 class="blur-in font-serif text-5xl sm:text-6xl md:text-7xl lg:text-[5rem] font-bold leading-[0.95] tracking-tight text-cream mb-8" style="transition-delay: 0.15s;">
+          Expert guidance,<br>
+          <span class="italic font-normal text-muted">without the full engagement.</span>
+        </h1>
+
+        <p class="blur-in font-sans text-lg sm:text-xl text-secondary max-w-2xl leading-relaxed mb-10" style="transition-delay: 0.3s;">
+          Not every problem needs a full project. Sometimes you need a second opinion, a strategy session, or someone who's been deep in AI + ecommerce to review your approach. That's what consulting hours are for.
+        </p>
+
+        <div class="blur-in flex flex-wrap gap-4 items-center" style="transition-delay: 0.45s;">
+          <a href="#contact" class="btn-primary bg-cream text-white font-sans font-semibold px-8 py-4 rounded-full text-base cursor-pointer inline-flex items-center gap-3 hover:bg-black transition-colors duration-200">
+            Book a Session
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+          <span class="font-sans text-sm text-muted">$350/hr or 5-hr block for $1,500</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== THE PROBLEM ======================== -->
+  <section class="px-4 sm:px-6 lg:px-8 py-24 md:py-32 border-t border-black/5 overflow-hidden">
+    <div class="max-w-7xl mx-auto">
+      <div class="reveal text-center max-w-3xl mx-auto mb-16">
+        <p class="font-sans text-sm tracking-[0.3em] uppercase text-muted mb-3">The Problem</p>
+        <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-cream leading-tight">Not everything needs<br><span class="italic font-normal text-muted">a full engagement.</span></h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="reveal glass-card stat-card rounded-2xl p-8">
+          <h3 class="font-serif text-xl font-bold text-cream mb-3">You need clarity, not a contract</h3>
+          <p class="font-sans text-sm text-muted leading-relaxed">You have questions about GEO, agentic commerce, or Shopify architecture. You don't need a $5K project &mdash; you need an expert's perspective for an hour.</p>
+        </div>
+        <div class="reveal reveal-delay-1 glass-card stat-card rounded-2xl p-8">
+          <h3 class="font-serif text-xl font-bold text-cream mb-3">Your team needs upskilling</h3>
+          <p class="font-sans text-sm text-muted leading-relaxed">AI tools are changing how ecommerce teams work. Training your team on Claude Code, structured data, or AI search optimization compounds over time.</p>
+        </div>
+        <div class="reveal reveal-delay-2 glass-card stat-card rounded-2xl p-8">
+          <h3 class="font-serif text-xl font-bold text-cream mb-3">DIY is fine &mdash; with guidance</h3>
+          <p class="font-sans text-sm text-muted leading-relaxed">Maybe you want to do the work yourself but need someone to validate your approach, catch blind spots, and point you in the right direction.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== WHAT YOU GET ======================== -->
+  <section class="px-4 sm:px-6 lg:px-8 py-24 md:py-32 border-t border-black/5 overflow-hidden">
+    <div class="max-w-7xl mx-auto">
+      <div class="reveal text-center max-w-3xl mx-auto mb-16">
+        <p class="font-sans text-sm tracking-[0.3em] uppercase text-muted mb-3">What You Get</p>
+        <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-cream leading-tight">Flexible expertise,<br><span class="italic font-normal text-muted">on your terms.</span></h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="reveal glass-card rounded-2xl p-8">
+          <div class="w-12 h-12 rounded-xl bg-accent/20 flex items-center justify-center mb-6">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1A1A1A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <h3 class="font-serif text-xl font-bold text-cream mb-3">Strategy Sessions</h3>
+          <p class="font-sans text-sm text-muted leading-relaxed">1-on-1 video calls to discuss your store's AI readiness, GEO strategy, tech stack decisions, or growth roadmap.</p>
+        </div>
+
+        <div class="reveal reveal-delay-1 glass-card rounded-2xl p-8">
+          <div class="w-12 h-12 rounded-xl bg-accent/20 flex items-center justify-center mb-6">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1A1A1A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/><line x1="14" y1="4" x2="10" y2="20"/></svg>
+          </div>
+          <h3 class="font-serif text-xl font-bold text-cream mb-3">Code Reviews</h3>
+          <p class="font-sans text-sm text-muted leading-relaxed">Expert review of your Shopify theme, custom apps, Liquid code, or automation workflows with actionable feedback.</p>
+        </div>
+
+        <div class="reveal reveal-delay-2 glass-card rounded-2xl p-8">
+          <div class="w-12 h-12 rounded-xl bg-accent/20 flex items-center justify-center mb-6">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1A1A1A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <h3 class="font-serif text-xl font-bold text-cream mb-3">Architecture Audits</h3>
+          <p class="font-sans text-sm text-muted leading-relaxed">Deep review of your ecommerce infrastructure &mdash; data flows, integrations, performance, and scalability.</p>
+        </div>
+
+        <div class="reveal glass-card rounded-2xl p-8">
+          <div class="w-12 h-12 rounded-xl bg-accent/20 flex items-center justify-center mb-6">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1A1A1A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3 class="font-serif text-xl font-bold text-cream mb-3">Team Training</h3>
+          <p class="font-sans text-sm text-muted leading-relaxed">Hands-on training sessions for your dev team on Claude Code, AI-powered development, structured data, or GEO.</p>
+        </div>
+
+        <div class="reveal reveal-delay-1 glass-card rounded-2xl p-8">
+          <div class="w-12 h-12 rounded-xl bg-accent/20 flex items-center justify-center mb-6">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1A1A1A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
+          <h3 class="font-serif text-xl font-bold text-cream mb-3">Second Opinions</h3>
+          <p class="font-sans text-sm text-muted leading-relaxed">Validate a vendor proposal, tech decision, or strategic direction before committing time and money.</p>
+        </div>
+
+        <div class="reveal reveal-delay-2 glass-card rounded-2xl p-8">
+          <div class="w-12 h-12 rounded-xl bg-accent/20 flex items-center justify-center mb-6">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1A1A1A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+          </div>
+          <h3 class="font-serif text-xl font-bold text-cream mb-3">Ad-Hoc Problem Solving</h3>
+          <p class="font-sans text-sm text-muted leading-relaxed">Stuck on a specific technical challenge? Bring it to a session and we'll work through it together.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== HOW IT WORKS ======================== -->
+  <section class="px-4 sm:px-6 lg:px-8 py-24 md:py-32 border-t border-black/5 overflow-hidden">
+    <div class="max-w-7xl mx-auto">
+      <div class="reveal mb-16 text-center">
+        <p class="font-sans text-sm tracking-[0.3em] uppercase text-muted mb-3">How It Works</p>
+        <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-cream leading-tight">Three simple steps<br><span class="italic font-normal text-muted">to expert advice.</span></h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="reveal glass-card rounded-2xl p-8 relative">
+          <span class="step-num" aria-hidden="true">01</span>
+          <div class="relative z-10">
+            <h3 class="font-serif text-xl font-bold text-cream mb-3">Book a Session</h3>
+            <p class="font-sans text-sm text-muted leading-relaxed">Choose a time that works. Sessions are 1 hour by default, or book a half-day (4 hours) for deep dives.</p>
+          </div>
+        </div>
+
+        <div class="reveal reveal-delay-1 glass-card rounded-2xl p-8 relative">
+          <span class="step-num" aria-hidden="true">02</span>
+          <div class="relative z-10">
+            <h3 class="font-serif text-xl font-bold text-cream mb-3">Come Prepared</h3>
+            <p class="font-sans text-sm text-muted leading-relaxed">Share your questions, code, or challenges in advance so we maximize the session. I'll review beforehand.</p>
+          </div>
+        </div>
+
+        <div class="reveal reveal-delay-2 glass-card rounded-2xl p-8 relative">
+          <span class="step-num" aria-hidden="true">03</span>
+          <div class="relative z-10">
+            <h3 class="font-serif text-xl font-bold text-cream mb-3">Get Answers</h3>
+            <p class="font-sans text-sm text-muted leading-relaxed">Actionable advice, documented takeaways, and follow-up notes sent within 24 hours. No fluff, no upselling.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== PRICING ======================== -->
+  <section class="px-4 sm:px-6 lg:px-8 py-24 md:py-32 border-t border-black/5 overflow-hidden">
+    <div class="max-w-7xl mx-auto">
+      <div class="reveal text-center max-w-3xl mx-auto mb-16">
+        <p class="font-sans text-sm tracking-[0.3em] uppercase text-muted mb-3">Pricing</p>
+        <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-cream leading-tight">Simple, transparent<br><span class="italic font-normal text-muted">pricing.</span></h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Single Session -->
+        <div class="reveal glass-card rounded-2xl p-8">
+          <p class="font-sans text-sm tracking-[0.2em] uppercase text-muted mb-2">Single Session</p>
+          <p class="font-serif text-4xl font-bold text-cream mb-6">$350</p>
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              <span class="font-sans text-sm text-muted">1-hour video call</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              <span class="font-sans text-sm text-muted">Strategy, code review, or problem-solving</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              <span class="font-sans text-sm text-muted">Follow-up notes within 24 hours</span>
+            </li>
+          </ul>
+          <a href="#contact" class="btn-primary bg-black/5 text-cream font-sans font-semibold px-6 py-3 rounded-full text-sm cursor-pointer inline-flex items-center gap-2 hover:bg-black/10 transition-colors duration-200 w-full justify-center">
+            Book a Session
+          </a>
+        </div>
+
+        <!-- 5-Hour Block (Featured) -->
+        <div class="reveal reveal-delay-1 glass-card pricing-featured rounded-2xl p-8 relative">
+          <div class="absolute top-4 right-4">
+            <span class="font-sans text-[10px] font-semibold text-white bg-cream px-2.5 py-1 rounded-full uppercase tracking-wider">Best Value</span>
+          </div>
+          <p class="font-sans text-sm tracking-[0.2em] uppercase text-muted mb-2">5-Hour Block</p>
+          <div class="flex items-baseline gap-2 mb-1">
+            <p class="font-serif text-4xl font-bold text-cream">$1,500</p>
+          </div>
+          <p class="font-sans text-xs text-accent mb-6">Save $250</p>
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              <span class="font-sans text-sm text-muted">Prepaid hours used at your pace</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              <span class="font-sans text-sm text-muted">Ideal for ongoing advisory</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              <span class="font-sans text-sm text-muted">Valid for 3 months</span>
+            </li>
+          </ul>
+          <a href="#contact" class="btn-primary bg-cream text-white font-sans font-semibold px-6 py-3 rounded-full text-sm cursor-pointer inline-flex items-center gap-2 hover:bg-black transition-colors duration-200 w-full justify-center">
+            Get Started
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+
+        <!-- Half-Day Deep Dive -->
+        <div class="reveal reveal-delay-2 glass-card rounded-2xl p-8">
+          <p class="font-sans text-sm tracking-[0.2em] uppercase text-muted mb-2">Half-Day Deep Dive</p>
+          <p class="font-serif text-4xl font-bold text-cream mb-6">$1,200</p>
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              <span class="font-sans text-sm text-muted">4 hours of focused work on a single topic</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              <span class="font-sans text-sm text-muted">Architecture audit, team training, or strategic planning</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <svg class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              <span class="font-sans text-sm text-muted">Prep + follow-up included</span>
+            </li>
+          </ul>
+          <a href="#contact" class="btn-primary bg-black/5 text-cream font-sans font-semibold px-6 py-3 rounded-full text-sm cursor-pointer inline-flex items-center gap-2 hover:bg-black/10 transition-colors duration-200 w-full justify-center">
+            Book a Deep Dive
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== FAQ ======================== -->
+  <section class="px-4 sm:px-6 lg:px-8 py-24 md:py-32 border-t border-black/5 overflow-hidden">
+    <div class="max-w-3xl mx-auto">
+      <div class="reveal text-center mb-16">
+        <p class="font-sans text-sm tracking-[0.3em] uppercase text-muted mb-3">FAQ</p>
+        <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-cream leading-tight">Common<br><span class="italic font-normal text-muted">questions</span></h2>
+      </div>
+      <div class="space-y-4" id="faqContainer">
+
+        <div class="reveal faq-item glass-card rounded-2xl">
+          <button class="faq-btn w-full text-left p-6 flex justify-between items-center gap-4 cursor-pointer bg-transparent border-none" aria-expanded="false" aria-controls="faq-a1">
+            <span class="font-serif text-lg font-bold text-cream">What topics can I ask about?</span>
+            <svg class="faq-icon w-5 h-5 text-muted flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+          <div class="faq-answer" id="faq-a1" role="region">
+            <p class="px-6 pb-6 font-sans text-sm text-muted leading-relaxed">Anything in the AI + ecommerce space: GEO optimization, agentic commerce, Shopify development, Claude Code workflows, ecommerce automation, structured data, tech stack decisions, team processes, and vendor evaluation. If it's related to AI and ecommerce, I can help.</p>
+          </div>
+        </div>
+
+        <div class="reveal reveal-delay-1 faq-item glass-card rounded-2xl">
+          <button class="faq-btn w-full text-left p-6 flex justify-between items-center gap-4 cursor-pointer bg-transparent border-none" aria-expanded="false" aria-controls="faq-a2">
+            <span class="font-serif text-lg font-bold text-cream">Can consulting turn into a project?</span>
+            <svg class="faq-icon w-5 h-5 text-muted flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+          <div class="faq-answer" id="faq-a2" role="region">
+            <p class="px-6 pb-6 font-sans text-sm text-muted leading-relaxed">Absolutely. Many clients start with a consulting session to get clarity, then move into a focused project. Consulting hours already paid are credited toward the project.</p>
+          </div>
+        </div>
+
+        <div class="reveal reveal-delay-2 faq-item glass-card rounded-2xl">
+          <button class="faq-btn w-full text-left p-6 flex justify-between items-center gap-4 cursor-pointer bg-transparent border-none" aria-expanded="false" aria-controls="faq-a3">
+            <span class="font-serif text-lg font-bold text-cream">How do I prepare for a session?</span>
+            <svg class="faq-icon w-5 h-5 text-muted flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+          <div class="faq-answer" id="faq-a3" role="region">
+            <p class="px-6 pb-6 font-sans text-sm text-muted leading-relaxed">Send me your questions, relevant URLs, code snippets, or challenge descriptions at least 24 hours before the session. The more context I have, the more value you'll get from the hour.</p>
+          </div>
+        </div>
+
+        <div class="reveal faq-item glass-card rounded-2xl">
+          <button class="faq-btn w-full text-left p-6 flex justify-between items-center gap-4 cursor-pointer bg-transparent border-none" aria-expanded="false" aria-controls="faq-a4">
+            <span class="font-serif text-lg font-bold text-cream">Do you offer team training?</span>
+            <svg class="faq-icon w-5 h-5 text-muted flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+          <div class="faq-answer" id="faq-a4" role="region">
+            <p class="px-6 pb-6 font-sans text-sm text-muted leading-relaxed">Yes. Training sessions are typically 2&ndash;4 hours and can cover Claude Code for Shopify development, GEO optimization workflows, structured data best practices, or agentic commerce preparation. I provide hands-on exercises and documentation your team can reference afterward.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== CTA ======================== -->
+  <section class="px-4 sm:px-6 lg:px-8 py-16 md:py-20">
+    <div class="max-w-4xl mx-auto">
+      <div class="reveal glass-card rounded-3xl p-8 md:p-12 text-center relative overflow-hidden">
+        <div class="absolute w-[300px] h-[300px] bg-accent/10 rounded-full blur-[100px] -top-20 -left-20 pointer-events-none" aria-hidden="true"></div>
+        <div class="relative z-10">
+          <h2 class="font-serif text-3xl md:text-4xl font-bold text-cream mb-4">One hour of expert guidance<br>can save weeks of wrong turns<span class="text-accent">.</span></h2>
+          <p class="font-sans text-base text-muted mb-8 max-w-lg mx-auto">Let's talk.</p>
+          <a href="#contact" class="btn-primary bg-cream text-white font-sans font-semibold px-8 py-4 rounded-full text-base cursor-pointer inline-flex items-center gap-3 hover:bg-black transition-colors duration-200">
+            Book a Session
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== RELATED SERVICES ======================== -->
+  <section class="px-4 sm:px-6 lg:px-8 py-24 md:py-32 border-t border-black/5 overflow-hidden">
+    <div class="max-w-7xl mx-auto">
+      <div class="reveal text-center max-w-3xl mx-auto mb-16">
+        <p class="font-sans text-sm tracking-[0.3em] uppercase text-muted mb-3">Related Services</p>
+        <h2 class="font-serif text-4xl md:text-5xl font-bold text-cream leading-tight">Ready for more<span class="text-accent">?</span></h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        <a href="/services/geo/" class="reveal glass-card service-card rounded-2xl p-8 block group">
+          <div class="w-12 h-12 rounded-xl bg-accent/20 flex items-center justify-center mb-6">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1A1A1A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><path d="M11 8v6"/><path d="M8 11h6"/></svg>
+          </div>
+          <h3 class="font-serif text-xl font-bold text-cream mb-3 group-hover:text-secondary transition-colors">GEO Optimization</h3>
+          <p class="font-sans text-sm text-muted leading-relaxed mb-4">Ready to go beyond consulting? Full GEO audit and implementation.</p>
+          <span class="font-sans text-sm text-cream group-hover:text-secondary transition-colors duration-200 inline-flex items-center gap-1">Learn more <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </a>
+
+        <a href="/services/shopify-claude-code/" class="reveal reveal-delay-1 glass-card service-card rounded-2xl p-8 block group">
+          <div class="w-12 h-12 rounded-xl bg-accent/20 flex items-center justify-center mb-6">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1A1A1A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/><line x1="14" y1="4" x2="10" y2="20"/></svg>
+          </div>
+          <h3 class="font-serif text-xl font-bold text-cream mb-3 group-hover:text-secondary transition-colors">Shopify + Claude Code</h3>
+          <p class="font-sans text-sm text-muted leading-relaxed mb-4">Need it built? AI-powered Shopify development from concept to launch.</p>
+          <span class="font-sans text-sm text-cream group-hover:text-secondary transition-colors duration-200 inline-flex items-center gap-1">Learn more <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== CONTACT ======================== -->
+  <section id="contact" class="px-4 sm:px-6 lg:px-8 py-24 md:py-32 border-t border-black/5 overflow-hidden">
+    <div class="max-w-7xl mx-auto">
+      <div class="reveal glass-card rounded-3xl p-8 md:p-16 relative overflow-hidden">
+        <!-- Background accent -->
+        <div class="absolute w-[400px] h-[400px] bg-accent/10 rounded-full blur-[120px] -top-40 -right-40 pointer-events-none" aria-hidden="true"></div>
+
+        <div class="relative z-10 max-w-2xl">
+          <p class="font-sans text-sm tracking-[0.3em] uppercase text-muted mb-4">Get Started</p>
+          <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-cream leading-tight mb-6">Let's talk about<br><span class="italic font-normal text-muted">your challenge.</span></h2>
+          <p class="font-sans text-base text-muted leading-relaxed mb-10 max-w-lg">Tell me what you're working on. I'll get back to you within 24 hours with next steps.</p>
+
+          <form class="space-y-6" id="contactForm">
+            <!-- Honeypot -->
+            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label for="name" class="font-sans text-xs uppercase tracking-wider text-muted mb-2 block">Name <span class="text-red-400">*</span></label>
+                <input type="text" id="name" name="name" required autocomplete="name" class="w-full bg-black/[0.03] border border-black/10 rounded-xl px-4 py-3 font-sans text-sm text-cream placeholder:text-muted/50 focus:outline-none focus:border-cream/40 focus:ring-1 focus:ring-cream/20 transition-colors duration-200" placeholder="Your name">
+              </div>
+              <div>
+                <label for="email" class="font-sans text-xs uppercase tracking-wider text-muted mb-2 block">Email <span class="text-red-400">*</span></label>
+                <input type="email" id="email" name="email" required autocomplete="email" class="w-full bg-black/[0.03] border border-black/10 rounded-xl px-4 py-3 font-sans text-sm text-cream placeholder:text-muted/50 focus:outline-none focus:border-cream/40 focus:ring-1 focus:ring-cream/20 transition-colors duration-200" placeholder="you@store.com">
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label for="storeUrl" class="font-sans text-xs uppercase tracking-wider text-muted mb-2 block">Store URL</label>
+                <input type="url" id="storeUrl" name="store_url" class="w-full bg-black/[0.03] border border-black/10 rounded-xl px-4 py-3 font-sans text-sm text-cream placeholder:text-muted/50 focus:outline-none focus:border-cream/40 focus:ring-1 focus:ring-cream/20 transition-colors duration-200" placeholder="yourstore.com">
+              </div>
+              <div>
+                <label for="service" class="font-sans text-xs uppercase tracking-wider text-muted mb-2 block">Interested In</label>
+                <select id="service" name="service" class="w-full bg-black/[0.03] border border-black/10 rounded-xl px-4 py-3 font-sans text-sm text-cream focus:outline-none focus:border-cream/40 focus:ring-1 focus:ring-cream/20 transition-colors duration-200 appearance-none cursor-pointer">
+                  <option value="consulting" selected>1-on-1 Consulting</option>
+                  <option value="geo">GEO Optimization</option>
+                  <option value="shopify-claude-code">Shopify + Claude Code</option>
+                  <option value="ecommerce-automation">Ecommerce Automation</option>
+                  <option value="agentic-commerce">Agentic Commerce Prep</option>
+                  <option value="not-sure">Not sure yet</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label for="message" class="font-sans text-xs uppercase tracking-wider text-muted mb-2 block">Message</label>
+              <textarea id="message" name="message" rows="4" class="w-full bg-black/[0.03] border border-black/10 rounded-xl px-4 py-3 font-sans text-sm text-cream placeholder:text-muted/50 focus:outline-none focus:border-cream/40 focus:ring-1 focus:ring-cream/20 transition-colors duration-200 resize-none" placeholder="Tell me what you'd like to discuss in the session..."></textarea>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
+              <button type="submit" class="btn-primary bg-cream text-white font-sans font-semibold px-8 py-4 rounded-full text-base cursor-pointer inline-flex items-center gap-3 hover:bg-black transition-colors duration-200">
+                Send Message
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              </button>
+              <span class="font-sans text-xs text-muted">I'll reply within 24 hours</span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- ======================== FOOTER ======================== -->
+  <footer class="px-4 sm:px-6 lg:px-8 py-12 border-t border-black/5">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+        <div>
+          <a href="/" class="font-serif text-xl font-bold text-cream">MK<span class="text-accent">.</span></a>
+          <p class="font-sans text-sm text-muted mt-2">AI-First Shopify & Ecommerce Consultancy</p>
+        </div>
+        <div>
+          <p class="font-sans text-xs uppercase tracking-wider text-muted mb-3">Services</p>
+          <div class="space-y-2">
+            <a href="/services/geo/" class="font-sans text-sm text-secondary hover:text-cream transition-colors block">GEO Optimization</a>
+            <a href="/services/shopify-claude-code/" class="font-sans text-sm text-secondary hover:text-cream transition-colors block">Shopify + Claude Code</a>
+            <a href="/services/ecommerce-automation/" class="font-sans text-sm text-secondary hover:text-cream transition-colors block">Ecommerce Automation</a>
+            <a href="/services/agentic-commerce/" class="font-sans text-sm text-secondary hover:text-cream transition-colors block">Agentic Commerce</a>
+            <a href="/services/consulting/" class="font-sans text-sm text-secondary hover:text-cream transition-colors block">1-on-1 Consulting</a>
+          </div>
+        </div>
+        <div>
+          <p class="font-sans text-xs uppercase tracking-wider text-muted mb-3">Contact</p>
+          <div class="space-y-2">
+            <a href="mailto:max.kolesnyk1@gmail.com" class="font-sans text-sm text-secondary hover:text-cream transition-colors block">max.kolesnyk1@gmail.com</a>
+            <a href="tel:+61414841874" class="font-sans text-sm text-secondary hover:text-cream transition-colors block">+61 414 841 874</a>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-black/5 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p class="font-sans text-xs text-muted">&copy; 2026 Maksym Kolesnyk. All rights reserved.</p>
+        <p class="font-sans text-xs text-muted">All prices in AUD, exclude GST.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ======================== JAVASCRIPT ======================== -->
+  <script>
+    // Scroll reveal
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+    document.querySelectorAll('.blur-in').forEach(el => revealObserver.observe(el));
+
+    // Custom cursor (desktop only)
+    const dot = document.getElementById('cursorDot');
+    const ring = document.getElementById('cursorRing');
+    if (dot && ring && window.matchMedia('(pointer: fine)').matches) {
+      let mouseX = 0, mouseY = 0, ringX = 0, ringY = 0;
+      document.addEventListener('mousemove', e => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+        dot.style.left = mouseX - 4 + 'px';
+        dot.style.top = mouseY - 4 + 'px';
+      });
+      function animateRing() {
+        ringX += (mouseX - ringX) * 0.15;
+        ringY += (mouseY - ringY) * 0.15;
+        ring.style.left = ringX - 20 + 'px';
+        ring.style.top = ringY - 20 + 'px';
+        requestAnimationFrame(animateRing);
+      }
+      animateRing();
+      document.querySelectorAll('a, button, input, textarea, select, .glass-card').forEach(el => {
+        el.addEventListener('mouseenter', () => {
+          ring.style.width = '60px';
+          ring.style.height = '60px';
+          ring.style.borderColor = 'rgba(0,0,0,0.4)';
+          ring.style.left = ringX - 30 + 'px';
+          ring.style.top = ringY - 30 + 'px';
+        });
+        el.addEventListener('mouseleave', () => {
+          ring.style.width = '40px';
+          ring.style.height = '40px';
+          ring.style.borderColor = 'rgba(0,0,0,0.2)';
+        });
+      });
+    }
+
+    // Mobile menu
+    const menuBtn = document.getElementById('menuBtn');
+    const closeMenuBtn = document.getElementById('closeMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    function openMobileMenu() {
+      mobileMenu.classList.add('open');
+      mobileMenu.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+      closeMenuBtn.focus();
+    }
+    function closeMobileMenu() {
+      mobileMenu.classList.remove('open');
+      mobileMenu.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+      menuBtn.focus();
+    }
+    menuBtn.addEventListener('click', openMobileMenu);
+    closeMenuBtn.addEventListener('click', closeMobileMenu);
+    document.querySelectorAll('.mobile-link').forEach(link => {
+      link.addEventListener('click', closeMobileMenu);
+    });
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && mobileMenu.classList.contains('open')) closeMobileMenu();
+      if (e.key === 'Tab' && mobileMenu.classList.contains('open')) {
+        const focusable = mobileMenu.querySelectorAll('a, button');
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+        if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+        else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+      }
+    });
+
+    // Navbar scroll
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 60);
+    });
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.parentElement;
+        const isActive = item.classList.contains('active');
+        document.querySelectorAll('.faq-item').forEach(i => {
+          i.classList.remove('active');
+          i.querySelector('.faq-btn').setAttribute('aria-expanded', 'false');
+        });
+        if (!isActive) {
+          item.classList.add('active');
+          btn.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+
+    // Contact form
+    const form = document.getElementById('contactForm');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const honeypot = form.querySelector('input[name="_gotcha"]');
+      if (honeypot && honeypot.value) return;
+
+      const btn = form.querySelector('button[type="submit"]');
+      const originalText = btn.innerHTML;
+      btn.disabled = true;
+      btn.innerHTML = '<span class="inline-flex items-center gap-2">Sending...</span>';
+
+      try {
+        const payload = {
+          name: form.querySelector('#name').value.trim(),
+          email: form.querySelector('#email').value.trim(),
+          store_url: form.querySelector('#storeUrl').value.trim() || undefined,
+          service: form.querySelector('#service').value || undefined,
+          message: form.querySelector('#message').value.trim() || undefined,
+          page_url: window.location.href,
+        };
+
+        const res = await fetch('https://app.maksym.au/api/leads', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+        });
+
+        if (!res.ok) throw new Error('Request failed');
+
+        btn.innerHTML = '<span class="inline-flex items-center gap-2">Sent! <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>';
+        btn.classList.remove('bg-cream');
+        btn.classList.add('bg-green-600');
+        form.reset();
+      } catch (err) {
+        console.error('Form submission error:', err);
+        btn.innerHTML = '<span class="inline-flex items-center gap-2">Error — try again</span>';
+        btn.classList.remove('bg-cream');
+        btn.classList.add('bg-red-500');
+      }
+
+      setTimeout(() => {
+        btn.innerHTML = originalText;
+        btn.classList.remove('bg-green-600', 'bg-red-500');
+        btn.classList.add('bg-cream');
+        btn.disabled = false;
+      }, 2500);
+    });
+  </script>
+
+  <!-- Cloudflare Web Analytics -->
+  <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "42e8088b03054cbf86c5445e07ea49a0"}'></script>
+
+</body>
+</html>
