@@ -3,20 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Maksym Kolesnyk | High-Performance Websites for Service Businesses</title>
-  <meta name="description" content="High-performance, mobile-first websites for service businesses. 95+ PageSpeed scores, AI-powered development, live in 1–2 weeks. From $2,990.">
-  <meta name="theme-color" content="#0A0A0A">
+  <title>Maksym Kolesnyk | AI-First Shopify & Ecommerce Consultancy</title>
+  <meta name="description" content="GEO optimization, Shopify + Claude Code development, ecommerce automation, and agentic commerce preparation. Get your store ready for the AI era.">
+  <meta name="theme-color" content="#FAFAFA">
   <link rel="canonical" href="https://maksym.au/">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://maksym.au/">
-  <meta property="og:title" content="Maksym Kolesnyk | High-Performance Websites for Service Businesses">
-  <meta property="og:description" content="High-performance, mobile-first websites for service businesses. AI-powered development — fast, affordable, enterprise-grade. 95+ PageSpeed guaranteed.">
+  <meta property="og:title" content="Maksym Kolesnyk | AI-First Shopify & Ecommerce Consultancy">
+  <meta property="og:description" content="GEO optimization, Shopify + Claude Code development, ecommerce automation, and agentic commerce preparation. Get your store ready for the AI era.">
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Maksym Kolesnyk | High-Performance Websites for Service Businesses">
-  <meta name="twitter:description" content="High-performance, mobile-first websites for service businesses. AI-powered development — fast, affordable, enterprise-grade. 95+ PageSpeed guaranteed.">
+  <meta name="twitter:title" content="Maksym Kolesnyk | AI-First Shopify & Ecommerce Consultancy">
+  <meta name="twitter:description" content="GEO optimization, Shopify + Claude Code development, ecommerce automation, and agentic commerce preparation. Get your store ready for the AI era.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,700;1,400&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
@@ -24,44 +24,24 @@
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; }
-    body { background: #0A0A0A; color: #F5F0E8; font-family: 'Jost', sans-serif; overflow-x: hidden; }
+    body { background: #FAFAFA; color: #1A1A1A; font-family: 'Jost', sans-serif; overflow-x: hidden; }
     ::selection { background: #C8FF00; color: #0A0A0A; }
 
-    /* Noise grain overlay */
-    body::before {
-      content: '';
-      position: fixed;
-      inset: 0;
-      z-index: 9999;
-      pointer-events: none;
-      opacity: 0.035;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
-      background-repeat: repeat;
-      background-size: 256px 256px;
-    }
-
-    /* Floating navbar — liquid glass */
+    /* ── Liquid Glass Navbar ── */
     .nav-glass {
-      background:
-        linear-gradient(180deg,
-          rgba(255, 255, 255, 0.06) 0%,
-          rgba(255, 255, 255, 0.02) 40%,
-          rgba(10, 10, 10, 0.5) 100%
-        );
-      backdrop-filter: blur(40px) saturate(1.6) brightness(1.1);
-      -webkit-backdrop-filter: blur(40px) saturate(1.6) brightness(1.1);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      border-top: 1px solid rgba(255, 255, 255, 0.22);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(40px) saturate(1.6);
+      -webkit-backdrop-filter: blur(40px) saturate(1.6);
+      border: 1px solid rgba(0, 0, 0, 0.06);
+      border-top: 1px solid rgba(255, 255, 255, 0.9);
       box-shadow:
-        0 8px 32px rgba(0, 0, 0, 0.4),
-        0 2px 8px rgba(0, 0, 0, 0.2),
-        inset 0 1px 0 rgba(255, 255, 255, 0.08),
-        inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+        0 8px 32px rgba(0, 0, 0, 0.06),
+        0 2px 8px rgba(0, 0, 0, 0.04),
+        inset 0 1px 0 rgba(255, 255, 255, 1),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.02);
       overflow: hidden;
-      transition: background 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+      transition: background 0.4s ease, box-shadow 0.4s ease;
     }
-    /* Specular highlight shimmer */
     .nav-glass::before {
       content: '';
       position: absolute;
@@ -69,89 +49,82 @@
       left: -20%;
       width: 60%;
       height: 100%;
-      background: linear-gradient(
-        105deg,
-        transparent 20%,
-        rgba(255, 255, 255, 0.03) 40%,
-        rgba(255, 255, 255, 0.06) 50%,
-        rgba(255, 255, 255, 0.03) 60%,
-        transparent 80%
-      );
+      background: linear-gradient(105deg, transparent 20%, rgba(255, 255, 255, 0.4) 40%, rgba(255, 255, 255, 0.6) 50%, rgba(255, 255, 255, 0.4) 60%, transparent 80%);
       pointer-events: none;
       z-index: 0;
     }
-    /* Ensure nav content sits above shimmer */
-    .nav-glass > * {
-      position: relative;
-      z-index: 1;
-    }
-    /* Scrolled state — denser, deeper glass */
+    .nav-glass > * { position: relative; z-index: 1; }
     .nav-glass.scrolled {
-      background:
-        linear-gradient(180deg,
-          rgba(255, 255, 255, 0.04) 0%,
-          rgba(255, 255, 255, 0.01) 30%,
-          rgba(10, 10, 10, 0.75) 100%
-        );
-      border-top-color: rgba(255, 255, 255, 0.15);
+      background: rgba(255, 255, 255, 0.85);
       box-shadow:
-        0 12px 48px rgba(0, 0, 0, 0.5),
-        0 4px 12px rgba(0, 0, 0, 0.3),
-        inset 0 1px 0 rgba(255, 255, 255, 0.06),
-        inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+        0 12px 48px rgba(0, 0, 0, 0.08),
+        0 4px 12px rgba(0, 0, 0, 0.05),
+        inset 0 1px 0 rgba(255, 255, 255, 1);
     }
 
-    /* Glass card */
+    /* ── Glass Card (Light) ── */
     .glass-card {
-      background: rgba(255, 255, 255, 0.07);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border: 1px solid rgba(255, 255, 255, 0.16);
+      background: rgba(255, 255, 255, 0.65);
+      backdrop-filter: blur(24px) saturate(1.4);
+      -webkit-backdrop-filter: blur(24px) saturate(1.4);
+      border: 1px solid rgba(0, 0, 0, 0.06);
+      border-top: 1px solid rgba(255, 255, 255, 0.8);
+      box-shadow:
+        0 4px 24px rgba(0, 0, 0, 0.04),
+        0 1px 4px rgba(0, 0, 0, 0.02),
+        inset 0 1px 0 rgba(255, 255, 255, 0.9);
       transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     }
     .glass-card:hover {
-      background: rgba(255, 255, 255, 0.12);
-      border-color: rgba(200, 255, 0, 0.35);
-      box-shadow: 0 0 60px rgba(200, 255, 0, 0.08);
+      background: rgba(255, 255, 255, 0.8);
+      box-shadow:
+        0 8px 40px rgba(0, 0, 0, 0.08),
+        0 2px 8px rgba(0, 0, 0, 0.04),
+        inset 0 1px 0 rgba(255, 255, 255, 1);
+      transform: translateY(-2px);
     }
 
-    /* Stat card glow on hover */
-    .stat-card {
-      position: relative;
-      overflow: hidden;
+    /* ── Service Card (clickable) ── */
+    .service-card {
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     }
+    .service-card:hover {
+      border-color: rgba(200, 255, 0, 0.4);
+      box-shadow:
+        0 8px 40px rgba(200, 255, 0, 0.06),
+        0 2px 8px rgba(0, 0, 0, 0.04),
+        inset 0 1px 0 rgba(255, 255, 255, 1);
+      transform: translateY(-4px);
+    }
+
+    /* ── Stat Card ── */
+    .stat-card { position: relative; overflow: hidden; }
     .stat-card::before {
       content: '';
       position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
-      background: radial-gradient(circle, rgba(200, 255, 0, 0.06) 0%, transparent 60%);
+      top: -50%; left: -50%;
+      width: 200%; height: 200%;
+      background: radial-gradient(circle, rgba(200, 255, 0, 0.04) 0%, transparent 60%);
       opacity: 0;
       transition: opacity 0.5s ease;
       pointer-events: none;
     }
     .stat-card:hover::before { opacity: 1; }
 
-    /* Hero gradient orb */
-    .hero-orb {
-      position: absolute;
-      border-radius: 50%;
-      filter: blur(120px);
-      pointer-events: none;
-      animation: orbFloat 12s ease-in-out infinite;
+    /* ── Mobile Nav ── */
+    .mobile-menu {
+      transform: translateX(100%);
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(60px) saturate(1.8);
+      -webkit-backdrop-filter: blur(60px) saturate(1.8);
     }
-    @keyframes orbFloat {
-      0%, 100% { transform: translate(0, 0) scale(1); }
-      33% { transform: translate(30px, -40px) scale(1.1); }
-      66% { transform: translate(-20px, 20px) scale(0.95); }
-    }
+    .mobile-menu.open { transform: translateX(0); }
 
-    /* Horizontal marquee */
+    /* ── Marquee ── */
     .marquee-track {
       display: flex;
-      animation: marquee 30s linear infinite;
+      animation: marquee 35s linear infinite;
       width: max-content;
     }
     @keyframes marquee {
@@ -159,186 +132,19 @@
       100% { transform: translateX(-33.333%); }
     }
 
-    /* Scroll reveal */
+    /* ── Scroll Reveal ── */
     .reveal {
       opacity: 0;
       transform: translateY(40px);
       transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
     }
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
     .reveal-delay-1 { transition-delay: 0.1s; }
     .reveal-delay-2 { transition-delay: 0.2s; }
     .reveal-delay-3 { transition-delay: 0.3s; }
-    /* Select dropdown arrow */
-    select.appearance-none {
-      background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%23D0D0D0' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
-      background-repeat: no-repeat;
-      background-position: right 1rem center;
-      padding-right: 2.5rem;
-    }
+    .reveal-delay-4 { transition-delay: 0.4s; }
 
-    /* CTA button shimmer */
-    .btn-primary {
-      position: relative;
-      overflow: hidden;
-    }
-    .btn-primary::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
-      transition: left 0.5s ease;
-    }
-    .btn-primary:hover::after {
-      left: 100%;
-    }
-
-    /* Service tag pill */
-    .service-tag {
-      border: 1px solid rgba(255,255,255,0.22);
-      transition: all 0.3s ease;
-    }
-    .service-tag:hover {
-      border-color: #C8FF00;
-      color: #C8FF00;
-      background: rgba(200, 255, 0, 0.05);
-    }
-
-    /* Custom cursor dot */
-    .cursor-dot {
-      width: 8px;
-      height: 8px;
-      background: #C8FF00;
-      border-radius: 50%;
-      position: fixed;
-      pointer-events: none;
-      z-index: 99999;
-      transition: transform 0.15s ease, opacity 0.15s ease;
-      mix-blend-mode: difference;
-    }
-    .cursor-ring {
-      width: 40px;
-      height: 40px;
-      border: 1px solid rgba(200, 255, 0, 0.4);
-      border-radius: 50%;
-      position: fixed;
-      pointer-events: none;
-      z-index: 99998;
-      transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease, border-color 0.3s ease;
-    }
-
-    /* Process step number */
-    .step-num {
-      font-family: 'Bodoni Moda', serif;
-      font-size: 5rem;
-      font-weight: 700;
-      line-height: 1;
-      color: rgba(255,255,255,0.06);
-      position: absolute;
-      top: -0.5rem;
-      left: -0.25rem;
-      pointer-events: none;
-      user-select: none;
-    }
-
-    /* Reduced motion */
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-      }
-      .reveal { opacity: 1; transform: none; }
-      .marquee-track { animation: none; }
-      .ambient-orb { animation: none; }
-    }
-
-    /* Mobile nav — liquid glass */
-    .mobile-menu {
-      transform: translateX(100%);
-      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-      background:
-        linear-gradient(180deg,
-          rgba(255, 255, 255, 0.04) 0%,
-          rgba(10, 10, 10, 0.85) 30%,
-          rgba(10, 10, 10, 0.95) 100%
-        );
-      backdrop-filter: blur(60px) saturate(1.8) brightness(1.05);
-      -webkit-backdrop-filter: blur(60px) saturate(1.8) brightness(1.05);
-    }
-    .mobile-menu.open {
-      transform: translateX(0);
-    }
-    .mobile-menu::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-      pointer-events: none;
-    }
-
-    /* Pricing card enhanced hover */
-    .pricing-card {
-      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .pricing-card:hover {
-      transform: translateY(-4px);
-    }
-    .pricing-featured {
-      border: 1px solid rgba(200, 255, 0, 0.2);
-      box-shadow: 0 0 40px rgba(200, 255, 0, 0.04);
-    }
-    .pricing-featured:hover {
-      border-color: rgba(200, 255, 0, 0.35);
-      box-shadow: 0 8px 40px rgba(200, 255, 0, 0.08), 0 0 80px rgba(200, 255, 0, 0.04);
-      transform: translateY(-6px);
-    }
-
-    /* Comparison table */
-    .compare-check { color: #C8FF00; }
-    .compare-x { color: #777; }
-    .compare-row {
-      transition: background 0.2s ease;
-    }
-    .compare-row:hover {
-      background: rgba(255, 255, 255, 0.03);
-    }
-
-    /* FAQ */
-    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
-    .faq-item.active .faq-answer { max-height: 500px; }
-    .faq-icon { transition: transform 0.3s ease; }
-    .faq-item.active .faq-icon { transform: rotate(45deg); }
-
-    /* ===== ENHANCED HERO ===== */
-
-    /* Blueprint grid background */
-    .blueprint-grid {
-      background-image:
-        linear-gradient(rgba(200, 255, 0, 0.015) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(200, 255, 0, 0.015) 1px, transparent 1px);
-      background-size: 60px 60px;
-    }
-
-    /* Particle canvas */
-    .hero-canvas {
-      position: absolute;
-      inset: 0;
-      z-index: 1;
-      pointer-events: none;
-    }
-
-
-    /* Blur-in entrance */
+    /* ── Blur-in Entrance ── */
     .blur-in {
       opacity: 0;
       filter: blur(8px);
@@ -347,159 +153,127 @@
                   filter 0.9s cubic-bezier(0.16, 1, 0.3, 1),
                   transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
     }
-    .blur-in.visible {
-      opacity: 1;
-      filter: blur(0);
-      transform: translateY(0);
-    }
+    .blur-in.visible { opacity: 1; filter: blur(0); transform: translateY(0); }
 
-    /* Animated SVG underline */
-    .hero-underline path {
-      stroke-dasharray: 300;
-      stroke-dashoffset: 300;
-    }
-    .hero-underline.drawn path {
-      stroke-dashoffset: 0;
-      transition: stroke-dashoffset 1.2s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    /* CTA pulse ring */
-    .cta-pulse {
-      position: relative;
-    }
-    .cta-pulse::before {
+    /* ── CTA Button Shimmer ── */
+    .btn-primary { position: relative; overflow: hidden; }
+    .btn-primary::after {
       content: '';
       position: absolute;
-      inset: -3px;
-      border-radius: 9999px;
-      background: #C8FF00;
-      opacity: 0;
-      animation: ctaPulse 2.5s ease-in-out infinite;
-      z-index: -1;
+      top: 0; left: -100%;
+      width: 100%; height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: left 0.5s ease;
     }
-    @keyframes ctaPulse {
-      0%, 100% { opacity: 0; transform: scale(1); }
-      50% { opacity: 0.12; transform: scale(1.04); }
+    .btn-primary:hover::after { left: 100%; }
+
+    /* ── Service Tag Pill ── */
+    .service-tag {
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+    .service-tag:hover {
+      border-color: #A3D900;
+      color: #1A1A1A;
+      background: rgba(200, 255, 0, 0.1);
     }
 
-    /* Browser mockup float */
-    .browser-mockup {
-      transform: perspective(1200px) rotateY(-6deg) rotateX(2deg);
-      animation: mockupFloat 8s ease-in-out infinite;
-      box-shadow:
-        0 50px 100px -20px rgba(0, 0, 0, 0.5),
-        0 0 80px rgba(200, 255, 0, 0.02);
-      transition: transform 0.4s ease;
-    }
-    .browser-mockup:hover {
-      transform: perspective(1200px) rotateY(-2deg) rotateX(1deg) scale(1.02);
-    }
-    @keyframes mockupFloat {
-      0%, 100% { transform: perspective(1200px) rotateY(-6deg) rotateX(2deg) translateY(0); }
-      50% { transform: perspective(1200px) rotateY(-6deg) rotateX(2deg) translateY(-12px); }
-    }
-
-    /* Mockup inner glow bar */
-    .mockup-accent-bar {
-      background: linear-gradient(90deg, #C8FF00, rgba(200, 255, 0, 0.3));
-    }
-
-    /* ── Elevated Section Tints ── */
-    .section-elevated {
-      background: linear-gradient(180deg, rgba(200, 255, 0, 0.008) 0%, rgba(200, 255, 0, 0.012) 50%, transparent 100%);
-    }
-
-    /* ── Ambient Floating Orbs ── */
-    .ambient-orb {
-      position: fixed;
-      border-radius: 50%;
+    /* ── Process Step Number ── */
+    .step-num {
+      font-family: 'Bodoni Moda', serif;
+      font-size: 5rem;
+      font-weight: 700;
+      line-height: 1;
+      color: rgba(0, 0, 0, 0.04);
+      position: absolute;
+      top: -0.5rem;
+      left: -0.25rem;
       pointer-events: none;
-      z-index: 0;
-      filter: blur(150px);
-      will-change: transform;
-      animation: ambientDrift 25s ease-in-out infinite;
-    }
-    @keyframes ambientDrift {
-      0%, 100% { transform: translate(0, 0) scale(1); }
-      25% { transform: translate(30px, -20px) scale(1.05); }
-      50% { transform: translate(-20px, 15px) scale(0.95); }
-      75% { transform: translate(15px, 25px) scale(1.03); }
+      user-select: none;
     }
 
-    /* Contact form — package cards */
-    .package-card {
-      transition: all 0.3s ease;
+    /* ── FAQ ── */
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
+    .faq-item.active .faq-answer { max-height: 500px; }
+    .faq-icon { transition: transform 0.3s ease; }
+    .faq-item.active .faq-icon { transform: rotate(45deg); }
+
+    /* ── Custom Cursor ── */
+    .cursor-dot {
+      width: 8px; height: 8px;
+      background: #1A1A1A;
+      border-radius: 50%;
+      position: fixed;
+      pointer-events: none;
+      z-index: 99999;
+      transition: transform 0.15s ease, opacity 0.15s ease;
+      mix-blend-mode: difference;
     }
-    .package-card:has(input:checked) {
-      border-color: rgba(200, 255, 0, 0.6);
-      background: rgba(200, 255, 0, 0.05);
-      box-shadow: 0 0 20px rgba(200, 255, 0, 0.08);
+    .cursor-ring {
+      width: 40px; height: 40px;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      border-radius: 50%;
+      position: fixed;
+      pointer-events: none;
+      z-index: 99998;
+      transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease, border-color 0.3s ease;
     }
 
-    /* Contact form — addon pills */
-    .addon-pill {
-      transition: all 0.3s ease;
-    }
-    .addon-pill:has(input:checked) {
-      border-color: rgba(200, 255, 0, 0.6);
-      color: #C8FF00;
-      background: rgba(200, 255, 0, 0.05);
+    /* ── Gradient Mesh Background ── */
+    .mesh-bg {
+      background:
+        radial-gradient(ellipse 80% 50% at 20% 40%, rgba(200, 255, 0, 0.04), transparent),
+        radial-gradient(ellipse 60% 40% at 80% 20%, rgba(59, 130, 246, 0.03), transparent),
+        radial-gradient(ellipse 70% 60% at 50% 80%, rgba(168, 85, 247, 0.02), transparent);
     }
 
-    /* Contact form — toggle switch */
-    .toggle-track {
-      width: 44px;
-      height: 24px;
-      border-radius: 9999px;
-      background: rgba(255, 255, 255, 0.1);
-      position: relative;
-      transition: background 0.3s ease;
-      flex-shrink: 0;
-    }
-    .toggle-track::after {
-      content: '';
-      position: absolute;
-      top: 2px;
-      left: 2px;
-      width: 20px;
-      height: 20px;
-      border-radius: 9999px;
-      background: #F5F0E8;
-      transition: transform 0.3s ease;
-    }
-    input:checked + .toggle-track {
-      background: #C8FF00;
-    }
-    input:checked + .toggle-track::after {
-      transform: translateX(20px);
+    /* ── Comparison Table ── */
+    .compare-check { color: #16a34a; font-weight: 500; }
+    .compare-x { color: #9ca3af; }
+    .compare-row { transition: background 0.2s ease; }
+    .compare-row:hover { background: rgba(0, 0, 0, 0.02); }
+
+    /* ── Reduced Motion ── */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+      .reveal { opacity: 1; transform: none; }
+      .blur-in { opacity: 1; filter: none; transform: none; }
+      .marquee-track { animation: none; }
     }
 
-    /* PageSpeed gauge */
-    .gauge-circle { fill:none; stroke-width:8; stroke-linecap:round; transform:rotate(-90deg); transform-origin:center; transition:stroke-dashoffset 1.5s cubic-bezier(0.16,1,0.3,1); }
-    .gauge-bad { stroke:#FF6B4A; }
-    .gauge-good { stroke:#C8FF00; }
-    .gauge-track { fill:none; stroke:rgba(255,255,255,0.06); stroke-width:8; }
-    .gauge-score { font-family:'Bodoni Moda',serif; font-size:2.5rem; font-weight:700; fill:currentColor; }
-    .gauge-label { font-family:'Jost',sans-serif; font-size:0.75rem; fill:currentColor; opacity:0.6; }
+    /* Select dropdown arrow */
+    select.appearance-none {
+      background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%236B7280' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 1rem center;
+      padding-right: 2.5rem;
+    }
   </style>
+
   <!-- Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
-    "name": "Maksym Kolesnyk — High-Performance Websites for Service Businesses",
+    "name": "Maksym Kolesnyk — AI-First Shopify & Ecommerce Consultancy",
     "url": "https://maksym.au",
-    "description": "High-performance, mobile-first websites for service businesses. AI-powered development, 95+ PageSpeed, live in 1–2 weeks.",
-    "priceRange": "$$",
-    "knowsAbout": ["Web Development", "Next.js", "AI-Powered Development", "Mobile-First Design", "PageSpeed Optimization", "Service Business Websites"],
+    "description": "GEO optimization, Shopify + Claude Code integration, ecommerce automation, agentic commerce preparation, and 1-on-1 consulting for Shopify merchants.",
+    "priceRange": "$$$",
+    "knowsAbout": ["Generative Engine Optimization", "Shopify Development", "Claude Code", "Ecommerce Automation", "Agentic Commerce", "MCP Servers", "AI-Powered Development"],
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
-      "name": "Website Packages",
+      "name": "Services",
       "itemListElement": [
-        {"@type": "Offer", "name": "Foundation", "price": "2990", "priceCurrency": "AUD", "description": "5-page responsive website with SEO, contact forms, SSL, analytics, Google Business Profile, and Privacy & Terms pages"},
-        {"@type": "Offer", "name": "Professional", "price": "4990", "priceCurrency": "AUD", "description": "10+ page site with project gallery, professional copywriting, advanced SEO, and Google Business setup"},
-        {"@type": "Offer", "name": "Advanced", "price": "6490", "priceCurrency": "AUD", "description": "Professional site plus Blog Writer Bot, Auto-Reply Bot, and Review Collector built in"},
-        {"@type": "Offer", "name": "Logo & Branding", "price": "490", "priceCurrency": "AUD", "description": "Professional wordmark, brand colours, and business card layout"}
+        {"@type": "Offer", "name": "GEO Audit & Setup", "price": "3500", "priceCurrency": "AUD", "description": "AI search audit, structured data optimization, content strategy for AI citation"},
+        {"@type": "Offer", "name": "GEO Ongoing Optimization", "price": "990", "priceCurrency": "AUD", "description": "Continuous AI search optimization, monitoring, and content updates"},
+        {"@type": "Offer", "name": "Shopify + Claude Code Development", "price": "5000", "priceCurrency": "AUD", "description": "AI-powered Shopify theme builds, custom apps, and storefront development"},
+        {"@type": "Offer", "name": "Ecommerce Automation", "price": "3500", "priceCurrency": "AUD", "description": "Workflow automation, integrations, and AI-powered customer service"},
+        {"@type": "Offer", "name": "Agentic Commerce Preparation", "price": "4500", "priceCurrency": "AUD", "description": "Structured data audit, API endpoints, MCP server setup, agent-readiness scorecard"},
+        {"@type": "Offer", "name": "1-on-1 Consulting", "price": "350", "priceCurrency": "AUD", "description": "Strategy calls, code reviews, team training — hourly rate"}
       ]
     }
   }
@@ -509,16 +283,12 @@
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
-      {"@type": "Question", "name": "How long does it take to build my website?", "acceptedAnswer": {"@type": "Answer", "text": "Foundation sites go live within 5–7 business days. Professional sites take 1–2 weeks. AI-powered development means faster delivery without sacrificing quality."}},
-      {"@type": "Question", "name": "I'm not tech-savvy. Will I be able to update my site?", "acceptedAnswer": {"@type": "Answer", "text": "You won't need to. The Hosting & Care plan covers all updates, content changes, and technical work."}},
-      {"@type": "Question", "name": "What do I need to provide?", "acceptedAnswer": {"@type": "Answer", "text": "After the discovery call, you'll receive an onboarding checklist: your logo, photos of your work, a list of your services, and your contact details. You have 7 business days to send everything through. Don't have a logo? Add the Logo & Branding package ($490)."}},
-      {"@type": "Question", "name": "What does the $79/month Hosting & Care cover?", "acceptedAnswer": {"@type": "Answer", "text": "Vercel hosting, SSL, domain setup, email forwarding, uptime monitoring, security updates, and content support. SMS and API credits included for the first 12 months. Add-ons are one-time builds with no extra monthly fees. SEO & Content ($249/mo) is the only optional monthly service."}},
-      {"@type": "Question", "name": "Do you work with businesses outside Australia?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Everything is done remotely — video calls, shared staging links, and quick turnarounds regardless of timezone. I work with service businesses across Australia, New Zealand, the UK, US, and Canada."}},
-      {"@type": "Question", "name": "What makes your sites different from Wix or Squarespace?", "acceptedAnswer": {"@type": "Answer", "text": "Speed and SEO. Custom-coded with Next.js on Vercel infrastructure — sub-second load times, 95+ PageSpeed scores, and better search rankings."}},
-      {"@type": "Question", "name": "Can I pay in instalments?", "acceptedAnswer": {"@type": "Answer", "text": "Standard terms are 50% upfront and 50% on launch. For the Advanced package or multiple add-ons, payments can be split into three. Monthly modules are billed monthly with no lock-in contracts."}},
-      {"@type": "Question", "name": "How many revision rounds do I get?", "acceptedAnswer": {"@type": "Answer", "text": "Two full revision rounds are included in every website build. Build-phase tweaks are handled same-day at no extra cost. Additional revision rounds are $150 each."}},
-      {"@type": "Question", "name": "What if I don't send content on time?", "acceptedAnswer": {"@type": "Answer", "text": "You have 7 business days after the discovery call to send content. If the deadline passes, the project pauses until you're ready."}},
-      {"@type": "Question", "name": "Do I get a professional email?", "acceptedAnswer": {"@type": "Answer", "text": "Email forwarding is included in the Hosting & Care plan. Emails to info@yourdomain.com get forwarded to your personal inbox. Full Google Workspace setup is available on request."}}
+      {"@type": "Question", "name": "What is Generative Engine Optimization (GEO)?", "acceptedAnswer": {"@type": "Answer", "text": "GEO is the practice of optimizing your online presence so AI systems like ChatGPT, Perplexity, and Claude cite and recommend your business. Traditional SEO gets you ranked on Google. GEO gets you recommended by AI."}},
+      {"@type": "Question", "name": "What is agentic commerce?", "acceptedAnswer": {"@type": "Answer", "text": "Agentic commerce is when AI agents browse, compare, and purchase products on behalf of consumers. If your store's data isn't structured and API-accessible, these agents will skip you entirely."}},
+      {"@type": "Question", "name": "Do you only work with Shopify stores?", "acceptedAnswer": {"@type": "Answer", "text": "Shopify is my primary focus, but GEO optimization and consulting services apply to any ecommerce platform. The agentic commerce and automation work is platform-flexible."}},
+      {"@type": "Question", "name": "What does a typical engagement look like?", "acceptedAnswer": {"@type": "Answer", "text": "It starts with a discovery call to understand your store, goals, and pain points. From there I'll recommend the right service or combination. Most projects run 2-6 weeks depending on scope."}},
+      {"@type": "Question", "name": "How is Claude Code used in Shopify development?", "acceptedAnswer": {"@type": "Answer", "text": "Claude Code is an AI-powered development tool that accelerates Shopify theme builds, app development, and custom integrations by 3-5x. You get better code, faster, at a fraction of agency cost."}},
+      {"@type": "Question", "name": "Can I start with consulting before committing to a project?", "acceptedAnswer": {"@type": "Answer", "text": "Absolutely. A 1-hour consulting session is $350. Many clients start there to get clarity on their priorities, then move into a focused project."}}
     ]
   }
   </script>
@@ -538,12 +308,11 @@
 
     <!-- Desktop links -->
     <div class="hidden md:flex items-center gap-8">
-      <a href="#about" class="text-sm font-sans text-muted hover:text-cream transition-colors duration-200 cursor-pointer">About</a>
       <a href="#services" class="text-sm font-sans text-muted hover:text-cream transition-colors duration-200 cursor-pointer">Services</a>
+      <a href="#about" class="text-sm font-sans text-muted hover:text-cream transition-colors duration-200 cursor-pointer">About</a>
       <a href="#process" class="text-sm font-sans text-muted hover:text-cream transition-colors duration-200 cursor-pointer">How It Works</a>
-      <a href="#pricing" class="text-sm font-sans text-muted hover:text-cream transition-colors duration-200 cursor-pointer">Pricing</a>
-      <a href="https://app.maksym.au/blog" class="text-sm font-sans text-muted hover:text-cream transition-colors duration-200 cursor-pointer">Blog</a>
-      <a href="#contact" class="btn-primary bg-accent text-surface font-sans text-sm font-semibold px-6 py-2.5 rounded-full cursor-pointer inline-block hover:bg-lime-300 transition-colors duration-200">Get a Quote</a>
+      <a href="#faq" class="text-sm font-sans text-muted hover:text-cream transition-colors duration-200 cursor-pointer">FAQ</a>
+      <a href="#contact" class="btn-primary bg-cream text-white font-sans text-sm font-semibold px-6 py-2.5 rounded-full cursor-pointer inline-block hover:bg-black transition-colors duration-200">Book a Call</a>
     </div>
 
     <!-- Mobile menu button -->
@@ -557,540 +326,276 @@
     <button class="fixed top-6 right-6 text-cream cursor-pointer z-[61]" id="closeMenuBtn" aria-label="Close menu">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
     </button>
-    <a href="#about" class="mobile-link font-serif text-3xl text-cream cursor-pointer">About</a>
     <a href="#services" class="mobile-link font-serif text-3xl text-cream cursor-pointer">Services</a>
+    <a href="#about" class="mobile-link font-serif text-3xl text-cream cursor-pointer">About</a>
     <a href="#process" class="mobile-link font-serif text-3xl text-cream cursor-pointer">How It Works</a>
-    <a href="#pricing" class="mobile-link font-serif text-3xl text-cream cursor-pointer">Pricing</a>
-    <a href="https://app.maksym.au/blog" class="mobile-link font-serif text-3xl text-cream cursor-pointer">Blog</a>
-    <a href="#contact" class="mobile-link btn-primary bg-accent text-surface font-sans text-lg font-semibold px-8 py-3 rounded-full cursor-pointer inline-block mt-4">Get a Quote</a>
+    <a href="#faq" class="mobile-link font-serif text-3xl text-cream cursor-pointer">FAQ</a>
+    <a href="#contact" class="mobile-link btn-primary bg-cream text-white font-sans text-lg font-semibold px-8 py-3 rounded-full cursor-pointer inline-block mt-4">Book a Call</a>
   </div>
 
   <main id="main">
 
-  <!-- Ambient background orbs -->
-  <div class="ambient-orb" aria-hidden="true" style="width:450px;height:450px;top:30vh;left:-10%;background:rgba(200,255,0,0.012);animation-delay:0s;"></div>
-  <div class="ambient-orb" aria-hidden="true" style="width:350px;height:350px;top:55vh;right:-8%;background:rgba(100,160,255,0.01);animation-delay:-6s;"></div>
-  <div class="ambient-orb" aria-hidden="true" style="width:500px;height:500px;top:75vh;left:20%;background:rgba(245,240,232,0.01);animation-delay:-12s;"></div>
-  <div class="ambient-orb" aria-hidden="true" style="width:400px;height:400px;top:15vh;right:15%;background:rgba(200,255,0,0.015);animation-delay:-18s;"></div>
-
   <!-- ======================== HERO ======================== -->
-  <section class="relative min-h-screen flex flex-col justify-start sm:justify-center px-4 sm:px-6 lg:px-8 pt-24 pb-16 sm:pb-20 overflow-hidden blueprint-grid" id="heroSection">
-    <!-- Particle canvas -->
-    <canvas class="hero-canvas" id="heroCanvas" aria-hidden="true"></canvas>
-
-    <!-- Orbs (enhanced) -->
-    <div class="hero-orb w-[600px] h-[600px] bg-accent/10 top-[-15%] right-[-5%]" aria-hidden="true"></div>
-    <div class="hero-orb w-[400px] h-[400px] bg-blue-500/5 bottom-[5%] left-[-10%]" style="animation-delay: -4s;" aria-hidden="true"></div>
-    <div class="hero-orb w-[200px] h-[200px] bg-accent/5 top-[40%] left-[30%]" style="animation-delay: -8s;" aria-hidden="true"></div>
-
+  <section class="relative min-h-screen flex flex-col justify-center px-4 sm:px-6 lg:px-8 pt-24 pb-16 sm:pb-20 overflow-hidden mesh-bg">
     <div class="max-w-7xl mx-auto w-full relative z-10">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center">
-
-        <!-- Left: Text content -->
-        <div>
-          <div class="blur-in">
-            <p class="font-sans text-sm tracking-[0.3em] uppercase text-accent mb-6">Mobile-First Websites That Win Clients</p>
-          </div>
-
-          <h1 class="blur-in font-serif text-5xl sm:text-6xl md:text-7xl lg:text-[4.5rem] xl:text-[5rem] font-bold leading-[0.95] tracking-tight text-cream mb-8" style="transition-delay: 0.15s;">
-            <span class="sm:whitespace-nowrap">Your next <span class="text-accent">job</span></span><br>
-            <span class="italic font-normal text-muted">starts with your</span><br>
-            <span class="relative inline-block">
-              website<span class="text-accent">.</span>
-              <svg class="hero-underline absolute -bottom-2 left-0 w-full" height="8" viewBox="0 0 300 8" fill="none" aria-hidden="true">
-                <path d="M1 5.5C60 1.5 120 1.5 180 5.5C240 9.5 280 3 299 5" stroke="#C8FF00" stroke-width="2" stroke-linecap="round"/>
-              </svg>
-            </span>
-          </h1>
-
-          <p class="blur-in font-sans text-lg sm:text-xl text-cream max-w-xl leading-relaxed mb-10" style="transition-delay: 0.3s;">
-            A high-performance website that gets you found on Google, captures every lead, and replies to enquiries in under 60 seconds &mdash; while you're busy running your business. Built for service businesses worldwide.
-          </p>
-
-          <div class="blur-in flex flex-wrap gap-4 items-center" style="transition-delay: 0.45s;">
-            <a href="#contact" class="cta-pulse btn-primary bg-accent text-surface font-sans font-semibold px-8 py-4 rounded-full text-base cursor-pointer inline-flex items-center gap-3 hover:bg-lime-300 transition-colors duration-200">
-              Get a Free Quote
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-            </a>
-            <a href="#pricing" class="font-sans text-sm text-cream/90 hover:text-cream transition-colors duration-200 cursor-pointer underline underline-offset-4 decoration-cream/20 hover:decoration-cream/50">From $2,990 AUD</a>
-          </div>
-
-          <!-- Proof points -->
-          <div class="blur-in flex flex-wrap gap-6 mt-12 pt-8 border-t border-white/15" style="transition-delay: 0.6s;">
-            <div class="flex items-center gap-2">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C8FF00" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-              <span class="font-sans text-sm text-cream/90">Live in 1&ndash;2 weeks</span>
-            </div>
-            <div class="flex items-center gap-2">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C8FF00" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-              <span class="font-sans text-sm text-cream/90">95+ Google PageSpeed</span>
-            </div>
-            <div class="flex items-center gap-2">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C8FF00" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-              <span class="font-sans text-sm text-cream/90">AI replies in under 60s</span>
-            </div>
-            <div class="flex items-center gap-2">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C8FF00" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-              <span class="font-sans text-sm text-cream/90">Blog content on autopilot</span>
-            </div>
-          </div>
+      <div class="max-w-4xl">
+        <div class="blur-in">
+          <p class="font-sans text-sm tracking-[0.3em] uppercase text-muted mb-6">AI-First Ecommerce Consultancy</p>
         </div>
 
-        <!-- Right: Browser Mockup (desktop only) -->
-        <div class="hidden lg:block" aria-hidden="true">
-          <div class="browser-mockup bg-surfaceLight rounded-xl border border-white/15 overflow-hidden max-w-lg ml-auto">
-            <!-- Browser chrome -->
-            <div class="flex items-center gap-2 px-4 py-3 bg-white/5 border-b border-white/15">
-              <div class="flex gap-1.5">
-                <div class="w-2.5 h-2.5 rounded-full bg-red-500/40"></div>
-                <div class="w-2.5 h-2.5 rounded-full bg-yellow-500/40"></div>
-                <div class="w-2.5 h-2.5 rounded-full bg-green-500/40"></div>
-              </div>
-              <div class="flex-1 mx-3">
-                <div class="bg-white/5 rounded-md px-3 py-1 text-center">
-                  <span class="font-sans text-[10px] text-cream/40">yourbusiness.com</span>
-                </div>
-              </div>
-            </div>
-            <!-- Mini website content -->
-            <div class="p-4 space-y-3">
-              <!-- Mini nav -->
-              <div class="flex items-center justify-between">
-                <div class="font-sans text-[11px] font-bold text-cream">SB</div>
-                <div class="flex gap-3 items-center">
-                  <div class="w-8 h-1 bg-white/10 rounded"></div>
-                  <div class="w-8 h-1 bg-white/10 rounded"></div>
-                  <div class="w-8 h-1 bg-white/10 rounded"></div>
-                  <div class="w-14 h-4 mockup-accent-bar rounded-full"></div>
-                </div>
-              </div>
-              <!-- Mini hero -->
-              <div class="bg-gradient-to-br from-white/5 to-white/[0.02] rounded-lg p-5 relative overflow-hidden">
-                <div class="absolute inset-0 bg-gradient-to-r from-accent/5 to-transparent"></div>
-                <div class="relative z-10">
-                  <div class="w-24 h-1.5 bg-accent/30 rounded mb-2"></div>
-                  <div class="w-40 h-2 bg-white/20 rounded mb-1"></div>
-                  <div class="w-32 h-2 bg-white/10 rounded mb-3"></div>
-                  <div class="w-20 h-5 bg-accent/30 rounded-full"></div>
-                </div>
-              </div>
-              <!-- Mini service cards -->
-              <div class="grid grid-cols-3 gap-2">
-                <div class="bg-white/[0.03] rounded-lg p-2.5 border border-white/15">
-                  <div class="w-5 h-5 rounded bg-accent/10 mb-2 flex items-center justify-center">
-                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#C8FF00" stroke-width="2" opacity="0.5"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
-                  </div>
-                  <div class="w-12 h-1 bg-white/15 rounded mb-1"></div>
-                  <div class="w-full h-0.5 bg-white/5 rounded"></div>
-                  <div class="w-3/4 h-0.5 bg-white/5 rounded mt-0.5"></div>
-                </div>
-                <div class="bg-white/[0.03] rounded-lg p-2.5 border border-white/15">
-                  <div class="w-5 h-5 rounded bg-accent/10 mb-2 flex items-center justify-center">
-                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#C8FF00" stroke-width="2" opacity="0.5"><circle cx="12" cy="12" r="10"/></svg>
-                  </div>
-                  <div class="w-10 h-1 bg-white/15 rounded mb-1"></div>
-                  <div class="w-full h-0.5 bg-white/5 rounded"></div>
-                  <div class="w-3/4 h-0.5 bg-white/5 rounded mt-0.5"></div>
-                </div>
-                <div class="bg-white/[0.03] rounded-lg p-2.5 border border-white/15">
-                  <div class="w-5 h-5 rounded bg-accent/10 mb-2 flex items-center justify-center">
-                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#C8FF00" stroke-width="2" opacity="0.5"><polygon points="12 2 22 22 2 22"/></svg>
-                  </div>
-                  <div class="w-14 h-1 bg-white/15 rounded mb-1"></div>
-                  <div class="w-full h-0.5 bg-white/5 rounded"></div>
-                  <div class="w-3/4 h-0.5 bg-white/5 rounded mt-0.5"></div>
-                </div>
-              </div>
-              <!-- Mini testimonial -->
-              <div class="bg-white/[0.02] rounded-lg p-3 border border-white/15">
-                <div class="flex gap-0.5 mb-1.5">
-                  <span class="text-[8px] text-accent">&#9733;</span>
-                  <span class="text-[8px] text-accent">&#9733;</span>
-                  <span class="text-[8px] text-accent">&#9733;</span>
-                  <span class="text-[8px] text-accent">&#9733;</span>
-                  <span class="text-[8px] text-accent">&#9733;</span>
-                </div>
-                <div class="w-full h-0.5 bg-white/10 rounded mb-0.5"></div>
-                <div class="w-3/4 h-0.5 bg-white/5 rounded mb-2"></div>
-                <div class="flex items-center gap-2">
-                  <div class="w-4 h-4 rounded-full bg-white/10"></div>
-                  <div>
-                    <div class="w-12 h-0.5 bg-white/15 rounded"></div>
-                    <div class="w-8 h-0.5 bg-white/5 rounded mt-0.5"></div>
-                  </div>
-                </div>
-              </div>
-              <!-- Mini CTA bar -->
-              <div class="flex items-center justify-between bg-accent/5 rounded-lg px-3 py-2 border border-accent/10">
-                <div class="w-24 h-1 bg-white/15 rounded"></div>
-                <div class="w-12 h-4 bg-accent/20 rounded-full"></div>
-              </div>
-            </div>
-          </div>
+        <h1 class="blur-in font-serif text-5xl sm:text-6xl md:text-7xl lg:text-[5rem] font-bold leading-[0.95] tracking-tight text-cream mb-8" style="transition-delay: 0.15s;">
+          AI is reshaping<br>
+          <span class="italic font-normal text-muted">ecommerce.</span><br>
+          Is your store <span class="relative inline-block">ready<span class="text-accent">?</span></span>
+        </h1>
+
+        <p class="blur-in font-sans text-lg sm:text-xl text-secondary max-w-2xl leading-relaxed mb-10" style="transition-delay: 0.3s;">
+          Generative search is replacing Google clicks. AI agents are starting to shop autonomously. I help Shopify merchants get ahead of the curve &mdash; with GEO optimization, Claude Code development, ecommerce automation, and agentic commerce preparation.
+        </p>
+
+        <div class="blur-in flex flex-wrap gap-4 items-center" style="transition-delay: 0.45s;">
+          <a href="#contact" class="btn-primary bg-cream text-white font-sans font-semibold px-8 py-4 rounded-full text-base cursor-pointer inline-flex items-center gap-3 hover:bg-black transition-colors duration-200">
+            Book a Discovery Call
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+          <a href="#services" class="font-sans text-sm text-muted hover:text-cream transition-colors duration-200 cursor-pointer underline underline-offset-4 decoration-black/20 hover:decoration-black/50">See Services</a>
         </div>
 
+        <!-- Proof points -->
+        <div class="blur-in flex flex-wrap gap-6 mt-12 pt-8 border-t border-black/10" style="transition-delay: 0.6s;">
+          <div class="flex items-center gap-2">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="font-sans text-sm text-secondary">GEO & AI Search Specialist</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="font-sans text-sm text-secondary">Shopify + Claude Code</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="font-sans text-sm text-secondary">Agentic Commerce Ready</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="font-sans text-sm text-secondary">Remote, Worldwide</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- ======================== MARQUEE ======================== -->
-  <section class="py-6 border-y border-white/15 overflow-hidden" aria-hidden="true">
+  <section class="py-6 border-y border-black/5 overflow-hidden" aria-hidden="true">
     <div class="marquee-track">
-      <span class="font-serif text-2xl md:text-3xl italic text-white/55 whitespace-nowrap px-8">Mobile-First</span>
+      <span class="font-serif text-2xl md:text-3xl italic text-black/20 whitespace-nowrap px-8">GEO Optimization</span>
       <span class="text-accent text-xl px-2">/</span>
-      <span class="font-serif text-2xl md:text-3xl italic text-white/55 whitespace-nowrap px-8">95+ PageSpeed</span>
+      <span class="font-serif text-2xl md:text-3xl italic text-black/20 whitespace-nowrap px-8">Claude Code</span>
       <span class="text-accent text-xl px-2">/</span>
-      <span class="font-serif text-2xl md:text-3xl italic text-white/55 whitespace-nowrap px-8">SEO-Ready</span>
+      <span class="font-serif text-2xl md:text-3xl italic text-black/20 whitespace-nowrap px-8">Shopify Plus</span>
       <span class="text-accent text-xl px-2">/</span>
-      <span class="font-serif text-2xl md:text-3xl italic text-white/55 whitespace-nowrap px-8">Lightning Fast</span>
+      <span class="font-serif text-2xl md:text-3xl italic text-black/20 whitespace-nowrap px-8">Agentic Commerce</span>
       <span class="text-accent text-xl px-2">/</span>
-      <span class="font-serif text-2xl md:text-3xl italic text-white/55 whitespace-nowrap px-8">Lead Capture</span>
+      <span class="font-serif text-2xl md:text-3xl italic text-black/20 whitespace-nowrap px-8">MCP-Ready</span>
       <span class="text-accent text-xl px-2">/</span>
-      <span class="font-serif text-2xl md:text-3xl italic text-white/55 whitespace-nowrap px-8">AI-Powered</span>
+      <span class="font-serif text-2xl md:text-3xl italic text-black/20 whitespace-nowrap px-8">Structured Data</span>
       <span class="text-accent text-xl px-2">/</span>
-      <span class="font-serif text-2xl md:text-3xl italic text-white/55 whitespace-nowrap px-8">Custom Built</span>
+      <span class="font-serif text-2xl md:text-3xl italic text-black/20 whitespace-nowrap px-8">Ecommerce Automation</span>
       <span class="text-accent text-xl px-2">/</span>
-      <span class="font-serif text-2xl md:text-3xl italic text-white/55 whitespace-nowrap px-8">Conversion Optimised</span>
+      <span class="font-serif text-2xl md:text-3xl italic text-black/20 whitespace-nowrap px-8">AI-Native Development</span>
       <span class="text-accent text-xl px-2">/</span>
-      <!-- Duplicate 2x for seamless loop on wide screens -->
-      <span class="font-serif text-2xl md:text-3xl italic text-white/55 whitespace-nowrap px-8">Mobile-First</span>
+      <!-- 2x duplicate for seamless loop -->
+      <span class="font-serif text-2xl md:text-3xl italic text-black/20 whitespace-nowrap px-8">GEO Optimization</span>
       <span class="text-accent text-xl px-2">/</span>
-      <span class="font-serif text-2xl md:text-3xl italic text-white/55 whitespace-nowrap px-8">95+ PageSpeed</span>
+      <span class="font-serif text-2xl md:text-3xl italic text-black/20 whitespace-nowrap px-8">Claude Code</span>
       <span class="text-accent text-xl px-2">/</span>
-      <span class="font-serif text-2xl md:text-3xl italic text-white/55 whitespace-nowrap px-8">SEO-Ready</span>
+      <span class="font-serif text-2xl md:text-3xl italic text-black/20 whitespace-nowrap px-8">Shopify Plus</span>
       <span class="text-accent text-xl px-2">/</span>
-      <span class="font-serif text-2xl md:text-3xl italic text-white/55 whitespace-nowrap px-8">Lightning Fast</span>
+      <span class="font-serif text-2xl md:text-3xl italic text-black/20 whitespace-nowrap px-8">Agentic Commerce</span>
       <span class="text-accent text-xl px-2">/</span>
-      <span class="font-serif text-2xl md:text-3xl italic text-white/55 whitespace-nowrap px-8">Lead Capture</span>
+      <span class="font-serif text-2xl md:text-3xl italic text-black/20 whitespace-nowrap px-8">MCP-Ready</span>
       <span class="text-accent text-xl px-2">/</span>
-      <span class="font-serif text-2xl md:text-3xl italic text-white/55 whitespace-nowrap px-8">AI-Powered</span>
+      <span class="font-serif text-2xl md:text-3xl italic text-black/20 whitespace-nowrap px-8">Structured Data</span>
       <span class="text-accent text-xl px-2">/</span>
-      <span class="font-serif text-2xl md:text-3xl italic text-white/55 whitespace-nowrap px-8">Custom Built</span>
+      <span class="font-serif text-2xl md:text-3xl italic text-black/20 whitespace-nowrap px-8">Ecommerce Automation</span>
       <span class="text-accent text-xl px-2">/</span>
-      <span class="font-serif text-2xl md:text-3xl italic text-white/55 whitespace-nowrap px-8">Conversion Optimised</span>
+      <span class="font-serif text-2xl md:text-3xl italic text-black/20 whitespace-nowrap px-8">AI-Native Development</span>
       <span class="text-accent text-xl px-2">/</span>
-      <span class="font-serif text-2xl md:text-3xl italic text-white/55 whitespace-nowrap px-8">Mobile-First</span>
+      <!-- 3x -->
+      <span class="font-serif text-2xl md:text-3xl italic text-black/20 whitespace-nowrap px-8">GEO Optimization</span>
       <span class="text-accent text-xl px-2">/</span>
-      <span class="font-serif text-2xl md:text-3xl italic text-white/55 whitespace-nowrap px-8">95+ PageSpeed</span>
+      <span class="font-serif text-2xl md:text-3xl italic text-black/20 whitespace-nowrap px-8">Claude Code</span>
       <span class="text-accent text-xl px-2">/</span>
-      <span class="font-serif text-2xl md:text-3xl italic text-white/55 whitespace-nowrap px-8">SEO-Ready</span>
+      <span class="font-serif text-2xl md:text-3xl italic text-black/20 whitespace-nowrap px-8">Shopify Plus</span>
       <span class="text-accent text-xl px-2">/</span>
-      <span class="font-serif text-2xl md:text-3xl italic text-white/55 whitespace-nowrap px-8">Lightning Fast</span>
+      <span class="font-serif text-2xl md:text-3xl italic text-black/20 whitespace-nowrap px-8">Agentic Commerce</span>
       <span class="text-accent text-xl px-2">/</span>
-      <span class="font-serif text-2xl md:text-3xl italic text-white/55 whitespace-nowrap px-8">Lead Capture</span>
+      <span class="font-serif text-2xl md:text-3xl italic text-black/20 whitespace-nowrap px-8">MCP-Ready</span>
       <span class="text-accent text-xl px-2">/</span>
-      <span class="font-serif text-2xl md:text-3xl italic text-white/55 whitespace-nowrap px-8">AI-Powered</span>
+      <span class="font-serif text-2xl md:text-3xl italic text-black/20 whitespace-nowrap px-8">Structured Data</span>
       <span class="text-accent text-xl px-2">/</span>
-      <span class="font-serif text-2xl md:text-3xl italic text-white/55 whitespace-nowrap px-8">Custom Built</span>
+      <span class="font-serif text-2xl md:text-3xl italic text-black/20 whitespace-nowrap px-8">Ecommerce Automation</span>
       <span class="text-accent text-xl px-2">/</span>
-      <span class="font-serif text-2xl md:text-3xl italic text-white/55 whitespace-nowrap px-8">Conversion Optimised</span>
+      <span class="font-serif text-2xl md:text-3xl italic text-black/20 whitespace-nowrap px-8">AI-Native Development</span>
       <span class="text-accent text-xl px-2">/</span>
     </div>
   </section>
 
-  <!-- ======================== ABOUT ======================== -->
-  <section id="about" class="px-4 sm:px-6 lg:px-8 py-24 md:py-32 border-t border-white/15 overflow-hidden">
+  <!-- ======================== THE PROBLEM ======================== -->
+  <section class="px-4 sm:px-6 lg:px-8 py-24 md:py-32 overflow-hidden">
     <div class="max-w-7xl mx-auto">
-      <div class="text-center max-w-3xl mx-auto">
-        <p class="reveal font-sans text-sm tracking-[0.3em] uppercase text-accent mb-3">About</p>
-        <h2 class="reveal font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-cream leading-tight">Performance obsessed<span class="text-accent">,</span><br><span class="italic font-normal text-muted">mobile-first by default</span></h2>
-        <div class="reveal space-y-5 mt-8">
-          <p class="font-sans text-base text-muted leading-relaxed">I build websites the way they should be built &mdash; mobile-first, lightning fast, and obsessively optimised. Every site I ship scores 95+ on Google PageSpeed because I don't use bloated templates or drag-and-drop builders. Custom code, modern infrastructure, real results.</p>
-          <p class="font-sans text-base text-muted leading-relaxed">Most service business websites are embarrassingly slow on mobile. Your customers are searching on their phones &mdash; and if your site takes more than 3 seconds to load, they're gone. I fix that problem permanently with custom-coded sites on enterprise-grade infrastructure.</p>
-        </div>
-        <div class="reveal flex flex-wrap justify-center gap-3 mt-8">
-          <span class="font-sans text-xs text-accent bg-accent/10 px-4 py-1.5 rounded-full border border-accent/20">Performance Obsessed</span>
-          <span class="font-sans text-xs text-accent bg-accent/10 px-4 py-1.5 rounded-full border border-accent/20">AI-Powered Development</span>
-          <span class="font-sans text-xs text-accent bg-accent/10 px-4 py-1.5 rounded-full border border-accent/20">Mobile-First Developer</span>
-        </div>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16">
-        <div class="reveal glass-card stat-card rounded-2xl p-8">
-          <div class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-6">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C8FF00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          </div>
-          <h3 class="font-serif text-xl font-bold text-cream mb-3">Faster Delivery</h3>
-          <p class="font-sans text-sm text-muted leading-relaxed">Most sites go live within 1&ndash;2 weeks, not months. AI-assisted development means I write better code faster, with fewer revisions needed.</p>
-        </div>
-
-        <div class="reveal reveal-delay-1 glass-card stat-card rounded-2xl p-8">
-          <div class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-6">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C8FF00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-          </div>
-          <h3 class="font-serif text-xl font-bold text-cream mb-3">Better Value</h3>
-          <p class="font-sans text-sm text-muted leading-relaxed">No bloated agency overhead. You get enterprise-grade technology at small business prices. From $2,990 for a complete website.</p>
-        </div>
-
-        <div class="reveal reveal-delay-2 glass-card stat-card rounded-2xl p-8">
-          <div class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-6">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C8FF00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-          </div>
-          <h3 class="font-serif text-xl font-bold text-cream mb-3">Higher Quality</h3>
-          <p class="font-sans text-sm text-muted leading-relaxed">Every site scores 95+ on Google PageSpeed. Fast sites rank higher on Google and convert more visitors into paying customers.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ======================== PAGESPEED SHOWCASE ======================== -->
-  <section id="pagespeed" class="px-4 sm:px-6 lg:px-8 py-24 md:py-32 border-t border-white/15 overflow-hidden">
-    <div class="max-w-7xl mx-auto">
-      <div class="reveal mb-16 text-center">
-        <p class="font-sans text-sm tracking-[0.3em] uppercase text-accent mb-3">Performance</p>
-        <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-cream leading-tight">Speed isn't optional<span class="text-accent">.</span><br><span class="italic font-normal text-muted">It's everything.</span></h2>
-        <p class="font-sans text-base text-muted mt-6 max-w-2xl mx-auto">Google ranks faster sites higher. Visitors bounce from slow ones. Every site I build scores 95+ on Google PageSpeed &mdash; out of the box.</p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto" id="gaugeSection">
-        <!-- Bad score -->
-        <div class="reveal glass-card rounded-2xl p-8 text-center">
-          <p class="font-sans text-xs tracking-[0.2em] uppercase text-muted mb-6">Average Service Website</p>
-          <svg width="180" height="180" viewBox="0 0 180 180" class="mx-auto mb-6" aria-label="PageSpeed score: 38 out of 100">
-            <circle cx="90" cy="90" r="70" class="gauge-track"/>
-            <circle cx="90" cy="90" r="70" class="gauge-circle gauge-bad" id="gaugeBad" stroke-dasharray="440" stroke-dashoffset="440"/>
-            <text x="90" y="85" text-anchor="middle" class="gauge-score text-[#FF6B4A]">38</text>
-            <text x="90" y="108" text-anchor="middle" class="gauge-label">/100</text>
-          </svg>
-          <ul class="space-y-3 text-left max-w-[220px] mx-auto">
-            <li class="flex items-center gap-2">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FF6B4A" stroke-width="2.5" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-              <span class="font-sans text-sm text-muted">6+ second load time</span>
-            </li>
-            <li class="flex items-center gap-2">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FF6B4A" stroke-width="2.5" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-              <span class="font-sans text-sm text-muted">Poor mobile experience</span>
-            </li>
-            <li class="flex items-center gap-2">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FF6B4A" stroke-width="2.5" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-              <span class="font-sans text-sm text-muted">Penalised by Google</span>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Good score -->
-        <div class="reveal reveal-delay-1 glass-card rounded-2xl p-8 text-center">
-          <p class="font-sans text-xs tracking-[0.2em] uppercase text-accent mb-6">Our Builds</p>
-          <svg width="180" height="180" viewBox="0 0 180 180" class="mx-auto mb-6" aria-label="PageSpeed score: 97 out of 100">
-            <circle cx="90" cy="90" r="70" class="gauge-track"/>
-            <circle cx="90" cy="90" r="70" class="gauge-circle gauge-good" id="gaugeGood" stroke-dasharray="440" stroke-dashoffset="440"/>
-            <text x="90" y="85" text-anchor="middle" class="gauge-score text-accent">97</text>
-            <text x="90" y="108" text-anchor="middle" class="gauge-label">/100</text>
-          </svg>
-          <ul class="space-y-3 text-left max-w-[220px] mx-auto">
-            <li class="flex items-center gap-2">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C8FF00" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-              <span class="font-sans text-sm text-muted">Sub-second load time</span>
-            </li>
-            <li class="flex items-center gap-2">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C8FF00" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-              <span class="font-sans text-sm text-muted">Flawless on every device</span>
-            </li>
-            <li class="flex items-center gap-2">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C8FF00" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-              <span class="font-sans text-sm text-muted">Rewarded by Google</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Bottom stat bar -->
-      <div class="reveal grid grid-cols-1 sm:grid-cols-3 gap-6 mt-12 max-w-4xl mx-auto text-center">
-        <div class="glass-card rounded-xl p-6">
-          <p class="font-serif text-2xl font-bold text-accent">3&times;</p>
-          <p class="font-sans text-sm text-muted mt-1">faster load time</p>
-        </div>
-        <div class="glass-card rounded-xl p-6">
-          <p class="font-serif text-2xl font-bold text-accent">53%</p>
-          <p class="font-sans text-sm text-muted mt-1">of visitors bounce if load &gt; 3s</p>
-        </div>
-        <div class="glass-card rounded-xl p-6">
-          <p class="font-serif text-2xl font-bold text-accent">#1</p>
-          <p class="font-sans text-sm text-muted mt-1">Google ranking factor</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ======================== RECENT WORK ======================== -->
-  <section id="work" class="px-4 sm:px-6 lg:px-8 py-24 md:py-32 border-t border-white/15 overflow-hidden">
-    <div class="max-w-7xl mx-auto">
-      <div class="reveal mb-16 text-center">
-        <p class="font-sans text-sm tracking-[0.3em] uppercase text-accent mb-3">Recent Work</p>
-        <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-cream leading-tight">Built to perform<span class="text-accent">.</span><br><span class="italic font-normal text-muted">See for yourself.</span></h2>
+      <div class="reveal text-center max-w-3xl mx-auto mb-16">
+        <p class="font-sans text-sm tracking-[0.3em] uppercase text-muted mb-3">The Shift</p>
+        <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-cream leading-tight">The old playbook<br><span class="italic font-normal text-muted">is dying.</span></h2>
+        <p class="font-sans text-base text-muted mt-6 max-w-2xl mx-auto">Google isn't the only front door anymore. AI assistants are answering questions, recommending products, and soon purchasing on behalf of your customers. If your store isn't optimized for this new world, you're invisible.</p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <!-- Urban 360 -->
-        <a href="https://urban360.vercel.app" target="_blank" rel="noopener noreferrer" class="reveal glass-card rounded-2xl overflow-hidden group block">
-          <div class="h-48 bg-gradient-to-br from-blue-500/20 via-blue-500/5 to-transparent flex items-center justify-center">
-            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" class="text-blue-400/40" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-          </div>
-          <div class="p-6">
-            <div class="flex items-center justify-between mb-2">
-              <h3 class="font-serif text-xl font-bold text-cream group-hover:text-accent transition-colors duration-200">Urban 360</h3>
-              <span class="font-sans text-xs font-semibold text-accent bg-accent/10 px-2.5 py-1 rounded-full">97</span>
-            </div>
-            <p class="font-sans text-xs text-muted mb-3">urban360.com.au</p>
-            <p class="font-sans text-sm text-muted leading-relaxed">Building inspection firm in Melbourne. Service pages, lead capture, and instant enquiry alerts.</p>
-            <span class="font-sans text-sm text-accent inline-flex items-center gap-2 mt-4 group-hover:gap-3 transition-all duration-200">
-              View Site
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-            </span>
-          </div>
-        </a>
-
-        <!-- Beauty Tools -->
-        <a href="https://beautytools.au" target="_blank" rel="noopener noreferrer" class="reveal reveal-delay-1 glass-card rounded-2xl overflow-hidden group block">
-          <div class="h-48 bg-gradient-to-br from-pink-500/20 via-pink-500/5 to-transparent flex items-center justify-center">
-            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" class="text-pink-400/40" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
-          </div>
-          <div class="p-6">
-            <div class="flex items-center justify-between mb-2">
-              <h3 class="font-serif text-xl font-bold text-cream group-hover:text-accent transition-colors duration-200">HBT Beauty Tools</h3>
-              <span class="font-sans text-xs font-semibold text-accent bg-accent/10 px-2.5 py-1 rounded-full">96</span>
-            </div>
-            <p class="font-sans text-xs text-muted mb-3">beautytools.au</p>
-            <p class="font-sans text-sm text-muted leading-relaxed">E-commerce store for professional salon tools and equipment. Product catalogue, referral program, and brand showcases.</p>
-            <span class="font-sans text-sm text-accent inline-flex items-center gap-2 mt-4 group-hover:gap-3 transition-all duration-200">
-              View Site
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-            </span>
-          </div>
-        </a>
-
-        <!-- Coming Soon / Demo Project -->
-        <div class="reveal reveal-delay-2 glass-card rounded-2xl overflow-hidden">
-          <div class="h-48 bg-gradient-to-br from-accent/20 via-accent/5 to-transparent flex items-center justify-center">
-            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" class="text-accent/40" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          </div>
-          <div class="p-6">
-            <div class="flex items-center justify-between mb-2">
-              <h3 class="font-serif text-xl font-bold text-cream">Coming Soon</h3>
-            </div>
-            <p class="font-sans text-xs text-muted mb-3">&nbsp;</p>
-            <p class="font-sans text-sm text-muted leading-relaxed">New project currently in development. Check back soon.</p>
-          </div>
+        <div class="reveal glass-card stat-card rounded-2xl p-8">
+          <p class="font-serif text-4xl font-bold text-cream mb-3">40%</p>
+          <p class="font-sans text-sm text-muted leading-relaxed">of product searches now start with AI assistants instead of Google. That number is accelerating.</p>
+        </div>
+        <div class="reveal reveal-delay-1 glass-card stat-card rounded-2xl p-8">
+          <p class="font-serif text-4xl font-bold text-cream mb-3">0%</p>
+          <p class="font-sans text-sm text-muted leading-relaxed">of Shopify stores are optimized for agentic commerce. The window to be first-mover is now.</p>
+        </div>
+        <div class="reveal reveal-delay-2 glass-card stat-card rounded-2xl p-8">
+          <p class="font-serif text-4xl font-bold text-cream mb-3">3&ndash;5x</p>
+          <p class="font-sans text-sm text-muted leading-relaxed">faster Shopify development with Claude Code. Better code, lower cost, faster time-to-market.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ======================== SERVICES ======================== -->
-  <section id="services" class="px-4 sm:px-6 lg:px-8 py-24 md:py-32 relative border-t border-white/15 overflow-hidden">
+  <section id="services" class="px-4 sm:px-6 lg:px-8 py-24 md:py-32 border-t border-black/5 overflow-hidden">
     <div class="max-w-7xl mx-auto">
       <div class="reveal mb-16 text-center">
-        <p class="font-sans text-sm tracking-[0.3em] uppercase text-accent mb-3">Services</p>
-        <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-cream leading-tight">The website gets you found.<br><span class="italic font-normal text-muted">The add-ons keep you winning.</span></h2>
+        <p class="font-sans text-sm tracking-[0.3em] uppercase text-muted mb-3">Services</p>
+        <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-cream leading-tight">Five ways I help you<br><span class="italic font-normal text-muted">win in the AI era.</span></h2>
       </div>
 
-      <!-- The Website -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <!-- Services Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-        <div class="reveal glass-card stat-card rounded-2xl p-6 md:p-8 relative">
-          <div class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-6">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C8FF00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+        <!-- GEO Services -->
+        <a href="/services/geo/" class="reveal glass-card service-card rounded-2xl p-8 block group">
+          <div class="w-12 h-12 rounded-xl bg-accent/20 flex items-center justify-center mb-6">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1A1A1A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><path d="M11 8v6"/><path d="M8 11h6"/></svg>
           </div>
-          <h3 class="font-serif text-xl font-bold text-cream mb-3">Your Online Presence</h3>
-          <p class="font-sans text-sm text-muted leading-relaxed mb-6">A fast, professional website that makes your business look as good as your work. Mobile-first, built to rank on Google, and live in days &mdash; not months.</p>
-          <div class="flex flex-wrap gap-2">
-            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">Mobile-First</span>
-            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">95+ PageSpeed</span>
-            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">SEO-Ready</span>
-            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">Contact Forms</span>
+          <div class="flex items-center gap-2 mb-4 flex-wrap">
+            <span class="font-sans text-xs font-semibold text-cream bg-cream/10 px-3 py-1 rounded-full">From $3,500</span>
+            <span class="font-sans text-xs font-semibold text-muted bg-black/5 px-3 py-1 rounded-full">+ $990/mo</span>
           </div>
-        </div>
-
-        <div class="reveal reveal-delay-1 glass-card stat-card rounded-2xl p-6 md:p-8 relative">
-          <div class="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-6">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C8FF00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-          </div>
-          <h3 class="font-serif text-xl font-bold text-cream mb-3">Your Best Work, Front &amp; Centre</h3>
-          <p class="font-sans text-sm text-muted leading-relaxed mb-6">Showcase completed projects with before-and-after galleries, service pages that target your local area, and professional copy that turns browsers into callers.</p>
-          <div class="flex flex-wrap gap-2">
-            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">Project Gallery</span>
-            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">Service Pages</span>
-            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">Professional Copy</span>
-            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">Google Maps</span>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Narrative bridge -->
-      <div class="reveal text-center my-16">
-        <p class="font-sans text-sm tracking-[0.3em] uppercase text-accent mb-3">Then Plug In</p>
-        <h3 class="font-serif text-3xl md:text-4xl font-bold text-cream leading-tight">Add-ons that<br><span class="italic font-normal text-muted">pay for themselves</span></h3>
-        <p class="font-sans text-base text-muted mt-4 max-w-lg mx-auto">Your website brings people in. These add-ons turn them into booked jobs, repeat customers, and steady revenue.</p>
-      </div>
-
-      <!-- Add-ons -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-
-        <a href="/services/blog-writer-bot" class="reveal glass-card stat-card rounded-2xl p-6 relative block group">
-          <div class="flex items-center gap-2 flex-wrap">
-            <span class="font-sans text-xs font-semibold text-accent bg-accent/10 px-3 py-1 rounded-full">$1,490</span>
-            <span class="font-sans text-xs font-semibold text-muted bg-white/5 px-3 py-1 rounded-full">DIY with AI</span>
-          </div>
-          <h3 class="font-serif text-xl font-bold text-cream mb-3 mt-4">Blog Writer Bot</h3>
-          <p class="font-sans text-sm text-muted leading-relaxed mb-6">AI generates SEO-optimised blog posts for your business. Review, edit, and publish from a simple admin panel. Fresh content without the writing.</p>
+          <h3 class="font-serif text-xl font-bold text-cream mb-3 group-hover:text-secondary transition-colors">GEO Services</h3>
+          <p class="font-sans text-sm text-muted leading-relaxed mb-6">Get your store cited and recommended by ChatGPT, Perplexity, Claude, and other AI search engines. The new SEO.</p>
           <div class="flex flex-wrap gap-2 mb-4">
-            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">AI Content</span>
-            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">Admin Panel</span>
-            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">You Approve</span>
+            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">AI Search Audit</span>
+            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">Structured Data</span>
+            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">Citation Strategy</span>
           </div>
-          <span class="font-sans text-sm text-accent group-hover:text-lime-300 transition-colors duration-200 inline-flex items-center gap-1">Learn more <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+          <span class="font-sans text-sm text-cream group-hover:text-secondary transition-colors duration-200 inline-flex items-center gap-1">Learn more <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
         </a>
 
-        <a href="/services/auto-reply-bot" class="reveal reveal-delay-1 glass-card stat-card rounded-2xl p-6 relative block group">
-          <span class="font-sans text-xs font-semibold text-accent bg-accent/10 px-3 py-1 rounded-full">$890</span>
-          <h3 class="font-serif text-xl font-bold text-cream mb-3 mt-4">Auto-Reply Bot</h3>
-          <p class="font-sans text-sm text-muted leading-relaxed mb-6">AI reads each enquiry and sends a personalised reply in under a minute &mdash; via SMS or email. Customers get answers while you're busy with clients.</p>
-          <div class="flex flex-wrap gap-2 mb-4">
-            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">Under 60 Seconds</span>
-            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">AI-Personalised</span>
-            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">Works Standalone</span>
+        <!-- Shopify + Claude Code -->
+        <a href="/services/shopify-claude-code/" class="reveal reveal-delay-1 glass-card service-card rounded-2xl p-8 block group">
+          <div class="w-12 h-12 rounded-xl bg-accent/20 flex items-center justify-center mb-6">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1A1A1A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/><line x1="14" y1="4" x2="10" y2="20"/></svg>
           </div>
-          <span class="font-sans text-sm text-accent group-hover:text-lime-300 transition-colors duration-200 inline-flex items-center gap-1">Learn more <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+          <span class="font-sans text-xs font-semibold text-cream bg-cream/10 px-3 py-1 rounded-full">From $5,000</span>
+          <h3 class="font-serif text-xl font-bold text-cream mb-3 mt-4 group-hover:text-secondary transition-colors">Shopify + Claude Code</h3>
+          <p class="font-sans text-sm text-muted leading-relaxed mb-6">AI-powered Shopify development at 3&ndash;5x speed. Custom themes, apps, Liquid/Hydrogen builds, and storefront customization.</p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">Theme Dev</span>
+            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">Custom Apps</span>
+            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">Hydrogen</span>
+          </div>
+          <span class="font-sans text-sm text-cream group-hover:text-secondary transition-colors duration-200 inline-flex items-center gap-1">Learn more <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
         </a>
 
-        <a href="/services/review-collector" class="reveal reveal-delay-2 glass-card stat-card rounded-2xl p-6 relative block group">
-          <span class="font-sans text-xs font-semibold text-accent bg-accent/10 px-3 py-1 rounded-full">$790</span>
-          <h3 class="font-serif text-xl font-bold text-cream mb-3 mt-4">Review Collector</h3>
-          <p class="font-sans text-sm text-muted leading-relaxed mb-6">After a job, an automated SMS sends your customer a direct Google review link. One follow-up if they haven't reviewed. Reputation on autopilot.</p>
-          <div class="flex flex-wrap gap-2 mb-4">
-            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">Auto SMS</span>
-            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">Google Reviews</span>
-            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">Rating Gate</span>
+        <!-- Ecommerce Automation -->
+        <a href="/services/ecommerce-automation/" class="reveal reveal-delay-2 glass-card service-card rounded-2xl p-8 block group">
+          <div class="w-12 h-12 rounded-xl bg-accent/20 flex items-center justify-center mb-6">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1A1A1A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v4"/><path d="M12 18v4"/><path d="M4.93 4.93l2.83 2.83"/><path d="M16.24 16.24l2.83 2.83"/><path d="M2 12h4"/><path d="M18 12h4"/><path d="M4.93 19.07l2.83-2.83"/><path d="M16.24 7.76l2.83-2.83"/></svg>
           </div>
-          <span class="font-sans text-sm text-accent group-hover:text-lime-300 transition-colors duration-200 inline-flex items-center gap-1">Learn more <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+          <span class="font-sans text-xs font-semibold text-cream bg-cream/10 px-3 py-1 rounded-full">From $3,500</span>
+          <h3 class="font-serif text-xl font-bold text-cream mb-3 mt-4 group-hover:text-secondary transition-colors">Ecommerce Automation</h3>
+          <p class="font-sans text-sm text-muted leading-relaxed mb-6">Stop running your store manually. Automated workflows for inventory, fulfillment, customer comms, and reporting.</p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">Shopify Flow</span>
+            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">Integrations</span>
+            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">AI Support</span>
+          </div>
+          <span class="font-sans text-sm text-cream group-hover:text-secondary transition-colors duration-200 inline-flex items-center gap-1">Learn more <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
         </a>
 
-        <a href="/services/seo-content" class="reveal glass-card stat-card rounded-2xl p-6 relative border border-accent/20 block group">
-          <div class="flex items-center gap-2 flex-wrap">
-            <span class="font-sans text-xs font-semibold text-surface bg-accent px-3 py-1 rounded-full">$249/mo</span>
-            <span class="font-sans text-xs font-semibold text-muted bg-white/5 px-3 py-1 rounded-full">Done for you</span>
+        <!-- Agentic Commerce -->
+        <a href="/services/agentic-commerce/" class="reveal glass-card service-card rounded-2xl p-8 block group relative overflow-hidden">
+          <div class="absolute top-4 right-4">
+            <span class="font-sans text-[10px] font-semibold text-white bg-cream px-2.5 py-1 rounded-full uppercase tracking-wider">New</span>
           </div>
-          <h3 class="font-serif text-xl font-bold text-cream mb-3 mt-4">SEO &amp; Content</h3>
-          <p class="font-sans text-sm text-muted leading-relaxed mb-6">I handle your SEO, write monthly content, track keyword rankings, and send quarterly reports. Completely hands-off for you.</p>
+          <div class="w-12 h-12 rounded-xl bg-accent/20 flex items-center justify-center mb-6">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1A1A1A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a4 4 0 0 1 4 4c0 1.95-1.4 3.58-3.25 3.93"/><path d="M8.56 9.8A4 4 0 1 1 15 13"/><circle cx="12" cy="12" r="10"/><path d="M12 16v.01"/></svg>
+          </div>
+          <span class="font-sans text-xs font-semibold text-cream bg-cream/10 px-3 py-1 rounded-full">From $4,500</span>
+          <h3 class="font-serif text-xl font-bold text-cream mb-3 mt-4 group-hover:text-secondary transition-colors">Agentic Commerce</h3>
+          <p class="font-sans text-sm text-muted leading-relaxed mb-6">Prepare your Shopify store for AI shopping agents. Structured data, API endpoints, MCP servers, and agent-readiness audits.</p>
           <div class="flex flex-wrap gap-2 mb-4">
-            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">Monthly Content</span>
-            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">Rank Tracking</span>
-            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">Quarterly Reports</span>
+            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">MCP Servers</span>
+            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">API Design</span>
+            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">Agent-Ready</span>
           </div>
-          <span class="font-sans text-sm text-accent group-hover:text-lime-300 transition-colors duration-200 inline-flex items-center gap-1">Learn more <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+          <span class="font-sans text-sm text-cream group-hover:text-secondary transition-colors duration-200 inline-flex items-center gap-1">Learn more <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </a>
+
+        <!-- 1-on-1 Consulting -->
+        <a href="/services/consulting/" class="reveal reveal-delay-1 glass-card service-card rounded-2xl p-8 block group">
+          <div class="w-12 h-12 rounded-xl bg-accent/20 flex items-center justify-center mb-6">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1A1A1A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <div class="flex items-center gap-2 mb-4 flex-wrap">
+            <span class="font-sans text-xs font-semibold text-cream bg-cream/10 px-3 py-1 rounded-full">$350/hr</span>
+            <span class="font-sans text-xs font-semibold text-muted bg-black/5 px-3 py-1 rounded-full">5-hr block $1,500</span>
+          </div>
+          <h3 class="font-serif text-xl font-bold text-cream mb-3 group-hover:text-secondary transition-colors">1-on-1 Consulting</h3>
+          <p class="font-sans text-sm text-muted leading-relaxed mb-6">Expert guidance without a full engagement. Strategy calls, code reviews, team training, and architecture audits.</p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">Strategy</span>
+            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">Code Review</span>
+            <span class="service-tag font-sans text-xs text-muted px-3 py-1 rounded-full">Training</span>
+          </div>
+          <span class="font-sans text-sm text-cream group-hover:text-secondary transition-colors duration-200 inline-flex items-center gap-1">Learn more <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
         </a>
 
       </div>
     </div>
   </section>
 
+  <!-- ======================== ABOUT ======================== -->
+  <section id="about" class="px-4 sm:px-6 lg:px-8 py-24 md:py-32 border-t border-black/5 overflow-hidden">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center max-w-3xl mx-auto">
+        <p class="reveal font-sans text-sm tracking-[0.3em] uppercase text-muted mb-3">About</p>
+        <h2 class="reveal font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-cream leading-tight">AI meets ecommerce<span class="text-accent">.</span><br><span class="italic font-normal text-muted">That's where I live.</span></h2>
+        <div class="reveal space-y-5 mt-8">
+          <p class="font-sans text-base text-muted leading-relaxed">I'm Maksym &mdash; a Shopify developer and AI specialist based in Australia. I use Claude Code as my primary development tool and have spent the last year building at the intersection of AI and ecommerce.</p>
+          <p class="font-sans text-base text-muted leading-relaxed">While most agencies are still figuring out ChatGPT, I'm building MCP servers for Shopify stores, optimizing product data for generative search, and helping merchants prepare for the autonomous shopping agents that are coming whether they're ready or not.</p>
+        </div>
+        <div class="reveal flex flex-wrap justify-center gap-3 mt-8">
+          <span class="font-sans text-xs text-cream bg-cream/5 border border-black/10 px-4 py-1.5 rounded-full">Shopify Expert</span>
+          <span class="font-sans text-xs text-cream bg-cream/5 border border-black/10 px-4 py-1.5 rounded-full">Claude Code Developer</span>
+          <span class="font-sans text-xs text-cream bg-cream/5 border border-black/10 px-4 py-1.5 rounded-full">GEO Specialist</span>
+          <span class="font-sans text-xs text-cream bg-cream/5 border border-black/10 px-4 py-1.5 rounded-full">Agentic Commerce</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ======================== PROCESS ======================== -->
-  <section id="process" class="px-4 sm:px-6 lg:px-8 py-24 md:py-32 border-t border-white/15 overflow-hidden">
+  <section id="process" class="px-4 sm:px-6 lg:px-8 py-24 md:py-32 border-t border-black/5 overflow-hidden">
     <div class="max-w-7xl mx-auto">
       <div class="reveal mb-16 text-center">
-        <p class="font-sans text-sm tracking-[0.3em] uppercase text-accent mb-3">How It Works</p>
-        <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-cream leading-tight">From enquiry to<br><span class="italic font-normal text-muted">live in days</span></h2>
+        <p class="font-sans text-sm tracking-[0.3em] uppercase text-muted mb-3">How It Works</p>
+        <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-cream leading-tight">From first call to<br><span class="italic font-normal text-muted">measurable results.</span></h2>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -1098,31 +603,31 @@
           <span class="step-num" aria-hidden="true">01</span>
           <div class="relative z-10">
             <h3 class="font-serif text-xl font-bold text-cream mb-3">Discovery Call</h3>
-            <p class="font-sans text-sm text-muted leading-relaxed">Quick 15-minute call to understand your business, your customers, and what you need. After the call, I'll send a simple onboarding checklist &mdash; logo, photos, service list, and domain login. That's all you need to provide.</p>
+            <p class="font-sans text-sm text-muted leading-relaxed">30-minute call to understand your store, tech stack, goals, and pain points. I'll identify which services will have the biggest impact.</p>
           </div>
         </div>
 
         <div class="reveal reveal-delay-1 glass-card rounded-2xl p-8 relative">
           <span class="step-num" aria-hidden="true">02</span>
           <div class="relative z-10">
-            <h3 class="font-serif text-xl font-bold text-cream mb-3">Design &amp; Content</h3>
-            <p class="font-sans text-sm text-muted leading-relaxed">I'll design your site and write the content. You'll see exactly what it looks like before any code is written. Two rounds of revisions included to get it perfect.</p>
+            <h3 class="font-serif text-xl font-bold text-cream mb-3">Audit & Strategy</h3>
+            <p class="font-sans text-sm text-muted leading-relaxed">Deep dive into your store's AI readiness. You'll get a clear report with priorities, opportunities, and a recommended roadmap.</p>
           </div>
         </div>
 
         <div class="reveal reveal-delay-2 glass-card rounded-2xl p-8 relative">
           <span class="step-num" aria-hidden="true">03</span>
           <div class="relative z-10">
-            <h3 class="font-serif text-xl font-bold text-cream mb-3">Build with AI</h3>
-            <p class="font-sans text-sm text-muted leading-relaxed">Using Claude Code and modern tools, I build your site fast. You get a staging link to review. Need a tweak? Changes are same-day during this phase.</p>
+            <h3 class="font-serif text-xl font-bold text-cream mb-3">Implementation</h3>
+            <p class="font-sans text-sm text-muted leading-relaxed">I build, optimize, and integrate. Whether it's GEO setup, a Claude Code theme build, or MCP server deployment &mdash; fast, clean execution.</p>
           </div>
         </div>
 
         <div class="reveal reveal-delay-3 glass-card rounded-2xl p-8 relative">
           <span class="step-num" aria-hidden="true">04</span>
           <div class="relative z-10">
-            <h3 class="font-serif text-xl font-bold text-cream mb-3">Launch &amp; Grow</h3>
-            <p class="font-sans text-sm text-muted leading-relaxed">Your site goes live on Vercel's global CDN. Lightning fast worldwide. Then plug in add-ons &mdash; auto-reply, blog writer, SEO &mdash; that turn your website into a revenue engine.</p>
+            <h3 class="font-serif text-xl font-bold text-cream mb-3">Optimize & Scale</h3>
+            <p class="font-sans text-sm text-muted leading-relaxed">Monitor AI citations, track agent interactions, refine automations. Ongoing retainers available for continuous optimization.</p>
           </div>
         </div>
       </div>
@@ -1133,12 +638,12 @@
   <section class="px-4 sm:px-6 lg:px-8 py-16 md:py-20">
     <div class="max-w-4xl mx-auto">
       <div class="reveal glass-card rounded-3xl p-8 md:p-12 text-center relative overflow-hidden">
-        <div class="absolute w-[300px] h-[300px] bg-accent/5 rounded-full blur-[100px] -top-20 -left-20 pointer-events-none" aria-hidden="true"></div>
+        <div class="absolute w-[300px] h-[300px] bg-accent/10 rounded-full blur-[100px] -top-20 -left-20 pointer-events-none" aria-hidden="true"></div>
         <div class="relative z-10">
-          <h2 class="font-serif text-3xl md:text-4xl font-bold text-cream mb-4">Your website should be your best salesperson<span class="text-accent">.</span></h2>
-          <p class="font-sans text-base text-muted mb-8 max-w-lg mx-auto">Get a site that looks the part from $2,990 &mdash; then plug in add-ons that win jobs while you sleep.</p>
-          <a href="#contact" class="btn-primary bg-accent text-surface font-sans font-semibold px-8 py-4 rounded-full text-base cursor-pointer inline-flex items-center gap-3 hover:bg-lime-300 transition-colors duration-200">
-            Get a Free Quote
+          <h2 class="font-serif text-3xl md:text-4xl font-bold text-cream mb-4">Your competitors aren't waiting<span class="text-accent">.</span></h2>
+          <p class="font-sans text-base text-muted mb-8 max-w-lg mx-auto">Every day you delay, another store optimizes for AI search and gets cited ahead of you. Let's fix that.</p>
+          <a href="#contact" class="btn-primary bg-cream text-white font-sans font-semibold px-8 py-4 rounded-full text-base cursor-pointer inline-flex items-center gap-3 hover:bg-black transition-colors duration-200">
+            Book a Discovery Call
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
           </a>
         </div>
@@ -1146,546 +651,217 @@
     </div>
   </section>
 
-  <!-- ======================== WHAT YOU GET ======================== -->
-  <section class="px-4 sm:px-6 lg:px-8 py-24 md:py-32 border-t border-white/15 overflow-hidden">
-    <div class="max-w-7xl mx-auto">
-      <div class="reveal mb-16 text-center">
-        <p class="font-sans text-sm tracking-[0.3em] uppercase text-accent mb-3">Every Site Includes</p>
-        <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-cream leading-tight">No hidden extras<span class="text-accent">.</span><br><span class="italic font-normal text-muted">All of this from $2,990.</span></h2>
-      </div>
-
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div class="reveal glass-card rounded-2xl p-6 text-center">
-          <div class="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center mx-auto mb-4">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C8FF00" stroke-width="1.5" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
-          </div>
-          <h3 class="font-sans text-sm font-semibold text-cream mb-1">Mobile-First Design</h3>
-          <p class="font-sans text-xs text-muted">Looks perfect on every device</p>
-        </div>
-
-        <div class="reveal reveal-delay-1 glass-card rounded-2xl p-6 text-center">
-          <div class="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center mx-auto mb-4">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C8FF00" stroke-width="1.5" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-          </div>
-          <h3 class="font-sans text-sm font-semibold text-cream mb-1">95+ PageSpeed</h3>
-          <p class="font-sans text-xs text-muted">Blazing fast load times</p>
-        </div>
-
-        <div class="reveal reveal-delay-2 glass-card rounded-2xl p-6 text-center">
-          <div class="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center mx-auto mb-4">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C8FF00" stroke-width="1.5" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          </div>
-          <h3 class="font-sans text-sm font-semibold text-cream mb-1">SSL &amp; Security</h3>
-          <p class="font-sans text-xs text-muted">HTTPS included on every site</p>
-        </div>
-
-        <div class="reveal reveal-delay-3 glass-card rounded-2xl p-6 text-center">
-          <div class="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center mx-auto mb-4">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C8FF00" stroke-width="1.5" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-          </div>
-          <h3 class="font-sans text-sm font-semibold text-cream mb-1">SEO Foundations</h3>
-          <p class="font-sans text-xs text-muted">Built to rank on Google</p>
-        </div>
-
-        <div class="reveal glass-card rounded-2xl p-6 text-center">
-          <div class="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center mx-auto mb-4">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C8FF00" stroke-width="1.5" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-          </div>
-          <h3 class="font-sans text-sm font-semibold text-cream mb-1">Contact Forms</h3>
-          <p class="font-sans text-xs text-muted">Enquiry &amp; quote request forms</p>
-        </div>
-
-        <div class="reveal reveal-delay-1 glass-card rounded-2xl p-6 text-center">
-          <div class="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center mx-auto mb-4">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C8FF00" stroke-width="1.5" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          </div>
-          <h3 class="font-sans text-sm font-semibold text-cream mb-1">Google Maps</h3>
-          <p class="font-sans text-xs text-muted">Service area maps embedded</p>
-        </div>
-
-        <div class="reveal reveal-delay-2 glass-card rounded-2xl p-6 text-center">
-          <div class="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center mx-auto mb-4">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C8FF00" stroke-width="1.5" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
-          </div>
-          <h3 class="font-sans text-sm font-semibold text-cream mb-1">Content Writing</h3>
-          <p class="font-sans text-xs text-muted">Professional copy included</p>
-        </div>
-
-        <div class="reveal reveal-delay-3 glass-card rounded-2xl p-6 text-center">
-          <div class="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center mx-auto mb-4">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C8FF00" stroke-width="1.5" aria-hidden="true"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg>
-          </div>
-          <h3 class="font-sans text-sm font-semibold text-cream mb-1">Analytics</h3>
-          <p class="font-sans text-xs text-muted">Track visitors &amp; enquiries</p>
-        </div>
-
-        <div class="reveal glass-card rounded-2xl p-6 text-center">
-          <div class="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center mx-auto mb-4">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C8FF00" stroke-width="1.5" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
-          </div>
-          <h3 class="font-sans text-sm font-semibold text-cream mb-1">Privacy &amp; Terms</h3>
-          <p class="font-sans text-xs text-muted">Legal pages sorted</p>
-        </div>
-
-        <div class="reveal reveal-delay-1 glass-card rounded-2xl p-6 text-center">
-          <div class="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center mx-auto mb-4">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C8FF00" stroke-width="1.5" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-          </div>
-          <h3 class="font-sans text-sm font-semibold text-cream mb-1">Google Business</h3>
-          <p class="font-sans text-xs text-muted">Profile setup included</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ======================== PRICING ======================== -->
-  <section id="pricing" class="px-4 sm:px-6 lg:px-8 py-24 md:py-32 border-t border-white/15 section-elevated overflow-hidden">
-    <div class="max-w-7xl mx-auto">
+  <!-- ======================== COMPARISON ======================== -->
+  <section class="px-4 sm:px-6 lg:px-8 py-24 md:py-32 border-t border-black/5 overflow-hidden">
+    <div class="max-w-5xl mx-auto">
       <div class="reveal text-center mb-16">
-        <p class="font-sans text-sm tracking-[0.3em] uppercase text-accent mb-3">Pricing</p>
-        <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-cream leading-tight">Straight-up<br><span class="italic font-normal text-muted">pricing</span></h2>
-        <p class="font-sans text-base text-muted mt-4 max-w-lg mx-auto">Fixed prices. No hourly rates, no surprise invoices. You know exactly what you're paying before we start.</p>
-      </div>
-      <!-- Website Build Tiers -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <!-- Foundation -->
-        <div class="reveal glass-card pricing-card rounded-2xl p-6 md:p-8 flex flex-col">
-          <p class="font-serif text-xl font-bold text-cream mb-1">Foundation</p>
-          <p class="font-sans text-sm text-muted mb-4">Get online &amp; start getting leads</p>
-          <p class="font-serif text-4xl font-bold text-cream mb-1">$2,990</p>
-          <p class="font-sans text-xs text-muted mb-8">One-off payment (AUD)</p>
-          <ul class="space-y-3 mb-8 flex-1">
-            <li class="font-sans text-sm text-muted flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span>5-page responsive website</li>
-            <li class="font-sans text-sm text-muted flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span>Mobile-first design</li>
-            <li class="font-sans text-sm text-muted flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span>Contact &amp; quote request form</li>
-            <li class="font-sans text-sm text-muted flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span>Lead capture &amp; instant alerts</li>
-            <li class="font-sans text-sm text-muted flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span>Google Maps &amp; service areas</li>
-            <li class="font-sans text-sm text-muted flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span>Basic SEO setup</li>
-            <li class="font-sans text-sm text-muted flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span>SSL &amp; analytics</li>
-            <li class="font-sans text-sm text-muted flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span>Google Business Profile setup</li>
-            <li class="font-sans text-sm text-muted flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span>Privacy Policy &amp; Terms pages</li>
-            <li class="font-sans text-sm text-muted flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span>30 days post-launch support</li>
-          </ul>
-          <a href="#contact" class="btn-primary bg-accent text-surface font-sans font-semibold px-6 py-3 rounded-full text-sm cursor-pointer inline-flex items-center justify-center gap-2 hover:bg-lime-300 transition-colors duration-200">Get Started <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
-        </div>
-        <!-- Professional -->
-        <div class="reveal reveal-delay-1 glass-card pricing-card rounded-2xl p-6 md:p-8 flex flex-col">
-          <p class="font-serif text-xl font-bold text-cream mb-1">Professional</p>
-          <p class="font-sans text-sm text-muted mb-4">Full site + copywriting + advanced SEO</p>
-          <p class="font-serif text-4xl font-bold text-cream mb-1">$4,990</p>
-          <p class="font-sans text-xs text-muted mb-8">One-off payment (AUD)</p>
-          <ul class="space-y-3 mb-8 flex-1">
-            <li class="font-sans text-sm text-muted flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span>Everything in Foundation</li>
-            <li class="font-sans text-sm text-muted flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span>10+ pages</li>
-            <li class="font-sans text-sm text-muted flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span>Project gallery with before/after</li>
-            <li class="font-sans text-sm text-muted flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span>Professional copywriting</li>
-            <li class="font-sans text-sm text-muted flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span>Advanced SEO &amp; schema markup</li>
-            <li class="font-sans text-sm text-muted flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span>Google Business setup</li>
-            <li class="font-sans text-sm text-muted flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span>60 days post-launch support</li>
-          </ul>
-          <a href="#contact" class="btn-primary bg-accent text-surface font-sans font-semibold px-6 py-3 rounded-full text-sm cursor-pointer inline-flex items-center justify-center gap-2 hover:bg-lime-300 transition-colors duration-200">Get Started <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
-        </div>
-        <!-- Advanced (Featured) -->
-        <div class="reveal reveal-delay-2 glass-card pricing-card pricing-featured rounded-2xl p-6 md:p-8 flex flex-col relative">
-          <div class="absolute -top-3 left-1/2 -translate-x-1/2">
-            <span class="font-sans text-xs font-semibold text-surface bg-accent px-4 py-1 rounded-full">Best Value</span>
-          </div>
-          <p class="font-serif text-xl font-bold text-cream mb-1">Advanced</p>
-          <p class="font-sans text-sm text-muted mb-4">Website + add-ons built in</p>
-          <p class="font-serif text-4xl font-bold text-accent mb-1">$6,490</p>
-          <p class="font-sans text-xs text-muted mb-8">One-off &mdash; save $1,670 on add-ons</p>
-          <ul class="space-y-3 mb-8 flex-1">
-            <li class="font-sans text-sm text-muted flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span>Everything in Professional</li>
-            <li class="font-sans text-sm text-muted flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span>Blog Writer Bot ($1,490 value)</li>
-            <li class="font-sans text-sm text-muted flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span>Auto-Reply Bot ($890 value)</li>
-            <li class="font-sans text-sm text-muted flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span>Review Collector ($790 value)</li>
-            <li class="font-sans text-sm text-muted flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span>Priority build (fastest turnaround)</li>
-            <li class="font-sans text-sm text-muted flex items-start gap-3"><span class="text-accent mt-0.5"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span>90 days priority support</li>
-          </ul>
-          <a href="#contact" class="btn-primary bg-accent text-surface font-sans font-semibold px-6 py-3 rounded-full text-sm cursor-pointer inline-flex items-center justify-center gap-2 hover:bg-lime-300 transition-colors duration-200">Get Started <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
-        </div>
+        <p class="font-sans text-sm tracking-[0.3em] uppercase text-muted mb-3">Why This Matters</p>
+        <h2 class="font-serif text-4xl md:text-5xl font-bold text-cream leading-tight">Traditional vs AI-first<span class="text-accent">.</span></h2>
       </div>
 
-      <!-- Add-ons & services -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
-        <!-- Hosting & Care -->
-        <div class="reveal glass-card rounded-2xl p-6 md:p-8 flex flex-col justify-between gap-4">
-          <div>
-            <div class="flex items-center gap-3 mb-1 flex-wrap">
-              <p class="font-serif text-xl font-bold text-cream">Hosting &amp; Care</p>
-              <span class="font-sans text-xs font-semibold text-accent bg-accent/10 px-3 py-1 rounded-full">Monthly</span>
-            </div>
-            <p class="font-sans text-sm text-muted">Vercel hosting, SSL, domain setup, email forwarding, uptime monitoring, security updates, and content support. Required for all sites.</p>
-          </div>
-          <div>
-            <p class="font-serif text-3xl font-bold text-accent">$79<span class="text-lg font-normal text-muted">/mo</span></p>
-            <p class="font-sans text-xs text-muted">AUD, cancel anytime</p>
-          </div>
-        </div>
-        <!-- Add-ons -->
-        <div class="reveal reveal-delay-1 glass-card rounded-2xl p-6 md:p-8 flex flex-col justify-between gap-4">
-          <div>
-            <p class="font-serif text-xl font-bold text-cream mb-1">Add-ons</p>
-            <p class="font-sans text-sm text-muted">Blog Writer, Auto-Reply, Review Collector &mdash; plug into any package anytime. <a href="#services" class="text-accent hover:underline">See all add-ons</a></p>
-          </div>
-          <div>
-            <p class="font-serif text-3xl font-bold text-accent">From $790</p>
-            <p class="font-sans text-xs text-muted">One-time per add-on (AUD)</p>
-          </div>
-        </div>
-        <!-- Logo & Branding -->
-        <div class="reveal glass-card rounded-2xl p-6 md:p-8 flex flex-col justify-between gap-4">
-          <div>
-            <p class="font-serif text-xl font-bold text-cream mb-1">Logo &amp; Branding</p>
-            <p class="font-sans text-sm text-muted">Professional wordmark, brand colours, and business card layout. For businesses that need a clean brand before the site goes live.</p>
-          </div>
-          <div>
-            <p class="font-serif text-3xl font-bold text-accent">$490</p>
-            <p class="font-sans text-xs text-muted">One-time (AUD)</p>
-          </div>
-        </div>
-        <!-- SEO & Content -->
-        <div class="reveal reveal-delay-1 glass-card rounded-2xl p-6 md:p-8 flex flex-col justify-between gap-4">
-          <div>
-            <div class="flex items-center gap-3 mb-1 flex-wrap">
-              <p class="font-serif text-xl font-bold text-cream">SEO &amp; Content</p>
-              <span class="font-sans text-xs font-semibold text-accent bg-accent/10 px-3 py-1 rounded-full">Monthly</span>
-            </div>
-            <p class="font-sans text-sm text-muted">Hands-on SEO, monthly content writing, keyword rank tracking, and quarterly reports.</p>
-          </div>
-          <div>
-            <p class="font-serif text-3xl font-bold text-accent">$249<span class="text-lg font-normal text-muted">/mo</span></p>
-            <p class="font-sans text-xs text-muted">AUD, cancel anytime</p>
-          </div>
-        </div>
-      </div>
-
-      <p class="reveal font-sans text-xs text-muted text-center mt-8">All prices in AUD and exclude GST. 50% deposit on website builds, balance on launch. Two revision rounds included; additional rounds $150 each.</p>
-
-      <!-- Comparison table -->
-      <div class="reveal mt-20">
-        <h3 class="font-serif text-2xl md:text-3xl font-bold text-cream text-center mb-10">How it stacks up</h3>
-        <div class="overflow-x-auto rounded-2xl border border-white/15">
-          <table class="w-full text-left font-sans text-sm min-w-[600px]">
-            <thead>
-              <tr class="border-b border-white/15">
-                <th scope="col" class="p-4 md:p-5 text-muted font-normal w-[40%]"></th>
-                <th scope="col" class="p-4 md:p-5 text-muted font-semibold text-center">DIY Builder<br><span class="text-xs font-normal">Wix / Squarespace</span></th>
-                <th scope="col" class="p-4 md:p-5 text-muted font-semibold text-center">Traditional Agency</th>
-                <th scope="col" class="p-4 md:p-5 text-accent font-semibold text-center">MK<span class="text-accent">.</span> AI-Powered</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="compare-row border-b border-white/5">
-                <td class="p-4 md:p-5 text-cream">Turnaround time</td>
-                <td class="p-4 md:p-5 text-center text-muted">Weeks (you build it)</td>
-                <td class="p-4 md:p-5 text-center text-muted">2&ndash;3 months</td>
-                <td class="p-4 md:p-5 text-center text-cream font-medium">1&ndash;2 weeks</td>
-              </tr>
-              <tr class="compare-row border-b border-white/5">
-                <td class="p-4 md:p-5 text-cream">Cost</td>
-                <td class="p-4 md:p-5 text-center text-muted">$300&ndash;$600/yr</td>
-                <td class="p-4 md:p-5 text-center text-muted">$10K&ndash;$25K</td>
-                <td class="p-4 md:p-5 text-center text-cream font-medium">From $2,990</td>
-              </tr>
-              <tr class="compare-row border-b border-white/5">
-                <td class="p-4 md:p-5 text-cream">Google PageSpeed</td>
-                <td class="p-4 md:p-5 text-center text-muted">40&ndash;65</td>
-                <td class="p-4 md:p-5 text-center text-muted">60&ndash;85</td>
-                <td class="p-4 md:p-5 text-center"><span class="compare-check font-medium">95+</span></td>
-              </tr>
-              <tr class="compare-row border-b border-white/5">
-                <td class="p-4 md:p-5 text-cream">Custom code</td>
-                <td class="p-4 md:p-5 text-center"><span class="compare-x">&times;</span></td>
-                <td class="p-4 md:p-5 text-center"><span class="compare-check">&check;</span></td>
-                <td class="p-4 md:p-5 text-center"><span class="compare-check">&check;</span></td>
-              </tr>
-              <tr class="compare-row border-b border-white/5">
-                <td class="p-4 md:p-5 text-cream">SEO optimised</td>
-                <td class="p-4 md:p-5 text-center text-muted">Basic</td>
-                <td class="p-4 md:p-5 text-center"><span class="compare-check">&check;</span></td>
-                <td class="p-4 md:p-5 text-center"><span class="compare-check">&check;</span></td>
-              </tr>
-              <tr class="compare-row border-b border-white/5">
-                <td class="p-4 md:p-5 text-cream">Mobile-first design</td>
-                <td class="p-4 md:p-5 text-center text-muted">Template</td>
-                <td class="p-4 md:p-5 text-center"><span class="compare-check">&check;</span></td>
-                <td class="p-4 md:p-5 text-center"><span class="compare-check">&check;</span></td>
-              </tr>
-              <tr class="compare-row border-b border-white/5">
-                <td class="p-4 md:p-5 text-cream">You own the code</td>
-                <td class="p-4 md:p-5 text-center"><span class="compare-x">&times;</span></td>
-                <td class="p-4 md:p-5 text-center"><span class="compare-check">&check;</span></td>
-                <td class="p-4 md:p-5 text-center"><span class="compare-check">&check;</span></td>
-              </tr>
-              <tr class="compare-row">
-                <td class="p-4 md:p-5 text-cream">Ongoing support</td>
-                <td class="p-4 md:p-5 text-center"><span class="compare-x">&times;</span></td>
-                <td class="p-4 md:p-5 text-center text-muted">$$$ retainer</td>
-                <td class="p-4 md:p-5 text-center"><span class="compare-check">From $79/mo</span></td>
-              </tr>
-              <tr class="compare-row">
-                <td class="p-4 md:p-5 text-cream">Add-ons (auto-reply, blog, SEO)</td>
-                <td class="p-4 md:p-5 text-center"><span class="compare-x">&times;</span></td>
-                <td class="p-4 md:p-5 text-center text-muted">$$$ extra</td>
-                <td class="p-4 md:p-5 text-center"><span class="compare-check">Plug &amp; play</span></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ======================== CTA / CONTACT ======================== -->
-  <section id="contact" class="px-4 sm:px-6 lg:px-8 py-24 md:py-32 border-t border-white/15 section-elevated overflow-hidden">
-    <div class="max-w-7xl mx-auto">
-      <div class="reveal glass-card rounded-3xl p-8 md:p-16 relative overflow-hidden">
-        <!-- Background orb -->
-        <div class="absolute w-[400px] h-[400px] bg-accent/5 rounded-full blur-[120px] -top-40 -right-40 pointer-events-none" aria-hidden="true"></div>
-
-        <div class="relative z-10 max-w-2xl">
-          <p class="font-sans text-sm tracking-[0.3em] uppercase text-accent mb-4">Get a Quote</p>
-          <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-cream leading-tight mb-6">Let's get your<br><span class="italic font-normal text-muted">business online</span></h2>
-          <p class="font-sans text-base text-muted leading-relaxed mb-10 max-w-lg">Tell me about your business and I'll get back to you within 24 hours with a no-obligation quote.</p>
-
-          <form class="space-y-6" id="contactForm">
-            <!-- Honeypot anti-spam (hidden from real users) -->
-            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <label for="name" class="font-sans text-xs uppercase tracking-wider text-muted mb-2 block">Name <span class="text-accent">*</span></label>
-                <input type="text" id="name" name="name" required autocomplete="name" class="w-full bg-white/5 border border-white/15 rounded-xl px-4 py-3 font-sans text-sm text-cream placeholder:text-muted/50 focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/20 transition-colors duration-200" placeholder="Your name">
-              </div>
-              <div>
-                <label for="phone" class="font-sans text-xs uppercase tracking-wider text-muted mb-2 block">Phone <span class="text-accent">*</span></label>
-                <input type="tel" id="phone" name="phone" required autocomplete="tel" class="w-full bg-white/5 border border-white/15 rounded-xl px-4 py-3 font-sans text-sm text-cream placeholder:text-muted/50 focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/20 transition-colors duration-200" placeholder="04XX XXX XXX">
-              </div>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <label for="email" class="font-sans text-xs uppercase tracking-wider text-muted mb-2 block">Email</label>
-                <input type="email" id="email" name="email" autocomplete="email" class="w-full bg-white/5 border border-white/15 rounded-xl px-4 py-3 font-sans text-sm text-cream placeholder:text-muted/50 focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/20 transition-colors duration-200" placeholder="you@yourbusiness.com">
-              </div>
-              <div>
-                <label for="industry" class="font-sans text-xs uppercase tracking-wider text-muted mb-2 block">Your Industry</label>
-                <select id="industry" name="industry" class="w-full bg-white/5 border border-white/15 rounded-xl px-4 py-3 font-sans text-sm text-cream focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/20 transition-colors duration-200 appearance-none cursor-pointer">
-                  <option value="" class="bg-surface">Select your industry</option>
-                  <option value="professional-services" class="bg-surface">Professional Services</option>
-                  <option value="health-wellness" class="bg-surface">Health &amp; Wellness</option>
-                  <option value="home-services" class="bg-surface">Home Services</option>
-                  <option value="hospitality-food" class="bg-surface">Hospitality &amp; Food</option>
-                  <option value="retail-ecommerce" class="bg-surface">Retail &amp; E-commerce</option>
-                  <option value="real-estate" class="bg-surface">Real Estate</option>
-                  <option value="education-training" class="bg-surface">Education &amp; Training</option>
-                  <option value="trades-construction" class="bg-surface">Trades &amp; Construction</option>
-                  <option value="other" class="bg-surface">Other</option>
-                </select>
-              </div>
-            </div>
-            <div>
-              <p class="font-sans text-xs uppercase tracking-wider text-muted mb-3">Package</p>
-              <div class="grid grid-cols-1 sm:grid-cols-3 gap-3" id="packageCards">
-                <label class="package-card bg-white/5 border border-white/15 rounded-xl p-4 text-center cursor-pointer">
-                  <input type="radio" name="package" value="foundation" class="sr-only">
-                  <span class="block text-sm font-semibold text-cream">Foundation</span>
-                  <span class="block text-xs text-muted mt-1">$2,990</span>
-                </label>
-                <label class="package-card bg-white/5 border border-white/15 rounded-xl p-4 text-center cursor-pointer relative">
-                  <input type="radio" name="package" value="professional" class="sr-only">
-                  <span class="absolute -top-2 left-1/2 -translate-x-1/2 bg-accent text-surface text-[10px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded-full">Popular</span>
-                  <span class="block text-sm font-semibold text-cream">Professional</span>
-                  <span class="block text-xs text-muted mt-1">$4,990</span>
-                </label>
-                <label class="package-card bg-white/5 border border-white/15 rounded-xl p-4 text-center cursor-pointer">
-                  <input type="radio" name="package" value="advanced" class="sr-only">
-                  <span class="block text-sm font-semibold text-cream">Advanced</span>
-                  <span class="block text-xs text-muted mt-1">$6,490</span>
-                </label>
-              </div>
-              <button type="button" id="packageClear" class="font-sans text-xs text-muted hover:text-accent transition-colors mt-2 cursor-pointer">Not sure yet</button>
-            </div>
-            <div>
-              <p class="font-sans text-xs uppercase tracking-wider text-muted mb-3">Add-ons</p>
-              <div class="flex flex-wrap gap-2">
-                <label class="addon-pill border border-white/15 rounded-full px-4 py-2 cursor-pointer text-sm font-sans text-muted bg-white/5 hover:border-white/30">
-                  <input type="checkbox" name="addons" value="Blog Writer Bot $1,490" class="sr-only">
-                  Blog Writer Bot — $1,490
-                </label>
-                <label class="addon-pill border border-white/15 rounded-full px-4 py-2 cursor-pointer text-sm font-sans text-muted bg-white/5 hover:border-white/30">
-                  <input type="checkbox" name="addons" value="Auto-Reply Bot $890" class="sr-only">
-                  Auto-Reply Bot — $890
-                </label>
-                <label class="addon-pill border border-white/15 rounded-full px-4 py-2 cursor-pointer text-sm font-sans text-muted bg-white/5 hover:border-white/30">
-                  <input type="checkbox" name="addons" value="Review Collector $790" class="sr-only">
-                  Review Collector — $790
-                </label>
-                <label class="addon-pill border border-white/15 rounded-full px-4 py-2 cursor-pointer text-sm font-sans text-muted bg-white/5 hover:border-white/30">
-                  <input type="checkbox" name="addons" value="SEO & Content $249/mo" class="sr-only">
-                  SEO &amp; Content — $249/mo
-                </label>
-              </div>
-            </div>
-            <div>
-              <p class="font-sans text-xs uppercase tracking-wider text-muted mb-3">Onboarding Extras</p>
-              <div class="flex flex-wrap gap-2">
-                <label class="addon-pill border border-white/15 rounded-full px-4 py-2 cursor-pointer text-sm font-sans text-muted bg-white/5 hover:border-white/30">
-                  <input type="checkbox" name="addons" value="Logo & Branding $490" class="sr-only">
-                  Logo &amp; Branding — $490
-                </label>
-              </div>
-            </div>
-            <div>
-              <label class="flex items-center gap-3 cursor-pointer group">
-                <input type="checkbox" id="hasExistingSite" name="has_existing_site" class="sr-only">
-                <span class="toggle-track"></span>
-                <span class="font-sans text-sm text-muted group-hover:text-cream transition-colors">I have an existing website</span>
-              </label>
-            </div>
-            <div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
-              <button type="submit" class="btn-primary bg-accent text-surface font-sans font-semibold px-8 py-4 rounded-full text-base cursor-pointer inline-flex items-center gap-3 hover:bg-lime-300 transition-colors duration-200">
-                Send Enquiry
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-              </button>
-              <span class="font-sans text-xs text-muted">Free quote &mdash; no obligation</span>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ======================== BLOG PREVIEW ======================== -->
-  <section id="blog" class="px-4 sm:px-6 lg:px-8 py-24 md:py-32">
-    <div class="max-w-7xl mx-auto">
-      <div class="reveal text-center mb-16">
-        <p class="font-sans text-sm tracking-[0.3em] uppercase text-accent mb-3">Blog</p>
-        <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-cream leading-tight">Latest from the<br><span class="italic font-normal text-muted">blog</span></h2>
-      </div>
-
-      <div class="max-w-lg mx-auto">
-        <a href="https://app.maksym.au/blog" class="reveal reveal-delay-1 glass-card rounded-2xl overflow-hidden group block">
-          <div class="h-48 bg-gradient-to-br from-accent/20 via-accent/5 to-transparent flex items-center justify-center">
-            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" class="text-accent/40" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-          </div>
-          <div class="p-6">
-            <span class="font-sans text-xs tracking-[0.2em] uppercase text-accent">Tips &amp; Advice</span>
-            <h3 class="font-serif text-xl font-bold text-cream mt-2 mb-3 group-hover:text-accent transition-colors duration-200">Why AI Native Web Development Beats Template Sites for Service Businesses</h3>
-            <p class="font-sans text-sm text-muted leading-relaxed mb-4">Template websites hold service businesses back. Discover how AI-native development delivers faster, smarter sites built to actually convert visitors into clients.</p>
-            <span class="font-sans text-sm text-accent inline-flex items-center gap-2 group-hover:gap-3 transition-all duration-200">
-              Read More
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-            </span>
-          </div>
-        </a>
-      </div>
-
-      <div class="reveal text-center mt-12">
-        <a href="https://app.maksym.au/blog" class="inline-flex items-center gap-3 font-sans text-sm font-semibold text-accent border border-accent/30 px-8 py-3 rounded-full hover:bg-accent/10 transition-all duration-200 cursor-pointer">
-          View All Posts
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </a>
+      <div class="reveal overflow-x-auto rounded-2xl border border-black/5 bg-white/50">
+        <table class="w-full text-left font-sans text-sm min-w-[600px]">
+          <thead>
+            <tr class="border-b border-black/5">
+              <th scope="col" class="p-4 md:p-5 text-muted font-normal w-[40%]"></th>
+              <th scope="col" class="p-4 md:p-5 text-muted font-semibold text-center">Traditional Agency</th>
+              <th scope="col" class="p-4 md:p-5 text-cream font-semibold text-center">MK<span class="text-accent">.</span> AI-First</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="compare-row border-b border-black/5">
+              <td class="p-4 md:p-5 text-cream">AI search visibility</td>
+              <td class="p-4 md:p-5 text-center"><span class="compare-x">&times; Not offered</span></td>
+              <td class="p-4 md:p-5 text-center"><span class="compare-check">&check; GEO optimized</span></td>
+            </tr>
+            <tr class="compare-row border-b border-black/5">
+              <td class="p-4 md:p-5 text-cream">Agent readiness</td>
+              <td class="p-4 md:p-5 text-center"><span class="compare-x">&times; Not on radar</span></td>
+              <td class="p-4 md:p-5 text-center"><span class="compare-check">&check; MCP + APIs</span></td>
+            </tr>
+            <tr class="compare-row border-b border-black/5">
+              <td class="p-4 md:p-5 text-cream">Development speed</td>
+              <td class="p-4 md:p-5 text-center text-muted">2&ndash;3 months</td>
+              <td class="p-4 md:p-5 text-center"><span class="compare-check">2&ndash;4 weeks</span></td>
+            </tr>
+            <tr class="compare-row border-b border-black/5">
+              <td class="p-4 md:p-5 text-cream">AI tooling</td>
+              <td class="p-4 md:p-5 text-center text-muted">Basic / none</td>
+              <td class="p-4 md:p-5 text-center"><span class="compare-check">Claude Code native</span></td>
+            </tr>
+            <tr class="compare-row border-b border-black/5">
+              <td class="p-4 md:p-5 text-cream">Structured data</td>
+              <td class="p-4 md:p-5 text-center text-muted">Basic schema</td>
+              <td class="p-4 md:p-5 text-center"><span class="compare-check">AI-optimized</span></td>
+            </tr>
+            <tr class="compare-row border-b border-black/5">
+              <td class="p-4 md:p-5 text-cream">Cost</td>
+              <td class="p-4 md:p-5 text-center text-muted">$15K&ndash;$50K+</td>
+              <td class="p-4 md:p-5 text-center"><span class="compare-check">From $3,500</span></td>
+            </tr>
+            <tr class="compare-row">
+              <td class="p-4 md:p-5 text-cream">Ongoing optimization</td>
+              <td class="p-4 md:p-5 text-center"><span class="compare-x">&times; Expensive retainer</span></td>
+              <td class="p-4 md:p-5 text-center"><span class="compare-check">$990/mo</span></td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </section>
 
   <!-- ======================== FAQ ======================== -->
-  <section id="faq" class="px-4 sm:px-6 lg:px-8 py-24 md:py-32 border-t border-white/15 overflow-hidden">
+  <section id="faq" class="px-4 sm:px-6 lg:px-8 py-24 md:py-32 border-t border-black/5 overflow-hidden">
     <div class="max-w-3xl mx-auto">
       <div class="reveal text-center mb-16">
-        <p class="font-sans text-sm tracking-[0.3em] uppercase text-accent mb-3">FAQ</p>
+        <p class="font-sans text-sm tracking-[0.3em] uppercase text-muted mb-3">FAQ</p>
         <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-cream leading-tight">Common<br><span class="italic font-normal text-muted">questions</span></h2>
       </div>
       <div class="space-y-4" id="faqContainer">
+
         <div class="reveal faq-item glass-card rounded-2xl">
           <button class="faq-btn w-full text-left p-6 flex justify-between items-center gap-4 cursor-pointer bg-transparent border-none" aria-expanded="false" aria-controls="faq-a1">
-            <span class="font-serif text-lg font-bold text-cream">How long does it take to build my website?</span>
-            <svg class="faq-icon w-5 h-5 text-accent flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            <span class="font-serif text-lg font-bold text-cream">What is Generative Engine Optimization (GEO)?</span>
+            <svg class="faq-icon w-5 h-5 text-muted flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
           </button>
           <div class="faq-answer" id="faq-a1" role="region">
-            <p class="px-6 pb-6 font-sans text-sm text-muted leading-relaxed">Foundation sites go live within 5&ndash;7 business days. Professional and Advanced sites take 1&ndash;2 weeks. Because I use AI-powered development with Claude Code, I can build significantly faster than traditional agencies without sacrificing quality. The main variable is how quickly you can provide content like photos and copy.</p>
+            <p class="px-6 pb-6 font-sans text-sm text-muted leading-relaxed">GEO is the practice of optimizing your online presence so AI systems like ChatGPT, Perplexity, and Claude cite and recommend your products. Traditional SEO gets you ranked on Google. GEO gets you recommended by AI &mdash; and increasingly, that's where purchase decisions start.</p>
           </div>
         </div>
+
         <div class="reveal reveal-delay-1 faq-item glass-card rounded-2xl">
           <button class="faq-btn w-full text-left p-6 flex justify-between items-center gap-4 cursor-pointer bg-transparent border-none" aria-expanded="false" aria-controls="faq-a2">
-            <span class="font-serif text-lg font-bold text-cream">I'm not tech-savvy. Will I be able to update my site?</span>
-            <svg class="faq-icon w-5 h-5 text-accent flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            <span class="font-serif text-lg font-bold text-cream">What is agentic commerce?</span>
+            <svg class="faq-icon w-5 h-5 text-muted flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
           </button>
           <div class="faq-answer" id="faq-a2" role="region">
-            <p class="px-6 pb-6 font-sans text-sm text-muted leading-relaxed">You won't need to. That's what the Hosting &amp; Care plan is for &mdash; I handle all updates, content changes, and technical work. If you want to add a new project photo or update your phone number, just send me a text or email and it'll be done within 24 hours. No logging into dashboards or learning CMS tools.</p>
+            <p class="px-6 pb-6 font-sans text-sm text-muted leading-relaxed">Agentic commerce is when AI agents browse, compare, and purchase products on behalf of consumers. Think of it as AI shopping assistants that don't use a browser &mdash; they use APIs and structured data to make decisions. If your store isn't API-accessible with clean product data, these agents will skip you entirely.</p>
           </div>
         </div>
+
         <div class="reveal reveal-delay-2 faq-item glass-card rounded-2xl">
           <button class="faq-btn w-full text-left p-6 flex justify-between items-center gap-4 cursor-pointer bg-transparent border-none" aria-expanded="false" aria-controls="faq-a3">
-            <span class="font-serif text-lg font-bold text-cream">What do I need to provide?</span>
-            <svg class="faq-icon w-5 h-5 text-accent flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            <span class="font-serif text-lg font-bold text-cream">Do you only work with Shopify stores?</span>
+            <svg class="faq-icon w-5 h-5 text-muted flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
           </button>
           <div class="faq-answer" id="faq-a3" role="region">
-            <p class="px-6 pb-6 font-sans text-sm text-muted leading-relaxed">After the discovery call, I'll send you a simple onboarding checklist: your logo, photos of your work (phone photos are fine), a list of your services, and your contact details. You'll have 7 business days to send everything through. I handle the rest &mdash; professional copywriting, design, development, and launch. Don't have a logo? Add the Logo &amp; Branding package ($490) and I'll sort that too.</p>
+            <p class="px-6 pb-6 font-sans text-sm text-muted leading-relaxed">Shopify is my primary focus, but GEO optimization and consulting services apply to any ecommerce platform. The agentic commerce and automation work is platform-flexible. Book a call and we'll figure out the best approach for your stack.</p>
           </div>
         </div>
+
         <div class="reveal faq-item glass-card rounded-2xl">
           <button class="faq-btn w-full text-left p-6 flex justify-between items-center gap-4 cursor-pointer bg-transparent border-none" aria-expanded="false" aria-controls="faq-a4">
-            <span class="font-serif text-lg font-bold text-cream">What does the $79/month Hosting &amp; Care cover?</span>
-            <svg class="faq-icon w-5 h-5 text-accent flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            <span class="font-serif text-lg font-bold text-cream">What does a typical engagement look like?</span>
+            <svg class="faq-icon w-5 h-5 text-muted flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
           </button>
           <div class="faq-answer" id="faq-a4" role="region">
-            <p class="px-6 pb-6 font-sans text-sm text-muted leading-relaxed">Vercel hosting on a global CDN, SSL certificate, domain setup, email forwarding, uptime monitoring, security updates, and content support. SMS and API credits are included for the first 12 months. Add-ons like Blog Writer Bot, Auto-Reply Bot, and Review Collector are one-time builds with no extra monthly fees. SEO &amp; Content ($249/mo) is the only optional monthly service. Cancel anytime with 30 days notice.</p>
+            <p class="px-6 pb-6 font-sans text-sm text-muted leading-relaxed">It starts with a free 30-minute discovery call. I'll understand your store, goals, and where you're losing ground. From there I'll recommend the right service or combination. Most projects run 2&ndash;6 weeks depending on scope, with clear deliverables at each stage.</p>
           </div>
         </div>
+
         <div class="reveal reveal-delay-1 faq-item glass-card rounded-2xl">
           <button class="faq-btn w-full text-left p-6 flex justify-between items-center gap-4 cursor-pointer bg-transparent border-none" aria-expanded="false" aria-controls="faq-a5">
-            <span class="font-serif text-lg font-bold text-cream">Do you work with businesses outside Australia?</span>
-            <svg class="faq-icon w-5 h-5 text-accent flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            <span class="font-serif text-lg font-bold text-cream">How is Claude Code used in Shopify development?</span>
+            <svg class="faq-icon w-5 h-5 text-muted flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
           </button>
           <div class="faq-answer" id="faq-a5" role="region">
-            <p class="px-6 pb-6 font-sans text-sm text-muted leading-relaxed">Yes. Everything is done remotely &mdash; video calls, shared staging links, and quick turnarounds regardless of timezone. I work with service businesses across Australia, New Zealand, the UK, US, and Canada. As long as you can send photos and answer a few questions, we're good to go.</p>
+            <p class="px-6 pb-6 font-sans text-sm text-muted leading-relaxed">Claude Code is Anthropic's AI-powered development CLI. I use it as my primary coding tool for Shopify theme development, custom app building, and system integrations. It writes better Liquid, catches edge cases, and accelerates the entire development cycle by 3&ndash;5x &mdash; meaning you get better code, faster, at a lower cost than traditional agency work.</p>
           </div>
         </div>
+
         <div class="reveal faq-item glass-card rounded-2xl">
           <button class="faq-btn w-full text-left p-6 flex justify-between items-center gap-4 cursor-pointer bg-transparent border-none" aria-expanded="false" aria-controls="faq-a6">
-            <span class="font-serif text-lg font-bold text-cream">What makes your sites different from Wix or Squarespace?</span>
-            <svg class="faq-icon w-5 h-5 text-accent flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            <span class="font-serif text-lg font-bold text-cream">Can I start with consulting before committing to a project?</span>
+            <svg class="faq-icon w-5 h-5 text-muted flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
           </button>
           <div class="faq-answer" id="faq-a6" role="region">
-            <p class="px-6 pb-6 font-sans text-sm text-muted leading-relaxed">Speed and SEO. Wix and Squarespace sites are notoriously slow and bloated. My sites are custom-coded with Next.js and hosted on Vercel &mdash; the same infrastructure used by Fortune 500 companies. That means sub-second load times, 95+ Google PageSpeed scores, and better search rankings. You can't get that from a drag-and-drop builder. Plus, you don't have to build it yourself.</p>
+            <p class="px-6 pb-6 font-sans text-sm text-muted leading-relaxed">Absolutely. A 1-hour consulting session is $350, or grab a 5-hour block for $1,500 (save $250). Many clients start there to get clarity on their priorities, validate their approach, or get a second opinion on their current strategy &mdash; then move into a focused project.</p>
           </div>
         </div>
+
         <div class="reveal reveal-delay-1 faq-item glass-card rounded-2xl">
           <button class="faq-btn w-full text-left p-6 flex justify-between items-center gap-4 cursor-pointer bg-transparent border-none" aria-expanded="false" aria-controls="faq-a7">
-            <span class="font-serif text-lg font-bold text-cream">Can I pay in instalments?</span>
-            <svg class="faq-icon w-5 h-5 text-accent flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            <span class="font-serif text-lg font-bold text-cream">Do you work with businesses outside Australia?</span>
+            <svg class="faq-icon w-5 h-5 text-muted flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
           </button>
           <div class="faq-answer" id="faq-a7" role="region">
-            <p class="px-6 pb-6 font-sans text-sm text-muted leading-relaxed">Absolutely. Standard terms are 50% upfront and 50% on launch &mdash; that's $1,495 + $1,495 for Foundation, $2,495 + $2,495 for Professional, or $3,245 + $3,245 for Advanced. For the Advanced package or multiple add-ons, I can split it into three payments. Add-on systems follow the same 50/50 split. Happy to discuss what works for your cash flow.</p>
+            <p class="px-6 pb-6 font-sans text-sm text-muted leading-relaxed">Yes. Everything is done remotely &mdash; video calls, screen shares, and async communication. I work with Shopify merchants and ecommerce teams worldwide. Most of the work I do is digital and timezone-flexible.</p>
           </div>
         </div>
+
         <div class="reveal faq-item glass-card rounded-2xl">
           <button class="faq-btn w-full text-left p-6 flex justify-between items-center gap-4 cursor-pointer bg-transparent border-none" aria-expanded="false" aria-controls="faq-a8">
-            <span class="font-serif text-lg font-bold text-cream">How many revision rounds do I get?</span>
-            <svg class="faq-icon w-5 h-5 text-accent flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            <span class="font-serif text-lg font-bold text-cream">What are your payment terms?</span>
+            <svg class="faq-icon w-5 h-5 text-muted flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
           </button>
           <div class="faq-answer" id="faq-a8" role="region">
-            <p class="px-6 pb-6 font-sans text-sm text-muted leading-relaxed">Two full revision rounds are included in every website build. During the build phase, small tweaks and feedback are handled same-day at no extra cost. If you need additional revision rounds after the two included, each round is $150. Most clients are happy after the first round.</p>
+            <p class="px-6 pb-6 font-sans text-sm text-muted leading-relaxed">Project work is 50% upfront, 50% on completion. Monthly retainers (GEO ongoing, consulting blocks) are billed monthly. Consulting hours are prepaid. All prices are in AUD and exclude GST.</p>
           </div>
         </div>
-        <div class="reveal reveal-delay-1 faq-item glass-card rounded-2xl">
-          <button class="faq-btn w-full text-left p-6 flex justify-between items-center gap-4 cursor-pointer bg-transparent border-none" aria-expanded="false" aria-controls="faq-a9">
-            <span class="font-serif text-lg font-bold text-cream">What if I don't send content on time?</span>
-            <svg class="faq-icon w-5 h-5 text-accent flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-          </button>
-          <div class="faq-answer" id="faq-a9" role="region">
-            <p class="px-6 pb-6 font-sans text-sm text-muted leading-relaxed">After the discovery call, you'll have 7 business days to send through your content (photos, service list, logo). If the deadline passes, I'll pause the project and move to the next client in the queue. When you're ready, we pick back up.</p>
-          </div>
-        </div>
-        <div class="reveal faq-item glass-card rounded-2xl">
-          <button class="faq-btn w-full text-left p-6 flex justify-between items-center gap-4 cursor-pointer bg-transparent border-none" aria-expanded="false" aria-controls="faq-a10">
-            <span class="font-serif text-lg font-bold text-cream">Do I get a professional email?</span>
-            <svg class="faq-icon w-5 h-5 text-accent flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-          </button>
-          <div class="faq-answer" id="faq-a10" role="region">
-            <p class="px-6 pb-6 font-sans text-sm text-muted leading-relaxed">Email forwarding is included in the Hosting &amp; Care plan &mdash; emails sent to info@yourdomain.com get forwarded to your personal inbox. If you want a full professional inbox (send and receive from your domain), I can set up Google Workspace on request.</p>
-          </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================== CONTACT ======================== -->
+  <section id="contact" class="px-4 sm:px-6 lg:px-8 py-24 md:py-32 border-t border-black/5 overflow-hidden">
+    <div class="max-w-7xl mx-auto">
+      <div class="reveal glass-card rounded-3xl p-8 md:p-16 relative overflow-hidden">
+        <!-- Background accent -->
+        <div class="absolute w-[400px] h-[400px] bg-accent/10 rounded-full blur-[120px] -top-40 -right-40 pointer-events-none" aria-hidden="true"></div>
+
+        <div class="relative z-10 max-w-2xl">
+          <p class="font-sans text-sm tracking-[0.3em] uppercase text-muted mb-4">Get Started</p>
+          <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-cream leading-tight mb-6">Let's talk about<br><span class="italic font-normal text-muted">your store.</span></h2>
+          <p class="font-sans text-base text-muted leading-relaxed mb-10 max-w-lg">Tell me what you're working on. I'll get back to you within 24 hours with next steps.</p>
+
+          <form class="space-y-6" id="contactForm">
+            <!-- Honeypot -->
+            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label for="name" class="font-sans text-xs uppercase tracking-wider text-muted mb-2 block">Name <span class="text-red-400">*</span></label>
+                <input type="text" id="name" name="name" required autocomplete="name" class="w-full bg-black/[0.03] border border-black/10 rounded-xl px-4 py-3 font-sans text-sm text-cream placeholder:text-muted/50 focus:outline-none focus:border-cream/40 focus:ring-1 focus:ring-cream/20 transition-colors duration-200" placeholder="Your name">
+              </div>
+              <div>
+                <label for="email" class="font-sans text-xs uppercase tracking-wider text-muted mb-2 block">Email <span class="text-red-400">*</span></label>
+                <input type="email" id="email" name="email" required autocomplete="email" class="w-full bg-black/[0.03] border border-black/10 rounded-xl px-4 py-3 font-sans text-sm text-cream placeholder:text-muted/50 focus:outline-none focus:border-cream/40 focus:ring-1 focus:ring-cream/20 transition-colors duration-200" placeholder="you@store.com">
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label for="storeUrl" class="font-sans text-xs uppercase tracking-wider text-muted mb-2 block">Store URL</label>
+                <input type="url" id="storeUrl" name="store_url" class="w-full bg-black/[0.03] border border-black/10 rounded-xl px-4 py-3 font-sans text-sm text-cream placeholder:text-muted/50 focus:outline-none focus:border-cream/40 focus:ring-1 focus:ring-cream/20 transition-colors duration-200" placeholder="yourstore.com">
+              </div>
+              <div>
+                <label for="service" class="font-sans text-xs uppercase tracking-wider text-muted mb-2 block">Interested In</label>
+                <select id="service" name="service" class="w-full bg-black/[0.03] border border-black/10 rounded-xl px-4 py-3 font-sans text-sm text-cream focus:outline-none focus:border-cream/40 focus:ring-1 focus:ring-cream/20 transition-colors duration-200 appearance-none cursor-pointer">
+                  <option value="">Select a service</option>
+                  <option value="geo">GEO Optimization</option>
+                  <option value="shopify-claude-code">Shopify + Claude Code</option>
+                  <option value="ecommerce-automation">Ecommerce Automation</option>
+                  <option value="agentic-commerce">Agentic Commerce Prep</option>
+                  <option value="consulting">1-on-1 Consulting</option>
+                  <option value="not-sure">Not sure yet</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label for="message" class="font-sans text-xs uppercase tracking-wider text-muted mb-2 block">Message</label>
+              <textarea id="message" name="message" rows="4" class="w-full bg-black/[0.03] border border-black/10 rounded-xl px-4 py-3 font-sans text-sm text-cream placeholder:text-muted/50 focus:outline-none focus:border-cream/40 focus:ring-1 focus:ring-cream/20 transition-colors duration-200 resize-none" placeholder="Tell me about your store and what you're looking to achieve..."></textarea>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
+              <button type="submit" class="btn-primary bg-cream text-white font-sans font-semibold px-8 py-4 rounded-full text-base cursor-pointer inline-flex items-center gap-3 hover:bg-black transition-colors duration-200">
+                Send Message
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              </button>
+              <span class="font-sans text-xs text-muted">Free discovery call &mdash; no obligation</span>
+            </div>
+          </form>
         </div>
       </div>
     </div>
@@ -1694,35 +870,41 @@
   </main>
 
   <!-- ======================== FOOTER ======================== -->
-  <footer class="px-4 sm:px-6 lg:px-8 py-12 border-t border-white/15">
-    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
-      <div class="flex items-center gap-3">
-        <span class="font-serif text-xl font-bold text-cream">MK<span class="text-accent">.</span></span>
-        <span class="text-white/35">|</span>
-        <span class="font-sans text-sm text-muted">High-Performance Websites for Service Businesses</span>
+  <footer class="px-4 sm:px-6 lg:px-8 py-12 border-t border-black/5">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+        <div>
+          <span class="font-serif text-xl font-bold text-cream">MK<span class="text-accent">.</span></span>
+          <p class="font-sans text-sm text-muted mt-2">AI-First Shopify & Ecommerce Consultancy</p>
+        </div>
+        <div>
+          <p class="font-sans text-xs uppercase tracking-wider text-muted mb-3">Services</p>
+          <div class="space-y-2">
+            <a href="/services/geo/" class="font-sans text-sm text-secondary hover:text-cream transition-colors block">GEO Optimization</a>
+            <a href="/services/shopify-claude-code/" class="font-sans text-sm text-secondary hover:text-cream transition-colors block">Shopify + Claude Code</a>
+            <a href="/services/ecommerce-automation/" class="font-sans text-sm text-secondary hover:text-cream transition-colors block">Ecommerce Automation</a>
+            <a href="/services/agentic-commerce/" class="font-sans text-sm text-secondary hover:text-cream transition-colors block">Agentic Commerce</a>
+            <a href="/services/consulting/" class="font-sans text-sm text-secondary hover:text-cream transition-colors block">1-on-1 Consulting</a>
+          </div>
+        </div>
+        <div>
+          <p class="font-sans text-xs uppercase tracking-wider text-muted mb-3">Contact</p>
+          <div class="space-y-2">
+            <a href="mailto:max.kolesnyk1@gmail.com" class="font-sans text-sm text-secondary hover:text-cream transition-colors block">max.kolesnyk1@gmail.com</a>
+            <a href="tel:+61414841874" class="font-sans text-sm text-secondary hover:text-cream transition-colors block">+61 414 841 874</a>
+          </div>
+        </div>
       </div>
-
-      <div class="flex items-center gap-6">
-        <!-- Placeholder: Replace # with real social links -->
-        <a href="#" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer" class="text-muted hover:text-cream transition-colors duration-200 cursor-pointer">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-        </a>
-        <a href="mailto:lorem@ipsum.com" aria-label="Email" class="text-muted hover:text-cream transition-colors duration-200 cursor-pointer">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-        </a>
-        <!-- Placeholder: Replace with real phone -->
-        <a href="tel:+61400000000" aria-label="Phone" class="text-muted hover:text-cream transition-colors duration-200 cursor-pointer">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        </a>
+      <div class="border-t border-black/5 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p class="font-sans text-xs text-muted">&copy; 2026 Maksym Kolesnyk. All rights reserved.</p>
+        <p class="font-sans text-xs text-muted">All prices in AUD, exclude GST.</p>
       </div>
-
-      <p class="font-sans text-xs text-muted">&copy; 2026 Maksym Kolesnyk. All rights reserved.</p>
     </div>
   </footer>
 
   <!-- ======================== JAVASCRIPT ======================== -->
   <script>
-    // Scroll reveal (handles both .reveal and .blur-in)
+    // Scroll reveal
     const revealObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -1734,141 +916,7 @@
     document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
     document.querySelectorAll('.blur-in').forEach(el => revealObserver.observe(el));
 
-    // PageSpeed gauge animation
-    const gaugeSection = document.getElementById('gaugeSection');
-    if (gaugeSection) {
-      const gaugeObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            // circumference = 2 * PI * 70 ≈ 440
-            // bad: 38% → offset = 440 * (1 - 0.38) = 273
-            // good: 97% → offset = 440 * (1 - 0.97) = 13
-            document.getElementById('gaugeBad').style.strokeDashoffset = '273';
-            document.getElementById('gaugeGood').style.strokeDashoffset = '13';
-            gaugeObserver.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.3 });
-      gaugeObserver.observe(gaugeSection);
-    }
-
-    // ===== HERO PARTICLE CANVAS =====
-    const heroCanvas = document.getElementById('heroCanvas');
-    if (heroCanvas) {
-      const ctx = heroCanvas.getContext('2d');
-      let particles = [];
-      let heroMouse = { x: -1000, y: -1000 };
-      let particlesRunning = false;
-      const PARTICLE_COUNT = 70;
-      const CONNECTION_DIST = 130;
-      const MOUSE_RADIUS = 200;
-
-      function resizeHeroCanvas() {
-        const section = document.getElementById('heroSection');
-        heroCanvas.width = section.offsetWidth;
-        heroCanvas.height = section.offsetHeight;
-      }
-
-      function createParticles() {
-        particles = [];
-        for (let i = 0; i < PARTICLE_COUNT; i++) {
-          particles.push({
-            x: Math.random() * heroCanvas.width,
-            y: Math.random() * heroCanvas.height,
-            vx: (Math.random() - 0.5) * 0.3,
-            vy: (Math.random() - 0.5) * 0.3,
-            radius: Math.random() * 1.5 + 0.5,
-            baseAlpha: Math.random() * 0.25 + 0.08,
-          });
-        }
-      }
-
-      function animateParticles() {
-        if (!particlesRunning) return;
-        ctx.clearRect(0, 0, heroCanvas.width, heroCanvas.height);
-        particles.forEach((p, i) => {
-          p.x += p.vx;
-          p.y += p.vy;
-          if (p.x < 0) p.x = heroCanvas.width;
-          if (p.x > heroCanvas.width) p.x = 0;
-          if (p.y < 0) p.y = heroCanvas.height;
-          if (p.y > heroCanvas.height) p.y = 0;
-
-          const dx = heroMouse.x - p.x;
-          const dy = heroMouse.y - p.y;
-          const dist = Math.sqrt(dx * dx + dy * dy);
-          let alpha = p.baseAlpha;
-
-          if (dist < MOUSE_RADIUS) {
-            const force = (MOUSE_RADIUS - dist) / MOUSE_RADIUS;
-            p.x -= dx * force * 0.015;
-            p.y -= dy * force * 0.015;
-            alpha = p.baseAlpha + force * 0.6;
-          }
-
-          ctx.beginPath();
-          ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-          ctx.fillStyle = 'rgba(200, 255, 0, ' + alpha + ')';
-          ctx.fill();
-
-          for (let j = i + 1; j < particles.length; j++) {
-            const p2 = particles[j];
-            const cdx = p.x - p2.x;
-            const cdy = p.y - p2.y;
-            const cdist = Math.sqrt(cdx * cdx + cdy * cdy);
-            if (cdist < CONNECTION_DIST) {
-              const lineAlpha = (1 - cdist / CONNECTION_DIST) * 0.12;
-              ctx.beginPath();
-              ctx.moveTo(p.x, p.y);
-              ctx.lineTo(p2.x, p2.y);
-              ctx.strokeStyle = 'rgba(200, 255, 0, ' + lineAlpha + ')';
-              ctx.lineWidth = 0.5;
-              ctx.stroke();
-            }
-          }
-        });
-        requestAnimationFrame(animateParticles);
-      }
-
-      const heroSection = document.getElementById('heroSection');
-      heroSection.addEventListener('mousemove', e => {
-        const rect = heroSection.getBoundingClientRect();
-        heroMouse.x = e.clientX - rect.left;
-        heroMouse.y = e.clientY - rect.top;
-      });
-      heroSection.addEventListener('mouseleave', () => {
-        heroMouse.x = -1000;
-        heroMouse.y = -1000;
-      });
-
-      // Pause particles when hero is off-screen (saves battery)
-      const heroVisObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting && !particlesRunning) {
-            particlesRunning = true;
-            animateParticles();
-          } else if (!entry.isIntersecting) {
-            particlesRunning = false;
-          }
-        });
-      }, { threshold: 0 });
-      heroVisObserver.observe(heroSection);
-
-      resizeHeroCanvas();
-      createParticles();
-      particlesRunning = true;
-      animateParticles();
-      window.addEventListener('resize', () => { resizeHeroCanvas(); createParticles(); });
-    }
-
-
-    // ===== ANIMATED UNDERLINE DRAW-ON =====
-    setTimeout(() => {
-      const underline = document.querySelector('.hero-underline');
-      if (underline) underline.classList.add('drawn');
-    }, 1000);
-
-    // Custom cursor (desktop only — skip on touch/mobile)
+    // Custom cursor (desktop only)
     const dot = document.getElementById('cursorDot');
     const ring = document.getElementById('cursorRing');
     if (dot && ring && window.matchMedia('(pointer: fine)').matches) {
@@ -1891,19 +939,19 @@
         el.addEventListener('mouseenter', () => {
           ring.style.width = '60px';
           ring.style.height = '60px';
-          ring.style.borderColor = 'rgba(200,255,0,0.6)';
+          ring.style.borderColor = 'rgba(0,0,0,0.4)';
           ring.style.left = ringX - 30 + 'px';
           ring.style.top = ringY - 30 + 'px';
         });
         el.addEventListener('mouseleave', () => {
           ring.style.width = '40px';
           ring.style.height = '40px';
-          ring.style.borderColor = 'rgba(200,255,0,0.4)';
+          ring.style.borderColor = 'rgba(0,0,0,0.2)';
         });
       });
     }
 
-    // Mobile menu (with focus trap and scroll lock)
+    // Mobile menu
     const menuBtn = document.getElementById('menuBtn');
     const closeMenuBtn = document.getElementById('closeMenuBtn');
     const mobileMenu = document.getElementById('mobileMenu');
@@ -1925,45 +973,31 @@
       link.addEventListener('click', closeMobileMenu);
     });
     document.addEventListener('keydown', e => {
-      if (e.key === 'Escape' && mobileMenu.classList.contains('open')) {
-        closeMobileMenu();
-      }
-      // Focus trap inside mobile menu
+      if (e.key === 'Escape' && mobileMenu.classList.contains('open')) closeMobileMenu();
       if (e.key === 'Tab' && mobileMenu.classList.contains('open')) {
         const focusable = mobileMenu.querySelectorAll('a, button');
         const first = focusable[0];
         const last = focusable[focusable.length - 1];
-        if (e.shiftKey && document.activeElement === first) {
-          e.preventDefault();
-          last.focus();
-        } else if (!e.shiftKey && document.activeElement === last) {
-          e.preventDefault();
-          first.focus();
-        }
+        if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+        else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
       }
     });
 
-    // Navbar scroll — toggle dense glass state
+    // Navbar scroll
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
-      if (window.scrollY > 60) {
-        navbar.classList.add('scrolled');
-      } else {
-        navbar.classList.remove('scrolled');
-      }
+      navbar.classList.toggle('scrolled', window.scrollY > 60);
     });
 
-    // FAQ accordion (with aria-expanded toggle)
+    // FAQ accordion
     document.querySelectorAll('.faq-btn').forEach(btn => {
       btn.addEventListener('click', () => {
         const item = btn.parentElement;
         const isActive = item.classList.contains('active');
-        // Close all
         document.querySelectorAll('.faq-item').forEach(i => {
           i.classList.remove('active');
           i.querySelector('.faq-btn').setAttribute('aria-expanded', 'false');
         });
-        // Open clicked (if wasn't already open)
         if (!isActive) {
           item.classList.add('active');
           btn.setAttribute('aria-expanded', 'true');
@@ -1971,17 +1005,10 @@
       });
     });
 
-    // Package "Not sure yet" — deselect all radios
-    document.getElementById('packageClear').addEventListener('click', () => {
-      document.querySelectorAll('input[name="package"]').forEach(r => r.checked = false);
-    });
-
-    // Contact form — submit to leads API
+    // Contact form
     const form = document.getElementById('contactForm');
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
-
-      // Honeypot — silently ignore bots
       const honeypot = form.querySelector('input[name="_gotcha"]');
       if (honeypot && honeypot.value) return;
 
@@ -1991,18 +1018,12 @@
       btn.innerHTML = '<span class="inline-flex items-center gap-2">Sending...</span>';
 
       try {
-        const addons = Array.from(form.querySelectorAll('input[name="addons"]:checked')).map(cb => cb.value);
-        const pkg = form.querySelector('input[name="package"]:checked')?.value || undefined;
-
         const payload = {
           name: form.querySelector('#name').value.trim(),
-          phone: form.querySelector('#phone').value.trim(),
-          email: form.querySelector('#email').value.trim() || undefined,
-          industry: form.querySelector('#industry').value || undefined,
-          package: pkg,
-          addons: addons.length ? addons : undefined,
-          has_existing_site: form.querySelector('#hasExistingSite').checked || undefined,
-          website: honeypot.value || undefined,
+          email: form.querySelector('#email').value.trim(),
+          store_url: form.querySelector('#storeUrl').value.trim() || undefined,
+          service: form.querySelector('#service').value || undefined,
+          message: form.querySelector('#message').value.trim() || undefined,
           page_url: window.location.href,
         };
 
@@ -2015,20 +1036,20 @@
         if (!res.ok) throw new Error('Request failed');
 
         btn.innerHTML = '<span class="inline-flex items-center gap-2">Sent! <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>';
-        btn.classList.remove('bg-accent');
-        btn.classList.add('bg-green-500');
+        btn.classList.remove('bg-cream');
+        btn.classList.add('bg-green-600');
         form.reset();
       } catch (err) {
         console.error('Form submission error:', err);
         btn.innerHTML = '<span class="inline-flex items-center gap-2">Error — try again</span>';
-        btn.classList.remove('bg-accent');
+        btn.classList.remove('bg-cream');
         btn.classList.add('bg-red-500');
       }
 
       setTimeout(() => {
         btn.innerHTML = originalText;
-        btn.classList.remove('bg-green-500', 'bg-red-500');
-        btn.classList.add('bg-accent');
+        btn.classList.remove('bg-green-600', 'bg-red-500');
+        btn.classList.add('bg-cream');
         btn.disabled = false;
       }, 2500);
     });

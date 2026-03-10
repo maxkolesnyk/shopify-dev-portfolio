@@ -1,0 +1,14 @@
+{
+  "redirects": [
+    { "source": "/services/blog-writer-bot", "destination": "/services/shopify-claude-code/", "permanent": true },
+    { "source": "/services/auto-reply-bot", "destination": "/services/ecommerce-automation/", "permanent": true },
+    { "source": "/services/review-collector", "destination": "/services/ecommerce-automation/", "permanent": true },
+    { "source": "/services/lead-engine", "destination": "/services/ecommerce-automation/", "permanent": true },
+    { "source": "/services/online-booking", "destination": "/", "permanent": true },
+    { "source": "/services/quoting-system", "destination": "/", "permanent": true },
+    { "source": "/services/client-portal", "destination": "/", "permanent": true },
+    { "source": "/services/seo-content", "destination": "/services/geo/", "permanent": true },
+    { "source": "/services/content-collection", "destination": "/", "permanent": true },
+    { "source": "/services/google-ads", "destination": "/services/geo/", "permanent": true }
+  ]
+}
